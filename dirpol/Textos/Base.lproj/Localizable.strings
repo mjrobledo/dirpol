@@ -1,0 +1,63 @@
+/* 
+  Localizable.strings
+  dirpol
+
+  Created by macbook on 18/09/18.
+  Copyright © 2018 gravittas. All rights reserved.
+*/
+
+Si = "Si";
+No = "No";
+
+Cancelar = "Cancelar";
+
+CERRARSESION = "Cerrar sesión";
+AlertaSesion = "¿Deseas cerrar sesión ahora?";
+
+Cargando = "Cargando...";
+
+Aplicacion = "DIRPOL";
+Enterado = "Enterado";
+
+NoSeEncontraronDatos = "No se encontraron datos";
+
+//---- Menu -----//
+BusquedaAvanzada = "Búsqueda avanzada";
+AltoMandoPolicial = "Alto mando policial";
+PanelUsuario = "Panel de usuario";
+AcercaDe = "Acerca de";
+CerrarSesion = "Cerrar sesión";
+
+
+// MARK: - (Inicio de sesión, recupera)
+NoRecueraTuUsuario = "¿No recuerdas tu usuario?";
+NoRecueraTuPassword = "¿No recuerdas tu contraseña?";
+
+MensajePassword = "Por favor, introduzca la dirección de correo electrónico para su cuenta. Se le enviará un código de verificación. Una vez que lo reciba, podrá seleccionar o escribir una nueva contraseña para su cuenta.";
+
+MensajeUsuario = "Por favor, introduzca la dirección de correo electrónico que tiene asociada con su cuenta de usuario. Su usuario le será enviado si la dirección que nos facilita es correcta.";
+
+SeleccionaUnaOpcion = "Selecciona una opción";
+Selecciona = "Selecciona";
+Alerta = "Alerta";
+
+TodosLosCamposSonObligatorios = "Todos los campos son obligatorios";
+
+DebesAgregarUnCorreo = "Debes agregar un correo para completar la solicitud";
+FormatoCorreoInvalido = "Debes agregar un correo válido";
+
+CorreoEnviadoCorrectamente = "Correo enviado correctamente";
+
+ErrorEnElServicio = "Error en el servicio, intenta más tarde";
+
+ObteniendoInformacion = "Obteniendo información";
+
+DebesTenerConexionInternet = "Para realizar está solicitud deber tener una conexión a Internet";
+
+LaCuentaDeCorreoNoEsValida = "La cuenta de correo no es valida";
+
+ParaContactarnosEsNecesario = "Para contactarnos es necesario tener una cuenta de correo instalada en el teléfono.";
+contactos = "contactos";
+
+LosCorreosNoCoinciden = "Los correos no coinciden";
+LasContrasenasNoCoinciden = "Las contraseñas no coinciden";

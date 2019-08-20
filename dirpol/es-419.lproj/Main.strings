@@ -1,0 +1,51 @@
+
+/* Class = "UILabel"; text = "© 2015 App Dirpol"; ObjectID = "3MQ-gh-ulW"; */
+"3MQ-gh-ulW.text" = "© 2015 App Dirpol";
+
+/* Class = "UITextField"; placeholder = "Nombre de usuario"; ObjectID = "3d0-p9-DBp"; */
+"3d0-p9-DBp.placeholder" = "Nombre de usuario";
+
+/* Class = "UILabel"; text = "RECUPERAR CONTRASEÑA"; ObjectID = "5Hl-vd-1Gx"; */
+"5Hl-vd-1Gx.text" = "RECUPERAR CONTRASEÑA";
+
+/* Class = "UILabel"; text = "Ponte en contacto con el servicio de\rasistencia al cliente"; ObjectID = "6Ru-dU-fC8"; */
+"6Ru-dU-fC8.text" = "Ponte en contacto con el servicio de\rasistencia al cliente";
+
+/* Class = "UITextField"; placeholder = "Contraseña"; ObjectID = "6qh-O5-TdE"; */
+"6qh-O5-TdE.placeholder" = "Contraseña";
+
+/* Class = "UIButton"; normalTitle = "¿Recuperación de contraseña?"; ObjectID = "IN2-VJ-b5F"; */
+"IN2-VJ-b5F.normalTitle" = "¿Recuperación de contraseña?";
+
+/* Class = "UILabel"; text = "Iniciar sesión"; ObjectID = "XcF-Uc-H9y"; */
+"XcF-Uc-H9y.text" = "Iniciar sesión";
+
+/* Class = "UILabel"; text = "¿No tienes un correo electronico registrado o no\rte acuerdas de la dirección?"; ObjectID = "Xh4-K2-VQ2"; */
+"Xh4-K2-VQ2.text" = "¿No tienes un correo electronico registrado o no\rte acuerdas de la dirección?";
+
+/* Class = "UILabel"; text = "DIRPOL"; ObjectID = "bkZ-9h-QEi"; */
+"bkZ-9h-QEi.text" = "DIRPOL";
+
+/* Class = "UILabel"; text = "Por favor, introduzca la direccion de correo electrónico que tiene asociada con su cuenta de usuario. Su usuario  le será enviado si la dirección que nos facilita es correta."; ObjectID = "bnO-zP-KRQ"; */
+"bnO-zP-KRQ.text" = "Por favor, introduzca la direccion de correo electrónico que tiene asociada con su cuenta de usuario. Su usuario  le será enviado si la dirección que nos facilita es correta.";
+
+/* Class = "UILabel"; text = "¿No recuerdas tu usuario?"; ObjectID = "lAZ-UW-1m1"; */
+"lAZ-UW-1m1.text" = "¿No recuerdas tu usuario?";
+
+/* Class = "UIButton"; normalTitle = "Enviar e-mail"; ObjectID = "mRu-Aw-MEq"; */
+"mRu-Aw-MEq.normalTitle" = "Enviar e-mail";
+
+/* Class = "UILabel"; text = "Dirpol"; ObjectID = "pSJ-KB-Qgj"; */
+"pSJ-KB-Qgj.text" = "Dirpol";
+
+/* Class = "UIButton"; normalTitle = "Iniciar sesión"; ObjectID = "rgG-cs-DDS"; */
+"rgG-cs-DDS.normalTitle" = "Iniciar sesión";
+
+/* Class = "UIButton"; normalTitle = "Nombre de usuario Dirpol"; ObjectID = "vJX-Ca-vIe"; */
+"vJX-Ca-vIe.normalTitle" = "Nombre de usuario Dirpol";
+
+/* Class = "UIButton"; normalTitle = "Recuperación de usuario"; ObjectID = "wXZ-li-mXu"; */
+"wXZ-li-mXu.normalTitle" = "Recuperación de usuario";
+
+/* Class = "UILabel"; text = "Correo eléctronico registrado"; ObjectID = "zQD-xl-1S5"; */
+"zQD-xl-1S5.text" = "Correo eléctronico registrado";
