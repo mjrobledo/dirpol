@@ -95,11 +95,11 @@ class BusquedaAvanzadaVC: UIViewController, listadoDelegate, UITextFieldDelegate
         reqBusqueda.TextoBusqueda = (txtBusqueda.text?.trim())!
         
         if reqBusqueda.TextoBusqueda.trim() == ""{
-            Utileria().enviarAlerta(mensaje: "Es necesario agregar un texto de busqueda", titulo: "Alerta", controller: self)
+            Utileria().enviarAlerta(mensaje: "Por favor, ingrese un valor para realizar la búsqueda", titulo: "Alerta", controller: self)
             return
         }
         if reqBusqueda.IdCategoria.count == 0 {
-            Utileria().enviarAlerta(mensaje: "Es necesario agregar una categoría", titulo: "Alerta", controller: self)
+            Utileria().enviarAlerta(mensaje: "Por favor, seleccione uno o más distritos para realizar la búsqueda con mayor precisión", titulo: "Alerta", controller: self)
             return
         }
         

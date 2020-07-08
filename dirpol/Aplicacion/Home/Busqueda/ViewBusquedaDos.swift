@@ -144,7 +144,7 @@ class ViewBusquedaDos: UIView, UITableViewDelegate, UITableViewDataSource, UITex
                     self.Items = (respuesta?.Datos)!
                     self.tablaBusqueda.reloadData()
                 }
-                self.lblNumeroResultados.text = "Se encontraron \((respuesta?.Datos.count)!) resultados"
+                self.lblNumeroResultados.text = "¡Encontrado(s) \((respuesta?.Datos.count)!) resultado(s)!"
             }else{
                 if respuesta == nil{
                     SVProgressHUD.showSuccess(withStatus: "Error en el servicio")

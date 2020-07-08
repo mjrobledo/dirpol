@@ -72,7 +72,7 @@ class ViewRegionesMapa: UIView, GMSMapViewDelegate {
                                                             options: nil)?.first as! ViewMarcker
         let name = String(utf8String: (r?.Nombre.cString(using: .utf8)!)!)
         viewFromNib?.lblRegion.text = name
-        
+        Variables.region = name!
         return viewFromNib
     }
     

@@ -73,7 +73,7 @@
 		21AD99D1E4FB36CE559D3E08 /* Pods-dirpolUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dirpolUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-dirpolUITests/Pods-dirpolUITests.release.xcconfig"; sourceTree = "<group>"; };
 		23E12D3A3BDCA4A915FCC1D7 /* Pods-dirpolTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dirpolTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dirpolTests/Pods-dirpolTests.debug.xcconfig"; sourceTree = "<group>"; };
 		42280B81768CDC12E7BFC9C1 /* Pods-dirpol.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dirpol.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dirpol/Pods-dirpol.debug.xcconfig"; sourceTree = "<group>"; };
-		6C3E98E1214C5746009FDF74 /* dirpol.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dirpol.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C3E98E1214C5746009FDF74 /* DIRPOL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DIRPOL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C3E98E4214C5746009FDF74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6C3E98E6214C5746009FDF74 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6C3E98E9214C5746009FDF74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -172,7 +172,7 @@
 		6C3E98E2214C5746009FDF74 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6C3E98E1214C5746009FDF74 /* dirpol.app */,
+				6C3E98E1214C5746009FDF74 /* DIRPOL.app */,
 				6C3E98F5214C5748009FDF74 /* dirpolTests.xctest */,
 				6C3E9900214C5748009FDF74 /* dirpolUITests.xctest */,
 			);
@@ -399,7 +399,7 @@
 			);
 			name = dirpol;
 			productName = dirpol;
-			productReference = 6C3E98E1214C5746009FDF74 /* dirpol.app */;
+			productReference = 6C3E98E1214C5746009FDF74 /* DIRPOL.app */;
 			productType = "com.apple.product-type.application";
 		};
 		6C3E98F4214C5748009FDF74 /* dirpolTests */ = {
@@ -468,6 +468,7 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				en,
 				Base,
 				"es-419",
 			);
@@ -843,7 +844,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gravittas.dirpol;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = DIRPOL;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -863,7 +864,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gravittas.dirpol;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = DIRPOL;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

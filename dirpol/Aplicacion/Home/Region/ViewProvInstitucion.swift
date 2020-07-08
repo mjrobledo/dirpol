@@ -259,6 +259,7 @@ class ViewProvInstitucion: UIView , UITableViewDelegate, UITableViewDataSource, 
             self.provincia = self.provinciasAux[indexPath.row]
             self.txtBuscar.text = ""
             self.provinciasAux = self.provincias
+            Variables.provincia = self.provincia.Nombre
             getDatosServicio()
         }else{
             self.getInstitucion(idInstitucion: institucionesAux[indexPath.row].Id)

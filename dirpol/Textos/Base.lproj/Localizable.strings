@@ -23,8 +23,8 @@ NoSeEncontraronDatos = "No se encontraron datos";
 
 //---- Menu -----//
 BusquedaAvanzada = "Búsqueda avanzada";
-AltoMandoPolicial = "Alto mando policial";
-PanelUsuario = "Panel de usuario";
+AltoMandoPolicial = "Unidades Especializadas";
+PanelUsuario = "Panel de Usuario";
 AcercaDe = "Acerca de";
 CerrarSesion = "Cerrar sesión";
 
@@ -33,7 +33,7 @@ CerrarSesion = "Cerrar sesión";
 NoRecueraTuUsuario = "¿No recuerdas tu usuario?";
 NoRecueraTuPassword = "¿No recuerdas tu contraseña?";
 
-MensajePassword = "Por favor, introduzca la dirección de correo electrónico para su cuenta. Se le enviará un código de verificación. Una vez que lo reciba, podrá seleccionar o escribir una nueva contraseña para su cuenta.";
+MensajePassword = "Por favor, introduzca la dirección de correo electrónico asociada a su cuenta. Se le enviará una nueva contraseña para acceder a la aplicación móvil. Posterior a ello, usted puede cambiar la clave en el menú: Panel de Usuario";
 
 MensajeUsuario = "Por favor, introduzca la dirección de correo electrónico que tiene asociada con su cuenta de usuario. Su usuario le será enviado si la dirección que nos facilita es correcta.";
 

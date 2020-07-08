@@ -1,6 +1,6 @@
 
 /* Class = "UILabel"; text = "© 2015 App Dirpol"; ObjectID = "3MQ-gh-ulW"; */
-"3MQ-gh-ulW.text" = "© 2015 App Dirpol";
+"3MQ-gh-ulW.text" = "© 2020 App DIRPOL";
 
 /* Class = "UITextField"; placeholder = "Nombre de usuario"; ObjectID = "3d0-p9-DBp"; */
 "3d0-p9-DBp.placeholder" = "Nombre de usuario";
@@ -36,13 +36,13 @@
 "mRu-Aw-MEq.normalTitle" = "Enviar e-mail";
 
 /* Class = "UILabel"; text = "Dirpol"; ObjectID = "pSJ-KB-Qgj"; */
-"pSJ-KB-Qgj.text" = "Dirpol";
+"pSJ-KB-Qgj.text" = "DIRPOL";
 
 /* Class = "UIButton"; normalTitle = "Iniciar sesión"; ObjectID = "rgG-cs-DDS"; */
 "rgG-cs-DDS.normalTitle" = "Iniciar sesión";
 
 /* Class = "UIButton"; normalTitle = "Nombre de usuario Dirpol"; ObjectID = "vJX-Ca-vIe"; */
-"vJX-Ca-vIe.normalTitle" = "Nombre de usuario Dirpol";
+"vJX-Ca-vIe.normalTitle" = "Nombre de usuario DIRPOL";
 
 /* Class = "UIButton"; normalTitle = "Recuperación de usuario"; ObjectID = "wXZ-li-mXu"; */
 "wXZ-li-mXu.normalTitle" = "Recuperación de usuario";

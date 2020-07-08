@@ -10,8 +10,9 @@ import UIKit
 import SVProgressHUD
 
 protocol busquedaDelegate {
-    func busquedaCompleta(texto:String)
-    func verDetalleBusqueda(institucion:Institucion)
+    func busquedaCompleta(texto: String)
+    //func verDetalleBusqueda(institucion:Institucion)
+    func verDetalleBusqueda(text: String)
 }
 
 class ViewBusquedaUno: UIView, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
@@ -28,11 +29,12 @@ class ViewBusquedaUno: UIView, UITableViewDelegate, UITableViewDataSource, UITex
     var frameOriginal:CGRect = CGRect()
     
     func iniciar(){
-     
         tabla.delegate = self
         tabla.dataSource = self
-        tabla.alpha = 0
-        self.lblDominio.alpha = 0
+         
+        tabla.alpha = Items.isEmpty ? 0 : 1
+        self.lblDominio.alpha = Items.isEmpty ? 0 : 1
+        
         tabla.reloadData()
         frameOriginal = tabla.frame
         txtBusqueda.delegate = self
@@ -63,12 +65,12 @@ class ViewBusquedaUno: UIView, UITableViewDelegate, UITableViewDataSource, UITex
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item = Items[indexPath.row]
-        if item.Tipo == structTipo.Institucion{
+        self.delegateBusqueda.verDetalleBusqueda(text: item.Nombre)
+        /*if item.Tipo == structTipo.Institucion {
             getInstitucion(idInstitucion: item.Id)
-        }else{
+        } else {
             getInstitucionFuncionario(idFuncionario: item.Id)
-        }
-        
+        }*/
     }
     
     private func getInstitucion(idInstitucion:Int){
@@ -79,7 +81,7 @@ class ViewBusquedaUno: UIView, UITableViewDelegate, UITableViewDataSource, UITex
             if resp != nil && resp?.Datos != nil {
                 if resp?.Codigo == structCodigo.Correcto{
                     let inst = resp?.Datos
-                    self.delegateBusqueda.verDetalleBusqueda(institucion: inst!)
+                   // self.delegateBusqueda.verDetalleBusqueda(institucion: inst!)
                 }else{
                     SVProgressHUD.showInfo(withStatus: resp?.Mensaje)
                     SVProgressHUD.dismiss(withDelay: 3)
@@ -99,7 +101,7 @@ class ViewBusquedaUno: UIView, UITableViewDelegate, UITableViewDataSource, UITex
             if resp != nil && resp?.Datos != nil {
                 if resp?.Codigo == structCodigo.Correcto{
                     let inst:Institucion = (resp?.Datos)!
-                    self.delegateBusqueda.verDetalleBusqueda(institucion: inst)
+                  // self.delegateBusqueda.verDetalleBusqueda(institucion: inst)
                 }else{
                     SVProgressHUD.showInfo(withStatus: resp?.Mensaje)
                     SVProgressHUD.dismiss(withDelay: 3)

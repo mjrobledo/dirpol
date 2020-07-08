@@ -12,6 +12,9 @@ struct Variables {
     static var Perfil = Usuario()
     
     static var IntentosDeLogin = 1
+     
+    static var region = ""
+    static var provincia = ""
 }
 
  

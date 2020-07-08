@@ -14,6 +14,7 @@ class DetalleBusquedaVC: UIViewController {
     @IBOutlet weak var lblTitulo: UILabel!
     
     @IBOutlet weak var lblDescripcionExpande: UILabel!
+    @IBOutlet weak var lblRegionProvincia: UILabel!
     @IBOutlet weak var lblDireccionExpande: UILabel!
     
     
@@ -82,6 +83,7 @@ class DetalleBusquedaVC: UIViewController {
         localizacion.text = institucion.Districto
         
         lblDireccionExpande.text = institucion.Direccion
+        lblRegionProvincia.text = "\(Variables.region) \(Variables.provincia) \(institucion.Districto)"
         lblDescripcionExpande.text = institucion.Descripcion
         
         let camera = GMSCameraPosition.camera(withLatitude: institucion.Latitud, longitude: institucion.Longitud, zoom: 15.0)
@@ -132,7 +134,7 @@ class DetalleBusquedaVC: UIViewController {
     
     @IBAction func expandeMapa(_ sender: Any) {
         
-        UIView.animate(withDuration: 2, animations: {
+        UIView.animate(withDuration: 1, animations: {
             //self.viewFrame.addSubview(self.viewFrameMapa)
             self.viewFrameMapa.alpha = 1
         }, completion: nil)
@@ -141,7 +143,7 @@ class DetalleBusquedaVC: UIViewController {
     @IBAction func vistaNormal(_ sender: Any) {
        
         
-        UIView.animate(withDuration: 2, animations: {
+        UIView.animate(withDuration: 1, animations: {
             self.viewFrameMapa.alpha = 0
         }, completion: nil)
     }

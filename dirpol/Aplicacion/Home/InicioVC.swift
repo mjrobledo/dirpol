@@ -15,14 +15,11 @@ class InicioVC: UIViewController, segueMenu , MenuDelegate, busquedaDelegate, di
             self.performSegue(withIdentifier: strSegue.Detalle, sender: institucion)
         }
     }
-     
     
     func regionDosSeleccionado() {
         
     }
-    
-    
-    
+     
 
     @IBOutlet weak var btnVuelveRegion: UIButton!
     
@@ -69,7 +66,6 @@ class InicioVC: UIViewController, segueMenu , MenuDelegate, busquedaDelegate, di
     }
     
     
-    
     func menuSeleccionado(index: Int) {
         strucSubMenu.Activo = index
         
@@ -105,16 +101,24 @@ class InicioVC: UIViewController, segueMenu , MenuDelegate, busquedaDelegate, di
             }
             
         case strucSubMenu.Busqueda:
-            strVBusqueda.ventanaAbierta = strVBusqueda.VistaBusquedaGoogle
-            btnVuelveRegion.isHidden = true
-            self.viewBusqueda.frame = CGRect(x: 0, y: 0, width: viewFrame.frame.width, height: viewFrame.frame.height)
-            self.viewBusqueda.delegateBusqueda = self
-            self.viewFrame.addSubview(viewBusqueda)
             
-            viewRegionMapa.removeFromSuperview()
-            viewDirectorio.removeFromSuperview()
-            DispatchQueue.main.async {
-                self.viewBusqueda.iniciar()
+            switch strVBusqueda.ventanaAbierta {
+            case strVBusqueda.VistaBusquedaGoogle:
+                strVBusqueda.ventanaAbierta = strVBusqueda.VistaBusquedaGoogle
+                btnVuelveRegion.isHidden = true
+                self.viewBusqueda.frame = CGRect(x: 0, y: 0, width: viewFrame.frame.width, height: viewFrame.frame.height)
+                self.viewBusqueda.delegateBusqueda = self
+                self.viewFrame.addSubview(viewBusqueda)
+                    
+                viewRegionMapa.removeFromSuperview()
+                viewDirectorio.removeFromSuperview()
+                DispatchQueue.main.async {
+                    self.viewBusqueda.iniciar()
+                }
+            case strVBusqueda.VistaBusquedaCompleta :
+                self.busquedaCompleta(texto: "")
+            default:
+                print("busqueda non")
             }
             
         case strucSubMenu.Directorio:
@@ -160,6 +164,7 @@ class InicioVC: UIViewController, segueMenu , MenuDelegate, busquedaDelegate, di
     //Se selecciona
     func regionSeleccionada(region: Region) {
         viewRegionProv.region = region
+        Variables.region = region.Nombre
         strucSubMenu.MenuRegion = strucSubMenu.RegionProvincia
         strVRegion.ventanaAbierta = strVRegion.VistaProvincia
         
@@ -222,8 +227,9 @@ class InicioVC: UIViewController, segueMenu , MenuDelegate, busquedaDelegate, di
         strVBusqueda.ventanaAbierta = strVBusqueda.VistaBusquedaCompleta
         UIView.animate(withDuration: 2, animations: {
             self.viewBusquedaDos.frame = CGRect(x: 0, y: 0, width: self.self.viewFrame.frame.width, height: self.viewFrame.frame.height)
-            
-            self.viewBusquedaDos.txtBusqueda.text = texto
+            if !texto.isEmpty {
+                self.viewBusquedaDos.txtBusqueda.text = texto
+            }
             self.viewBusquedaDos.iniciar(texto: texto)
             self.viewFrame.addSubview(self.viewBusquedaDos)
            
@@ -231,9 +237,20 @@ class InicioVC: UIViewController, segueMenu , MenuDelegate, busquedaDelegate, di
         }, completion: nil)
     }
     
+    func verDetalleBusqueda(text: String) {
+        DispatchQueue.main.async {
+            Variables.region = ""
+            Variables.provincia = ""
+            self.busquedaCompleta(texto: text)
+        }
+    }
+    
     func verDetalleBusqueda(institucion: Institucion) {
         DispatchQueue.main.async {
-            self.performSegue(withIdentifier: strSegue.Detalle, sender: institucion)
+            Variables.region = ""
+            Variables.provincia = ""
+            //self.performSegue(withIdentifier: strSegue.Detalle, sender: institucion)
+            self.busquedaCompleta(texto: institucion.NombreFuncionario)
         }
     }
     
@@ -248,8 +265,9 @@ class InicioVC: UIViewController, segueMenu , MenuDelegate, busquedaDelegate, di
     }
     
     func busquedaDosSeleccionado(institucion: Institucion) {
-        
         DispatchQueue.main.async {
+            Variables.region = ""
+            Variables.provincia = ""
             self.performSegue(withIdentifier: strSegue.Detalle, sender: institucion)
         }
     }

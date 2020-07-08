@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="w4p-q3-dOT">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="w4p-q3-dOT">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,21 +11,21 @@
         <!--InicioVC-->
         <scene sceneID="Sas-ZG-rfL">
             <objects>
-                <viewController id="w4p-q3-dOT" customClass="InicioVC" customModule="dirpol" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="w4p-q3-dOT" customClass="InicioVC" customModule="DIRPOL" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JlM-EC-PTU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleAspectFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IOz-pL-iZn">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="97"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="112"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="img_header" translatesAutoresizingMaskIntoConstraints="NO" id="FXn-je-T4s">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="97"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fondocamara" translatesAutoresizingMaskIntoConstraints="NO" id="FXn-je-T4s">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="112"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tKI-0v-ZjH">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="97"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="112"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" red="0.19215686269999999" green="0.36078431370000003" blue="0.1176470588" alpha="0.46224483370000002" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -35,11 +33,11 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo_v2" translatesAutoresizingMaskIntoConstraints="NO" id="ytl-Dc-Ety">
-                                        <rect key="frame" x="33" y="24" width="119" height="49"/>
+                                        <rect key="frame" x="33" y="32" width="119" height="49"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sue-vz-vbz">
-                                        <rect key="frame" x="8" y="65" width="48" height="24"/>
+                                        <rect key="frame" x="8" y="80" width="48" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <state key="normal" image="ic_volver_blanco"/>
                                         <connections>
@@ -50,7 +48,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A5D-ro-9d3">
-                                <rect key="frame" x="0.0" y="96" width="375" height="514"/>
+                                <rect key="frame" x="0.0" y="112" width="375" height="498"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Do9-tc-4st">
@@ -65,7 +63,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="te7-uq-GSp" customClass="CollMenu" customModule="dirpol" customModuleProvider="target">
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="te7-uq-GSp" customClass="CollMenu" customModule="DIRPOL" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="38"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -81,7 +79,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MXo-cx-Xd2">
-                                        <rect key="frame" x="0.0" y="39" width="375" height="475"/>
+                                        <rect key="frame" x="0.0" y="39" width="375" height="459"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
@@ -155,7 +153,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aA9-PH-QTq" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <view contentMode="scaleToFill" id="bDQ-fD-BiC" customClass="ViewRegionesMapa" customModule="dirpol" customModuleProvider="target">
+                <view contentMode="scaleToFill" id="bDQ-fD-BiC" customClass="ViewRegionesMapa" customModule="DIRPOL" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
@@ -167,6 +165,24 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7sU-iH-eus">
+                                    <rect key="frame" x="10" y="271" width="123" height="98"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pulse sobre cada región para obtener más información" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lct-Nr-xQt">
+                                            <rect key="frame" x="0.0" y="62" width="123" height="36"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                            <color key="textColor" red="0.19215686269999999" green="0.36078431370000003" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_handselect" translatesAutoresizingMaskIntoConstraints="NO" id="Tbi-yC-Lyh">
+                                            <rect key="frame" x="31" y="0.0" width="60" height="54"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </view>
                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zAN-OK-5EG">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
@@ -203,7 +219,7 @@
                         <outlet property="viewMapa" destination="Tev-mn-PSr" id="0OE-42-KiU"/>
                     </connections>
                 </view>
-                <view contentMode="scaleToFill" id="Yw9-tq-rpq" customClass="ViewProvInstitucion" customModule="dirpol" customModuleProvider="target">
+                <view contentMode="scaleToFill" id="Yw9-tq-rpq" customClass="ViewProvInstitucion" customModule="DIRPOL" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
@@ -220,20 +236,28 @@
                                             <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TqP-yv-ahh" id="Hup-Tn-DhU">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KC6-I8-8CM">
-                                                        <rect key="frame" x="53" y="5" width="307" height="35"/>
+                                                        <rect key="frame" x="53" y="5" width="374" height="35"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <color key="textColor" red="0.19215686269999999" green="0.36078431370000003" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_region" translatesAutoresizingMaskIntoConstraints="NO" id="ex0-bf-MXD">
-                                                        <rect key="frame" x="15" y="9" width="25" height="25"/>
+                                                        <rect key="frame" x="15" y="9" width="25" height="24"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                        <color key="tintColor" red="0.30588235294117649" green="0.30590143799781799" blue="0.30584180355072021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DIRPOL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fd7-4Q-qPu">
+                                                        <rect key="frame" x="15" y="32" width="24" height="8"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="6"/>
+                                                        <color key="textColor" red="0.19215686274509802" green="0.36078431372549019" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                             </tableViewCellContentView>
                                         </tableViewCell>
@@ -266,13 +290,12 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 </imageView>
                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Clr-S4-gBV">
-                                    <rect key="frame" x="128" y="14" width="239" height="33"/>
+                                    <rect key="frame" x="128" y="14" width="225" height="33"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Buscar..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qlt-be-zE3">
-                                            <rect key="frame" x="8" y="4" width="231" height="25"/>
+                                            <rect key="frame" x="8" y="4" width="209" height="25"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                            <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                             <userDefinedRuntimeAttributes>
@@ -322,7 +345,7 @@
                         <outlet property="viewBusqueda" destination="Clr-S4-gBV" id="M0d-dH-J9i"/>
                     </connections>
                 </view>
-                <view contentMode="scaleToFill" id="NoN-zW-kUA" customClass="ViewDirectorio" customModule="dirpol" customModuleProvider="target">
+                <view contentMode="scaleToFill" id="NoN-zW-kUA" customClass="ViewDirectorio" customModule="DIRPOL" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
@@ -335,11 +358,11 @@
                                     <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Oed-VQ-CaL" id="5q5-Bt-94I">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="91Q-NB-0Mf">
-                                                <rect key="frame" x="15" y="5" width="301" height="32"/>
+                                                <rect key="frame" x="14" y="5" width="375" height="32"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                                 <color key="textColor" red="0.1784019043" green="0.37254901959999998" blue="0.10603383800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -368,7 +391,6 @@
                                         <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Buscar..." clearsOnBeginEditing="YES" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="9UA-zg-wFJ">
                                             <rect key="frame" x="38" y="0.0" width="257" height="39"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                            <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" returnKeyType="search"/>
                                         </textField>
@@ -412,7 +434,7 @@
                         <outlet property="txtBusqueda" destination="9UA-zg-wFJ" id="fey-eq-FaL"/>
                     </connections>
                 </view>
-                <view contentMode="scaleToFill" id="UzU-fl-NP9" customClass="ViewBusquedaDos" customModule="dirpol" customModuleProvider="target">
+                <view contentMode="scaleToFill" id="UzU-fl-NP9" customClass="ViewBusquedaDos" customModule="DIRPOL" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
@@ -420,8 +442,12 @@
                             <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="border_search" translatesAutoresizingMaskIntoConstraints="NO" id="zn3-db-zFg">
+                                    <rect key="frame" x="71" y="4" width="259" height="40"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                </imageView>
                                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f39-TQ-g9Q">
-                                    <rect key="frame" x="8" y="9" width="32" height="32"/>
+                                    <rect key="frame" x="11" y="9" width="32" height="32"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                     <state key="normal" image="ic_back"/>
                                     <connections>
@@ -429,7 +455,7 @@
                                         <action selector="volverBusquedaUno:" destination="UzU-fl-NP9" eventType="touchUpInside" id="hcC-Ky-tIc"/>
                                     </connections>
                                 </button>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_logo_policia" translatesAutoresizingMaskIntoConstraints="NO" id="Ckp-3o-C5d">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="escudo_cara_secundaria" translatesAutoresizingMaskIntoConstraints="NO" id="Ckp-3o-C5d">
                                     <rect key="frame" x="15" y="5" width="48" height="38"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 </imageView>
@@ -444,23 +470,13 @@
                                     </connections>
                                 </button>
                                 <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Buscar" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="L6T-fY-8Lo">
-                                    <rect key="frame" x="71" y="4" width="258" height="40"/>
+                                    <rect key="frame" x="85" y="4" width="244" height="40"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                    <nil key="textColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
                                             <color key="value" red="0.2188213162" green="0.2188213162" blue="0.2188213162" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="color" keyPath="colorCorner">
-                                            <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                            <real key="value" value="3"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                            <real key="value" value="1"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </textField>
@@ -490,11 +506,11 @@
                                     <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SWU-3u-Vnx" id="DLu-Pa-KHn">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ministerio de agricultura" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VOh-un-ZIZ">
-                                                <rect key="frame" x="20" y="9" width="335" height="25"/>
+                                                <rect key="frame" x="19" y="9" width="376" height="25"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <color key="textColor" red="0.2156862745" green="0.22352941179999999" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -515,11 +531,11 @@
                         <outlet property="txtBusqueda" destination="L6T-fY-8Lo" id="Wqu-qL-MpP"/>
                     </connections>
                 </view>
-                <view contentMode="scaleToFill" id="QcX-X8-JHo" customClass="ViewBusquedaUno" customModule="dirpol" customModuleProvider="target">
+                <view contentMode="scaleToFill" id="QcX-X8-JHo" customClass="ViewBusquedaUno" customModule="DIRPOL" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_logo_policia" translatesAutoresizingMaskIntoConstraints="NO" id="qXQ-P6-682">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="escudo_cara_principal" translatesAutoresizingMaskIntoConstraints="NO" id="qXQ-P6-682">
                             <rect key="frame" x="90" y="20" width="194" height="112"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
@@ -539,18 +555,18 @@
                                     <rect key="frame" x="0.0" y="28" width="350" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OCF-YX-qxL" id="QEN-bW-f16">
-                                        <rect key="frame" x="0.0" y="0.0" width="350" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ministerio de agricultura" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCb-7h-JbY">
-                                                <rect key="frame" x="15" y="11" width="283" height="25"/>
+                                                <rect key="frame" x="14" y="11" width="350" height="25"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <color key="textColor" red="0.2156862745" green="0.22352941179999999" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_check_on" translatesAutoresizingMaskIntoConstraints="NO" id="j1d-kT-aim">
-                                                <rect key="frame" x="306" y="11" width="25" height="25"/>
+                                                <rect key="frame" x="306" y="11" width="25" height="24"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             </imageView>
                                         </subviews>
@@ -559,7 +575,7 @@
                                 </tableViewCell>
                             </prototypes>
                         </tableView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="www.dirpol.pe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cka-5V-hg2">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="www.dirpol.pe " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cka-5V-hg2">
                             <rect key="frame" x="45" y="377" width="285" height="21"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
@@ -573,7 +589,6 @@
                                 <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Buscar..." minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="x1f-OL-uv7">
                                     <rect key="frame" x="13" y="0.0" width="272" height="40"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                    <nil key="textColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                 </textField>
@@ -616,9 +631,9 @@
         <!--ContactoVC-->
         <scene sceneID="exA-Jn-z9G">
             <objects>
-                <viewController id="FKN-8E-e1q" customClass="ContactoVC" customModule="dirpol" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="FKN-8E-e1q" customClass="ContactoVC" customModule="DIRPOL" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mxk-Q4-kmO">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="800"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="780"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jzY-p4-3PS">
@@ -640,7 +655,7 @@
                                             <action selector="volver:" destination="FKN-8E-e1q" eventType="touchUpInside" id="38N-Jh-Zph"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contacte" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O7d-qr-uBm">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contáctenos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O7d-qr-uBm">
                                         <rect key="frame" x="70" y="23" width="235" height="35"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
@@ -666,10 +681,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xvS-xK-2id">
-                                <rect key="frame" x="0.0" y="64" width="375" height="736"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="716"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d4w-P8-FOn">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="736"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="716"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="llj-Wz-QvA">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="700"/>
@@ -681,7 +696,7 @@
                                                             <textField opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tX9-sr-4Ca">
                                                                 <rect key="frame" x="34" y="52" width="306" height="30"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                                                <color key="textColor" red="0.2156862745" green="0.22352941179999999" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                                 <userDefinedRuntimeAttributes>
@@ -699,7 +714,7 @@
                                                                     <outlet property="delegate" destination="FKN-8E-e1q" id="DzN-S1-U8b"/>
                                                                 </connections>
                                                             </textField>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hh-VC-3Ff">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre(s) y Apellido(s)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hh-VC-3Ff">
                                                                 <rect key="frame" x="34" y="23" width="306" height="21"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -713,10 +728,10 @@
                                                         <rect key="frame" x="0.0" y="94" width="375" height="97"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                         <subviews>
-                                                            <textField opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sKd-8W-FRP">
+                                                            <textField opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="usuario@ejemplo.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sKd-8W-FRP">
                                                                 <rect key="frame" x="34" y="53" width="306" height="30"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                                                <color key="textColor" red="0.2156862745" green="0.22352941179999999" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                                 <userDefinedRuntimeAttributes>
@@ -751,7 +766,7 @@
                                                             <textField opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nop-o5-RsD">
                                                                 <rect key="frame" x="34" y="53" width="306" height="30"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                                                <color key="textColor" red="0.2156862745" green="0.22352941179999999" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                                 <userDefinedRuntimeAttributes>
@@ -769,7 +784,7 @@
                                                                     <outlet property="delegate" destination="FKN-8E-e1q" id="hQD-WY-Nqp"/>
                                                                 </connections>
                                                             </textField>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Empresa / Institución" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYj-yM-SYj">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre / Empresa / Institución" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYj-yM-SYj">
                                                                 <rect key="frame" x="34" y="17" width="306" height="21"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -849,7 +864,7 @@
                                                                 <rect key="frame" x="34" y="46" width="306" height="128"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <color key="textColor" red="0.2156862745" green="0.22352941179999999" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                                 <userDefinedRuntimeAttributes>
@@ -993,10 +1008,10 @@
                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Agradecemos que te hayas dado unos minutos para enviarnos su mensaje" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TNP-DY-cj4">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Agradecemos los minutos que dedicó para enviar el mensaje." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TNP-DY-cj4">
                             <rect key="frame" x="41" y="351" width="292" height="182"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="23"/>
                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -1014,9 +1029,9 @@
         <!--Acerca DeVC-->
         <scene sceneID="9kh-El-Kca">
             <objects>
-                <viewController id="nh1-gx-sqo" customClass="AcercaDeVC" customModule="dirpol" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="nh1-gx-sqo" customClass="AcercaDeVC" customModule="DIRPOL" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ase-Bo-5SB">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m6Q-hX-0Ko">
@@ -1059,13 +1074,11 @@
                                 <color key="backgroundColor" red="0.90588235289999997" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zMf-bG-sQy">
-                                <rect key="frame" x="0.0" y="196" width="375" height="471"/>
+                                <rect key="frame" x="16" y="196" width="343" height="451"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <attributedString key="attributedText">
-                                    <fragment>
-                                        <string key="content">DirPol™
-</string>
+                                    <fragment content="DIRPOL    ">
                                         <attributes>
                                             <font key="NSFont" size="18" name=".SFNSText"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
@@ -1074,11 +1087,11 @@
                                     <fragment>
                                         <string key="content">Versión 1.0.0.00000
 
-Copyright 2018-2019 Directorio Policial
+Copyright 2020  Directorio Policial SRL
 
 Patentes en trámite
 
-El nombre DirPol, las marcas comerciales y los logotipos relacionados, son marcas comerciales del Directorio Policial o de entidades vinculadas.
+El nombre DIRPOL, las marcas comerciales y los logotipos relacionados, son marcas registradas de la empresa Directorio Policial SRL.
 
 </string>
                                         <attributes>
@@ -1117,18 +1130,18 @@ sanciones penales/civiles y serán objeto de todas las acciones judiciales que c
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ViD-Rq-vSr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1998" y="1384"/>
+            <point key="canvasLocation" x="1997.5999999999999" y="1383.9580209895053"/>
         </scene>
         <!--Listado TemaVC-->
         <scene sceneID="wOW-G8-4fa">
             <objects>
-                <viewController id="w4B-IB-e3s" customClass="ListadoTemaVC" customModule="dirpol" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="w4B-IB-e3s" customClass="ListadoTemaVC" customModule="DIRPOL" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="azH-IU-aKD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oA8-nz-94r">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <connections>
                                     <action selector="volver:" destination="w4B-IB-e3s" eventType="touchUpInside" id="3i5-Fb-jqg"/>
@@ -1136,11 +1149,11 @@ sanciones penales/civiles y serán objeto de todas las acciones judiciales que c
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CgJ-1j-EsG">
-                                <rect key="frame" x="22" y="74" width="330" height="519"/>
+                                <rect key="frame" x="22" y="74" width="330" height="499"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jf1-q1-Z4j">
-                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                        <rect key="frame" x="8" y="8" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="ic_cerrar">
                                             <color key="titleColor" red="0.0" green="0.40784313729999999" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1150,14 +1163,14 @@ sanciones penales/civiles y serán objeto de todas las acciones judiciales que c
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Selecciona un tema" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uoQ-81-nJW">
-                                        <rect key="frame" x="47" y="19" width="235" height="21"/>
+                                        <rect key="frame" x="47" y="8" width="235" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.2156862745" green="0.22352941179999999" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kg3-oX-72E">
-                                        <rect key="frame" x="0.0" y="48" width="330" height="471"/>
+                                        <rect key="frame" x="0.0" y="48" width="330" height="408"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
@@ -1165,11 +1178,11 @@ sanciones penales/civiles y serán objeto de todas las acciones judiciales que c
                                                 <rect key="frame" x="0.0" y="28" width="330" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="baf-L1-be5" id="ovm-ag-Gfu">
-                                                    <rect key="frame" x="0.0" y="0.0" width="330" height="43.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="330" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bloqueo de cuenta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q16-w2-mr3">
-                                                            <rect key="frame" x="26" y="11" width="289" height="21"/>
+                                                            <rect key="frame" x="25" y="11" width="330" height="19"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <color key="textColor" red="0.30663409279999998" green="0.30663409279999998" blue="0.30663409279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1185,9 +1198,9 @@ sanciones penales/civiles y serán objeto de todas las acciones judiciales que c
                                         </connections>
                                     </tableView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CFo-MG-AQ7">
-                                        <rect key="frame" x="290" y="0.0" width="40" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="ic_seleccion">
+                                        <rect key="frame" x="262" y="461" width="60" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                        <state key="normal" title="OK">
                                             <color key="titleColor" red="0.0" green="0.40784313729999999" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
@@ -1220,7 +1233,7 @@ sanciones penales/civiles y serán objeto de todas las acciones judiciales que c
         <!--MenuVC-->
         <scene sceneID="H3l-dI-FqN">
             <objects>
-                <viewController id="hi9-dQ-Hi5" customClass="MenuVC" customModule="dirpol" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="hi9-dQ-Hi5" customClass="MenuVC" customModule="DIRPOL" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MVz-ko-dCC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1241,7 +1254,7 @@ sanciones penales/civiles y serán objeto de todas las acciones judiciales que c
                                         <rect key="frame" x="0.0" y="28" width="303" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xz5-bE-XCN" id="gM2-UG-JP7">
-                                            <rect key="frame" x="0.0" y="0.0" width="303" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="303" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1266,9 +1279,9 @@ sanciones penales/civiles y serán objeto de todas las acciones judiciales que c
         <!--Alto Mando PolicialVC-->
         <scene sceneID="mgk-px-AKw">
             <objects>
-                <viewController id="MFz-ey-Snz" customClass="AltoMandoPolicialVC" customModule="dirpol" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="MFz-ey-Snz" customClass="AltoMandoPolicialVC" customModule="DIRPOL" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fuM-7V-eyg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0wb-PO-OIh">
@@ -1317,7 +1330,6 @@ sanciones penales/civiles y serán objeto de todas las acciones judiciales que c
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="15" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Kvc-RR-UrX">
                                         <rect key="frame" x="8" y="6" width="284" height="37"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                        <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="search"/>
                                         <connections>
@@ -1357,7 +1369,7 @@ sanciones penales/civiles y serán objeto de todas las acciones judiciales que c
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2x6-ye-Gds">
-                                <rect key="frame" x="0.0" y="128" width="375" height="539"/>
+                                <rect key="frame" x="0.0" y="128" width="375" height="519"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -1365,11 +1377,11 @@ sanciones penales/civiles y serán objeto de todas las acciones judiciales que c
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gb2-Nd-lOZ" id="bMz-Ev-ujb">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bloqueo de cuenta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SOK-lH-P0l">
-                                                    <rect key="frame" x="29" y="11" width="317" height="21"/>
+                                                    <rect key="frame" x="28" y="10" width="375" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.30663409279999998" green="0.30663409279999998" blue="0.30663409279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1402,7 +1414,7 @@ sanciones penales/civiles y serán objeto de todas las acciones judiciales que c
         <!--Busqueda AvanzadaVC-->
         <scene sceneID="h9q-ws-OcU">
             <objects>
-                <viewController id="KS7-qP-IVI" customClass="BusquedaAvanzadaVC" customModule="dirpol" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="KS7-qP-IVI" customClass="BusquedaAvanzadaVC" customModule="DIRPOL" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="u4m-fl-gaT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1464,7 +1476,6 @@ sanciones penales/civiles y serán objeto de todas las acciones judiciales que c
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="siy-Nn-bGH">
                                         <rect key="frame" x="45" y="37" width="285" height="30"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                        <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -1557,7 +1568,6 @@ sanciones penales/civiles y serán objeto de todas las acciones judiciales que c
                                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Selecciona categoría" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="keL-aI-8pa">
                                                 <rect key="frame" x="8" y="0.0" width="235" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -1600,9 +1610,9 @@ sanciones penales/civiles y serán objeto de todas las acciones judiciales que c
         <!--Panel UsuarioVC-->
         <scene sceneID="7J2-jS-eQ5">
             <objects>
-                <viewController id="lHv-2e-iUp" customClass="PanelUsuarioVC" customModule="dirpol" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="lHv-2e-iUp" customClass="PanelUsuarioVC" customModule="DIRPOL" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xId-jU-gR7">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="700"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="680"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ckP-Mn-daN">
@@ -1624,7 +1634,7 @@ sanciones penales/civiles y serán objeto de todas las acciones judiciales que c
                                             <action selector="volver:" destination="lHv-2e-iUp" eventType="touchUpInside" id="QUN-0P-MKA"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Panel de usuario" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9PQ-qD-bAJ">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Panel de Usuario" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9PQ-qD-bAJ">
                                         <rect key="frame" x="70" y="23" width="235" height="35"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
@@ -1642,12 +1652,11 @@ sanciones penales/civiles y serán objeto de todas las acciones judiciales que c
                                 </subviews>
                                 <color key="backgroundColor" red="0.90588235289999997" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="375" id="mre-U0-OP2"/>
-                                    <constraint firstAttribute="height" constant="64" id="nqT-Te-HFQ"/>
+                                    <constraint firstAttribute="height" constant="64" id="ivi-nT-NUu"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5kV-hB-rpt">
-                                <rect key="frame" x="0.0" y="-37" width="375" height="1"/>
+                                <rect key="frame" x="0.0" y="-57" width="375" height="1"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" red="0.19215686269999999" green="0.36078431370000003" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1655,22 +1664,21 @@ sanciones penales/civiles y serán objeto de todas las acciones judiciales que c
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="38n-wN-71Z">
-                                <rect key="frame" x="0.0" y="64" width="375" height="636"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="555"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SZs-7e-red">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="636"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="555"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d4X-f8-U9V">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="636"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="553"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bww-W7-QlV">
                                                         <rect key="frame" x="0.0" y="31" width="375" height="74"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                         <subviews>
-                                                            <textField opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y9K-8x-BHY">
-                                                                <rect key="frame" x="45" y="37" width="285" height="30"/>
+                                                            <textField opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y9K-8x-BHY">
+                                                                <rect key="frame" x="45" y="37" width="285" height="34"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                                                <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                                                 <userDefinedRuntimeAttributes>
@@ -1688,7 +1696,7 @@ sanciones penales/civiles y serán objeto de todas las acciones judiciales que c
                                                                     <outlet property="delegate" destination="lHv-2e-iUp" id="4iu-cg-DR4"/>
                                                                 </connections>
                                                             </textField>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcq-G1-kv5">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre / Empresa / Institución" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcq-G1-kv5">
                                                                 <rect key="frame" x="45" y="8" width="285" height="21"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -1705,7 +1713,6 @@ sanciones penales/civiles y serán objeto de todas las acciones judiciales que c
                                                             <textField opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="csb-w9-PAH">
                                                                 <rect key="frame" x="45" y="37" width="285" height="30"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                                                <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                                                 <userDefinedRuntimeAttributes>
@@ -1740,7 +1747,6 @@ sanciones penales/civiles y serán objeto de todas las acciones judiciales que c
                                                             <textField opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q6l-gS-cJ3">
                                                                 <rect key="frame" x="45" y="37" width="285" height="30"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                                                <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES"/>
                                                                 <userDefinedRuntimeAttributes>
@@ -1775,7 +1781,6 @@ sanciones penales/civiles y serán objeto de todas las acciones judiciales que c
                                                             <textField opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q6m-ws-R7M">
                                                                 <rect key="frame" x="45" y="37" width="285" height="30"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                                                <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES"/>
                                                                 <userDefinedRuntimeAttributes>
@@ -1807,7 +1812,6 @@ sanciones penales/civiles y serán objeto de todas las acciones judiciales que c
                                                             <textField opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BhN-nl-PCp">
                                                                 <rect key="frame" x="45" y="37" width="285" height="30"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                                                <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
                                                                 <userDefinedRuntimeAttributes>
@@ -1842,7 +1846,6 @@ sanciones penales/civiles y serán objeto de todas las acciones judiciales que c
                                                             <textField opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y8h-fl-uBK">
                                                                 <rect key="frame" x="45" y="37" width="285" height="30"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                                                <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="done"/>
                                                                 <userDefinedRuntimeAttributes>
@@ -1860,7 +1863,7 @@ sanciones penales/civiles y serán objeto de todas las acciones judiciales que c
                                                                     <outlet property="delegate" destination="lHv-2e-iUp" id="bio-YN-N3P"/>
                                                                 </connections>
                                                             </textField>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Confirma correo electrónico" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yk0-Tb-bLG">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Confirme su dirección de correo electrónico" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.84999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="yk0-Tb-bLG">
                                                                 <rect key="frame" x="45" y="8" width="285" height="21"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -1870,56 +1873,61 @@ sanciones penales/civiles y serán objeto de todas las acciones judiciales que c
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </view>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pRv-Ll-4qH">
-                                                        <rect key="frame" x="0.0" y="575" width="375" height="61"/>
-                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                                        <color key="backgroundColor" red="0.2156862745" green="0.42745098040000001" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <state key="normal" image="ic_paloma">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </state>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <real key="value" value="0.0"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <action selector="guardaUsuario:" destination="lHv-2e-iUp" eventType="touchUpInside" id="gQx-cc-vjc"/>
-                                                        </connections>
-                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="636" id="42w-ii-6FJ"/>
+                                                    <constraint firstAttribute="width" secondItem="d4X-f8-U9V" secondAttribute="height" multiplier="375:553" id="jtz-fo-7fR"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="d4X-f8-U9V" firstAttribute="top" secondItem="SZs-7e-red" secondAttribute="top" id="B6S-Ua-wFm"/>
-                                            <constraint firstAttribute="trailing" secondItem="d4X-f8-U9V" secondAttribute="trailing" id="hRa-1p-R3L"/>
-                                            <constraint firstItem="d4X-f8-U9V" firstAttribute="leading" secondItem="SZs-7e-red" secondAttribute="leading" id="kfd-o0-RpZ"/>
-                                            <constraint firstItem="d4X-f8-U9V" firstAttribute="centerX" secondItem="SZs-7e-red" secondAttribute="centerX" id="l1q-JP-90D"/>
-                                            <constraint firstAttribute="bottom" secondItem="d4X-f8-U9V" secondAttribute="bottom" id="ndj-gj-gtX"/>
+                                            <constraint firstItem="d4X-f8-U9V" firstAttribute="top" secondItem="SZs-7e-red" secondAttribute="top" id="6Ca-5x-k2B"/>
+                                            <constraint firstAttribute="bottom" secondItem="d4X-f8-U9V" secondAttribute="bottom" id="Id5-sK-G73"/>
+                                            <constraint firstAttribute="trailing" secondItem="d4X-f8-U9V" secondAttribute="trailing" id="OlE-y3-Qt0"/>
+                                            <constraint firstItem="d4X-f8-U9V" firstAttribute="leading" secondItem="SZs-7e-red" secondAttribute="leading" id="PhP-Xu-35b"/>
                                         </constraints>
                                     </scrollView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="SZs-7e-red" firstAttribute="leading" secondItem="38n-wN-71Z" secondAttribute="leading" id="9uT-Go-Y5P"/>
-                                    <constraint firstAttribute="bottom" secondItem="SZs-7e-red" secondAttribute="bottom" id="PBK-ns-r5P"/>
-                                    <constraint firstAttribute="trailing" secondItem="SZs-7e-red" secondAttribute="trailing" id="gwY-IY-ddC"/>
-                                    <constraint firstItem="SZs-7e-red" firstAttribute="top" secondItem="38n-wN-71Z" secondAttribute="top" id="nOJ-6z-bja"/>
+                                    <constraint firstItem="d4X-f8-U9V" firstAttribute="width" secondItem="38n-wN-71Z" secondAttribute="width" id="5F4-Rh-k9E"/>
+                                    <constraint firstAttribute="bottom" secondItem="SZs-7e-red" secondAttribute="bottom" id="Fyc-CT-7cJ"/>
+                                    <constraint firstItem="SZs-7e-red" firstAttribute="top" secondItem="38n-wN-71Z" secondAttribute="top" id="ZA9-i5-0cq"/>
+                                    <constraint firstAttribute="trailing" secondItem="SZs-7e-red" secondAttribute="trailing" id="cAT-aS-T85"/>
+                                    <constraint firstItem="SZs-7e-red" firstAttribute="leading" secondItem="38n-wN-71Z" secondAttribute="leading" id="f8a-25-3Z2"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pRv-Ll-4qH">
+                                <rect key="frame" x="0.0" y="619" width="375" height="61"/>
+                                <color key="backgroundColor" red="0.2156862745" green="0.42745098040000001" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="Kw4-ON-Y8F"/>
+                                </constraints>
+                                <state key="normal" image="ic_paloma">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="guardaUsuario:" destination="lHv-2e-iUp" eventType="touchUpInside" id="gQx-cc-vjc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="38n-wN-71Z" firstAttribute="leading" secondItem="wWc-fh-TYq" secondAttribute="leading" id="CHn-MZ-m9m"/>
-                            <constraint firstItem="38n-wN-71Z" firstAttribute="trailing" secondItem="wWc-fh-TYq" secondAttribute="trailing" id="cTA-am-eG9"/>
-                            <constraint firstItem="38n-wN-71Z" firstAttribute="top" secondItem="ckP-Mn-daN" secondAttribute="bottom" id="d3n-sC-wN4"/>
-                            <constraint firstItem="38n-wN-71Z" firstAttribute="bottom" secondItem="wWc-fh-TYq" secondAttribute="bottom" id="nb8-qk-Xkx"/>
-                            <constraint firstItem="ckP-Mn-daN" firstAttribute="leading" secondItem="wWc-fh-TYq" secondAttribute="leading" id="oK5-Um-Yw6"/>
-                            <constraint firstItem="ckP-Mn-daN" firstAttribute="trailing" secondItem="wWc-fh-TYq" secondAttribute="trailing" id="sFS-M0-53s"/>
-                            <constraint firstItem="ckP-Mn-daN" firstAttribute="top" secondItem="xId-jU-gR7" secondAttribute="top" id="wKs-PG-yeC"/>
+                            <constraint firstItem="pRv-Ll-4qH" firstAttribute="top" secondItem="38n-wN-71Z" secondAttribute="bottom" id="EVW-Se-1dS"/>
+                            <constraint firstItem="pRv-Ll-4qH" firstAttribute="trailing" secondItem="wWc-fh-TYq" secondAttribute="trailing" id="H4t-dR-rgm"/>
+                            <constraint firstItem="pRv-Ll-4qH" firstAttribute="bottom" secondItem="wWc-fh-TYq" secondAttribute="bottom" id="HDK-ff-N0K"/>
+                            <constraint firstItem="38n-wN-71Z" firstAttribute="top" secondItem="ckP-Mn-daN" secondAttribute="bottom" id="IbC-nN-TSG"/>
+                            <constraint firstItem="38n-wN-71Z" firstAttribute="leading" secondItem="wWc-fh-TYq" secondAttribute="leading" id="If9-Eb-ToG"/>
+                            <constraint firstItem="pRv-Ll-4qH" firstAttribute="leading" secondItem="wWc-fh-TYq" secondAttribute="leading" id="PrB-dY-Swj"/>
+                            <constraint firstItem="ckP-Mn-daN" firstAttribute="top" secondItem="wWc-fh-TYq" secondAttribute="top" id="Qky-1s-dy7"/>
+                            <constraint firstItem="ckP-Mn-daN" firstAttribute="trailing" secondItem="wWc-fh-TYq" secondAttribute="trailing" id="dRO-IJ-xLX"/>
+                            <constraint firstItem="38n-wN-71Z" firstAttribute="trailing" secondItem="wWc-fh-TYq" secondAttribute="trailing" id="dku-cU-nFC"/>
+                            <constraint firstItem="ckP-Mn-daN" firstAttribute="leading" secondItem="wWc-fh-TYq" secondAttribute="leading" id="eBR-ur-GDM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wWc-fh-TYq"/>
                     </view>
@@ -1939,14 +1947,14 @@ sanciones penales/civiles y serán objeto de todas las acciones judiciales que c
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hYd-1Q-a3T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3420" y="-159"/>
+            <point key="canvasLocation" x="3420" y="-159.22038980509745"/>
         </scene>
         <!--Detalle BusquedaVC-->
         <scene sceneID="iMS-Bk-e4B">
             <objects>
-                <viewController id="VGs-Ym-36f" customClass="DetalleBusquedaVC" customModule="dirpol" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="VGs-Ym-36f" customClass="DetalleBusquedaVC" customModule="DIRPOL" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UIj-ww-BPG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="800"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="780"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AhA-MR-X1t">
@@ -2003,10 +2011,10 @@ sanciones penales/civiles y serán objeto de todas las acciones judiciales que c
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G7p-Yx-ZtU">
-                                <rect key="frame" x="0.0" y="64" width="375" height="736"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="716"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Imw-Cn-LSx">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="736"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="716"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ivG-9Q-Meo">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="700"/>
@@ -2058,11 +2066,11 @@ sanciones penales/civiles y serán objeto de todas las acciones judiciales que c
                                                                                 <color key="textColor" red="0.2188213162" green="0.2188213162" blue="0.2188213162" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No Aplica" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VPm-Rz-Ra4">
+                                                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No disponible" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VPm-Rz-Ra4">
                                                                                 <rect key="frame" x="47" y="21" width="320" height="20"/>
                                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
@@ -2085,10 +2093,10 @@ sanciones penales/civiles y serán objeto de todas las acciones judiciales que c
                                                                                 <color key="textColor" red="0.2188213162" green="0.2188213162" blue="0.2188213162" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No Aplica" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cmh-jr-aBc">
+                                                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No disponible" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cmh-jr-aBc">
                                                                                 <rect key="frame" x="47" y="23" width="320" height="20"/>
                                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
@@ -2111,10 +2119,10 @@ sanciones penales/civiles y serán objeto de todas las acciones judiciales que c
                                                                                 <color key="textColor" red="0.2188213162" green="0.2188213162" blue="0.2188213162" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No Aplica" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="915-fX-quo">
+                                                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No disponible" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="915-fX-quo">
                                                                                 <rect key="frame" x="47" y="23" width="320" height="20"/>
                                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
@@ -2152,10 +2160,10 @@ sanciones penales/civiles y serán objeto de todas las acciones judiciales que c
                                                                                 <color key="textColor" red="0.2188213162" green="0.2188213162" blue="0.2188213162" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Perri delgado Juan Ernesto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ld8-Zc-B0a">
-                                                                                <rect key="frame" x="47" y="23" width="320" height="20"/>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Perri delgado Juan Ernesto" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ld8-Zc-B0a">
+                                                                                <rect key="frame" x="23" y="18" width="344" height="25"/>
                                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
@@ -2178,9 +2186,9 @@ sanciones penales/civiles y serán objeto de todas las acciones judiciales que c
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Comisario" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SAx-5L-JIN">
-                                                                                <rect key="frame" x="47" y="23" width="320" height="20"/>
+                                                                                <rect key="frame" x="23" y="18" width="344" height="25"/>
                                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
@@ -2203,9 +2211,9 @@ sanciones penales/civiles y serán objeto de todas las acciones judiciales que c
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Comisaria PNP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7dv-QF-GVw">
-                                                                                <rect key="frame" x="47" y="23" width="320" height="20"/>
+                                                                                <rect key="frame" x="23" y="18" width="344" height="25"/>
                                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
@@ -2228,9 +2236,9 @@ sanciones penales/civiles y serán objeto de todas las acciones judiciales que c
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Av. Principal " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7CH-M4-oMk">
-                                                                                <rect key="frame" x="47" y="23" width="320" height="20"/>
+                                                                                <rect key="frame" x="23" y="18" width="344" height="25"/>
                                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
@@ -2253,9 +2261,9 @@ sanciones penales/civiles y serán objeto de todas las acciones judiciales que c
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bagua" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QxI-Sv-rld">
-                                                                                <rect key="frame" x="47" y="23" width="320" height="20"/>
+                                                                                <rect key="frame" x="23" y="18" width="344" height="25"/>
                                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                                                 <color key="textColor" red="0.19215686269999999" green="0.36078431370000003" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
@@ -2320,7 +2328,8 @@ sanciones penales/civiles y serán objeto de todas las acciones judiciales que c
                         <outlet property="descripcion" destination="7dv-QF-GVw" id="bgq-70-X16"/>
                         <outlet property="direccion" destination="7CH-M4-oMk" id="E7d-4J-NYq"/>
                         <outlet property="lblDescripcionExpande" destination="UcN-YR-ocb" id="BH6-s3-V6K"/>
-                        <outlet property="lblDireccionExpande" destination="NFJ-z5-ccG" id="TlY-0X-tpX"/>
+                        <outlet property="lblDireccionExpande" destination="6Pd-1k-Wbq" id="Ciz-3g-COh"/>
+                        <outlet property="lblRegionProvincia" destination="NFJ-z5-ccG" id="JDF-BE-1y8"/>
                         <outlet property="lblTitulo" destination="5wQ-IG-XGG" id="yHS-ZC-XSG"/>
                         <outlet property="localizacion" destination="QxI-Sv-rld" id="fSM-z3-dmb"/>
                         <outlet property="mapa" destination="ZhQ-I7-k4b" id="xkc-46-8eK"/>
@@ -2345,14 +2354,14 @@ sanciones penales/civiles y serán objeto de todas las acciones judiciales que c
                             <color key="backgroundColor" red="0.19215686269999999" green="0.36078431370000003" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </view>
                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="90h-xH-RLx">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="92"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="112"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qWd-Lg-WIM">
-                                    <rect key="frame" x="20" y="37" width="355" height="35"/>
+                                    <rect key="frame" x="20" y="39" width="355" height="35"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Comisaría PNP El Muyo - Bahua" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NFJ-z5-ccG">
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NFJ-z5-ccG">
                                             <rect key="frame" x="58" y="7" width="289" height="21"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -2369,7 +2378,7 @@ sanciones penales/civiles y serán objeto de todas las acciones judiciales que c
                                     <rect key="frame" x="20" y="8" width="355" height="35"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Comisaría PNP El Muyo - Bahua" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UcN-YR-ocb">
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UcN-YR-ocb">
                                             <rect key="frame" x="58" y="7" width="289" height="21"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -2390,6 +2399,23 @@ sanciones penales/civiles y serán objeto de todas las acciones judiciales que c
                                         <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="YES"/>
                                     </userDefinedRuntimeAttributes>
                                 </view>
+                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ANh-x7-RXE">
+                                    <rect key="frame" x="20" y="72" width="355" height="35"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Pd-1k-Wbq">
+                                            <rect key="frame" x="58" y="7" width="289" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" red="0.30663409279999998" green="0.30663409279999998" blue="0.30663409279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
@@ -2403,9 +2429,9 @@ sanciones penales/civiles y serán objeto de todas las acciones judiciales que c
         <!--Busqueda AvanzadaVC-->
         <scene sceneID="8KS-iy-bKI">
             <objects>
-                <viewController id="Pls-1r-yxN" customClass="BusquedaAvanzadaVC" customModule="dirpol" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Pls-1r-yxN" customClass="BusquedaAvanzadaVC" customModule="DIRPOL" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TJX-z4-uav">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0NJ-39-pH9">
@@ -2450,7 +2476,7 @@ sanciones penales/civiles y serán objeto de todas las acciones judiciales que c
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHG-HY-a74">
-                                <rect key="frame" x="0.0" y="-70" width="375" height="1"/>
+                                <rect key="frame" x="0.0" y="-90" width="375" height="1"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" red="0.19215686269999999" green="0.36078431370000003" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -2458,10 +2484,10 @@ sanciones penales/civiles y serán objeto de todas las acciones judiciales que c
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="owL-89-w6a">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="583"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SZI-Qc-5S0">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="583"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ixX-VE-t3D">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
@@ -2474,7 +2500,7 @@ sanciones penales/civiles y serán objeto de todas las acciones judiciales que c
                                                                 <rect key="frame" x="0.0" y="377" width="375" height="76"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Categoría" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTj-av-qMF">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Distritos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTj-av-qMF">
                                                                         <rect key="frame" x="45" y="8" width="285" height="21"/>
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -2485,7 +2511,7 @@ sanciones penales/civiles y serán objeto de todas las acciones judiciales que c
                                                                         <rect key="frame" x="45" y="37" width="285" height="31"/>
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                                         <subviews>
-                                                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Selecciona categoría" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bW0-g6-32f">
+                                                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Seleccione distrito" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bW0-g6-32f">
                                                                                 <rect key="frame" x="8" y="0.0" width="235" height="30"/>
                                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2540,7 +2566,6 @@ sanciones penales/civiles y serán objeto de todas las acciones judiciales que c
                                                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bY2-C9-Z9e">
                                                                         <rect key="frame" x="45" y="37" width="285" height="31"/>
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                                                        <nil key="textColor"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                                         <userDefinedRuntimeAttributes>
@@ -2710,9 +2735,9 @@ sanciones penales/civiles y serán objeto de todas las acciones judiciales que c
         <!--DetalleB AvanzadaVC-->
         <scene sceneID="4Ej-Kk-gaR">
             <objects>
-                <viewController id="wYP-7F-3Eg" customClass="DetalleBAvanzadaVC" customModule="dirpol" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="wYP-7F-3Eg" customClass="DetalleBAvanzadaVC" customModule="DIRPOL" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kew-0u-W9u">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sd6-br-wrJ">
@@ -2761,7 +2786,6 @@ sanciones penales/civiles y serán objeto de todas las acciones judiciales que c
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="15" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="FxC-0A-TBB">
                                         <rect key="frame" x="8" y="5" width="284" height="37"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                        <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="search"/>
                                         <connections>
@@ -2801,7 +2825,7 @@ sanciones penales/civiles y serán objeto de todas las acciones judiciales que c
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="epw-un-RyM">
-                                <rect key="frame" x="0.0" y="128" width="375" height="539"/>
+                                <rect key="frame" x="0.0" y="128" width="375" height="519"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -2809,11 +2833,11 @@ sanciones penales/civiles y serán objeto de todas las acciones judiciales que c
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XkN-Cv-tlw" id="e2n-23-9da">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bloqueo de cuenta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="18i-bm-4RS">
-                                                    <rect key="frame" x="23" y="11" width="328" height="21"/>
+                                                    <rect key="frame" x="21" y="8" width="376" height="23"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.30663409279999998" green="0.30663409279999998" blue="0.30663409279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2845,30 +2869,32 @@ sanciones penales/civiles y serán objeto de todas las acciones judiciales que c
         </scene>
     </scenes>
     <resources>
+        <image name="border_search" width="579" height="94"/>
+        <image name="escudo_cara_principal" width="412" height="461"/>
+        <image name="escudo_cara_secundaria" width="387" height="460"/>
+        <image name="fondocamara" width="3339" height="1878"/>
         <image name="ic_acerca_aleja" width="184" height="296"/>
         <image name="ic_back" width="32" height="32"/>
         <image name="ic_cerrar" width="30" height="30"/>
         <image name="ic_check_on" width="55" height="54"/>
-        <image name="ic_correo" width="35" height="25"/>
+        <image name="ic_correo" width="35" height="25.5"/>
         <image name="ic_derecha" width="32" height="32"/>
         <image name="ic_down" width="25" height="25"/>
         <image name="ic_expande" width="48" height="48"/>
+        <image name="ic_handselect" width="84" height="137"/>
         <image name="ic_home" width="96" height="96"/>
         <image name="ic_llamar" width="50" height="50"/>
-        <image name="ic_logo_policia" width="195" height="139"/>
         <image name="ic_lupa" width="25" height="25"/>
         <image name="ic_lupa_verde" width="50" height="50"/>
         <image name="ic_menu" width="56" height="35"/>
-        <image name="ic_paloma" width="53" height="41"/>
+        <image name="ic_paloma" width="53.5" height="41"/>
         <image name="ic_provincia" width="78" height="51"/>
-        <image name="ic_radio_off" width="27" height="27"/>
+        <image name="ic_radio_off" width="27" height="27.5"/>
         <image name="ic_radio_on" width="27" height="27"/>
         <image name="ic_region" width="66" height="90"/>
-        <image name="ic_seleccion" width="26" height="26"/>
         <image name="ic_volver" width="26" height="26"/>
         <image name="ic_volver_blanco" width="30" height="30"/>
         <image name="imgBusqueda" width="120" height="121"/>
-        <image name="img_header" width="1253" height="297"/>
         <image name="img_ok" width="567" height="496"/>
         <image name="logo" width="396" height="148"/>
         <image name="logo_v2" width="396" height="148"/>
