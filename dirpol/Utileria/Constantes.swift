@@ -11,7 +11,7 @@ import UIKit
 
 struct url {
     
-    static let principal = "http://acceso127.lorexddns.net:8084/DirPolServicio/public"
+    //static let principal = "http://acceso127.lorexddns.net:8084/DirPolServicio/public"
     //static let principal = "http://localhost:8888/DirPolServicio/public"
 }
 

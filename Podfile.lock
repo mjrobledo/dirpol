@@ -20,7 +20,7 @@ DEPENDENCIES:
   - SVProgressHUD
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - Alamofire
     - AlamofireObjectMapper
     - GoogleMaps
@@ -38,4 +38,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: f02413fbb22b5b75ce4a413a5378f088cbf9fa68
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.8.4

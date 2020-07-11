@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,10 +11,11 @@
 		6C3E98E5214C5746009FDF74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3E98E4214C5746009FDF74 /* AppDelegate.swift */; };
 		6C3E98E7214C5746009FDF74 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3E98E6214C5746009FDF74 /* ViewController.swift */; };
 		6C3E98EA214C5746009FDF74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C3E98E8214C5746009FDF74 /* Main.storyboard */; };
-		6C3E98EC214C5748009FDF74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C3E98EB214C5748009FDF74 /* Assets.xcassets */; };
 		6C3E98EF214C5748009FDF74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C3E98ED214C5748009FDF74 /* LaunchScreen.storyboard */; };
 		6C3E98FA214C5748009FDF74 /* dirpolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3E98F9214C5748009FDF74 /* dirpolTests.swift */; };
 		6C3E9905214C5748009FDF74 /* dirpolUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3E9904214C5748009FDF74 /* dirpolUITests.swift */; };
+		8B409ACF24B57ED5004ED46E /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B409ACE24B57ED5004ED46E /* Api.swift */; };
+		8B409AD224B58CED004ED46E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C3E98EB214C5748009FDF74 /* Assets.xcassets */; };
 		BE9554394D603684738B87F2 /* Pods_dirpolTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9263082E810C2440E3D76AE4 /* Pods_dirpolTests.framework */; };
 		C91C97CDA6C1A693D765894E /* Pods_dirpolUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FCB4BEBF2E7D94BAEF5A1D1 /* Pods_dirpolUITests.framework */; };
 		FA43C655215C2C9700495E32 /* Servicios.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA43C654215C2C9600495E32 /* Servicios.swift */; };
@@ -70,9 +71,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		039286BD2571DFE7E8AE82CC /* Pods-dirpolUITests.peru.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dirpolUITests.peru.xcconfig"; path = "Pods/Target Support Files/Pods-dirpolUITests/Pods-dirpolUITests.peru.xcconfig"; sourceTree = "<group>"; };
+		048EBC8AF4F4192BA7601E1D /* Pods-dirpolTests.colombia.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dirpolTests.colombia.xcconfig"; path = "Pods/Target Support Files/Pods-dirpolTests/Pods-dirpolTests.colombia.xcconfig"; sourceTree = "<group>"; };
+		04FD70831494C12CFA5761BB /* Pods-dirpolTests.peru.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dirpolTests.peru.xcconfig"; path = "Pods/Target Support Files/Pods-dirpolTests/Pods-dirpolTests.peru.xcconfig"; sourceTree = "<group>"; };
+		09614BF5394D1CDB0D937387 /* Pods-dirpol.peru.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dirpol.peru.xcconfig"; path = "Pods/Target Support Files/Pods-dirpol/Pods-dirpol.peru.xcconfig"; sourceTree = "<group>"; };
+		18962F5E0B9F5C4BC057B923 /* Pods-dirpolUITests.mexico.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dirpolUITests.mexico.xcconfig"; path = "Pods/Target Support Files/Pods-dirpolUITests/Pods-dirpolUITests.mexico.xcconfig"; sourceTree = "<group>"; };
 		21AD99D1E4FB36CE559D3E08 /* Pods-dirpolUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dirpolUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-dirpolUITests/Pods-dirpolUITests.release.xcconfig"; sourceTree = "<group>"; };
+		22AA28544D276140356D2BFA /* Pods-dirpolUITests.colombia.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dirpolUITests.colombia.xcconfig"; path = "Pods/Target Support Files/Pods-dirpolUITests/Pods-dirpolUITests.colombia.xcconfig"; sourceTree = "<group>"; };
+		23C56302C56222551723B3F6 /* Pods-dirpolTests.mexico.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dirpolTests.mexico.xcconfig"; path = "Pods/Target Support Files/Pods-dirpolTests/Pods-dirpolTests.mexico.xcconfig"; sourceTree = "<group>"; };
 		23E12D3A3BDCA4A915FCC1D7 /* Pods-dirpolTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dirpolTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dirpolTests/Pods-dirpolTests.debug.xcconfig"; sourceTree = "<group>"; };
 		42280B81768CDC12E7BFC9C1 /* Pods-dirpol.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dirpol.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dirpol/Pods-dirpol.debug.xcconfig"; sourceTree = "<group>"; };
+		639B2BB21BD8A5156C0DFA6C /* Pods-dirpol.colombia.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dirpol.colombia.xcconfig"; path = "Pods/Target Support Files/Pods-dirpol/Pods-dirpol.colombia.xcconfig"; sourceTree = "<group>"; };
 		6C3E98E1214C5746009FDF74 /* DIRPOL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DIRPOL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C3E98E4214C5746009FDF74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6C3E98E6214C5746009FDF74 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -87,9 +96,14 @@
 		6C3E9904214C5748009FDF74 /* dirpolUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dirpolUITests.swift; sourceTree = "<group>"; };
 		6C3E9906214C5748009FDF74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80A7DDB1983A89542503EA9E /* Pods-dirpol.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dirpol.release.xcconfig"; path = "Pods/Target Support Files/Pods-dirpol/Pods-dirpol.release.xcconfig"; sourceTree = "<group>"; };
+		8B409ACB24B57E11004ED46E /* ConfigPeru.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ConfigPeru.xcconfig; sourceTree = "<group>"; };
+		8B409ACC24B57E26004ED46E /* ConfigColombia.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ConfigColombia.xcconfig; sourceTree = "<group>"; };
+		8B409ACD24B57E33004ED46E /* ConfigMexico.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ConfigMexico.xcconfig; sourceTree = "<group>"; };
+		8B409ACE24B57ED5004ED46E /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		9263082E810C2440E3D76AE4 /* Pods_dirpolTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dirpolTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		941BF69C99F0BEBE1A6A5C01 /* Pods-dirpolTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dirpolTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-dirpolTests/Pods-dirpolTests.release.xcconfig"; sourceTree = "<group>"; };
 		9FCB4BEBF2E7D94BAEF5A1D1 /* Pods_dirpolUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dirpolUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C32A66D16A42F5B9E32B88A9 /* Pods-dirpol.mexico.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dirpol.mexico.xcconfig"; path = "Pods/Target Support Files/Pods-dirpol/Pods-dirpol.mexico.xcconfig"; sourceTree = "<group>"; };
 		E5AE02951DD073885AB2F2FE /* Pods-dirpolUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dirpolUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dirpolUITests/Pods-dirpolUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FA43C654215C2C9600495E32 /* Servicios.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Servicios.swift; sourceTree = "<group>"; };
 		FA43C657215CA0B400495E32 /* DetalleBAvanzadaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleBAvanzadaVC.swift; sourceTree = "<group>"; };
@@ -182,17 +196,17 @@
 		6C3E98E3214C5746009FDF74 /* dirpol */ = {
 			isa = PBXGroup;
 			children = (
+				6C3E98F0214C5748009FDF74 /* Info.plist */,
+				8B409ACA24B57DFE004ED46E /* Config */,
 				FAC2C04021517CE200A74FA3 /* Textos */,
 				FAC2C0292150570E00A74FA3 /* Modelos */,
 				FAC2C0282150570100A74FA3 /* Servicios */,
 				FAC2C0232150322B00A74FA3 /* Utileria */,
 				FAC2C030215069E900A74FA3 /* Aplicacion */,
-				6C3E98E4214C5746009FDF74 /* AppDelegate.swift */,
 				6C3E98E6214C5746009FDF74 /* ViewController.swift */,
 				6C3E98E8214C5746009FDF74 /* Main.storyboard */,
 				6C3E98EB214C5748009FDF74 /* Assets.xcassets */,
 				6C3E98ED214C5748009FDF74 /* LaunchScreen.storyboard */,
-				6C3E98F0214C5748009FDF74 /* Info.plist */,
 			);
 			path = dirpol;
 			sourceTree = "<group>";
@@ -225,6 +239,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8B409ACA24B57DFE004ED46E /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				6C3E98E4214C5746009FDF74 /* AppDelegate.swift */,
+				8B409ACB24B57E11004ED46E /* ConfigPeru.xcconfig */,
+				8B409ACC24B57E26004ED46E /* ConfigColombia.xcconfig */,
+				8B409ACD24B57E33004ED46E /* ConfigMexico.xcconfig */,
+				8B409ACE24B57ED5004ED46E /* Api.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
 		B08BF0283E6B48FD4868C5D9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -234,6 +260,15 @@
 				941BF69C99F0BEBE1A6A5C01 /* Pods-dirpolTests.release.xcconfig */,
 				E5AE02951DD073885AB2F2FE /* Pods-dirpolUITests.debug.xcconfig */,
 				21AD99D1E4FB36CE559D3E08 /* Pods-dirpolUITests.release.xcconfig */,
+				09614BF5394D1CDB0D937387 /* Pods-dirpol.peru.xcconfig */,
+				639B2BB21BD8A5156C0DFA6C /* Pods-dirpol.colombia.xcconfig */,
+				C32A66D16A42F5B9E32B88A9 /* Pods-dirpol.mexico.xcconfig */,
+				04FD70831494C12CFA5761BB /* Pods-dirpolTests.peru.xcconfig */,
+				048EBC8AF4F4192BA7601E1D /* Pods-dirpolTests.colombia.xcconfig */,
+				23C56302C56222551723B3F6 /* Pods-dirpolTests.mexico.xcconfig */,
+				039286BD2571DFE7E8AE82CC /* Pods-dirpolUITests.peru.xcconfig */,
+				22AA28544D276140356D2BFA /* Pods-dirpolUITests.colombia.xcconfig */,
+				18962F5E0B9F5C4BC057B923 /* Pods-dirpolUITests.mexico.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -493,8 +528,8 @@
 				FA9CD34D215739290032174B /* ViewMarcker.xib in Resources */,
 				FA9850C02151D162002F143D /* Contacto.storyboard in Resources */,
 				FAC2C0382150C04900A74FA3 /* Buscar.storyboard in Resources */,
+				8B409AD224B58CED004ED46E /* Assets.xcassets in Resources */,
 				6C3E98EF214C5748009FDF74 /* LaunchScreen.storyboard in Resources */,
-				6C3E98EC214C5748009FDF74 /* Assets.xcassets in Resources */,
 				6C3E98EA214C5746009FDF74 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -539,21 +574,12 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-dirpol/Pods-dirpol-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
-				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
-				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
-				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-dirpol/Pods-dirpol-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-dirpol/Pods-dirpol-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -601,13 +627,12 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-dirpol/Pods-dirpol-resources.sh",
-				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-dirpol/Pods-dirpol-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-dirpol/Pods-dirpol-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -651,6 +676,7 @@
 				FA9850C421521AF7002F143D /* BusquedaAvanzadaVC.swift in Sources */,
 				FA43C655215C2C9700495E32 /* Servicios.swift in Sources */,
 				FAC2C0572151A6DD00A74FA3 /* CellMenu.swift in Sources */,
+				8B409ACF24B57ED5004ED46E /* Api.swift in Sources */,
 				FAC2C0562151A6DD00A74FA3 /* CollMenu.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -716,8 +742,9 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		6C3E9907214C5748009FDF74 /* Debug */ = {
+		6C3E9907214C5748009FDF74 /* Peru */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B409ACB24B57E11004ED46E /* ConfigPeru.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -774,10 +801,11 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
-			name = Debug;
+			name = Peru;
 		};
-		6C3E9908214C5748009FDF74 /* Release */ = {
+		6C3E9908214C5748009FDF74 /* Colombia */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B409ACC24B57E26004ED46E /* ConfigColombia.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -828,12 +856,13 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = Colombia;
 		};
-		6C3E990A214C5748009FDF74 /* Debug */ = {
+		6C3E990A214C5748009FDF74 /* Peru */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 42280B81768CDC12E7BFC9C1 /* Pods-dirpol.debug.xcconfig */;
+			baseConfigurationReference = 09614BF5394D1CDB0D937387 /* Pods-dirpol.peru.xcconfig */;
 			buildSettings = {
+				APP_NAME_DISPLAY = DIRPOLP;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XYEE79Z2JZ;
@@ -848,12 +877,13 @@
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
-			name = Debug;
+			name = Peru;
 		};
-		6C3E990B214C5748009FDF74 /* Release */ = {
+		6C3E990B214C5748009FDF74 /* Colombia */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 80A7DDB1983A89542503EA9E /* Pods-dirpol.release.xcconfig */;
+			baseConfigurationReference = 639B2BB21BD8A5156C0DFA6C /* Pods-dirpol.colombia.xcconfig */;
 			buildSettings = {
+				APP_NAME_DISPLAY = DIRPOLC;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XYEE79Z2JZ;
@@ -863,16 +893,17 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.gravittas.dirpol;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gravittas.dirpol.colombia;
 				PRODUCT_NAME = DIRPOL;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
-			name = Release;
+			name = Colombia;
 		};
-		6C3E990D214C5748009FDF74 /* Debug */ = {
+		6C3E990D214C5748009FDF74 /* Peru */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 23E12D3A3BDCA4A915FCC1D7 /* Pods-dirpolTests.debug.xcconfig */;
+			baseConfigurationReference = 04FD70831494C12CFA5761BB /* Pods-dirpolTests.peru.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -890,11 +921,11 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/dirpol.app/dirpol";
 			};
-			name = Debug;
+			name = Peru;
 		};
-		6C3E990E214C5748009FDF74 /* Release */ = {
+		6C3E990E214C5748009FDF74 /* Colombia */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 941BF69C99F0BEBE1A6A5C01 /* Pods-dirpolTests.release.xcconfig */;
+			baseConfigurationReference = 048EBC8AF4F4192BA7601E1D /* Pods-dirpolTests.colombia.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -912,11 +943,11 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/dirpol.app/dirpol";
 			};
-			name = Release;
+			name = Colombia;
 		};
-		6C3E9910214C5748009FDF74 /* Debug */ = {
+		6C3E9910214C5748009FDF74 /* Peru */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E5AE02951DD073885AB2F2FE /* Pods-dirpolUITests.debug.xcconfig */;
+			baseConfigurationReference = 039286BD2571DFE7E8AE82CC /* Pods-dirpolUITests.peru.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -933,11 +964,11 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = dirpol;
 			};
-			name = Debug;
+			name = Peru;
 		};
-		6C3E9911214C5748009FDF74 /* Release */ = {
+		6C3E9911214C5748009FDF74 /* Colombia */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 21AD99D1E4FB36CE559D3E08 /* Pods-dirpolUITests.release.xcconfig */;
+			baseConfigurationReference = 22AA28544D276140356D2BFA /* Pods-dirpolUITests.colombia.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -954,7 +985,127 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = dirpol;
 			};
-			name = Release;
+			name = Colombia;
+		};
+		8B409AC624B57AFC004ED46E /* Mexico */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B409ACD24B57E33004ED46E /* ConfigMexico.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Mexico;
+		};
+		8B409AC724B57AFC004ED46E /* Mexico */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C32A66D16A42F5B9E32B88A9 /* Pods-dirpol.mexico.xcconfig */;
+			buildSettings = {
+				APP_NAME_DISPLAY = DIRPOLM;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XYEE79Z2JZ;
+				INFOPLIST_FILE = dirpol/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gravittas.dirpol.mexico;
+				PRODUCT_NAME = DIRPOL;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Mexico;
+		};
+		8B409AC824B57AFC004ED46E /* Mexico */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23C56302C56222551723B3F6 /* Pods-dirpolTests.mexico.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XYEE79Z2JZ;
+				INFOPLIST_FILE = dirpolTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gravittas.dirpolTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/dirpol.app/dirpol";
+			};
+			name = Mexico;
+		};
+		8B409AC924B57AFC004ED46E /* Mexico */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18962F5E0B9F5C4BC057B923 /* Pods-dirpolUITests.mexico.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XYEE79Z2JZ;
+				INFOPLIST_FILE = dirpolUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gravittas.dirpolUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = dirpol;
+			};
+			name = Mexico;
 		};
 /* End XCBuildConfiguration section */
 
@@ -962,38 +1113,42 @@
 		6C3E98DC214C5746009FDF74 /* Build configuration list for PBXProject "dirpol" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6C3E9907214C5748009FDF74 /* Debug */,
-				6C3E9908214C5748009FDF74 /* Release */,
+				6C3E9907214C5748009FDF74 /* Peru */,
+				6C3E9908214C5748009FDF74 /* Colombia */,
+				8B409AC624B57AFC004ED46E /* Mexico */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Colombia;
 		};
 		6C3E9909214C5748009FDF74 /* Build configuration list for PBXNativeTarget "dirpol" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6C3E990A214C5748009FDF74 /* Debug */,
-				6C3E990B214C5748009FDF74 /* Release */,
+				6C3E990A214C5748009FDF74 /* Peru */,
+				6C3E990B214C5748009FDF74 /* Colombia */,
+				8B409AC724B57AFC004ED46E /* Mexico */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Colombia;
 		};
 		6C3E990C214C5748009FDF74 /* Build configuration list for PBXNativeTarget "dirpolTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6C3E990D214C5748009FDF74 /* Debug */,
-				6C3E990E214C5748009FDF74 /* Release */,
+				6C3E990D214C5748009FDF74 /* Peru */,
+				6C3E990E214C5748009FDF74 /* Colombia */,
+				8B409AC824B57AFC004ED46E /* Mexico */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Colombia;
 		};
 		6C3E990F214C5748009FDF74 /* Build configuration list for PBXNativeTarget "dirpolUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6C3E9910214C5748009FDF74 /* Debug */,
-				6C3E9911214C5748009FDF74 /* Release */,
+				6C3E9910214C5748009FDF74 /* Peru */,
+				6C3E9911214C5748009FDF74 /* Colombia */,
+				8B409AC924B57AFC004ED46E /* Mexico */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Colombia;
 		};
 /* End XCConfigurationList section */
 	};

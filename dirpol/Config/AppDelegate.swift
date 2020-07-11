@@ -17,11 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        Api.config()
         Tema.configuraApariencia()
         
         window?.tintColor = UIColor.cPrincipal()
         
-        GMSServices.provideAPIKey("AIzaSyAxb0nBSc39zaJl2wPa0FIVybjO95ZxQEY")
+        GMSServices.provideAPIKey(Api.ProvideAPIKey)
  
         
         return true
