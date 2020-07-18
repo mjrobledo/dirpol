@@ -325,8 +325,7 @@ class InicioVC: UIViewController, segueMenu , MenuDelegate, busquedaDelegate, di
                 let inst:Institucion = sender as! Institucion
                 svc.institucion = inst
             }
-        }
-        
+        }        
     }
     
 

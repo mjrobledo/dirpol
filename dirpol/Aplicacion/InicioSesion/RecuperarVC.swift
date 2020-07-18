@@ -13,7 +13,7 @@ import Alamofire
 class RecuperarVC: UIViewController , UITextFieldDelegate{
 
     @IBOutlet weak var lblPregunta: UILabel!
-    @IBOutlet weak var lblMensaje: UILabel!
+    //@IBOutlet weak var lblMensaje: UILabel!
     @IBOutlet weak var txtCorreo: UITextField!
     
     @IBOutlet weak var scrollView: UIScrollView!
@@ -27,21 +27,35 @@ class RecuperarVC: UIViewController , UITextFieldDelegate{
         super.viewDidLoad()
         lblPregunta.text = texto
         // Do any additional setup after loading the view.
-        if texto == .NoRecueraTuPassword{
-            lblMensaje.text = .MensajePassword
+        if texto == .NoRecueraTuPassword {
+            self.navigationItem.title = "Contraseña"
+            //lblMensaje.text = .MensajePassword
             RecuperaPasswordUsuario = structServicio.RecuperaPassword
         }else{
-            lblMensaje.text = .MensajeUsuario
+            //lblMensaje.text = .MensajeUsuario
+            self.navigationItem.title = "Usuario"
             RecuperaPasswordUsuario = structServicio.RecuperaUsuario
         }
         
-        let tap1 = UITapGestureRecognizer(target: self, action: #selector(OcultarTeclado))
+        let tap1 = UITapGestureRecognizer(target: self, action: #selector(hideKeyBoard))
         self.viewForm.addGestureRecognizer(tap1)
     }
     
-    @objc func OcultarTeclado(){
+    @objc func hideKeyBoard(){
         self.view.endEditing(true)
     }
+    
+     @IBAction func call(_ sender: Any) {
+         Utileria.llamar(tel: "+5115006000", viewController: self)
+     }
+         
+     @IBAction func whatsapp(_ sender: Any) {
+         Utileria.openWhatsapp()
+     }
+     
+     @IBAction func facebook(_ sender: Any) {
+         Utileria.openFB()
+     }
 
     @IBAction func volver(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
@@ -57,7 +71,7 @@ class RecuperarVC: UIViewController , UITextFieldDelegate{
             return
         }
         let correo:String = (txtCorreo.text?.trim())!
-        self.OcultarTeclado()
+        self.hideKeyBoard()
         if Utileria.conexionInternet(){
         DispatchQueue.global(qos: .userInitiated).async {
             SVProgressHUD.show()

@@ -20,8 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Api.config()
         Tema.configuraApariencia()
         
-        window?.tintColor = UIColor.cPrincipal()
-        
+        window?.tintColor = UIColor.cPrincipal()        
         GMSServices.provideAPIKey(Api.ProvideAPIKey)
  
         

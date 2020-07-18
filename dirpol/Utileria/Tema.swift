@@ -12,22 +12,17 @@
 import UIKit
 
 struct Tema {
-    //c = Color seguido del una descripción a la que se haga referencia
-    static let cPrincipal =  UIColor(red:0.2431, green:0.5216, blue:0.6196, alpha:0.25)
-    static let cEnfatizar =  UIColor(red:0.2431, green:0.5216, blue:0.6196, alpha:0.25)
-    static let cSecundario =  UIColor(red:0.2431, green:0.5216, blue:0.6196, alpha:0.25)
-    
-      
     
     static func configuraApariencia() {
-        let navBarFont = UIFont(name: "System", size: 16)
+        let navBarFont = UIFont.systemFont(ofSize: 15)
             //UIFont.systemFont(ofSize: 14.0)
        // UIFont.systemFont(ofSize: 17.0)
         let navBarAppearance = UINavigationBar.appearance()
-        navBarAppearance.isTranslucent = true
-        //navBarAppearance.titleTextAttributes = [kCTForegroundColorAttributeName : UIColor.cPrincipal(), kCTFontAttributeName : navBarFont!] as [NSAttributedStringKey : Any]
-        
-        navBarAppearance.tintColor = UIColor.cPrincipal()
+        navBarAppearance.isTranslucent = false
+        navBarAppearance.titleTextAttributes = [kCTForegroundColorAttributeName : UIColor.white, kCTFontAttributeName : navBarFont] as [NSAttributedStringKey : Any]
+        navBarAppearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        navBarAppearance.tintColor = UIColor.white
+        navBarAppearance.barTintColor = UIColor.cPrincipal()
         
     }
 }
@@ -41,7 +36,7 @@ extension UIFont{
 }
 extension UIColor {
     class func cPrincipal() -> UIColor {
-        return UIColor(red: 46/255, green: 95/255, blue: 27/255, alpha: 1.0)
+        return UIColor(red: 45/255, green: 81/255, blue: 46/255, alpha: 1.0)
     }
     
     class func cEnfatizar() -> UIColor {

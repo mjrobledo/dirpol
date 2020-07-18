@@ -57,6 +57,46 @@ class Utileria: NSObject {
         }
         )
     }
+    
+    static func llamar(tel:String, viewController: UIViewController){
+        if let url = URL(string: "telprompt://\(tel)"), UIApplication.shared.canOpenURL(url) {
+            if #available(iOS 10, *) {
+                UIApplication.shared.open(url)
+            } else {
+                UIApplication.shared.openURL(url)
+            }
+        }else{
+            Utileria().enviarAlerta(mensaje: "Número de teléfono no válido", titulo: "Alerta", controller: viewController)
+        }
+    }
+    
+   static func openWhatsapp() {
+        let phoneNumber =  "+5115006000" // you need to change this number
+        let appURL = URL(string: "https://api.whatsapp.com/send?phone=\(phoneNumber)")!
+        if UIApplication.shared.canOpenURL(appURL) {
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(appURL, options: [:], completionHandler: nil)
+            }
+            else {
+                UIApplication.shared.openURL(appURL)
+            }
+        } else {
+            // WhatsApp is not installed
+        }
+    }
+    
+   static func openFB() {
+        let url = URL(string: "fb://profile/254320987943693")!
+        let application = UIApplication.shared
+        // Check if the facebook App is installed
+        if application.canOpenURL(url) {
+            application.open(url)
+        } else {
+            // If Facebook App is not installed, open Safari with Facebook Link
+            application.open(URL(string: "https://de-de.facebook.com/apple")!)
+        }
+    }
+    
     /******* Fin Metodo para enviar alerta  ********/
     
     

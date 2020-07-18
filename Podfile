@@ -25,7 +25,7 @@ target 'dirpol' do
   pod 'AlamofireObjectMapper'
   pod 'GoogleMaps'
   pod 'SVProgressHUD'
-
+  
 
   # Pods for dirpol
 

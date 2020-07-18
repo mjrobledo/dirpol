@@ -14,6 +14,7 @@ class IniciarSesionVC: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var txtPassword: UITextField!
     @IBOutlet weak var txtNombre: UITextField!
+    @IBOutlet weak var imgRemember: UIImageView!
     
     @IBOutlet weak var btnIniciaSesion: UIButton!
     
@@ -134,6 +135,15 @@ class IniciarSesionVC: UIViewController, UITextFieldDelegate {
          Utileria().enviarAlerta(mensaje: "Error de autenticación", titulo: .Alerta, controller: self)
     }
     
+    @IBAction func rememberMe(_ sender: UIButton) {
+        if sender.tag == 1 {
+            imgRemember.image = #imageLiteral(resourceName: "ic_check_off")
+            sender.tag = 0
+        } else {
+            imgRemember.image = #imageLiteral(resourceName: "ic_check_on-1")
+            sender.tag = 1
+        }
+    }
     
     @IBAction func volver(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
@@ -162,9 +172,13 @@ class IniciarSesionVC: UIViewController, UITextFieldDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        let navVC = segue.destination as? UINavigationController
         if segue.identifier == strSegue.RecuperaPassword {
-            let vc = segue.destination as! RecuperarVC
+            let vc = navVC?.viewControllers.first as! RecuperarVC
             vc.texto = .NoRecueraTuPassword
+        } else if segue.identifier == strSegue.RecuperaUsuario {
+            let vc = navVC?.viewControllers.first as! RecuperarVC
+            vc.texto = .NoRecueraTuUsuario
         }
     }
     
