@@ -17,8 +17,25 @@
 		8B088B8924C26B50005C723C /* Directory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B088B8824C26B50005C723C /* Directory.storyboard */; };
 		8B088B8B24C26BDC005C723C /* DirectoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B088B8A24C26BDC005C723C /* DirectoryVC.swift */; };
 		8B115EC724BECD2000C82CFB /* Credential.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B115EC624BECD2000C82CFB /* Credential.storyboard */; };
+		8B19929324C36591003D788B /* AdvancedSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B19929224C36591003D788B /* AdvancedSearch.storyboard */; };
+		8B19929524C368F1003D788B /* AdvanceSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B19929424C368F1003D788B /* AdvanceSearchVC.swift */; };
+		8B19929824C36A0F003D788B /* ContactUs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B19929724C36A0F003D788B /* ContactUs.storyboard */; };
+		8B19929A24C36E61003D788B /* ContactUsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B19929924C36E61003D788B /* ContactUsVC.swift */; };
+		8B19929D24C3706A003D788B /* UserPanel.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B19929C24C3706A003D788B /* UserPanel.storyboard */; };
+		8B19929F24C370E2003D788B /* UserPanelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B19929E24C370E2003D788B /* UserPanelVC.swift */; };
+		8B1992A224C3759F003D788B /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B1992A124C3759F003D788B /* About.storyboard */; };
+		8B1992A424C37671003D788B /* AboutUS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1992A324C37671003D788B /* AboutUS.swift */; };
+		8B1992A724C3792E003D788B /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1992A624C3792E003D788B /* Singleton.swift */; };
+		8B1992AA24C38373003D788B /* Regions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B1992A924C38373003D788B /* Regions.storyboard */; };
+		8B1992AC24C383BB003D788B /* RegionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1992AB24C383BB003D788B /* RegionsVC.swift */; };
+		8B1992B424C3A399003D788B /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8B1992AE24C3A398003D788B /* Montserrat-Light.ttf */; };
+		8B1992B524C3A399003D788B /* Montserrat-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8B1992AF24C3A398003D788B /* Montserrat-Bold.otf */; };
+		8B1992B624C3A399003D788B /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8B1992B024C3A399003D788B /* Montserrat-Regular.ttf */; };
+		8B1992B824C3A399003D788B /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8B1992B224C3A399003D788B /* Montserrat-Medium.ttf */; };
+		8B1992B924C3A399003D788B /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8B1992B324C3A399003D788B /* Montserrat-SemiBold.ttf */; };
 		8B409ACF24B57ED5004ED46E /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B409ACE24B57ED5004ED46E /* Api.swift */; };
 		8B409AD224B58CED004ED46E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C3E98EB214C5748009FDF74 /* Assets.xcassets */; };
+		8B87507624C7B8C8006244C6 /* LaunchScreen_col.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B87507524C7B8C8006244C6 /* LaunchScreen_col.storyboard */; };
 		8B9AB12624C143F0005AE821 /* CredentialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9AB12524C143F0005AE821 /* CredentialVC.swift */; };
 		8B9AB12824C1441E005AE821 /* RenewMembershipVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9AB12724C1441E005AE821 /* RenewMembershipVC.swift */; };
 		8BAC4FDA24BDF20C0008026F /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BAC4FD924BDF20C0008026F /* Menu.storyboard */; };
@@ -109,10 +126,27 @@
 		8B088B8824C26B50005C723C /* Directory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Directory.storyboard; sourceTree = "<group>"; };
 		8B088B8A24C26BDC005C723C /* DirectoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryVC.swift; sourceTree = "<group>"; };
 		8B115EC624BECD2000C82CFB /* Credential.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Credential.storyboard; sourceTree = "<group>"; };
+		8B19929224C36591003D788B /* AdvancedSearch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AdvancedSearch.storyboard; sourceTree = "<group>"; };
+		8B19929424C368F1003D788B /* AdvanceSearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvanceSearchVC.swift; sourceTree = "<group>"; };
+		8B19929724C36A0F003D788B /* ContactUs.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ContactUs.storyboard; sourceTree = "<group>"; };
+		8B19929924C36E61003D788B /* ContactUsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsVC.swift; sourceTree = "<group>"; };
+		8B19929C24C3706A003D788B /* UserPanel.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserPanel.storyboard; sourceTree = "<group>"; };
+		8B19929E24C370E2003D788B /* UserPanelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPanelVC.swift; sourceTree = "<group>"; };
+		8B1992A124C3759F003D788B /* About.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = About.storyboard; sourceTree = "<group>"; };
+		8B1992A324C37671003D788B /* AboutUS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUS.swift; sourceTree = "<group>"; };
+		8B1992A624C3792E003D788B /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
+		8B1992A924C38373003D788B /* Regions.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Regions.storyboard; sourceTree = "<group>"; };
+		8B1992AB24C383BB003D788B /* RegionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionsVC.swift; sourceTree = "<group>"; };
+		8B1992AE24C3A398003D788B /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
+		8B1992AF24C3A398003D788B /* Montserrat-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.otf"; sourceTree = "<group>"; };
+		8B1992B024C3A399003D788B /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		8B1992B224C3A399003D788B /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		8B1992B324C3A399003D788B /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 		8B409ACB24B57E11004ED46E /* ConfigPeru.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ConfigPeru.xcconfig; sourceTree = "<group>"; };
 		8B409ACC24B57E26004ED46E /* ConfigColombia.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ConfigColombia.xcconfig; sourceTree = "<group>"; };
 		8B409ACD24B57E33004ED46E /* ConfigMexico.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ConfigMexico.xcconfig; sourceTree = "<group>"; };
 		8B409ACE24B57ED5004ED46E /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		8B87507524C7B8C8006244C6 /* LaunchScreen_col.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen_col.storyboard; sourceTree = "<group>"; };
 		8B9AB12524C143F0005AE821 /* CredentialVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialVC.swift; sourceTree = "<group>"; };
 		8B9AB12724C1441E005AE821 /* RenewMembershipVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenewMembershipVC.swift; sourceTree = "<group>"; };
 		8BAC4FD924BDF20C0008026F /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
@@ -218,6 +252,8 @@
 		6C3E98E3214C5746009FDF74 /* dirpol */ = {
 			isa = PBXGroup;
 			children = (
+				8B1992AD24C3A385003D788B /* Font */,
+				8B1992A524C37918003D788B /* Api */,
 				8BAC4FE524BE017A0008026F /* Libraries */,
 				6C3E98F0214C5748009FDF74 /* Info.plist */,
 				8B409ACA24B57DFE004ED46E /* Config */,
@@ -231,6 +267,7 @@
 				6C3E98E8214C5746009FDF74 /* Main.storyboard */,
 				6C3E98EB214C5748009FDF74 /* Assets.xcassets */,
 				6C3E98ED214C5748009FDF74 /* LaunchScreen.storyboard */,
+				8B87507524C7B8C8006244C6 /* LaunchScreen_col.storyboard */,
 			);
 			path = dirpol;
 			sourceTree = "<group>";
@@ -271,6 +308,84 @@
 				8B9AB12724C1441E005AE821 /* RenewMembershipVC.swift */,
 			);
 			path = Credential;
+			sourceTree = "<group>";
+		};
+		8B19929024C36522003D788B /* NewDesing */ = {
+			isa = PBXGroup;
+			children = (
+				8B1992A824C38368003D788B /* Regions */,
+				8B1992A024C3758F003D788B /* AboutUS */,
+				8B19929B24C37059003D788B /* UserPanel */,
+				8B19929624C369F4003D788B /* ContactUS */,
+				8B19929124C36555003D788B /* Search */,
+				8B115EC524BECD1000C82CFB /* Credential */,
+			);
+			path = NewDesing;
+			sourceTree = "<group>";
+		};
+		8B19929124C36555003D788B /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				8B19929224C36591003D788B /* AdvancedSearch.storyboard */,
+				8B19929424C368F1003D788B /* AdvanceSearchVC.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		8B19929624C369F4003D788B /* ContactUS */ = {
+			isa = PBXGroup;
+			children = (
+				8B19929724C36A0F003D788B /* ContactUs.storyboard */,
+				8B19929924C36E61003D788B /* ContactUsVC.swift */,
+			);
+			path = ContactUS;
+			sourceTree = "<group>";
+		};
+		8B19929B24C37059003D788B /* UserPanel */ = {
+			isa = PBXGroup;
+			children = (
+				8B19929C24C3706A003D788B /* UserPanel.storyboard */,
+				8B19929E24C370E2003D788B /* UserPanelVC.swift */,
+			);
+			path = UserPanel;
+			sourceTree = "<group>";
+		};
+		8B1992A024C3758F003D788B /* AboutUS */ = {
+			isa = PBXGroup;
+			children = (
+				8B1992A124C3759F003D788B /* About.storyboard */,
+				8B1992A324C37671003D788B /* AboutUS.swift */,
+			);
+			path = AboutUS;
+			sourceTree = "<group>";
+		};
+		8B1992A524C37918003D788B /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				8B1992A624C3792E003D788B /* Singleton.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		8B1992A824C38368003D788B /* Regions */ = {
+			isa = PBXGroup;
+			children = (
+				8B1992A924C38373003D788B /* Regions.storyboard */,
+				8B1992AB24C383BB003D788B /* RegionsVC.swift */,
+			);
+			path = Regions;
+			sourceTree = "<group>";
+		};
+		8B1992AD24C3A385003D788B /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				8B1992AF24C3A398003D788B /* Montserrat-Bold.otf */,
+				8B1992AE24C3A398003D788B /* Montserrat-Light.ttf */,
+				8B1992B224C3A399003D788B /* Montserrat-Medium.ttf */,
+				8B1992B024C3A399003D788B /* Montserrat-Regular.ttf */,
+				8B1992B324C3A399003D788B /* Montserrat-SemiBold.ttf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 		8B409ACA24B57DFE004ED46E /* Config */ = {
@@ -417,7 +532,7 @@
 		FAC2C030215069E900A74FA3 /* Aplicacion */ = {
 			isa = PBXGroup;
 			children = (
-				8B115EC524BECD1000C82CFB /* Credential */,
+				8B19929024C36522003D788B /* NewDesing */,
 				FAC2C0582151BF4D00A74FA3 /* AcercaDe */,
 				FAC2C03221506A0800A74FA3 /* Home */,
 				FAC2C03121506A0000A74FA3 /* InicioSesion */,
@@ -583,15 +698,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B87507624C7B8C8006244C6 /* LaunchScreen_col.storyboard in Resources */,
+				8B1992B624C3A399003D788B /* Montserrat-Regular.ttf in Resources */,
+				8B1992B524C3A399003D788B /* Montserrat-Bold.otf in Resources */,
+				8B1992B924C3A399003D788B /* Montserrat-SemiBold.ttf in Resources */,
 				FAC2C0502151810A00A74FA3 /* Localizable.strings in Resources */,
+				8B19929324C36591003D788B /* AdvancedSearch.storyboard in Resources */,
 				FA9CD34D215739290032174B /* ViewMarcker.xib in Resources */,
+				8B1992B824C3A399003D788B /* Montserrat-Medium.ttf in Resources */,
 				FA9850C02151D162002F143D /* Contacto.storyboard in Resources */,
+				8B1992B424C3A399003D788B /* Montserrat-Light.ttf in Resources */,
 				8BAC4FDA24BDF20C0008026F /* Menu.storyboard in Resources */,
 				FAC2C0382150C04900A74FA3 /* Buscar.storyboard in Resources */,
 				8B409AD224B58CED004ED46E /* Assets.xcassets in Resources */,
+				8B1992AA24C38373003D788B /* Regions.storyboard in Resources */,
+				8B19929824C36A0F003D788B /* ContactUs.storyboard in Resources */,
+				8B1992A224C3759F003D788B /* About.storyboard in Resources */,
 				8B088B8924C26B50005C723C /* Directory.storyboard in Resources */,
 				6C3E98EF214C5748009FDF74 /* LaunchScreen.storyboard in Resources */,
 				8B115EC724BECD2000C82CFB /* Credential.storyboard in Resources */,
+				8B19929D24C3706A003D788B /* UserPanel.storyboard in Resources */,
 				6C3E98EA214C5746009FDF74 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -712,16 +838,20 @@
 				FAC2C02B2150572800A74FA3 /* Constantes.swift in Sources */,
 				8B088B8B24C26BDC005C723C /* DirectoryVC.swift in Sources */,
 				FA9CD34F21573B340032174B /* ViewMarcker.swift in Sources */,
+				8B19929F24C370E2003D788B /* UserPanelVC.swift in Sources */,
 				FAC2C0272150333100A74FA3 /* Tema.swift in Sources */,
 				FA9CD3532159EBB60032174B /* Utileria.swift in Sources */,
 				FA43C658215CA0B400495E32 /* DetalleBAvanzadaVC.swift in Sources */,
+				8B19929A24C36E61003D788B /* ContactUsVC.swift in Sources */,
 				FA9850D4215565EC002F143D /* ModeloServicios.swift in Sources */,
 				FAC2C04221517CFD00A74FA3 /* Textos.swift in Sources */,
+				8B19929524C368F1003D788B /* AdvanceSearchVC.swift in Sources */,
 				FA9CD355215B40420032174B /* ViewBusquedaDos.swift in Sources */,
 				6C3E98E7214C5746009FDF74 /* ViewController.swift in Sources */,
 				FA9850C22151D3FD002F143D /* AltoMandoPolicialVC.swift in Sources */,
 				8BAC4FE024BDFE1C0008026F /* SWRevealViewController.m in Sources */,
 				FAC2C0532151825E00A74FA3 /* InicioVC.swift in Sources */,
+				8B1992A724C3792E003D788B /* Singleton.swift in Sources */,
 				FAC2C02D2150573200A74FA3 /* Variables.swift in Sources */,
 				FA9850C621521EE2002F143D /* PanelUsuarioVC.swift in Sources */,
 				FAC2C03F21514E8500A74FA3 /* MenuVC.swift in Sources */,
@@ -731,6 +861,7 @@
 				FAC2C02F2150574400A74FA3 /* Metodos.swift in Sources */,
 				FAC2C0362150828300A74FA3 /* IniciarSesionVC.swift in Sources */,
 				8BAC4FE824BE01C30008026F /* HomeVC.swift in Sources */,
+				8B1992AC24C383BB003D788B /* RegionsVC.swift in Sources */,
 				8B9AB12824C1441E005AE821 /* RenewMembershipVC.swift in Sources */,
 				8BAC4FE424BE01610008026F /* MenuCell.swift in Sources */,
 				8BAC4FE224BE00BA0008026F /* MenuLeftVC.swift in Sources */,
@@ -738,6 +869,7 @@
 				FAC2C05A2151BF6700A74FA3 /* AcercaDeVC.swift in Sources */,
 				FA9850CE215347B9002F143D /* ViewBusquedaUno.swift in Sources */,
 				6C3E98E5214C5746009FDF74 /* AppDelegate.swift in Sources */,
+				8B1992A424C37671003D788B /* AboutUS.swift in Sources */,
 				FAC2C0342150822B00A74FA3 /* RecuperarVC.swift in Sources */,
 				FAC2C025215032FE00A74FA3 /* Extenciones.swift in Sources */,
 				FAC2C03B2150C18700A74FA3 /* ContactoVC.swift in Sources */,

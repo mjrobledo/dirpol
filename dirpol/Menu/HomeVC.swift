@@ -10,6 +10,10 @@ import UIKit
 
 class HomeVC: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var btnRegion: UIButton!
+    @IBOutlet weak var btnDirectory: UIButton!
+    @IBOutlet weak var btnSearch: UIButton!
+    @IBOutlet weak var btnPanel: UIButton!
     @IBOutlet weak var btnMenu: UIBarButtonItem!
     
     override func viewDidLoad() {
@@ -19,6 +23,7 @@ class HomeVC: UIViewController, UITextFieldDelegate {
             btnMenu.action = #selector(SWRevealViewController.revealToggle(_:))
             view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
+                
         let tap1 = UITapGestureRecognizer(target: self, action: #selector(hideKeyBoard))
         self.view.addGestureRecognizer(tap1)
 
@@ -29,6 +34,36 @@ class HomeVC: UIViewController, UITextFieldDelegate {
         self.view.endEditing(true)
     }
 
+    @IBAction func goToAdvancedSearch(_ sender: Any) {
+       /* if Singleton.instance.menuTable == nil {
+            self.revealViewController().revealToggle(animated: false)
+        }
+        MenuLeftVC.changedMenu(menu: 2)
+        self.revealViewController().revealToggle(animated: false)
+        */
+    }
+    
+    @IBAction func goToRegions(_ sender: Any) {
+        
+    }
+    
+    @IBAction func goToDirectory(_ sender: Any) {
+        /*if Singleton.instance.menuTable == nil {
+            self.revealViewController().revealToggle(animated: true)
+        }
+        MenuLeftVC.changedMenu(menu: 3)
+        self.revealViewController().revealToggle(animated: false)
+        */
+    }
+    
+    @IBAction func goToPanel(_ sender: Any) {
+        /*if Singleton.instance.menuTable == nil {
+            self.revealViewController().revealToggle(animated: false)
+        }
+        MenuLeftVC.changedMenu(menu: 6)
+        self.revealViewController().revealToggle(animated: false)*/
+    }
+    
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.hideKeyBoard()

@@ -127,10 +127,29 @@ class DirectoryVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
        public func sectionIndexTitles(for tableView: UITableView) -> [String]? {
            return arrIndexSection   //Side Section title
        }
+    
        public func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int
        {
-           return index
+        return index
        }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let rect = CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 44)
+        let footerView = UIView(frame:rect)
+        let label = UILabel(frame: rect)
+        label.textAlignment = .center
+        label.text = String(ItemsAlfabetoDireccion[section])
+        label.textColor = UIColor.white
+        label.font = UIFont().MontserratBold(size: 15)
+        footerView.addSubview(label)
+        footerView.backgroundColor = UIColor.cPrincipal()
+        return footerView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 44
+    }
+        
        public func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
            return String(ItemsAlfabetoDireccion[section])
        }
@@ -143,17 +162,17 @@ class DirectoryVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
        }
        
        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-           let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
            
-           let encabezado:String = String(ItemsAlfabetoDireccion[indexPath.section])
+        let encabezado:String = String(ItemsAlfabetoDireccion[indexPath.section])
           
-           let items = direccionesAux.filter{ $0.Nombre.hasPrefix(encabezado) }
-           let direccion = items[indexPath.row]
+        let items = direccionesAux.filter{ $0.Nombre.hasPrefix(encabezado) }
+        let direccion = items[indexPath.row]
           
-           //let direccion = direccionesAux[indexPath.row]
-           let titulo:UILabel = cell?.viewWithTag(1) as! UILabel
-           titulo.text = "\(direccion.Nombre)"
-           
+        //let direccion = direccionesAux[indexPath.row]
+        let titulo:UILabel = cell?.viewWithTag(1) as! UILabel
+        titulo.text = "\(direccion.Nombre)"
+                   
            return cell!
        }
        

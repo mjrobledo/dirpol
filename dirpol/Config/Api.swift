@@ -9,7 +9,7 @@
 import Foundation
 
 class Api {
-    static var config_app: String = ""
+    static var config_app: VersionCountry = .Peru
     static var url_app: String = ""
     static var ProvideAPIKey: String = ""
     
@@ -18,13 +18,17 @@ class Api {
         if let path = Bundle.main.path(forResource: "Info", ofType: "plist") {
            nsDictionary = NSDictionary(contentsOfFile: path)
             
-            Api.config_app = nsDictionary!["CONFIG_APP"] as! String
-            print(Api.config_app)
+            Api.config_app = VersionCountry(rawValue: nsDictionary!["CONFIG_APP"] as! String)!
+            print(Api.config_app.rawValue)
             Api.url_app = nsDictionary!["URL_APP"] as! String
             print(Api.url_app)
             Api.ProvideAPIKey = nsDictionary!["ProvideAPIKey_APP"] as! String
-            
         }
-        
     }
+}
+
+enum VersionCountry: String {
+    case Colombia = "Colombia"
+    case Peru = "Peru"
+    case Mexico = "Mexico"
 }

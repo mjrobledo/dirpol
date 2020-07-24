@@ -11,7 +11,8 @@ import UIKit
 class CredentialVC: UIViewController {
 
      @IBOutlet weak var btnMenu: UIBarButtonItem!
-      
+    @IBOutlet weak var viewRenew: UIView!
+    
       override func viewDidLoad() {
           super.viewDidLoad()
           if revealViewController() != nil {
@@ -19,7 +20,17 @@ class CredentialVC: UIViewController {
               btnMenu.action = #selector(SWRevealViewController.revealToggle(_:))
               view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
           }
+        viewRenew.isHidden = true
         // Do any additional setup after loading the view.
+    }
+    
+    
+    @IBAction func show(_ sender: Any) {
+        self.viewRenew.isHidden = false
+    }
+    
+    @IBAction func hide(_ sender: Any) {
+        self.viewRenew.isHidden = true
     }
     
     

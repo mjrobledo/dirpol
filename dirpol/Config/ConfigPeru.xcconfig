@@ -12,3 +12,4 @@ CONFIG_APP=Peru
 SLASH = /
 URL_APP = http:$(SLASH)/acceso127.lorexddns.net:8084/DirPolServicio/public
 ProvideAPIKey_APP = AIzaSyAxb0nBSc39zaJl2wPa0FIVybjO95ZxQEY
+LaunchScreen = LaunchScreen

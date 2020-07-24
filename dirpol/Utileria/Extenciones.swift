@@ -278,6 +278,31 @@ extension UIButton {
             }
         }
     }
+    
+    @IBInspectable var TextPrimaryColor: Bool   {
+        get {
+            return false
+        }
+        set {
+            if newValue {
+                self.setTitleColor(UIColor.cPrincipal()  , for: .normal)
+                self.setTitleColor(UIColor.cPrincipal(), for: .selected)
+            }
+        }
+    }
+}
+
+extension UILabel {
+    @IBInspectable var LblPrimaryColor: Bool   {
+        get {
+            return false
+        }
+        set {
+            if newValue {
+                self.textColor = UIColor.cPrincipal()
+            }
+        }
+    }
 }
 
 extension UIButton {
@@ -323,7 +348,6 @@ extension UITextField{
 
 
 extension UIView {
-    
     @IBInspectable var shadow: Bool {
         get {
             return layer.shadowOpacity > 0.0
@@ -358,7 +382,6 @@ extension UIView {
             self.layer.masksToBounds = true
             self.layer.borderColor = newValue.cgColor
         }
-        
     }
     
     @IBInspectable var borderWidth: CGFloat {        
@@ -371,10 +394,6 @@ extension UIView {
         }
     }
     
-    
- 
-
-    
     func addShadow(shadowColor: CGColor = UIColor.cSecundarioN4().cgColor,
                    shadowOffset: CGSize = CGSize(width: 2.0, height: 2.0),
                    shadowOpacity: Float = 0.7,
@@ -383,10 +402,34 @@ extension UIView {
         layer.shadowOffset = shadowOffset
         layer.shadowOpacity = shadowOpacity
         layer.shadowRadius = shadowRadius
-        
-        
+    }
+    
+    @IBInspectable var primaryColor: Bool   {
+        get {
+            return false
+        }
+        set {
+            if newValue {
+                self.backgroundColor = UIColor.cPrincipal()
+            }
+        }
     }
 }
+
+extension UIImageView {
+    @IBInspectable var ImgPrimaryColor: Bool   {
+        get {
+            return false
+        }
+        set {
+            if newValue {
+                self.image = self.image?.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
+                self.tintColor = UIColor.cPrincipal()
+            }
+        }
+    }
+}
+
 extension UIImageView {
 @IBDesignable class TintedImageView: UIImageView {
     override func prepareForInterfaceBuilder() {
@@ -395,7 +438,6 @@ extension UIImageView {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-
         self.configure()
     }
 
@@ -404,17 +446,17 @@ extension UIImageView {
             self.configure()
         }
     }
-
+    
     private func configure() {
         self.image = self.image?.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
     }
-    }
+     
+}
     
-        override open func awakeFromNib() {
-            super.awakeFromNib()
-            tintColorDidChange()
-        }
-    
+    override open func awakeFromNib() {
+        super.awakeFromNib()
+        tintColorDidChange()
+    }    
 }
 
 /*_________________________________________________________________________________________*/

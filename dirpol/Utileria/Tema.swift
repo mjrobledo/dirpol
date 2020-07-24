@@ -14,7 +14,7 @@ import UIKit
 struct Tema {
     
     static func configuraApariencia() {
-        let navBarFont = UIFont.systemFont(ofSize: 15)
+        let navBarFont = UIFont().MontserratMedium(size: 13)
             //UIFont.systemFont(ofSize: 14.0)
        // UIFont.systemFont(ofSize: 17.0)
         let navBarAppearance = UINavigationBar.appearance()
@@ -24,19 +24,65 @@ struct Tema {
         navBarAppearance.tintColor = UIColor.white
         navBarAppearance.barTintColor = UIColor.cPrincipal()
         
+        UILabel.appearance().substituteFontName = FontMontserrat.Regular.rawValue
     }
 }
 
 extension UIFont{
-    
     class func fTexto() -> UIFont{
         return UIFont.systemFont(ofSize: 12)
     }
-    
 }
+
+extension UIFont {
+    func MontserratRegular(size: CGFloat? = 12) -> UIFont {
+        return UIFont(name: FontMontserrat.Regular.rawValue, size: size!)!
+    }
+    
+    func MontserratMedium(size: CGFloat? = 12) -> UIFont {
+        return UIFont(name: FontMontserrat.Medium.rawValue, size: size!)!
+    }
+    
+    func MontserratBold(size: CGFloat = 12) -> UIFont {
+        return UIFont(name: FontMontserrat.Bold.rawValue, size: size)!
+    }
+    
+    func MontserratLight(size: CGFloat = 12) -> UIFont {
+        return UIFont(name: FontMontserrat.Light.rawValue, size: size)!
+    }
+    
+    func MontserratSemiBold(size: CGFloat = 12) -> UIFont {
+        return UIFont(name: FontMontserrat.SemiBold.rawValue, size: size)!
+    }
+}
+
+extension UILabel {
+    @objc var substituteFontName : String {
+        get { return self.font.fontName }
+        set { self.font = UIFont(name: newValue, size: self.font.pointSize) }
+    }
+
+}
+
+enum FontMontserrat: String {
+    case Regular = "Montserrat-Regular"
+    case Medium = "Montserrat-Medium"
+    case Bold = "Montserrat-Bold"
+    case Light = "Montserrat-Light"
+    case SemiBold = "Montserrat-SemiBold"
+}
+
 extension UIColor {
     class func cPrincipal() -> UIColor {
-        return UIColor(red: 45/255, green: 81/255, blue: 46/255, alpha: 1.0)
+        switch Api.config_app {
+        case .Colombia:
+            return UIColor(red: 49/255, green: 66/255, blue: 142/255, alpha: 1.0)
+        case .Peru:
+            return UIColor(red: 45/255, green: 81/255, blue: 46/255, alpha: 1.0)
+        case .Mexico:
+            return UIColor(red: 45/255, green: 81/255, blue: 46/255, alpha: 1.0)
+        }
+        
     }
     
     class func cEnfatizar() -> UIColor {
@@ -98,7 +144,4 @@ extension UIColor {
     class func cSecundarioG4() -> UIColor {
         return UIColor(red: 255/255, green:255/255, blue: 255/255, alpha: 1.0)
     }
-    
-    
-    
 }

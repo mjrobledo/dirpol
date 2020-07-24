@@ -8,10 +8,15 @@
 
 import UIKit
 
+@available(iOS 13.0, *)
+@available(iOS 13.0, *)
+@available(iOS 13.0, *)
 class MenuLeftVC: UIViewController, UITableViewDataSource, UITableViewDelegate, SWRevealViewControllerDelegate {
 
     
     @IBOutlet weak var imgPerfil: UIImageView!
+    
+    
     
     @IBOutlet weak var tblMenu: UITableView!
     @IBOutlet weak var viewTop: UIView!
@@ -23,34 +28,16 @@ class MenuLeftVC: UIViewController, UITableViewDataSource, UITableViewDelegate, 
         super.viewDidLoad()
         //viewTop.backgroundColor = UIColor.cPrincipal()
         // Do any additional setup after loading the view.
-        
+        Singleton.instance.menuTable = self.tblMenu
         tblMenu.reloadData()
     }
 
     override func viewDidAppear(_ animated: Bool) {
-       /* if Variable.usuario != nil {
-            lblNombre.text = "\(Variable.usuario.nombre) \(Variable.usuario.apaterno) \(Variable.usuario.us_amaterno)"
-            imgPerfil.image = #imageLiteral(resourceName: "H&M")
-        }else{
-            imgPerfil.image = #imageLiteral(resourceName: "H&M")
-           lblNombre.text = "HYM"
-        }*/
-        /*
-        if(Variable.menuLogin){
-            ar_Menu = Constante.getMenuLogin()
-        }else{
-            ar_Menu = Constante.getSinLogin()
-        }*/
         tblMenu.reloadData()
+        
     }
     
     func revealControllerPanGestureBegan(_ revealController: SWRevealViewController!) {
-        /*
-        if(Variable.menuLogin){
-            ar_Menu = Constante.getMenuLogin()
-        }else{
-            ar_Menu = Constante.getSinLogin()
-        }*/
         tblMenu.reloadData()
     }
     // MARK: - Table view data source
@@ -69,10 +56,9 @@ class MenuLeftVC: UIViewController, UITableViewDataSource, UITableViewDelegate, 
         
         let m = ar_Menu[indexPath.row]
         
-        
         cell.lblTitulo.text = m.titulo.uppercased()
-        cell.imgIcono.image =  m.imagen //.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
-        //cell.imgIcono.tintColor = UIColor.black
+        cell.imgIcono.image =  m.imagen.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
+        cell.imgIcono.tintColor = UIColor.cPrincipal()
         
         return cell
     }
@@ -112,13 +98,24 @@ class MenuLeftVC: UIViewController, UITableViewDataSource, UITableViewDelegate, 
         
     }
     
-    static func cambiaMenu(menu:Int)
+    static func changedMenu(menu:Int)
     {
-        let indexPath = IndexPath(row: menu, section: 0)
-        //Variable.tablaMenu.selectRow(at: indexPath, animated: true, scrollPosition: .bottom)
-      //  Variable.tablaMenu.delegate?.tableView!(Variable.tablaMenu, didSelectRowAt: indexPath)
-        
+        DispatchQueue.main.async {
+            let indexPath = IndexPath(row: menu, section: 0)
+            Singleton.instance.menuTable.selectRow(at: indexPath, animated: true, scrollPosition: .bottom)
+            Singleton.instance.menuTable.delegate?.tableView!(Singleton.instance.menuTable, didSelectRowAt: indexPath)
+        }
     }
+    
+    @IBAction func goToRenew(_ sender: Any) {
+        let vc =  UIStoryboard(name: "Credential", bundle: nil).instantiateViewController(withIdentifier: "renewID")  as! RenewMembershipVC
+        vc.modalPresentationStyle = .fullScreen
+        vc.modalTransitionStyle = .crossDissolve
+        vc.providesPresentationContextTransitionStyle = true;
+        vc.definesPresentationContext = true;
+        self.present(vc, animated: true, completion: nil)
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -154,7 +151,7 @@ class Menu {
                 Menu(titulo: "Regiones", segue: Segue.Region, imagen: #imageLiteral(resourceName: "menu_regions")),
                 Menu(titulo: "Búsqueda Avanzada", segue: Segue.Search, imagen: #imageLiteral(resourceName: "menu_search")),
                 Menu(titulo: "Directorio", segue: Segue.Directory, imagen: #imageLiteral(resourceName: "menu_directoty")),
-                Menu(titulo: "Contáctanos", segue: Segue.Directory, imagen: #imageLiteral(resourceName: "menu_contac_us")),
+                Menu(titulo: "Contáctanos", segue: Segue.ContactUs, imagen: #imageLiteral(resourceName: "menu_contac_us")),
                 Menu(titulo: "Credencial Virtual", segue: Segue.Credential, imagen: #imageLiteral(resourceName: "menu_credential")),
                 Menu(titulo: "Panel de Usuario", segue: Segue.Panel, imagen: #imageLiteral(resourceName: "menu_panel")),
                 Menu(titulo: "Acerca de Dirpol", segue: Segue.About, imagen: #imageLiteral(resourceName: "menu_about")),
