@@ -7,21 +7,19 @@
 //
 
 import UIKit
+import CropViewController
 
-@available(iOS 13.0, *)
-@available(iOS 13.0, *)
-@available(iOS 13.0, *)
+ 
 class MenuLeftVC: UIViewController, UITableViewDataSource, UITableViewDelegate, SWRevealViewControllerDelegate {
 
     
-    @IBOutlet weak var imgPerfil: UIImageView!
-    
-    
+    @IBOutlet weak var imgProfile: UIImageView!
     
     @IBOutlet weak var tblMenu: UITableView!
     @IBOutlet weak var viewTop: UIView!
     
-    
+    var pickerController: UIImagePickerController!
+    private var croppingStyle = CropViewCroppingStyle.default
     var ar_Menu:[Menu] = Menu.getMenu()
     
     override func viewDidLoad() {
@@ -34,7 +32,6 @@ class MenuLeftVC: UIViewController, UITableViewDataSource, UITableViewDelegate, 
 
     override func viewDidAppear(_ animated: Bool) {
         tblMenu.reloadData()
-        
     }
     
     func revealControllerPanGestureBegan(_ revealController: SWRevealViewController!) {
@@ -116,6 +113,10 @@ class MenuLeftVC: UIViewController, UITableViewDataSource, UITableViewDelegate, 
         self.present(vc, animated: true, completion: nil)
     }
     
+    @available(iOS 13.0, *)
+    @IBAction func takeAPicture(_ sender: Any) {
+        self.selectPath()
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -133,6 +134,84 @@ class MenuLeftVC: UIViewController, UITableViewDataSource, UITableViewDelegate, 
     }
     */
 
+}
+
+// MARK: - PhotoProfile
+extension MenuLeftVC:  UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    // MARK:- Cambiar foto de perfil
+    
+    
+        private func setCrollImage(image: UIImage) {
+            //If profile picture, push onto the same navigation stack
+            let cropViewController = CropViewController(croppingStyle: .circular, image: image)
+            cropViewController.delegate = self
+            present(cropViewController, animated: true, completion: nil)
+        }
+        
+        func selectPath() {
+            pickerController = UIImagePickerController()
+            pickerController.delegate = self
+            
+            let alert = UIAlertController(title: "", message: "", preferredStyle: .actionSheet) // 1
+            let btn_camara = UIAlertAction(title: "Camera", style: .default) { (alert: UIAlertAction!) -> Void in
+                //self.selectedCamera()
+                self.fromCamera()
+            }
+            let btn_carrete = UIAlertAction(title: "Gallery", style: .default) { (alert: UIAlertAction!) -> Void in
+              //  self.selectedCarrete()
+                self.fromGalery()
+            }
+            let btn_cancelar = UIAlertAction(title: "Cancel", style: .cancel) { (alert: UIAlertAction!) -> Void in }
+
+            alert.addAction(btn_camara) // 4
+            alert.addAction(btn_carrete) // 4
+            alert.addAction(btn_cancelar) // 4
+
+            present(alert, animated: true, completion: nil) // 6
+        }
+    
+    func fromCamera() {
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            pickerController.sourceType = .camera
+            present(pickerController, animated: true, completion: nil)
+        } else {
+            Util().enviarAlerta(mensaje: "Camara no disponible", titulo: "Ok", controller: self)
+        }
+    }
+
+    func fromGalery() {
+        pickerController.sourceType = .photoLibrary
+        present(pickerController, animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        pickerController.dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+        pickerController.dismiss(animated: true, completion: nil)
+        let image = info[UIImagePickerController.InfoKey.originalImage]! as! UIImage
+        self.setCrollImage(image: image)
+    }
+}
+
+extension MenuLeftVC: CropViewControllerDelegate {
+    func cropViewController(_ cropViewController: CropViewController, didCropToCircularImage image: UIImage, withRect cropRect: CGRect, angle: Int) {
+        print("didCropToCircularImage")
+        cropViewController.dismiss(animated: true) {
+            self.imgProfile.image = image
+        }
+    }
+    func cropViewController(_ cropViewController: CropViewController, didCropImageToRect rect: CGRect, angle: Int) {
+        print("didCropImageToRect")
+    }
+    func cropViewController(_ cropViewController: CropViewController, didFinishCancelled cancelled: Bool) {
+        print("didFinishCancelled")
+        cropViewController.dismiss(animated: true, completion: nil)
+    }
+    func cropViewController(_ cropViewController: CropViewController, didCropToImage image: UIImage, withRect cropRect: CGRect, angle: Int) {
+        print("didCropToImage")
+    }
 }
 
 class Menu {

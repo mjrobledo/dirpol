@@ -154,15 +154,15 @@ class PanelUsuarioVC: UIViewController, UITextFieldDelegate {
         // Do any additional setup after loading the view.
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(self.keyboardWillShow(notification:)),
-                                               name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+                                               name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(self.keyboardWillHide(notification:)),
-                                               name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+                                               name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {
         guard let userInfo = notification.userInfo,
-            let frame = (userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue )?.cgRectValue else{
+            let frame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue )?.cgRectValue else{
                 return
         }
         let contentInfo = UIEdgeInsets(top: 0, left: 0, bottom: frame.height     , right: 0)

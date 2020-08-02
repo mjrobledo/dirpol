@@ -52,7 +52,7 @@ class ContactoVC: UIViewController , listadoDelegate, MFMailComposeViewControlle
     @IBAction func enviarMensaje(_ sender: Any) {
         if validaCampos(){
             if !(txtEmail.text?.validaCorreo())!{
-                Utileria().enviarAlerta(mensaje: .LaCuentaDeCorreoNoEsValida, titulo: .Alerta, controller: self)
+                Util().enviarAlerta(mensaje: .LaCuentaDeCorreoNoEsValida, titulo: .Alerta, controller: self)
                 return
             }
             
@@ -71,10 +71,10 @@ class ContactoVC: UIViewController , listadoDelegate, MFMailComposeViewControlle
             
                 self.present(mail, animated: true, completion: nil)
             }else{
-                Utileria().enviarAlerta(mensaje: .ParaContactarnosEsNecesario, titulo: .Alerta, controller: self)
+                Util().enviarAlerta(mensaje: .ParaContactarnosEsNecesario, titulo: .Alerta, controller: self)
             }
         }else{
-            Utileria().enviarAlerta(mensaje: .TodosLosCamposSonObligatorios, titulo: .Alerta, controller: self)
+            Util().enviarAlerta(mensaje: .TodosLosCamposSonObligatorios, titulo: .Alerta, controller: self)
         }
         
     }
@@ -87,7 +87,7 @@ class ContactoVC: UIViewController , listadoDelegate, MFMailComposeViewControlle
             mail.dismiss(animated: true, completion: nil)
             
         case MFMailComposeResult.failed:
-            Utileria().enviarAlerta(mensaje: error.debugDescription, titulo: .Alerta, controller: self)
+            Util().enviarAlerta(mensaje: error.debugDescription, titulo: .Alerta, controller: self)
         case MFMailComposeResult.cancelled:
             mail.dismiss(animated: true, completion: nil)
             
@@ -164,15 +164,15 @@ class ContactoVC: UIViewController , listadoDelegate, MFMailComposeViewControlle
         // Do any additional setup after loading the view.
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(self.keyboardWillShow(notification:)),
-                                               name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+                                               name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(self.keyboardWillHide(notification:)),
-                                               name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+                                               name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {
         guard let userInfo = notification.userInfo,
-            let frame = (userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue )?.cgRectValue else{
+            let frame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue )?.cgRectValue else{
                 return
         }
         let contentInfo = UIEdgeInsets(top: 0, left: 0, bottom: frame.height     , right: 0)

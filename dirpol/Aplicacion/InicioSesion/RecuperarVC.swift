@@ -46,15 +46,15 @@ class RecuperarVC: UIViewController , UITextFieldDelegate{
     }
     
      @IBAction func call(_ sender: Any) {
-         Utileria.llamar(tel: "+5115006000", viewController: self)
+         Util.llamar(tel: "+5115006000", viewController: self)
      }
          
      @IBAction func whatsapp(_ sender: Any) {
-         Utileria.openWhatsapp()
+         Util.openWhatsapp()
      }
      
      @IBAction func facebook(_ sender: Any) {
-         Utileria.openFB()
+         Util.openFB()
      }
 
     @IBAction func volver(_ sender: Any) {
@@ -63,16 +63,16 @@ class RecuperarVC: UIViewController , UITextFieldDelegate{
     
     @IBAction func recuperarCuenta(_ sender: Any) {
         if (txtCorreo.text?.trim().estaVacio())! {
-            Utileria().enviarAlerta(mensaje: .DebesAgregarUnCorreo, titulo: .Alerta, controller: self)
+            Util().enviarAlerta(mensaje: .DebesAgregarUnCorreo, titulo: .Alerta, controller: self)
             return
         }
         if !(txtCorreo.text?.trim().validaCorreo())!{
-            Utileria().enviarAlerta(mensaje: .FormatoCorreoInvalido, titulo: .Alerta, controller: self)
+            Util().enviarAlerta(mensaje: .FormatoCorreoInvalido, titulo: .Alerta, controller: self)
             return
         }
         let correo:String = (txtCorreo.text?.trim())!
         self.hideKeyBoard()
-        if Utileria.conexionInternet(){
+        if Util.conexionInternet(){
         DispatchQueue.global(qos: .userInitiated).async {
             SVProgressHUD.show()
             // Bounce back to the main thread to update the UI
@@ -84,21 +84,21 @@ class RecuperarVC: UIViewController , UITextFieldDelegate{
                     
                     if respuesta != nil{
                         if respuesta?.Codigo == structCodigo.Correcto{
-                            Utileria().enviarAlerta(mensaje: .CorreoEnviadoCorrectamente, titulo: .Aplicacion, controller: self)
+                            Util().enviarAlerta(mensaje: .CorreoEnviadoCorrectamente, titulo: .Aplicacion, controller: self)
                             self.txtCorreo.text = ""
                             
                         }else{
-                            Utileria().enviarAlerta(mensaje: (respuesta?.Mensaje)!, titulo: .Alerta, controller: self)
+                            Util().enviarAlerta(mensaje: (respuesta?.Mensaje)!, titulo: .Alerta, controller: self)
                         }
                     }else{
-                         Utileria().enviarAlerta(mensaje:  .ErrorEnElServicio, titulo: .Alerta, controller: self)
+                         Util().enviarAlerta(mensaje:  .ErrorEnElServicio, titulo: .Alerta, controller: self)
                     }
                     
                 })
             }
             }
         }else{
-           Utileria().enviarAlerta(mensaje:  .DebesTenerConexionInternet, titulo: .Alerta, controller: self)
+           Util().enviarAlerta(mensaje:  .DebesTenerConexionInternet, titulo: .Alerta, controller: self)
         }
     }
     
@@ -108,15 +108,15 @@ class RecuperarVC: UIViewController , UITextFieldDelegate{
         // Do any additional setup after loading the view.
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(self.keyboardWillShow(notification:)),
-                                               name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+                                               name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(self.keyboardWillHide(notification:)),
-                                               name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+                                               name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {
         guard let userInfo = notification.userInfo,
-            let frame = (userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue )?.cgRectValue else{
+            let frame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue )?.cgRectValue else{
                 return
         }
         let contentInfo = UIEdgeInsets(top: 0, left: 0, bottom: frame.height     , right: 0)

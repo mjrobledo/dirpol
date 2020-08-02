@@ -3,6 +3,7 @@ PODS:
   - AlamofireObjectMapper (5.1.0):
     - Alamofire (~> 4.1)
     - ObjectMapper (~> 3.3)
+  - CropViewController (2.5.3)
   - GoogleMaps (2.7.0):
     - GoogleMaps/Maps (= 2.7.0)
   - GoogleMaps/Base (2.7.0)
@@ -15,6 +16,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 4.4)
   - AlamofireObjectMapper
+  - CropViewController
   - GoogleMaps
   - ReachabilitySwift
   - SVProgressHUD
@@ -27,15 +29,18 @@ SPEC REPOS:
     - ObjectMapper
     - ReachabilitySwift
     - SVProgressHUD
+  trunk:
+    - CropViewController
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   AlamofireObjectMapper: 3395e698901d8b0e6f48b7d0c43bd47875325102
+  CropViewController: a5c143548a0fabcd6cc25f2d26e40460cfb8c78c
   GoogleMaps: f79af95cb24d869457b1f961c93d3ce8b2f3b848
   ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
   ReachabilitySwift: 6849231cd4e06559f3b9ef4a97a0a0f96d41e09f
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 9523c02094703a4e1da42f5d9fdfd83df790cb6c
+PODFILE CHECKSUM: a5ad9650515b308e24f86ce7c8504df56ffa3cef
 
 COCOAPODS: 1.8.4

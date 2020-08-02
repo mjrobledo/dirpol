@@ -84,14 +84,14 @@ class IniciarSesionVC: UIViewController, UITextFieldDelegate {
                                 self.performSegue(withIdentifier: "segueInicio", sender: nil)
                         
                         case structCodigo.UsuarioNoExiste :
-                                Utileria().enviarAlerta(mensaje: "Error de autenticación", titulo: .Alerta, controller: self)
+                                Util().enviarAlerta(mensaje: "Error de autenticación", titulo: .Alerta, controller: self)
                         
                         case structCodigo.PasswordErronea :
                             self.controlIntentos()
                             Variables.IntentosDeLogin = Variables.IntentosDeLogin + 1
                         
                         case structCodigo.CuentaBloqueada :
-                            Utileria().enviarAlerta(mensaje: "Por seguridad su cuenta a sido bloqueada", titulo: .Alerta, controller: self)
+                            Util().enviarAlerta(mensaje: "Por seguridad su cuenta a sido bloqueada", titulo: .Alerta, controller: self)
                             
                         default:
                             print("No hay opciones login")
@@ -99,7 +99,7 @@ class IniciarSesionVC: UIViewController, UITextFieldDelegate {
                     }else{
                         DispatchQueue.main.async {
                         SVProgressHUD.dismiss()
-                         Utileria().enviarAlerta(mensaje:  .ErrorEnElServicio, titulo: .Alerta, controller: self)
+                         Util().enviarAlerta(mensaje:  .ErrorEnElServicio, titulo: .Alerta, controller: self)
                          //self.performSegue(withIdentifier: "segueInicio", sender: nil)
                         }
                     }
@@ -109,21 +109,21 @@ class IniciarSesionVC: UIViewController, UITextFieldDelegate {
             }
             
         }else{
-            Utileria().enviarAlerta(mensaje: .TodosLosCamposSonObligatorios, titulo: .Alerta, controller: self)
+            Util().enviarAlerta(mensaje: .TodosLosCamposSonObligatorios, titulo: .Alerta, controller: self)
         }
     }
     
     private func controlIntentos(){
         switch Variables.IntentosDeLogin {
         case 1:
-             Utileria().enviarAlerta(mensaje: "Intente de nuevo, clave incorrecta o el usuario no existe.", titulo: .Alerta, controller: self)
+             Util().enviarAlerta(mensaje: "Intente de nuevo, clave incorrecta o el usuario no existe.", titulo: .Alerta, controller: self)
         case 2:
-            Utileria().enviarAlerta(mensaje: "Clave incorrecta o el usuario no existe. Si se equivoca una vez más, por seguridad la cuenta será bloqueada.", titulo: "Advertencia", controller: self)
+            Util().enviarAlerta(mensaje: "Clave incorrecta o el usuario no existe. Si se equivoca una vez más, por seguridad la cuenta será bloqueada.", titulo: "Advertencia", controller: self)
         case 3:
             let usuario:String = (txtNombre.text?.trim())!
             Servicios().bloquearCuenta(usuario: usuario) { repuesta  in
                 if repuesta?.Codigo == structCodigo.Correcto{
-                    Utileria().enviarAlerta(mensaje: " Bloqueo se completó con éxito. Por favor contacte con el administrador del sistema.", titulo: "Mensaje", controller: self)
+                    Util().enviarAlerta(mensaje: " Bloqueo se completó con éxito. Por favor contacte con el administrador del sistema.", titulo: "Mensaje", controller: self)
                     
                 }
             }
@@ -132,7 +132,7 @@ class IniciarSesionVC: UIViewController, UITextFieldDelegate {
         default:
             print("Error")
         }
-         Utileria().enviarAlerta(mensaje: "Error de autenticación", titulo: .Alerta, controller: self)
+         Util().enviarAlerta(mensaje: "Error de autenticación", titulo: .Alerta, controller: self)
     }
     
     @IBAction func rememberMe(_ sender: UIButton) {

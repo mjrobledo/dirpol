@@ -16,7 +16,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="img_splash" translatesAutoresizingMaskIntoConstraints="NO" id="iwo-xj-IL1">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kkL-BT-V8L">
+                                <rect key="frame" x="-4" y="0.0" width="379" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.17782488465309143" green="0.32017689943313599" blue="0.17960512638092041" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" alpha="0.25" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgorund1-b" translatesAutoresizingMaskIntoConstraints="NO" id="iwo-xj-IL1">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
@@ -98,7 +103,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="img_splash" width="1184" height="2363"/>
+        <image name="backgorund1-b" width="1182" height="2363"/>
         <image name="logo_appointment" width="266" height="190"/>
         <image name="logo_dircom" width="322" height="170"/>
         <image name="logo_v2" width="396" height="148"/>

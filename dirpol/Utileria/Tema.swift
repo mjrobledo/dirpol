@@ -19,7 +19,7 @@ struct Tema {
        // UIFont.systemFont(ofSize: 17.0)
         let navBarAppearance = UINavigationBar.appearance()
         navBarAppearance.isTranslucent = false
-        navBarAppearance.titleTextAttributes = [kCTForegroundColorAttributeName : UIColor.white, kCTFontAttributeName : navBarFont] as [NSAttributedStringKey : Any]
+        navBarAppearance.titleTextAttributes = [kCTForegroundColorAttributeName : UIColor.white, kCTFontAttributeName : navBarFont] as [NSAttributedString.Key : Any]
         navBarAppearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         navBarAppearance.tintColor = UIColor.white
         navBarAppearance.barTintColor = UIColor.cPrincipal()

@@ -18,15 +18,15 @@ class RenewMembershipVC: UIViewController {
     
     
     @IBAction func call(_ sender: Any) {
-        Utileria.llamar(tel: "+5115006000", viewController: self)
+        Util.llamar(tel: "+5115006000", viewController: self)
     }
         
     @IBAction func whatsapp(_ sender: Any) {
-        Utileria.openWhatsapp()
+        Util.openWhatsapp()
     }
     
     @IBAction func facebook(_ sender: Any) {
-        Utileria.openFB()
+        Util.openFB()
     }
     
     @IBAction func close(_ sender: Any) {

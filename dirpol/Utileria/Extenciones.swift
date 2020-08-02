@@ -306,7 +306,7 @@ extension UILabel {
 }
 
 extension UIButton {
-    func setBackgroundColor(color: UIColor, forState: UIControlState) {
+    func setBackgroundColor(color: UIColor, forState: UIControl.State) {
         UIGraphicsBeginImageContext(CGSize(width: 1, height: 1))
         UIGraphicsGetCurrentContext()!.setFillColor(color.cgColor)
         UIGraphicsGetCurrentContext()!.fill(CGRect(x: 0, y: 0, width: 1, height: 1))
@@ -341,7 +341,7 @@ extension UITextField{
                 return self.placeHolderColor
             }
             set {
-                self.attributedPlaceholder = NSAttributedString(string:self.placeholder != nil ? self.placeholder! : "", attributes:[NSAttributedStringKey.foregroundColor: newValue!])
+                self.attributedPlaceholder = NSAttributedString(string:self.placeholder != nil ? self.placeholder! : "", attributes:[NSAttributedString.Key.foregroundColor: newValue!])
             }
         }
 }
@@ -423,7 +423,7 @@ extension UIImageView {
         }
         set {
             if newValue {
-                self.image = self.image?.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
+                self.image = self.image?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
                 self.tintColor = UIColor.cPrincipal()
             }
         }
@@ -448,7 +448,7 @@ extension UIImageView {
     }
     
     private func configure() {
-        self.image = self.image?.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
+        self.image = self.image?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
     }
      
 }

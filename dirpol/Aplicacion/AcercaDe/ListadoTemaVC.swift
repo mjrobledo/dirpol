@@ -81,9 +81,9 @@ class ListadoTemaVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         }else{
              titulo.text = regiones[indexPath.row].Nombre
             if regiones[indexPath.row].seleccionada{
-                cell?.accessoryType = UITableViewCellAccessoryType.checkmark
+                cell?.accessoryType = UITableViewCell.AccessoryType.checkmark
             }else{
-                cell?.accessoryType = UITableViewCellAccessoryType.none
+                cell?.accessoryType = UITableViewCell.AccessoryType.none
             }
         }
         return cell!

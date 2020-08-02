@@ -23,7 +23,7 @@ class CollMenu: UICollectionView,  UICollectionViewDataSource, UICollectionViewD
     func initClass(){
         self.register(CellMenu.self, forCellWithReuseIdentifier: "CellMenu")
         let layout = self.collectionViewLayout as! UICollectionViewFlowLayout
-        layout.scrollDirection = UICollectionViewScrollDirection.vertical
+        layout.scrollDirection = UICollectionView.ScrollDirection.vertical
     }
     
     override func draw(_ rect: CGRect) {
