@@ -1,0 +1,15 @@
+//
+//  ConfigMexico.xcconfig
+//  dirpol
+//
+//  Created by Developer iOS on 7/7/20.
+//  Copyright © 2020 gravittas. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+CONFIG_APP=Mexico
+SLASH = /
+URL_APP = http:$(SLASH)/acceso127.lorexddns.net:8084/DirPolServicio/public
+ProvideAPIKey_APP = AIzaSyAxb0nBSc39zaJl2wPa0FIVybjO95ZxQEY
+LaunchScreen = LaunchScreen_mex

@@ -147,6 +147,7 @@ class ViewDirectorio: UIView, UITableViewDelegate, UITableViewDataSource , UITex
         //let direccion = direccionesAux[indexPath.row]
         let titulo:UILabel = cell?.viewWithTag(1) as! UILabel
         titulo.text = "\(direccion.Nombre)"
+        titulo.backgroundColor = UIColor.cPrincipal()
         
         return cell!
     }

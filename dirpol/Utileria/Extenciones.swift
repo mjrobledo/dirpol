@@ -278,10 +278,35 @@ extension UIButton {
             }
         }
     }
+    
+    @IBInspectable var TextPrimaryColor: Bool   {
+        get {
+            return false
+        }
+        set {
+            if newValue {
+                self.setTitleColor(UIColor.cPrincipal()  , for: .normal)
+                self.setTitleColor(UIColor.cPrincipal(), for: .selected)
+            }
+        }
+    }
+}
+
+extension UILabel {
+    @IBInspectable var LblPrimaryColor: Bool   {
+        get {
+            return false
+        }
+        set {
+            if newValue {
+                self.textColor = UIColor.cPrincipal()
+            }
+        }
+    }
 }
 
 extension UIButton {
-    func setBackgroundColor(color: UIColor, forState: UIControlState) {
+    func setBackgroundColor(color: UIColor, forState: UIControl.State) {
         UIGraphicsBeginImageContext(CGSize(width: 1, height: 1))
         UIGraphicsGetCurrentContext()!.setFillColor(color.cgColor)
         UIGraphicsGetCurrentContext()!.fill(CGRect(x: 0, y: 0, width: 1, height: 1))
@@ -316,14 +341,13 @@ extension UITextField{
                 return self.placeHolderColor
             }
             set {
-                self.attributedPlaceholder = NSAttributedString(string:self.placeholder != nil ? self.placeholder! : "", attributes:[NSAttributedStringKey.foregroundColor: newValue!])
+                self.attributedPlaceholder = NSAttributedString(string:self.placeholder != nil ? self.placeholder! : "", attributes:[NSAttributedString.Key.foregroundColor: newValue!])
             }
         }
 }
 
 
 extension UIView {
-    
     @IBInspectable var shadow: Bool {
         get {
             return layer.shadowOpacity > 0.0
@@ -358,7 +382,6 @@ extension UIView {
             self.layer.masksToBounds = true
             self.layer.borderColor = newValue.cgColor
         }
-        
     }
     
     @IBInspectable var borderWidth: CGFloat {        
@@ -371,10 +394,6 @@ extension UIView {
         }
     }
     
-    
- 
-
-    
     func addShadow(shadowColor: CGColor = UIColor.cSecundarioN4().cgColor,
                    shadowOffset: CGSize = CGSize(width: 2.0, height: 2.0),
                    shadowOpacity: Float = 0.7,
@@ -383,10 +402,63 @@ extension UIView {
         layer.shadowOffset = shadowOffset
         layer.shadowOpacity = shadowOpacity
         layer.shadowRadius = shadowRadius
-        
-        
+    }
+    
+    @IBInspectable var primaryColor: Bool   {
+        get {
+            return false
+        }
+        set {
+            if newValue {
+                self.backgroundColor = UIColor.cPrincipal()
+            }
+        }
     }
 }
+
+extension UIImageView {
+    @IBInspectable var ImgPrimaryColor: Bool   {
+        get {
+            return false
+        }
+        set {
+            if newValue {
+                self.image = self.image?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
+                self.tintColor = UIColor.cPrincipal()
+            }
+        }
+    }
+}
+
+extension UIImageView {
+@IBDesignable class TintedImageView: UIImageView {
+    override func prepareForInterfaceBuilder() {
+        self.configure()
+    }
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.configure()
+    }
+
+    @IBInspectable override var tintColor: UIColor! {
+        didSet {
+            self.configure()
+        }
+    }
+    
+    private func configure() {
+        self.image = self.image?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
+    }
+     
+}
+    
+    override open func awakeFromNib() {
+        super.awakeFromNib()
+        tintColorDidChange()
+    }    
+}
+
 /*_________________________________________________________________________________________*/
 
 

@@ -124,7 +124,7 @@ class DetalleBusquedaVC: UIViewController {
                 UIApplication.shared.openURL(url)
             }
         }else{
-            Utileria().enviarAlerta(mensaje: "Número de teléfono no válido", titulo: "Alerta", controller: self)
+            Util().enviarAlerta(mensaje: "Número de teléfono no válido", titulo: "Alerta", controller: self)
         }
     }
     

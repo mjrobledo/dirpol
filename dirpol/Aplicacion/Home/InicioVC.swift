@@ -194,14 +194,14 @@ class InicioVC: UIViewController, segueMenu , MenuDelegate, busquedaDelegate, di
     //Cerrar sesion
     func alertCerrarSesion() {
         
-        let alertController = UIAlertController(title: .CerrarSesion , message: .AlertaSesion, preferredStyle: UIAlertControllerStyle.alert)
-        let siAction = UIAlertAction(title: .CERRARSESION, style: UIAlertActionStyle.default) { (result : UIAlertAction) -> Void in
+        let alertController = UIAlertController(title: .CerrarSesion , message: .AlertaSesion, preferredStyle: UIAlertController.Style.alert)
+        let siAction = UIAlertAction(title: .CERRARSESION, style: UIAlertAction.Style.default) { (result : UIAlertAction) -> Void in
             DispatchQueue.main.async {
                 strucSubMenu.Activo = strucSubMenu.Busqueda
                 self.dismiss(animated: true, completion: nil)
             }
         }
-        let noAction = UIAlertAction(title: .Cancelar, style: UIAlertActionStyle.cancel) { (result : UIAlertAction) -> Void in
+        let noAction = UIAlertAction(title: .Cancelar, style: UIAlertAction.Style.cancel) { (result : UIAlertAction) -> Void in
             DispatchQueue.main.async {
             }
         }
@@ -325,8 +325,7 @@ class InicioVC: UIViewController, segueMenu , MenuDelegate, busquedaDelegate, di
                 let inst:Institucion = sender as! Institucion
                 svc.institucion = inst
             }
-        }
-        
+        }        
     }
     
 

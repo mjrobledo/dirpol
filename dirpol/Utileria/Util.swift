@@ -13,18 +13,18 @@ import SystemConfiguration
    var activitiyViewController:ActivityViewController? = nil
 
 
-@objc protocol barraDelegate {
+@objc protocol barDelegate {
     
-    @objc optional func botonListo()
-    @objc optional func obtenerFecha(strFecha: String, fechaDate: Date )
+    @objc optional func bntOK()
+    @objc optional func getDate(strFecha: String, fechaDate: Date )
     @objc optional func setCantidad(strCantidad:String)
 }
 
 
 
-class Utileria: NSObject {
+class Util: NSObject {
     /*! @brief Delegado de la clase. */
-    var delegateUtil:barraDelegate?
+    var delegateUtil:barDelegate?
     
     var datePickerView:UIDatePicker = UIDatePicker()
     
@@ -48,7 +48,7 @@ class Utileria: NSObject {
     }
     
     
-    static func cerrarAlerta(completion:@escaping () -> ()){
+    static func closeAlert(completion:@escaping () -> ()){
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
         activitiyViewController?.dismiss(animated: true, completion:{ () in
             DispatchQueue.main.async {
@@ -57,6 +57,46 @@ class Utileria: NSObject {
         }
         )
     }
+    
+    static func llamar(tel:String, viewController: UIViewController){
+        if let url = URL(string: "telprompt://\(tel)"), UIApplication.shared.canOpenURL(url) {
+            if #available(iOS 10, *) {
+                UIApplication.shared.open(url)
+            } else {
+                UIApplication.shared.openURL(url)
+            }
+        }else{
+            Util().enviarAlerta(mensaje: "Número de teléfono no válido", titulo: "Alerta", controller: viewController)
+        }
+    }
+    
+   static func openWhatsapp() {
+        let phoneNumber =  "+5115006000" // you need to change this number
+        let appURL = URL(string: "https://api.whatsapp.com/send?phone=\(phoneNumber)")!
+        if UIApplication.shared.canOpenURL(appURL) {
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(appURL, options: [:], completionHandler: nil)
+            }
+            else {
+                UIApplication.shared.openURL(appURL)
+            }
+        } else {
+            // WhatsApp is not installed
+        }
+    }
+    
+   static func openFB() {
+        let url = URL(string: "fb://profile/254320987943693")!
+        let application = UIApplication.shared
+        // Check if the facebook App is installed
+        if application.canOpenURL(url) {
+            application.open(url)
+        } else {
+            // If Facebook App is not installed, open Safari with Facebook Link
+            application.open(URL(string: "https://de-de.facebook.com/apple")!)
+        }
+    }
+    
     /******* Fin Metodo para enviar alerta  ********/
     
     
@@ -88,8 +128,8 @@ class Utileria: NSObject {
         toolBar.tintColor = UIColor(red: 1/255, green: 104/255, blue: 61/255, alpha: 1)
         toolBar.sizeToFit()
         
-        let doneButton = UIBarButtonItem(title: "LISTO", style: UIBarButtonItemStyle.plain, target: self, action: #selector(self.listo))
-        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
+        let doneButton = UIBarButtonItem(title: "LISTO", style: UIBarButtonItem.Style.plain, target: self, action: #selector(self.listo))
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
         
         toolBar.setItems([ spaceButton, doneButton], animated: false)
         toolBar.isUserInteractionEnabled = true
@@ -98,44 +138,44 @@ class Utileria: NSObject {
     }
     
     @objc func listo()  {
-        self.delegateUtil?.botonListo!()
+        self.delegateUtil?.bntOK?()
     }
     
      func agregarPickerFecha(txt_aux: UITextField){
         
-        datePickerView.datePickerMode = UIDatePickerMode.date
+        datePickerView.datePickerMode = UIDatePicker.Mode.date
        
         // datePickerView.minimumDate = Date()
         
         txt_aux.inputView = datePickerView
         
-        datePickerView.addTarget(self, action: #selector(self.datePickerValueChanged(sender:)), for: UIControlEvents.valueChanged)
+        datePickerView.addTarget(self, action: #selector(self.datePickerValueChanged(sender:)), for: UIControl.Event.valueChanged)
     }
     
     
     func agregarFechaHoraPicker(txt_aux: UITextField){
         let datePickerView:UIDatePicker = UIDatePicker()
-        datePickerView.datePickerMode = UIDatePickerMode.dateAndTime
+        datePickerView.datePickerMode = UIDatePicker.Mode.dateAndTime
         
         datePickerView.minimumDate = Date()
         
         txt_aux.inputView = datePickerView
         
-        datePickerView.addTarget(self, action: #selector(self.retornaFechaHoraPicker(sender:)), for: UIControlEvents.valueChanged)
+        datePickerView.addTarget(self, action: #selector(self.retornaFechaHoraPicker(sender:)), for: UIControl.Event.valueChanged)
     }
     
      @objc func retornaFechaHoraPicker(sender:UIDatePicker){
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd MMMM yyyy hh:mm"
         let fecha = dateFormatter.string(from: sender.date)
-        self.delegateUtil?.obtenerFecha!(strFecha: fecha, fechaDate: sender.date)        
+        self.delegateUtil?.getDate?(strFecha: fecha, fechaDate: sender.date)
     }
     
     @objc func datePickerValueChanged(sender:UIDatePicker) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd MMMM yyyy"
         let fecha = dateFormatter.string(from: sender.date)
-        self.delegateUtil?.obtenerFecha!(strFecha: fecha, fechaDate: sender.date)
+        self.delegateUtil?.getDate!(strFecha: fecha, fechaDate: sender.date)
     }
     
     func getFechaDefaultPicker()-> (strFecha:String, dateFecha:Date){
@@ -306,7 +346,7 @@ class Utileria: NSObject {
     
     func getImagenBase64(imagen:UIImage) -> String{
         //Now use image to create into NSData format
-        let imageData:NSData = UIImagePNGRepresentation(imagen)! as NSData
+        let imageData:NSData = imagen.pngData()! as NSData
         
         let strBase64 = imageData.base64EncodedString(options: .lineLength64Characters)
         print(strBase64)
@@ -333,9 +373,9 @@ class Utileria: NSObject {
     }
     
      func enviarAlerta(mensaje:String, titulo:String, controller:UIViewController){
-        let alert = UIAlertController(title: titulo, message: mensaje, preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: titulo, message: mensaje, preferredStyle: UIAlertController.Style.alert)
         
-        alert.addAction(UIAlertAction(title: .Enterado, style: UIAlertActionStyle.default, handler: nil))
+        alert.addAction(UIAlertAction(title: .Enterado, style: UIAlertAction.Style.default, handler: nil))
         controller.present(alert, animated: true, completion: nil)
     }
     
@@ -390,7 +430,7 @@ class ActivityViewController: UIViewController {
 
 private class ActivityView: UIView {
     
-    let activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
+    let activityIndicatorView = UIActivityIndicatorView(style: .whiteLarge)
     let boundingBoxView = UIView(frame: CGRect.zero)
     let messageLabel = UILabel(frame: CGRect.zero)
     

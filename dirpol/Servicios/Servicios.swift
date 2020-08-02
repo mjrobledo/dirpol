@@ -17,7 +17,7 @@ class Servicios: NSObject {
     {
         let manager = Alamofire.SessionManager.default
         
-        let urlAux = "\(url.principal)/inserta"
+        let urlAux = "\(Api.url_app)/inserta"
         let parametros = us.toJSON()
         
         manager.request(urlAux,method: .post, parameters:parametros).responseObject { (response: DataResponse<requesData>) in
@@ -31,7 +31,7 @@ class Servicios: NSObject {
     
     func inicioSesion(usuario:RequestLogin, completion: @escaping (RespuestaLogin?) -> ())
     {
-        let urlAux = "\(url.principal)/api/auth"
+        let urlAux = "\(Api.url_app)/api/auth"
         let parametros = usuario.toJSON()
         let manager = Alamofire.SessionManager.default
         
@@ -47,7 +47,7 @@ class Servicios: NSObject {
     
     func bloquearCuenta(usuario:String, completion: @escaping (respuestaGenerica?) -> ())
     {
-        let urlAux = "\(url.principal)/api/user/block"
+        let urlAux = "\(Api.url_app)/api/user/block"
         let parametros = ["usuario":usuario]
         let manager = Alamofire.SessionManager.default
         
@@ -66,7 +66,7 @@ class Servicios: NSObject {
     // MARK: - Edita usuario
     func editarUsuario(usuario:Usuario, completion: @escaping (respuestaGenerica?) -> ())
     {
-        let urlAux = "\(url.principal)/api/user/editar"
+        let urlAux = "\(Api.url_app)/api/user/editar"
         let parametros = usuario.toJSON()
         let manager = Alamofire.SessionManager.default
         
@@ -85,7 +85,7 @@ class Servicios: NSObject {
     {
         let manager = Alamofire.SessionManager.default
         
-        let urlAux = "\(url.principal)/api/region"
+        let urlAux = "\(Api.url_app)/api/region"
         let parametros = ["usuario":""]
         
         manager.request(urlAux,method: .get, parameters:parametros).responseArray { (response: DataResponse<[Region]>) in
@@ -99,7 +99,7 @@ class Servicios: NSObject {
     {
         let manager = Alamofire.SessionManager.default
         
-        let urlAux = "\(url.principal)/api/region/provincia"
+        let urlAux = "\(Api.url_app)/api/region/provincia"
         
         let parametros = ["id_region":idRegion]
         
@@ -123,9 +123,9 @@ class Servicios: NSObject {
         let manager = Alamofire.SessionManager.default
         var urlAux = ""
         if tipo == structServicio.RecuperaUsuario {
-            urlAux = "\(url.principal)/api/user/recuperarUsuario"
+            urlAux = "\(Api.url_app)/api/user/recuperarUsuario"
         }else{
-            urlAux = "\(url.principal)/api/user/password"
+            urlAux = "\(Api.url_app)/api/user/password"
         }
         
         let parametros = ["email":correo] as [String : Any]
@@ -140,7 +140,7 @@ class Servicios: NSObject {
     
     func getBusquedaGoogle(texto:String, completa:Bool, completion: @escaping (RespuestaBGoogle?) -> ())
     {
-        let urlAux = "\(url.principal)/api/instituciones"
+        let urlAux = "\(Api.url_app)/api/instituciones"
         
         let parametros = ["txtBusqueda":texto, "busquedaCompleta" : completa] as [String : Any]
         let manager = Alamofire.SessionManager.default
@@ -165,7 +165,7 @@ class Servicios: NSObject {
     //
     func getInstitucionesProvincia(id_provincia:Int,  completion: @escaping (RespuestaBGoogle?) -> ())
     {
-        let urlAux = "\(url.principal)/api/institucion/districto"
+        let urlAux = "\(Api.url_app)/api/institucion/districto"
         let parametros = ["id_provincia":id_provincia]
         let manager = Alamofire.SessionManager.default
         
@@ -189,7 +189,7 @@ class Servicios: NSObject {
     
     func getInstitucion(id_institucion:Int,   completion: @escaping (respuestaInstitucion?) -> ())
     {
-        let urlAux = "\(url.principal)/api/detalleInstitucion"
+        let urlAux = "\(Api.url_app)/api/detalleInstitucion"
         
         let parametros = ["id_institucion":id_institucion]
         
@@ -207,7 +207,7 @@ class Servicios: NSObject {
     
     func getInstitucionFuncionario(id_funcionario:Int,   completion: @escaping (respuestaInstitucion?) -> ())
     {
-        let urlAux = "\(url.principal)/api/detalleInstitucionFuncionario"
+        let urlAux = "\(Api.url_app)/api/detalleInstitucionFuncionario"
         
         let parametros = ["id_funcionario":id_funcionario]
         
@@ -225,7 +225,7 @@ class Servicios: NSObject {
     
     func getAltoMando(   completion: @escaping (RespuestaBGoogle?) -> ())
     {
-        let urlAux = "\(url.principal)/api/altomando"
+        let urlAux = "\(Api.url_app)/api/altomando"
         
         let parametros = ["":""]
         
@@ -240,7 +240,7 @@ class Servicios: NSObject {
 
     func getInstitucionesBusqueda(request:RequestBusqueda,  completion: @escaping (RespuestaBGoogle?) -> ())
     {
-        let urlAux = "\(url.principal)/api/institucion/districto"
+        let urlAux = "\(Api.url_app)/api/institucion/districto"
         let parametros = request.toJSON()
         let manager = Alamofire.SessionManager.default
         
@@ -262,7 +262,7 @@ class Servicios: NSObject {
     
     func getBusquedaAvanzada(request:RequestBusqueda,  completion: @escaping (RespuestaBAvanzada?) -> ())
     {
-        let urlAux = "\(url.principal)/api/institucion/busqueda"
+        let urlAux = "\(Api.url_app)/api/institucion/busqueda"
         let parametros = request.toJSON()
         let manager = Alamofire.SessionManager.default
         

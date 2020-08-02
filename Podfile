@@ -6,26 +6,12 @@ target 'dirpol' do
   use_frameworks!
   #pod 'CardIO'
   pod 'Alamofire', '~> 4.4'
-  #pod 'OneSignal'
-  #pod 'Firebase/Core'
-  #pod 'Google/Analytics'
-  #pod 'RealmSwift'
-  #pod 'ZDCChat'
-  #pod 'ZendeskSDK'
-  #pod 'Kingfisher'
-  #pod 'SDWebImage'
   pod 'ReachabilitySwift'
-  #pod 'YouTubePlayer', '~> 0.4'
-  #pod 'Fabric'
-  #pod 'Crashlytics'
-  #pod 'Firebase/RemoteConfig'
-  # Calificar la app
-  #pod 'AppRating'
-  #pod 'ObjectMapper'
+  
   pod 'AlamofireObjectMapper'
   pod 'GoogleMaps'
   pod 'SVProgressHUD'
-
+  pod 'CropViewController'
 
   # Pods for dirpol
 

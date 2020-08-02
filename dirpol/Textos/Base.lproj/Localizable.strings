@@ -30,8 +30,8 @@ CerrarSesion = "Cerrar sesión";
 
 
 // MARK: - (Inicio de sesión, recupera)
-NoRecueraTuUsuario = "¿No recuerdas tu usuario?";
-NoRecueraTuPassword = "¿No recuerdas tu contraseña?";
+NoRecueraTuUsuario = "tu usuario?";
+NoRecueraTuPassword = "tu contraseña?";
 
 MensajePassword = "Por favor, introduzca la dirección de correo electrónico asociada a su cuenta. Se le enviará una nueva contraseña para acceder a la aplicación móvil. Posterior a ello, usted puede cambiar la clave en el menú: Panel de Usuario";
 
