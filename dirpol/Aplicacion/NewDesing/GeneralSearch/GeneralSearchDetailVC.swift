@@ -16,6 +16,7 @@ class GeneralSearchDetailVC: UIViewController {
         table.register(UINib(nibName: "CellGeneralSearchDetail", bundle: nil), forCellReuseIdentifier: "cell")
     }
  
+    
 
     /*
     // MARK: - Navigation
@@ -38,6 +39,10 @@ extension GeneralSearchDetailVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
         return cell!
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "segueMap", sender: nil)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

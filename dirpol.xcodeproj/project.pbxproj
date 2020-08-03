@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		473873F024D7B1D10050693F /* CellStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473873EE24D7B1D10050693F /* CellStation.swift */; };
+		473873F124D7B1D10050693F /* CellStation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 473873EF24D7B1D10050693F /* CellStation.xib */; };
+		477B99AE24D7BDD800BDF97F /* PoliciesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477B99AD24D7BDD800BDF97F /* PoliciesVC.swift */; };
+		477B99B024D7C79C00BDF97F /* ImageZoomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477B99AF24D7C79C00BDF97F /* ImageZoomVC.swift */; };
 		4A2EE5683B7C13721094057B /* Pods_dirpol.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF9EDE49EB90096899428D8D /* Pods_dirpol.framework */; };
 		6C3E98E5214C5746009FDF74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3E98E4214C5746009FDF74 /* AppDelegate.swift */; };
 		6C3E98E7214C5746009FDF74 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3E98E6214C5746009FDF74 /* ViewController.swift */; };
@@ -124,6 +128,10 @@
 		23C56302C56222551723B3F6 /* Pods-dirpolTests.mexico.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dirpolTests.mexico.xcconfig"; path = "Pods/Target Support Files/Pods-dirpolTests/Pods-dirpolTests.mexico.xcconfig"; sourceTree = "<group>"; };
 		23E12D3A3BDCA4A915FCC1D7 /* Pods-dirpolTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dirpolTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dirpolTests/Pods-dirpolTests.debug.xcconfig"; sourceTree = "<group>"; };
 		42280B81768CDC12E7BFC9C1 /* Pods-dirpol.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dirpol.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dirpol/Pods-dirpol.debug.xcconfig"; sourceTree = "<group>"; };
+		473873EE24D7B1D10050693F /* CellStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellStation.swift; sourceTree = "<group>"; };
+		473873EF24D7B1D10050693F /* CellStation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellStation.xib; sourceTree = "<group>"; };
+		477B99AD24D7BDD800BDF97F /* PoliciesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliciesVC.swift; sourceTree = "<group>"; };
+		477B99AF24D7C79C00BDF97F /* ImageZoomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageZoomVC.swift; sourceTree = "<group>"; };
 		639B2BB21BD8A5156C0DFA6C /* Pods-dirpol.colombia.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dirpol.colombia.xcconfig"; path = "Pods/Target Support Files/Pods-dirpol/Pods-dirpol.colombia.xcconfig"; sourceTree = "<group>"; };
 		6C3E98E1214C5746009FDF74 /* DIRPOL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DIRPOL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C3E98E4214C5746009FDF74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -349,8 +357,9 @@
 				8B06670D24D352AB00078BDB /* MapDetail */,
 				8B1075F524D243A200C50789 /* Cell */,
 				8B1075E924D2399300C50789 /* GeneralSearch.storyboard */,
-				8B1075F824D243DC00C50789 /* GeneralSearchDetailVC.swift */,
 				8B1075F624D243CB00C50789 /* GeneralSearchVC.swift */,
+				8B1075F824D243DC00C50789 /* GeneralSearchDetailVC.swift */,
+				477B99AD24D7BDD800BDF97F /* PoliciesVC.swift */,
 			);
 			path = GeneralSearch;
 			sourceTree = "<group>";
@@ -362,6 +371,8 @@
 				8B1075EE24D23CF400C50789 /* CellGeneralSearch.xib */,
 				8B1075F124D23E8B00C50789 /* CellGeneralSearchDetail.swift */,
 				8B1075F224D23E8B00C50789 /* CellGeneralSearchDetail.xib */,
+				473873EE24D7B1D10050693F /* CellStation.swift */,
+				473873EF24D7B1D10050693F /* CellStation.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -372,6 +383,7 @@
 				8B115EC624BECD2000C82CFB /* Credential.storyboard */,
 				8B9AB12524C143F0005AE821 /* CredentialVC.swift */,
 				8B9AB12724C1441E005AE821 /* RenewMembershipVC.swift */,
+				477B99AF24D7C79C00BDF97F /* ImageZoomVC.swift */,
 			);
 			path = Credential;
 			sourceTree = "<group>";
@@ -791,6 +803,7 @@
 				8B1992B824C3A399003D788B /* Montserrat-Medium.ttf in Resources */,
 				FA9850C02151D162002F143D /* Contacto.storyboard in Resources */,
 				8B1992B424C3A399003D788B /* Montserrat-Light.ttf in Resources */,
+				473873F124D7B1D10050693F /* CellStation.xib in Resources */,
 				8BAC4FDA24BDF20C0008026F /* Menu.storyboard in Resources */,
 				FAC2C0382150C04900A74FA3 /* Buscar.storyboard in Resources */,
 				8B409AD224B58CED004ED46E /* Assets.xcassets in Resources */,
@@ -964,14 +977,17 @@
 				FAC2C05A2151BF6700A74FA3 /* AcercaDeVC.swift in Sources */,
 				FA9850CE215347B9002F143D /* ViewBusquedaUno.swift in Sources */,
 				6C3E98E5214C5746009FDF74 /* AppDelegate.swift in Sources */,
+				477B99B024D7C79C00BDF97F /* ImageZoomVC.swift in Sources */,
 				8B1992A424C37671003D788B /* AboutUS.swift in Sources */,
 				FAC2C0342150822B00A74FA3 /* RecuperarVC.swift in Sources */,
 				FAC2C025215032FE00A74FA3 /* Extenciones.swift in Sources */,
+				473873F024D7B1D10050693F /* CellStation.swift in Sources */,
 				FAC2C03B2150C18700A74FA3 /* ContactoVC.swift in Sources */,
 				FA9850C421521AF7002F143D /* BusquedaAvanzadaVC.swift in Sources */,
 				FA43C655215C2C9700495E32 /* Servicios.swift in Sources */,
 				FAC2C0572151A6DD00A74FA3 /* CellMenu.swift in Sources */,
 				8B409ACF24B57ED5004ED46E /* Api.swift in Sources */,
+				477B99AE24D7BDD800BDF97F /* PoliciesVC.swift in Sources */,
 				8B9AB12624C143F0005AE821 /* CredentialVC.swift in Sources */,
 				8B1075EF24D23CF400C50789 /* CellGeneralSearch.swift in Sources */,
 				FAC2C0562151A6DD00A74FA3 /* CollMenu.swift in Sources */,

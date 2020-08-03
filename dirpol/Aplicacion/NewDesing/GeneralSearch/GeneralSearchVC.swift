@@ -20,6 +20,10 @@ class GeneralSearchVC: UIViewController {
 
     }
 
+    @IBAction func back(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     
 
     /*
@@ -41,6 +45,10 @@ extension GeneralSearchVC: UITableViewDelegate, UITableViewDataSource {
         table.isHidden = count == 0 ? true : false
         
         return count
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "segueSearchDetail", sender: nil)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
