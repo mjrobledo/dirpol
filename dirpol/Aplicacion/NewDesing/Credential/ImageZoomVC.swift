@@ -24,11 +24,19 @@ class ImageZoomVC: UIViewController , UIScrollViewDelegate{
     
     @IBAction func close(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
-
     }
     
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
       return imgPhoto
+    }
+     
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            return .landscape
+        } else {
+            return .all
+        }
     }
     
     /*

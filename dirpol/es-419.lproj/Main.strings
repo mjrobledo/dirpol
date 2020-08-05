@@ -15,7 +15,7 @@
 "6qh-O5-TdE.placeholder" = "Contraseña";
 
 /* Class = "UIButton"; normalTitle = "¿Recuperación de contraseña?"; ObjectID = "IN2-VJ-b5F"; */
-"IN2-VJ-b5F.normalTitle" = "¿Recuperación de contraseña?";
+"IN2-VJ-b5F.normalTitle" = "¿Olvidó su contraseña?";
 
 /* Class = "UILabel"; text = "Iniciar sesión"; ObjectID = "XcF-Uc-H9y"; */
 "XcF-Uc-H9y.text" = "Iniciar sesión";
@@ -45,7 +45,7 @@
 "vJX-Ca-vIe.normalTitle" = "Nombre de usuario DIRPOL";
 
 /* Class = "UIButton"; normalTitle = "Recuperación de usuario"; ObjectID = "wXZ-li-mXu"; */
-"wXZ-li-mXu.normalTitle" = "Recuperación de usuario";
+"wXZ-li-mXu.normalTitle" = "¿Olvidó su nombre de usuario?";
 
 /* Class = "UILabel"; text = "Correo eléctronico registrado"; ObjectID = "zQD-xl-1S5"; */
 "zQD-xl-1S5.text" = "Correo eléctronico registrado";

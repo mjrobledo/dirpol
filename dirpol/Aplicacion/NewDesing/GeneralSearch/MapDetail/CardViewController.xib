@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardViewController" customModule="DIRPOL" customModuleProvider="target">
             <connections>
                 <outlet property="handleArea" destination="r6F-YW-eeF" id="1Y4-Bw-5yT"/>
+                <outlet property="imgUpDown" destination="c97-th-UoC" id="PAT-8R-2SP"/>
                 <outlet property="table" destination="bWp-6n-j1j" id="cwI-dC-zdf"/>
                 <outlet property="view" destination="iN0-l3-epB" id="DJP-sT-hnF"/>
             </connections>
@@ -43,20 +44,14 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r6F-YW-eeF">
                     <rect key="frame" x="0.0" y="-20" width="375" height="65"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zJO-XV-NL4">
-                            <rect key="frame" x="157" y="29" width="61" height="7"/>
-                            <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="7" id="5UW-sC-L8k"/>
-                                <constraint firstAttribute="width" constant="61" id="RBz-3m-ETi"/>
-                            </constraints>
-                        </view>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_up" translatesAutoresizingMaskIntoConstraints="NO" id="c97-th-UoC">
+                            <rect key="frame" x="167" y="27" width="40" height="27"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="zJO-XV-NL4" firstAttribute="centerX" secondItem="r6F-YW-eeF" secondAttribute="centerX" id="4t4-pW-5yv"/>
                         <constraint firstAttribute="height" constant="65" id="I14-5u-1pH"/>
-                        <constraint firstItem="zJO-XV-NL4" firstAttribute="centerY" secondItem="r6F-YW-eeF" secondAttribute="centerY" id="wuO-47-3ye"/>
                     </constraints>
                 </view>
             </subviews>
@@ -78,4 +73,7 @@
             <point key="canvasLocation" x="130.40000000000001" y="73.763118440779621"/>
         </view>
     </objects>
+    <resources>
+        <image name="ic_up" width="57.5" height="20.5"/>
+    </resources>
 </document>

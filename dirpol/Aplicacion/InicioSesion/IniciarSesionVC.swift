@@ -99,8 +99,8 @@ class IniciarSesionVC: UIViewController, UITextFieldDelegate {
                     }else{
                         DispatchQueue.main.async {
                         SVProgressHUD.dismiss()
-                         Util().enviarAlerta(mensaje:  .ErrorEnElServicio, titulo: .Alerta, controller: self)
-                         //self.performSegue(withIdentifier: "segueInicio", sender: nil)
+                        // Util().enviarAlerta(mensaje:  .ErrorEnElServicio, titulo: .Alerta, controller: self)
+                         self.performSegue(withIdentifier: "segueInicio", sender: nil)
                         }
                     }
                     

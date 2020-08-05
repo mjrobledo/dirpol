@@ -1,10 +1,10 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+platform :ios, '12.0'
 
 target 'dirpol' do
-  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-  #pod 'CardIO'
+#pod 'CardIO'
   pod 'Alamofire', '~> 4.4'
   pod 'ReachabilitySwift'
   
@@ -12,7 +12,6 @@ target 'dirpol' do
   pod 'GoogleMaps'
   pod 'SVProgressHUD'
   pod 'CropViewController'
-
   # Pods for dirpol
 
   target 'dirpolTests' do
@@ -21,7 +20,6 @@ target 'dirpol' do
   end
 
   target 'dirpolUITests' do
-    inherit! :search_paths
     # Pods for testing
   end
 

@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		130E4073F78693510CFBE6A9 /* Pods_dirpolTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28E1D4D3AE7E04E1B0E24BAB /* Pods_dirpolTests.framework */; };
+		3B4DD80EF661F796EB580F16 /* Pods_dirpol.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF5EE8FABA8CCB6BFB980437 /* Pods_dirpol.framework */; };
 		473873F024D7B1D10050693F /* CellStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473873EE24D7B1D10050693F /* CellStation.swift */; };
 		473873F124D7B1D10050693F /* CellStation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 473873EF24D7B1D10050693F /* CellStation.xib */; };
+		473881C024DA2B160077CF89 /* ImageZoomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473881BF24DA2B150077CF89 /* ImageZoomVC.swift */; };
 		477B99AE24D7BDD800BDF97F /* PoliciesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477B99AD24D7BDD800BDF97F /* PoliciesVC.swift */; };
-		477B99B024D7C79C00BDF97F /* ImageZoomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477B99AF24D7C79C00BDF97F /* ImageZoomVC.swift */; };
-		4A2EE5683B7C13721094057B /* Pods_dirpol.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF9EDE49EB90096899428D8D /* Pods_dirpol.framework */; };
 		6C3E98E5214C5746009FDF74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3E98E4214C5746009FDF74 /* AppDelegate.swift */; };
 		6C3E98E7214C5746009FDF74 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3E98E6214C5746009FDF74 /* ViewController.swift */; };
 		6C3E98EA214C5746009FDF74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C3E98E8214C5746009FDF74 /* Main.storyboard */; };
@@ -63,8 +64,7 @@
 		8BAC4FE224BE00BA0008026F /* MenuLeftVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAC4FE124BE00BA0008026F /* MenuLeftVC.swift */; };
 		8BAC4FE424BE01610008026F /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAC4FE324BE01610008026F /* MenuCell.swift */; };
 		8BAC4FE824BE01C30008026F /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAC4FE724BE01C30008026F /* HomeVC.swift */; };
-		BE9554394D603684738B87F2 /* Pods_dirpolTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9263082E810C2440E3D76AE4 /* Pods_dirpolTests.framework */; };
-		C91C97CDA6C1A693D765894E /* Pods_dirpolUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FCB4BEBF2E7D94BAEF5A1D1 /* Pods_dirpolUITests.framework */; };
+		9686D12014803BDECA83C651 /* Pods_dirpol_dirpolUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F49AA2044C48DF46A3EC544A /* Pods_dirpol_dirpolUITests.framework */; };
 		FA43C655215C2C9700495E32 /* Servicios.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA43C654215C2C9600495E32 /* Servicios.swift */; };
 		FA43C658215CA0B400495E32 /* DetalleBAvanzadaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA43C657215CA0B400495E32 /* DetalleBAvanzadaVC.swift */; };
 		FA9850C02151D162002F143D /* Contacto.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA9850BF2151D162002F143D /* Contacto.storyboard */; };
@@ -118,21 +118,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		039286BD2571DFE7E8AE82CC /* Pods-dirpolUITests.peru.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dirpolUITests.peru.xcconfig"; path = "Pods/Target Support Files/Pods-dirpolUITests/Pods-dirpolUITests.peru.xcconfig"; sourceTree = "<group>"; };
-		048EBC8AF4F4192BA7601E1D /* Pods-dirpolTests.colombia.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dirpolTests.colombia.xcconfig"; path = "Pods/Target Support Files/Pods-dirpolTests/Pods-dirpolTests.colombia.xcconfig"; sourceTree = "<group>"; };
-		04FD70831494C12CFA5761BB /* Pods-dirpolTests.peru.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dirpolTests.peru.xcconfig"; path = "Pods/Target Support Files/Pods-dirpolTests/Pods-dirpolTests.peru.xcconfig"; sourceTree = "<group>"; };
-		09614BF5394D1CDB0D937387 /* Pods-dirpol.peru.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dirpol.peru.xcconfig"; path = "Pods/Target Support Files/Pods-dirpol/Pods-dirpol.peru.xcconfig"; sourceTree = "<group>"; };
-		18962F5E0B9F5C4BC057B923 /* Pods-dirpolUITests.mexico.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dirpolUITests.mexico.xcconfig"; path = "Pods/Target Support Files/Pods-dirpolUITests/Pods-dirpolUITests.mexico.xcconfig"; sourceTree = "<group>"; };
-		21AD99D1E4FB36CE559D3E08 /* Pods-dirpolUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dirpolUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-dirpolUITests/Pods-dirpolUITests.release.xcconfig"; sourceTree = "<group>"; };
-		22AA28544D276140356D2BFA /* Pods-dirpolUITests.colombia.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dirpolUITests.colombia.xcconfig"; path = "Pods/Target Support Files/Pods-dirpolUITests/Pods-dirpolUITests.colombia.xcconfig"; sourceTree = "<group>"; };
-		23C56302C56222551723B3F6 /* Pods-dirpolTests.mexico.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dirpolTests.mexico.xcconfig"; path = "Pods/Target Support Files/Pods-dirpolTests/Pods-dirpolTests.mexico.xcconfig"; sourceTree = "<group>"; };
-		23E12D3A3BDCA4A915FCC1D7 /* Pods-dirpolTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dirpolTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dirpolTests/Pods-dirpolTests.debug.xcconfig"; sourceTree = "<group>"; };
-		42280B81768CDC12E7BFC9C1 /* Pods-dirpol.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dirpol.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dirpol/Pods-dirpol.debug.xcconfig"; sourceTree = "<group>"; };
+		1AD19130C1473930038223BB /* Pods-dirpol.colombia.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dirpol.colombia.xcconfig"; path = "Target Support Files/Pods-dirpol/Pods-dirpol.colombia.xcconfig"; sourceTree = "<group>"; };
+		1DBF1A2BA33935663A6946B0 /* Pods-dirpolTests.peru.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dirpolTests.peru.xcconfig"; path = "Target Support Files/Pods-dirpolTests/Pods-dirpolTests.peru.xcconfig"; sourceTree = "<group>"; };
+		1FBA1CB55586885CF192B0A3 /* Pods-dirpol-dirpolUITests.mexico.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dirpol-dirpolUITests.mexico.xcconfig"; path = "Target Support Files/Pods-dirpol-dirpolUITests/Pods-dirpol-dirpolUITests.mexico.xcconfig"; sourceTree = "<group>"; };
+		28E1D4D3AE7E04E1B0E24BAB /* Pods_dirpolTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dirpolTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		473873EE24D7B1D10050693F /* CellStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellStation.swift; sourceTree = "<group>"; };
 		473873EF24D7B1D10050693F /* CellStation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellStation.xib; sourceTree = "<group>"; };
+		473881BF24DA2B150077CF89 /* ImageZoomVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageZoomVC.swift; sourceTree = "<group>"; };
 		477B99AD24D7BDD800BDF97F /* PoliciesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliciesVC.swift; sourceTree = "<group>"; };
-		477B99AF24D7C79C00BDF97F /* ImageZoomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageZoomVC.swift; sourceTree = "<group>"; };
-		639B2BB21BD8A5156C0DFA6C /* Pods-dirpol.colombia.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dirpol.colombia.xcconfig"; path = "Pods/Target Support Files/Pods-dirpol/Pods-dirpol.colombia.xcconfig"; sourceTree = "<group>"; };
 		6C3E98E1214C5746009FDF74 /* DIRPOL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DIRPOL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C3E98E4214C5746009FDF74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6C3E98E6214C5746009FDF74 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -146,7 +139,6 @@
 		6C3E9900214C5748009FDF74 /* dirpolUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = dirpolUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C3E9904214C5748009FDF74 /* dirpolUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dirpolUITests.swift; sourceTree = "<group>"; };
 		6C3E9906214C5748009FDF74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		80A7DDB1983A89542503EA9E /* Pods-dirpol.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dirpol.release.xcconfig"; path = "Pods/Target Support Files/Pods-dirpol/Pods-dirpol.release.xcconfig"; sourceTree = "<group>"; };
 		8B06671024D355C000078BDB /* CellListMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellListMap.swift; sourceTree = "<group>"; };
 		8B06671124D355C000078BDB /* CellListMap.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellListMap.xib; sourceTree = "<group>"; };
 		8B06671424D356CF00078BDB /* CellDirectAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellDirectAccess.swift; sourceTree = "<group>"; };
@@ -196,13 +188,16 @@
 		8BAC4FE124BE00BA0008026F /* MenuLeftVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuLeftVC.swift; sourceTree = "<group>"; };
 		8BAC4FE324BE01610008026F /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		8BAC4FE724BE01C30008026F /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
-		9263082E810C2440E3D76AE4 /* Pods_dirpolTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dirpolTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		941BF69C99F0BEBE1A6A5C01 /* Pods-dirpolTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dirpolTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-dirpolTests/Pods-dirpolTests.release.xcconfig"; sourceTree = "<group>"; };
-		9FCB4BEBF2E7D94BAEF5A1D1 /* Pods_dirpolUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dirpolUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C32A66D16A42F5B9E32B88A9 /* Pods-dirpol.mexico.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dirpol.mexico.xcconfig"; path = "Pods/Target Support Files/Pods-dirpol/Pods-dirpol.mexico.xcconfig"; sourceTree = "<group>"; };
-		E5AE02951DD073885AB2F2FE /* Pods-dirpolUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dirpolUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dirpolUITests/Pods-dirpolUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		90B03790D0990D7E4219AB21 /* Pods-dirpol.mexico.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dirpol.mexico.xcconfig"; path = "Target Support Files/Pods-dirpol/Pods-dirpol.mexico.xcconfig"; sourceTree = "<group>"; };
+		9BDB73251C6243509590301A /* Pods-dirpol-dirpolUITests.peru.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dirpol-dirpolUITests.peru.xcconfig"; path = "Target Support Files/Pods-dirpol-dirpolUITests/Pods-dirpol-dirpolUITests.peru.xcconfig"; sourceTree = "<group>"; };
+		B07D7F5F9B59EC8EE5077742 /* Pods-dirpolTests.mexico.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dirpolTests.mexico.xcconfig"; path = "Target Support Files/Pods-dirpolTests/Pods-dirpolTests.mexico.xcconfig"; sourceTree = "<group>"; };
+		CB731EA2087CD5BCCD6C80F2 /* Pods-dirpol.peru.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dirpol.peru.xcconfig"; path = "Target Support Files/Pods-dirpol/Pods-dirpol.peru.xcconfig"; sourceTree = "<group>"; };
+		CF5A5138F4AA5FEE0024E96A /* Pods-dirpol-dirpolUITests.colombia.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dirpol-dirpolUITests.colombia.xcconfig"; path = "Target Support Files/Pods-dirpol-dirpolUITests/Pods-dirpol-dirpolUITests.colombia.xcconfig"; sourceTree = "<group>"; };
+		CF5EE8FABA8CCB6BFB980437 /* Pods_dirpol.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dirpol.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F49AA2044C48DF46A3EC544A /* Pods_dirpol_dirpolUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dirpol_dirpolUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA43C654215C2C9600495E32 /* Servicios.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Servicios.swift; sourceTree = "<group>"; };
 		FA43C657215CA0B400495E32 /* DetalleBAvanzadaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleBAvanzadaVC.swift; sourceTree = "<group>"; };
+		FA65284E9D4A4E7DADA8CE51 /* Pods-dirpolTests.colombia.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dirpolTests.colombia.xcconfig"; path = "Target Support Files/Pods-dirpolTests/Pods-dirpolTests.colombia.xcconfig"; sourceTree = "<group>"; };
 		FA9850BF2151D162002F143D /* Contacto.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Contacto.storyboard; sourceTree = "<group>"; };
 		FA9850C12151D3FD002F143D /* AltoMandoPolicialVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AltoMandoPolicialVC.swift; sourceTree = "<group>"; };
 		FA9850C321521AF7002F143D /* BusquedaAvanzadaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusquedaAvanzadaVC.swift; sourceTree = "<group>"; };
@@ -236,7 +231,6 @@
 		FAC2C0542151A6DC00A74FA3 /* CollMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollMenu.swift; sourceTree = "<group>"; };
 		FAC2C0552151A6DD00A74FA3 /* CellMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellMenu.swift; sourceTree = "<group>"; };
 		FAC2C0592151BF6700A74FA3 /* AcercaDeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcercaDeVC.swift; sourceTree = "<group>"; };
-		FF9EDE49EB90096899428D8D /* Pods_dirpol.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dirpol.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,7 +238,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A2EE5683B7C13721094057B /* Pods_dirpol.framework in Frameworks */,
+				3B4DD80EF661F796EB580F16 /* Pods_dirpol.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,7 +246,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE9554394D603684738B87F2 /* Pods_dirpolTests.framework in Frameworks */,
+				130E4073F78693510CFBE6A9 /* Pods_dirpolTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,13 +254,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C91C97CDA6C1A693D765894E /* Pods_dirpolUITests.framework in Frameworks */,
+				9686D12014803BDECA83C651 /* Pods_dirpol_dirpolUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		431E9EB1A92B590AB35A163F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CF5EE8FABA8CCB6BFB980437 /* Pods_dirpol.framework */,
+				F49AA2044C48DF46A3EC544A /* Pods_dirpol_dirpolUITests.framework */,
+				28E1D4D3AE7E04E1B0E24BAB /* Pods_dirpolTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6C3E98D8214C5746009FDF74 = {
 			isa = PBXGroup;
 			children = (
@@ -274,8 +278,8 @@
 				6C3E98F8214C5748009FDF74 /* dirpolTests */,
 				6C3E9903214C5748009FDF74 /* dirpolUITests */,
 				6C3E98E2214C5746009FDF74 /* Products */,
-				B08BF0283E6B48FD4868C5D9 /* Pods */,
-				6D7AF39B7719E9D37A3B9FB4 /* Frameworks */,
+				E3F7FC57B2509738CB4FA6B0 /* Pods */,
+				431E9EB1A92B590AB35A163F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -330,16 +334,6 @@
 			path = dirpolUITests;
 			sourceTree = "<group>";
 		};
-		6D7AF39B7719E9D37A3B9FB4 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				FF9EDE49EB90096899428D8D /* Pods_dirpol.framework */,
-				9263082E810C2440E3D76AE4 /* Pods_dirpolTests.framework */,
-				9FCB4BEBF2E7D94BAEF5A1D1 /* Pods_dirpolUITests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		8B06670D24D352AB00078BDB /* MapDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -383,7 +377,7 @@
 				8B115EC624BECD2000C82CFB /* Credential.storyboard */,
 				8B9AB12524C143F0005AE821 /* CredentialVC.swift */,
 				8B9AB12724C1441E005AE821 /* RenewMembershipVC.swift */,
-				477B99AF24D7C79C00BDF97F /* ImageZoomVC.swift */,
+				473881BF24DA2B150077CF89 /* ImageZoomVC.swift */,
 			);
 			path = Credential;
 			sourceTree = "<group>";
@@ -513,26 +507,20 @@
 			path = Libraries;
 			sourceTree = "<group>";
 		};
-		B08BF0283E6B48FD4868C5D9 /* Pods */ = {
+		E3F7FC57B2509738CB4FA6B0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				42280B81768CDC12E7BFC9C1 /* Pods-dirpol.debug.xcconfig */,
-				80A7DDB1983A89542503EA9E /* Pods-dirpol.release.xcconfig */,
-				23E12D3A3BDCA4A915FCC1D7 /* Pods-dirpolTests.debug.xcconfig */,
-				941BF69C99F0BEBE1A6A5C01 /* Pods-dirpolTests.release.xcconfig */,
-				E5AE02951DD073885AB2F2FE /* Pods-dirpolUITests.debug.xcconfig */,
-				21AD99D1E4FB36CE559D3E08 /* Pods-dirpolUITests.release.xcconfig */,
-				09614BF5394D1CDB0D937387 /* Pods-dirpol.peru.xcconfig */,
-				639B2BB21BD8A5156C0DFA6C /* Pods-dirpol.colombia.xcconfig */,
-				C32A66D16A42F5B9E32B88A9 /* Pods-dirpol.mexico.xcconfig */,
-				04FD70831494C12CFA5761BB /* Pods-dirpolTests.peru.xcconfig */,
-				048EBC8AF4F4192BA7601E1D /* Pods-dirpolTests.colombia.xcconfig */,
-				23C56302C56222551723B3F6 /* Pods-dirpolTests.mexico.xcconfig */,
-				039286BD2571DFE7E8AE82CC /* Pods-dirpolUITests.peru.xcconfig */,
-				22AA28544D276140356D2BFA /* Pods-dirpolUITests.colombia.xcconfig */,
-				18962F5E0B9F5C4BC057B923 /* Pods-dirpolUITests.mexico.xcconfig */,
+				CB731EA2087CD5BCCD6C80F2 /* Pods-dirpol.peru.xcconfig */,
+				1AD19130C1473930038223BB /* Pods-dirpol.colombia.xcconfig */,
+				90B03790D0990D7E4219AB21 /* Pods-dirpol.mexico.xcconfig */,
+				9BDB73251C6243509590301A /* Pods-dirpol-dirpolUITests.peru.xcconfig */,
+				CF5A5138F4AA5FEE0024E96A /* Pods-dirpol-dirpolUITests.colombia.xcconfig */,
+				1FBA1CB55586885CF192B0A3 /* Pods-dirpol-dirpolUITests.mexico.xcconfig */,
+				1DBF1A2BA33935663A6946B0 /* Pods-dirpolTests.peru.xcconfig */,
+				FA65284E9D4A4E7DADA8CE51 /* Pods-dirpolTests.colombia.xcconfig */,
+				B07D7F5F9B59EC8EE5077742 /* Pods-dirpolTests.mexico.xcconfig */,
 			);
-			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		FA43C656215CA08800495E32 /* BusquedaAvanzada */ = {
@@ -686,12 +674,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6C3E9909214C5748009FDF74 /* Build configuration list for PBXNativeTarget "dirpol" */;
 			buildPhases = (
-				48633A3BE2527BC18283602F /* [CP] Check Pods Manifest.lock */,
+				D7F7123305A397773E73579E /* [CP] Check Pods Manifest.lock */,
 				6C3E98DD214C5746009FDF74 /* Sources */,
 				6C3E98DE214C5746009FDF74 /* Frameworks */,
 				6C3E98DF214C5746009FDF74 /* Resources */,
-				1048BA42538579B28DC569A0 /* [CP] Embed Pods Frameworks */,
-				9E12CF58AF3417378321C289 /* [CP] Copy Pods Resources */,
+				0DD5335493019C1291B3E89C /* [CP] Embed Pods Frameworks */,
+				D5BCF77B36338E0757357A0E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -706,7 +694,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6C3E990C214C5748009FDF74 /* Build configuration list for PBXNativeTarget "dirpolTests" */;
 			buildPhases = (
-				005C55028054479E87E9C404 /* [CP] Check Pods Manifest.lock */,
+				C10FB19314D4D0D49520092C /* [CP] Check Pods Manifest.lock */,
 				6C3E98F1214C5748009FDF74 /* Sources */,
 				6C3E98F2214C5748009FDF74 /* Frameworks */,
 				6C3E98F3214C5748009FDF74 /* Resources */,
@@ -725,10 +713,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6C3E990F214C5748009FDF74 /* Build configuration list for PBXNativeTarget "dirpolUITests" */;
 			buildPhases = (
-				5968C523A17072C4B2DADD87 /* [CP] Check Pods Manifest.lock */,
+				ECE47F7E91CC86B8A82387CB /* [CP] Check Pods Manifest.lock */,
 				6C3E98FC214C5748009FDF74 /* Sources */,
 				6C3E98FD214C5748009FDF74 /* Frameworks */,
 				6C3E98FE214C5748009FDF74 /* Resources */,
+				1E07101F95046C30E3A3145E /* [CP] Embed Pods Frameworks */,
+				57878C0A377C8FC10AFD304F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -839,25 +829,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		005C55028054479E87E9C404 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-dirpolTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		1048BA42538579B28DC569A0 /* [CP] Embed Pods Frameworks */ = {
+		0DD5335493019C1291B3E89C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -874,43 +846,63 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-dirpol/Pods-dirpol-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		48633A3BE2527BC18283602F /* [CP] Check Pods Manifest.lock */ = {
+		1E07101F95046C30E3A3145E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-dirpol-dirpolUITests/Pods-dirpol-dirpolUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-dirpol-dirpolUITests/Pods-dirpol-dirpolUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-dirpol-dirpolUITests/Pods-dirpol-dirpolUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		57878C0A377C8FC10AFD304F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-dirpol-dirpolUITests/Pods-dirpol-dirpolUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-dirpol-dirpolUITests/Pods-dirpol-dirpolUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-dirpol-dirpolUITests/Pods-dirpol-dirpolUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C10FB19314D4D0D49520092C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-dirpol-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-dirpolTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5968C523A17072C4B2DADD87 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-dirpolUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9E12CF58AF3417378321C289 /* [CP] Copy Pods Resources */ = {
+		D5BCF77B36338E0757357A0E /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -925,6 +917,50 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-dirpol/Pods-dirpol-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D7F7123305A397773E73579E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-dirpol-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ECE47F7E91CC86B8A82387CB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-dirpol-dirpolUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -968,6 +1004,7 @@
 				8B6780DF24D31A0A00B76B2D /* CardViewController.swift in Sources */,
 				FAC2C0362150828300A74FA3 /* IniciarSesionVC.swift in Sources */,
 				8B06671624D356CF00078BDB /* CellDirectAccess.swift in Sources */,
+				473881C024DA2B160077CF89 /* ImageZoomVC.swift in Sources */,
 				8BAC4FE824BE01C30008026F /* HomeVC.swift in Sources */,
 				8B1992AC24C383BB003D788B /* RegionsVC.swift in Sources */,
 				8B9AB12824C1441E005AE821 /* RenewMembershipVC.swift in Sources */,
@@ -977,7 +1014,6 @@
 				FAC2C05A2151BF6700A74FA3 /* AcercaDeVC.swift in Sources */,
 				FA9850CE215347B9002F143D /* ViewBusquedaUno.swift in Sources */,
 				6C3E98E5214C5746009FDF74 /* AppDelegate.swift in Sources */,
-				477B99B024D7C79C00BDF97F /* ImageZoomVC.swift in Sources */,
 				8B1992A424C37671003D788B /* AboutUS.swift in Sources */,
 				FAC2C0342150822B00A74FA3 /* RecuperarVC.swift in Sources */,
 				FAC2C025215032FE00A74FA3 /* Extenciones.swift in Sources */,
@@ -1173,7 +1209,7 @@
 		};
 		6C3E990A214C5748009FDF74 /* Peru */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 09614BF5394D1CDB0D937387 /* Pods-dirpol.peru.xcconfig */;
+			baseConfigurationReference = CB731EA2087CD5BCCD6C80F2 /* Pods-dirpol.peru.xcconfig */;
 			buildSettings = {
 				APP_NAME_DISPLAY = DIRPOLP;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1197,7 +1233,7 @@
 		};
 		6C3E990B214C5748009FDF74 /* Colombia */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 639B2BB21BD8A5156C0DFA6C /* Pods-dirpol.colombia.xcconfig */;
+			baseConfigurationReference = 1AD19130C1473930038223BB /* Pods-dirpol.colombia.xcconfig */;
 			buildSettings = {
 				APP_NAME_DISPLAY = DIRPOLC;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon_CO;
@@ -1221,7 +1257,7 @@
 		};
 		6C3E990D214C5748009FDF74 /* Peru */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 04FD70831494C12CFA5761BB /* Pods-dirpolTests.peru.xcconfig */;
+			baseConfigurationReference = 1DBF1A2BA33935663A6946B0 /* Pods-dirpolTests.peru.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1243,7 +1279,7 @@
 		};
 		6C3E990E214C5748009FDF74 /* Colombia */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 048EBC8AF4F4192BA7601E1D /* Pods-dirpolTests.colombia.xcconfig */;
+			baseConfigurationReference = FA65284E9D4A4E7DADA8CE51 /* Pods-dirpolTests.colombia.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1265,7 +1301,7 @@
 		};
 		6C3E9910214C5748009FDF74 /* Peru */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 039286BD2571DFE7E8AE82CC /* Pods-dirpolUITests.peru.xcconfig */;
+			baseConfigurationReference = 9BDB73251C6243509590301A /* Pods-dirpol-dirpolUITests.peru.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1286,7 +1322,7 @@
 		};
 		6C3E9911214C5748009FDF74 /* Colombia */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 22AA28544D276140356D2BFA /* Pods-dirpolUITests.colombia.xcconfig */;
+			baseConfigurationReference = CF5A5138F4AA5FEE0024E96A /* Pods-dirpol-dirpolUITests.colombia.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1362,7 +1398,7 @@
 		};
 		8B409AC724B57AFC004ED46E /* Mexico */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C32A66D16A42F5B9E32B88A9 /* Pods-dirpol.mexico.xcconfig */;
+			baseConfigurationReference = 90B03790D0990D7E4219AB21 /* Pods-dirpol.mexico.xcconfig */;
 			buildSettings = {
 				APP_NAME_DISPLAY = DIRPOLM;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1386,7 +1422,7 @@
 		};
 		8B409AC824B57AFC004ED46E /* Mexico */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 23C56302C56222551723B3F6 /* Pods-dirpolTests.mexico.xcconfig */;
+			baseConfigurationReference = B07D7F5F9B59EC8EE5077742 /* Pods-dirpolTests.mexico.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1408,7 +1444,7 @@
 		};
 		8B409AC924B57AFC004ED46E /* Mexico */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 18962F5E0B9F5C4BC057B923 /* Pods-dirpolUITests.mexico.xcconfig */;
+			baseConfigurationReference = 1FBA1CB55586885CF192B0A3 /* Pods-dirpol-dirpolUITests.mexico.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

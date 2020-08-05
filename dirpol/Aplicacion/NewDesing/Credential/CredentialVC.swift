@@ -33,6 +33,11 @@ class CredentialVC: UIViewController {
         self.viewRenew.isHidden = true
     }
     
+    @IBAction func showCredential(_ sender: Any) {
+        let viewController = UIViewController(nibName: "CredentialImageVC", bundle: nil)
+        self.present(viewController, animated: true, completion: nil)
+    }
+    
     
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -43,7 +48,7 @@ class CredentialVC: UIViewController {
             let svc = segue.destination as! RenewMembershipVC
             svc.providesPresentationContextTransitionStyle = true;
             svc.definesPresentationContext = true;
-            svc.modalPresentationStyle=UIModalPresentationStyle.overCurrentContext
+            svc.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
         }
     }
 }

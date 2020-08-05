@@ -116,8 +116,10 @@ class MapDetailVC: UIViewController {
                 switch state {
                 case .expanded:
                     self.cardViewController.view.layer.cornerRadius = 12
+                    self.cardViewController.imgUpDown.image = #imageLiteral(resourceName: "ic_down")
                 case .collapsed:
                     self.cardViewController.view.layer.cornerRadius = 0
+                    self.cardViewController.imgUpDown.image = #imageLiteral(resourceName: "ic_up")
                 }
             }
             

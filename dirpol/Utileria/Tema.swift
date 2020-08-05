@@ -24,7 +24,7 @@ struct Tema {
         navBarAppearance.tintColor = UIColor.white
         navBarAppearance.barTintColor = UIColor.cPrincipal()
         
-        UILabel.appearance().substituteFontName = FontMontserrat.Regular.rawValue
+        //UILabel.appearance().substituteFontName = FontMontserrat.Regular.rawValue
     }
 }
 

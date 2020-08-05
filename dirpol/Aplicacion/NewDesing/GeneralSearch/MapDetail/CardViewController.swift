@@ -12,6 +12,7 @@ class CardViewController: UIViewController {
 
     @IBOutlet weak var handleArea: UIView!
     @IBOutlet weak var table: UITableView!
+    @IBOutlet weak var imgUpDown: UIImageView!
         
     var detailList: [DetailCell] = []
     

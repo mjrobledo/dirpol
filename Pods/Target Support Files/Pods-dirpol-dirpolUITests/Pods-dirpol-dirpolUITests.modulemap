@@ -1,0 +1,6 @@
+framework module Pods_dirpol_dirpolUITests {
+  umbrella header "Pods-dirpol-dirpolUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
