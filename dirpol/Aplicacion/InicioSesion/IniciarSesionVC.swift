@@ -63,9 +63,10 @@ class IniciarSesionVC: UIViewController, UITextFieldDelegate {
         
         if validaCampos(){
             DispatchQueue.main.async {
-                SVProgressHUD.show(withStatus: "Iniciando sesión")
+                //SVProgressHUD.show(withStatus: "Iniciando sesión")
                 self.btnIniciaSesion.isEnabled = false
                 self.OcultarTeclado()
+                 self.performSegue(withIdentifier: "segueInicio", sender: nil)
             }
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
@@ -73,8 +74,9 @@ class IniciarSesionVC: UIViewController, UITextFieldDelegate {
                 self.btnIniciaSesion.isEnabled = true
                 
                 //Variables.Perfil = Usuario().getUsuarioPrueba()
+               
                 
-                Servicios().inicioSesion(usuario: reqLogin, completion: { respuesta  in
+                /*Servicios().inicioSesion(usuario: reqLogin, completion: { respuesta  in
                     SVProgressHUD.dismiss()
                     if respuesta != nil {
                         switch respuesta?.Codigo {
@@ -104,7 +106,7 @@ class IniciarSesionVC: UIViewController, UITextFieldDelegate {
                         }
                     }
                     
-                })
+                })*/
                
             }
             

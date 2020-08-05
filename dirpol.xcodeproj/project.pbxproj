@@ -64,6 +64,7 @@
 		8BAC4FE224BE00BA0008026F /* MenuLeftVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAC4FE124BE00BA0008026F /* MenuLeftVC.swift */; };
 		8BAC4FE424BE01610008026F /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAC4FE324BE01610008026F /* MenuCell.swift */; };
 		8BAC4FE824BE01C30008026F /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAC4FE724BE01C30008026F /* HomeVC.swift */; };
+		8BEDC8DF24DA58CC00E2D6F8 /* ListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEDC8DE24DA58CC00E2D6F8 /* ListVC.swift */; };
 		9686D12014803BDECA83C651 /* Pods_dirpol_dirpolUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F49AA2044C48DF46A3EC544A /* Pods_dirpol_dirpolUITests.framework */; };
 		FA43C655215C2C9700495E32 /* Servicios.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA43C654215C2C9600495E32 /* Servicios.swift */; };
 		FA43C658215CA0B400495E32 /* DetalleBAvanzadaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA43C657215CA0B400495E32 /* DetalleBAvanzadaVC.swift */; };
@@ -188,6 +189,7 @@
 		8BAC4FE124BE00BA0008026F /* MenuLeftVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuLeftVC.swift; sourceTree = "<group>"; };
 		8BAC4FE324BE01610008026F /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		8BAC4FE724BE01C30008026F /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		8BEDC8DE24DA58CC00E2D6F8 /* ListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVC.swift; sourceTree = "<group>"; };
 		90B03790D0990D7E4219AB21 /* Pods-dirpol.mexico.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dirpol.mexico.xcconfig"; path = "Target Support Files/Pods-dirpol/Pods-dirpol.mexico.xcconfig"; sourceTree = "<group>"; };
 		9BDB73251C6243509590301A /* Pods-dirpol-dirpolUITests.peru.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dirpol-dirpolUITests.peru.xcconfig"; path = "Target Support Files/Pods-dirpol-dirpolUITests/Pods-dirpol-dirpolUITests.peru.xcconfig"; sourceTree = "<group>"; };
 		B07D7F5F9B59EC8EE5077742 /* Pods-dirpolTests.mexico.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dirpolTests.mexico.xcconfig"; path = "Target Support Files/Pods-dirpolTests/Pods-dirpolTests.mexico.xcconfig"; sourceTree = "<group>"; };
@@ -401,6 +403,7 @@
 			children = (
 				8B19929224C36591003D788B /* AdvancedSearch.storyboard */,
 				8B19929424C368F1003D788B /* AdvanceSearchVC.swift */,
+				8BEDC8DE24DA58CC00E2D6F8 /* ListVC.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -1001,6 +1004,7 @@
 				FA9850C821529F8B002F143D /* DetalleBusquedaVC.swift in Sources */,
 				FA9850CB2152D50C002F143D /* ViewRegionesMapa.swift in Sources */,
 				FAC2C02F2150574400A74FA3 /* Metodos.swift in Sources */,
+				8BEDC8DF24DA58CC00E2D6F8 /* ListVC.swift in Sources */,
 				8B6780DF24D31A0A00B76B2D /* CardViewController.swift in Sources */,
 				FAC2C0362150828300A74FA3 /* IniciarSesionVC.swift in Sources */,
 				8B06671624D356CF00078BDB /* CellDirectAccess.swift in Sources */,

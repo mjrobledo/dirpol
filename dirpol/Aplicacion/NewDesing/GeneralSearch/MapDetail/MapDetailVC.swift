@@ -36,7 +36,9 @@ class MapDetailVC: UIViewController {
     }
         
     override func viewDidAppear(_ animated: Bool) {
-         setupCard()
+        if cardViewController == nil {
+            setupCard()
+        }
     }
   
     
@@ -116,11 +118,12 @@ class MapDetailVC: UIViewController {
                 switch state {
                 case .expanded:
                     self.cardViewController.view.layer.cornerRadius = 12
-                    self.cardViewController.imgUpDown.image = #imageLiteral(resourceName: "ic_down")
+                    self.cardViewController.imgUpDown.image = #imageLiteral(resourceName: "ic_down").withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
                 case .collapsed:
                     self.cardViewController.view.layer.cornerRadius = 0
-                    self.cardViewController.imgUpDown.image = #imageLiteral(resourceName: "ic_up")
+                    self.cardViewController.imgUpDown.image = #imageLiteral(resourceName: "ic_up").withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
                 }
+                self.cardViewController.imgUpDown.tintColor = UIColor.cPrincipal()
             }
             
             cornerRadiusAnimator.startAnimation()
