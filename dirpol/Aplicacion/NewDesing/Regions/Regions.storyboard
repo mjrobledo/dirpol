@@ -29,11 +29,19 @@
             <objects>
                 <viewController id="5Fb-Ra-VMa" customClass="RegionsVC" customModule="DIRPOL" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pAE-vS-G7g">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p9U-if-mQ1" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="CZ7-Wd-sw8"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" id="hpU-5y-bmL">
                         <barButtonItem key="leftBarButtonItem" image="ic_hamburger" id="rIb-tf-NZS">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -41,11 +49,12 @@
                     </navigationItem>
                     <connections>
                         <outlet property="btnMenu" destination="rIb-tf-NZS" id="2pm-Tt-qhn"/>
+                        <outlet property="viewMap" destination="p9U-if-mQ1" id="yKl-dS-gRM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Bq-tR-CRT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-328" y="110"/>
+            <point key="canvasLocation" x="-328.98550724637681" y="109.82142857142857"/>
         </scene>
     </scenes>
     <resources>

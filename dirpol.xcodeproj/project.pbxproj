@@ -64,6 +64,8 @@
 		8BAC4FE224BE00BA0008026F /* MenuLeftVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAC4FE124BE00BA0008026F /* MenuLeftVC.swift */; };
 		8BAC4FE424BE01610008026F /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAC4FE324BE01610008026F /* MenuCell.swift */; };
 		8BAC4FE824BE01C30008026F /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAC4FE724BE01C30008026F /* HomeVC.swift */; };
+		8BE52BA224DE1FC300824D93 /* RegionCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE52BA024DE1FC300824D93 /* RegionCardVC.swift */; };
+		8BE52BA324DE1FC300824D93 /* RegionCardVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BE52BA124DE1FC300824D93 /* RegionCardVC.xib */; };
 		8BEDC8DF24DA58CC00E2D6F8 /* ListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEDC8DE24DA58CC00E2D6F8 /* ListVC.swift */; };
 		9686D12014803BDECA83C651 /* Pods_dirpol_dirpolUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F49AA2044C48DF46A3EC544A /* Pods_dirpol_dirpolUITests.framework */; };
 		FA43C655215C2C9700495E32 /* Servicios.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA43C654215C2C9600495E32 /* Servicios.swift */; };
@@ -189,6 +191,8 @@
 		8BAC4FE124BE00BA0008026F /* MenuLeftVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuLeftVC.swift; sourceTree = "<group>"; };
 		8BAC4FE324BE01610008026F /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		8BAC4FE724BE01C30008026F /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		8BE52BA024DE1FC300824D93 /* RegionCardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegionCardVC.swift; sourceTree = "<group>"; };
+		8BE52BA124DE1FC300824D93 /* RegionCardVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegionCardVC.xib; sourceTree = "<group>"; };
 		8BEDC8DE24DA58CC00E2D6F8 /* ListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVC.swift; sourceTree = "<group>"; };
 		90B03790D0990D7E4219AB21 /* Pods-dirpol.mexico.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dirpol.mexico.xcconfig"; path = "Target Support Files/Pods-dirpol/Pods-dirpol.mexico.xcconfig"; sourceTree = "<group>"; };
 		9BDB73251C6243509590301A /* Pods-dirpol-dirpolUITests.peru.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dirpol-dirpolUITests.peru.xcconfig"; path = "Target Support Files/Pods-dirpol-dirpolUITests/Pods-dirpol-dirpolUITests.peru.xcconfig"; sourceTree = "<group>"; };
@@ -446,6 +450,8 @@
 		8B1992A824C38368003D788B /* Regions */ = {
 			isa = PBXGroup;
 			children = (
+				8BE52BA024DE1FC300824D93 /* RegionCardVC.swift */,
+				8BE52BA124DE1FC300824D93 /* RegionCardVC.xib */,
 				8B1992A924C38373003D788B /* Regions.storyboard */,
 				8B1992AB24C383BB003D788B /* RegionsVC.swift */,
 			);
@@ -791,6 +797,7 @@
 				8B06671724D356CF00078BDB /* CellDirectAccess.xib in Resources */,
 				8B1992B924C3A399003D788B /* Montserrat-SemiBold.ttf in Resources */,
 				FAC2C0502151810A00A74FA3 /* Localizable.strings in Resources */,
+				8BE52BA324DE1FC300824D93 /* RegionCardVC.xib in Resources */,
 				8B19929324C36591003D788B /* AdvancedSearch.storyboard in Resources */,
 				FA9CD34D215739290032174B /* ViewMarcker.xib in Resources */,
 				8B1992B824C3A399003D788B /* Montserrat-Medium.ttf in Resources */,
@@ -1018,6 +1025,7 @@
 				FAC2C05A2151BF6700A74FA3 /* AcercaDeVC.swift in Sources */,
 				FA9850CE215347B9002F143D /* ViewBusquedaUno.swift in Sources */,
 				6C3E98E5214C5746009FDF74 /* AppDelegate.swift in Sources */,
+				8BE52BA224DE1FC300824D93 /* RegionCardVC.swift in Sources */,
 				8B1992A424C37671003D788B /* AboutUS.swift in Sources */,
 				FAC2C0342150822B00A74FA3 /* RecuperarVC.swift in Sources */,
 				FAC2C025215032FE00A74FA3 /* Extenciones.swift in Sources */,

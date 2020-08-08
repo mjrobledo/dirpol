@@ -14,12 +14,12 @@ class ContactUsVC: UIViewController , listadoDelegate, MFMailComposeViewControll
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var viewForm: UIView!
     
-    @IBOutlet weak var lblTema: UITextField!
+    //@IBOutlet weak var lblTema: UITextField!
     @IBOutlet var viewCorrecto: UIView!
     @IBOutlet weak var txtNombre: UITextField!
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtEmpresa: UITextField!
-    @IBOutlet weak var btnTema: UIButton!
+   // @IBOutlet weak var btnTema: UIButton!
     @IBOutlet weak var txtMensaje: UITextView!
     
     let req = requestContacto()
@@ -67,7 +67,7 @@ class ContactUsVC: UIViewController , listadoDelegate, MFMailComposeViewControll
             req.Email = (txtEmail.text?.trim())!
             req.Mensaje = txtMensaje.text.trim()
             req.Contacto = (txtEmpresa.text?.trim())!
-            req.Tema = (lblTema.text?.trim())!
+           // req.Tema = (lblTema.text?.trim())!
             
             mail = MFMailComposeViewController()
             if mail != nil{
@@ -119,9 +119,9 @@ class ContactUsVC: UIViewController , listadoDelegate, MFMailComposeViewControll
         if (txtNombre.text?.trim() == ""){
             valido = false
         }
-        if (lblTema.text?.trim() == ""){
+        /*if (lblTema.text?.trim() == ""){
             valido = false
-        }
+        }*/
         
         return valido
         
@@ -132,7 +132,7 @@ class ContactUsVC: UIViewController , listadoDelegate, MFMailComposeViewControll
     }
     
     func opcionSeleccionada(id: Int, nombre: String) {
-        lblTema.text = nombre
+        //lblTema.text = nombre
     }
     func regionesSeleccionadas(ids: [Int], nombre: String) {
         
