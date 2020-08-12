@@ -132,21 +132,8 @@ extension RegionsVC {
 }
 
 extension RegionsVC: RegionCardVCDelegate {
-    func filter() {
-        
+    func selectedOption(option: SelectOption) {
+        self.performSegue(withIdentifier: "segueList", sender: nil)
     }
-    
-    func goToProvince() {
-        
-    }
-    
-    func goToCity() {
-        
-    }
-    
-    func goToDistrito() {
-        
-    }
-    
-    
 }
+ 

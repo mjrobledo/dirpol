@@ -15,7 +15,7 @@ class OfficialsVC: UIViewController {
         super.viewDidLoad()
 
         table.register(UINib(nibName: "CellOfficials", bundle: nil), forCellReuseIdentifier: "cell")
-        table.estimatedRowHeight = 30
+        table.estimatedRowHeight = 40
         // Do any additional setup after loading the view.
     }
     
@@ -46,7 +46,7 @@ extension OfficialsVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! CellOfficials
         cell.cornerRadius = 8
-       cell.lblName.text = "prueba prueba prueba prueba prueba prueba prueba prueba prueba prueba prueba prueba prueba prueba prueba prueba prueba prueba prueba prueba prueba "
+        cell.lblName.text = "(01) 999 568 123"
         return cell
     }
      

@@ -27,7 +27,8 @@ class RegionsVC: UIViewController {
     let cardHandleAreaHeight:CGFloat = 65
 
     var cardVisible = false
-
+    private var labelDepto = ""
+    
     var nextState: CardState {
         return cardVisible ? .collapsed : .expanded
     }
@@ -63,9 +64,6 @@ class RegionsVC: UIViewController {
         marker2.snippet = "Peru"
         //marker.setValue("2", forKey: "id")
         marker2.map = viewMap
-
-
-
         // Do any additional setup after loading the view.
     }
 
@@ -76,51 +74,33 @@ class RegionsVC: UIViewController {
         }
     }
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "segueProvince" {
+            let vc = segue.destination as! ProvincesVC
+            vc.depto = self.labelDepto
+        } else  if segue.identifier == "segueList" {
+            let vc = segue.destination as! ListVC
+            vc.setPopPup()
+        }
     }
-    */
+    
 
 }
 
-extension RegionsVC: RegionCardVCDelegate {
-    func selectedOption(option: SelectOption) {
-        self.performSegue(withIdentifier: "segueList", sender: nil)
+extension RegionsVC: GMSMapViewDelegate {
+    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+        self.labelDepto = marker.title!
+        DispatchQueue.main.async {
+            self.performSegue(withIdentifier: "segueProvince", sender: nil)
+        }
+        
+        return false // return false to display info window
     }
-
-
 }
-// Mark: - Methods Card Menu
-extension RegionsVC {
-    func setupCard() {
-        visualEffectView = UIVisualEffectView()
-        visualEffectView.frame = self.view.frame
-        //self.view.addSubview(visualEffectView)
-
-        regionCard = RegionCardVC(nibName:"RegionCardVC", bundle:nil)
-        regionCard.delegate = self
-        self.regionCard.view.layer.cornerRadius = 12
-        self.addChild(regionCard)
-        self.view.addSubview(regionCard.view)
-
-        cardHeight = 560
-        regionCard.view.frame = CGRect(x: 20, y: self.view.frame.height - cardHandleAreaHeight, width: self.view.bounds.width - 40, height: cardHeight)
-
-        regionCard.view.clipsToBounds = true
-
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.handleCardTap(recognzier:)))
-        let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(self.handleCardPan(recognizer:)))
-
-        regionCard.handleArea.addGestureRecognizer(tapGestureRecognizer)
-        regionCard.handleArea.addGestureRecognizer(panGestureRecognizer)
-    }
-/*
-    func mapView(_ mapView: GMSMapView, didCloseInfoWindowOf marker: GMSMarker) {
-        marker.icon = UIImage(named: "map_marker_unselected")
-    }*/
-}
+ 

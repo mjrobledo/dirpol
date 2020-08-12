@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,13 +19,7 @@
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mxp-Ge-9co">
                         <rect key="frame" x="6" y="5" width="307" height="34"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_logo_fb" translatesAutoresizingMaskIntoConstraints="NO" id="kij-kE-9wk">
-                                <rect key="frame" x="10" y="9" width="21" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.81109305420479683" green="0.95730885152284262" blue="0.84162960132881781" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.93557435274124146" green="0.94881147146224976" blue="0.95325404405593872" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                 <real key="value" value="9"/>
@@ -35,12 +29,20 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZHn-SF-YaV">
                         <rect key="frame" x="50" y="11" width="254" height="21"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" red="0.1764705882352941" green="0.31764705882352939" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_call" translatesAutoresizingMaskIntoConstraints="NO" id="kij-kE-9wk">
+                        <rect key="frame" x="15" y="11" width="21" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="9Cw-Hv-1bn"/>
+                            <constraint firstAttribute="width" constant="21" id="ihW-rP-rsv"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="mxp-Ge-9co" secondAttribute="bottom" constant="5" id="4u2-Ef-Lea"/>
+                    <constraint firstItem="kij-kE-9wk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="5Qk-D9-liO"/>
                     <constraint firstItem="ZHn-SF-YaV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="8JH-ad-9nC"/>
                     <constraint firstItem="mxp-Ge-9co" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="6" id="Od3-Z2-Rl0"/>
                     <constraint firstItem="mxp-Ge-9co" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="P2B-DX-rmf"/>
@@ -48,16 +50,18 @@
                     <constraint firstItem="ZHn-SF-YaV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="50" id="bAc-LR-V8D"/>
                     <constraint firstAttribute="trailing" secondItem="mxp-Ge-9co" secondAttribute="trailing" constant="7" id="nhe-zU-43B"/>
                     <constraint firstAttribute="bottom" secondItem="ZHn-SF-YaV" secondAttribute="bottom" constant="12" id="o8C-H1-Byp"/>
+                    <constraint firstItem="kij-kE-9wk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="yBD-0t-2Uy"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="imgIcon" destination="kij-kE-9wk" id="x3M-Lp-id0"/>
                 <outlet property="lblName" destination="ZHn-SF-YaV" id="1in-k4-LwU"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="89.732142857142847"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="ic_logo_fb" width="101" height="215"/>
+        <image name="ic_call" width="50" height="49"/>
     </resources>
 </document>

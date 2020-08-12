@@ -8,8 +8,13 @@
 
 import UIKit
 
-class CardViewController: UIViewController {
+protocol CardViewControllerDelegate {
+    func selectedDirectory()
+}
 
+class CardViewController: UIViewController {
+    var delegate: CardViewControllerDelegate!
+    
     @IBOutlet weak var handleArea: UIView!
     @IBOutlet weak var table: UITableView!
     @IBOutlet weak var imgUpDown: UIImageView!
@@ -21,7 +26,9 @@ class CardViewController: UIViewController {
         table.register(UINib(nibName: "CellListMap", bundle: nil), forCellReuseIdentifier: "cellList")
         table.register(UINib(nibName: "CellDirectAccess", bundle: nil), forCellReuseIdentifier: "cellActions")
         table.register(UINib(nibName: "CellHeaderMap", bundle: nil), forCellReuseIdentifier: "cellHeader")
+        table.register(UINib(nibName: "CellStation", bundle: nil), forCellReuseIdentifier: "cellDirectory")
         
+        table.estimatedRowHeight = 40
         self.setData()
     }
     
@@ -33,8 +40,9 @@ class CardViewController: UIViewController {
         let dcE: DetailCell = DetailCell(type: .Email, list: ["comisaria@gmail.com", "comisaria2@gmail.com"])
         let dcD: DetailCell = DetailCell(type: .Adreess, list: ["Av. Canaval y Moreyra cdra. 6 \n Plaza 30 de Agosto - San Isidro"])
         let dcR: DetailCell = DetailCell(type: .SocialMedia, list: ["www.facebook.com/mateopumacahua"])
-        
-        self.detailList = [dcH, dcA, dcT, dcW, dcE, dcD, dcR]
+        let dcDir: DetailCell = DetailCell(type: .Directory, list: ["", "", "", "", "", "", ""])
+        self.detailList = [dcH, dcA, dcT, dcW, dcE, dcD, dcR, dcDir]
+                
         self.table.reloadData()
     }
 }
@@ -48,14 +56,6 @@ extension CardViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        return self.detailList[section].list.count
-        /* switch section {
-        case 0:
-            return 1
-        case 1:
-            return 1
-        default:
-            return 3
-        }*/
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -79,35 +79,25 @@ extension CardViewController: UITableViewDataSource, UITableViewDelegate {
                    cell.delegate = self
                    // cell.viewWeb.isHidden = true
                     return cell
-               }
-        /*
-        switch indexPath.section {
-        case 0 :
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cellHeader")
-            return cell!
-        case 1:
-             let cell = tableView.dequeueReusableCell(withIdentifier: "cellActions") as! CellDirectAccess
-            // cell.viewWeb.isHidden = true
-             return cell
-            
-        default:
-             let cell = tableView.dequeueReusableCell(withIdentifier: "cellList") as! CellListMap
-             if indexPath.row > 0 {
-                cell.imgIcon.isHidden = true
-             }
-            return cell
-        }*/
+               case .Directory:
+                    let cell = tableView.dequeueReusableCell(withIdentifier: "cellDirectory")
+                    return cell!
+        }
+       
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-       
-       switch indexPath.section {
-       case 0 :
+        let sec = self.detailList[indexPath.section]
+        
+        switch sec.type {
+        case .Tel, .Web, .Email, .SocialMedia, .Adreess :
+          return UITableView.automaticDimension
+        case .Header:
             return 151
-       case 1:
+        case .Actions:
             return 60
-        default:
-            return 44
+        case .Directory:
+            return 150
         }
     }
     
@@ -126,6 +116,13 @@ extension CardViewController: UITableViewDataSource, UITableViewDelegate {
             return 0
         default :
             return 1
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let sec = self.detailList[indexPath.section]
+        if sec.type == .Directory {
+            self.delegate.selectedDirectory()
         }
     }
 }
@@ -167,6 +164,7 @@ enum TypeCellDetail {
     case Adreess
     case Header
     case Actions
+    case Directory
     
     func getIcon() -> UIImage {
         switch self {
@@ -177,6 +175,7 @@ enum TypeCellDetail {
         case .Adreess: return #imageLiteral(resourceName: "ic_web")
         case .Header: return #imageLiteral(resourceName: "ic_logo_3")
         case .Actions: return #imageLiteral(resourceName: "ic_logo_3")
+        case .Directory: return UIImage()
         }
     }
 }

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GjZ-h2-DiF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GjZ-h2-DiF">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -56,17 +56,26 @@
                     <connections>
                         <outlet property="btnMenu" destination="rIb-tf-NZS" id="2pm-Tt-qhn"/>
                         <outlet property="viewMap" destination="p9U-if-mQ1" id="yKl-dS-gRM"/>
-                        <segue destination="g6z-UO-1HP" kind="show" identifier="segueList" id="Rgg-qu-csH"/>
+                        <segue destination="g6z-UO-1HP" kind="show" identifier="segueProvince" id="Rgg-qu-csH"/>
+                        <segue destination="3LU-gx-eGE" kind="presentation" identifier="segueList" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="y68-v2-Ad8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Bq-tR-CRT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-328.98550724637681" y="109.82142857142857"/>
         </scene>
+        <!--ListID-->
+        <scene sceneID="dPu-cj-77J">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AdvancedSearch" referencedIdentifier="ListID" id="3LU-gx-eGE" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nns-g5-6EF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-329" y="500"/>
+        </scene>
         <!--Provincias-->
         <scene sceneID="8JA-KX-P65">
             <objects>
-                <viewController id="g6z-UO-1HP" sceneMemberID="viewController">
+                <viewController id="g6z-UO-1HP" customClass="ProvincesVC" customModule="DIRPOL" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3zf-It-lQJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -138,7 +147,7 @@
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <prototypes>
-                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Kuc-O0-9Ku">
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="Kuc-O0-9Ku">
                                                         <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Kuc-O0-9Ku" id="8ZF-Zd-pf3">
@@ -148,6 +157,10 @@
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </tableViewCell>
                                                 </prototypes>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="g6z-UO-1HP" id="Pzk-fu-nnO"/>
+                                                    <outlet property="delegate" destination="g6z-UO-1HP" id="3gR-4A-sKM"/>
+                                                </connections>
                                             </tableView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -167,10 +180,26 @@
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" title="Provincias" id="byc-Eu-YFe"/>
+                    <connections>
+                        <outlet property="lblDepto" destination="hdV-82-BIh" id="QJj-75-GHS"/>
+                        <outlet property="table" destination="lVo-js-EpA" id="AFC-6J-krJ"/>
+                        <outlet property="txtSearch" destination="O9F-yB-Iue" id="hR7-fL-mMY"/>
+                        <segue destination="YZs-xz-KjZ" kind="show" identifier="segueDetail" id="aID-20-txQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CO7-If-duA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="408.69565217391306" y="109.82142857142857"/>
+        </scene>
+        <!--MapDetailID-->
+        <scene sceneID="FHR-hO-FBu">
+            <objects>
+                <viewControllerPlaceholder storyboardName="GeneralSearch" referencedIdentifier="MapDetailID" id="YZs-xz-KjZ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="JZg-dk-pGx"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="95n-cw-PTt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="954" y="-86"/>
         </scene>
     </scenes>
     <resources>

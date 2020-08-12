@@ -14,9 +14,7 @@ protocol RegionCardVCDelegate {
 
 class RegionCardVC: UIViewController {
     var delegate: RegionCardVCDelegate!
-
-    var delegate: RegionCardVCDelegate!
-
+ 
     @IBOutlet weak var handleArea: UIView!
 
     @IBOutlet weak var btnDepto: UIButton!
