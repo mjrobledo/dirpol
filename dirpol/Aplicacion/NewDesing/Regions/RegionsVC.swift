@@ -14,27 +14,27 @@ class RegionsVC: UIViewController {
         case expanded
         case collapsed
     }
-    
+
      @IBOutlet weak var viewMap: GMSMapView!
      @IBOutlet weak var btnMenu: UIBarButtonItem!
-          
+
     var regionCard: RegionCardVC!
     var visualEffectView: UIVisualEffectView!
-    
+
     var marker:[GMSMarker] = []
-    
+
     var cardHeight:CGFloat = 400
     let cardHandleAreaHeight:CGFloat = 65
-    
+
     var cardVisible = false
-    
+
     var nextState: CardState {
         return cardVisible ? .collapsed : .expanded
     }
-    
+
     var runningAnimations = [UIViewPropertyAnimator]()
     var animationProgressWhenInterrupted:CGFloat = 0
-    
+
        override func viewDidLoad() {
               super.viewDidLoad()
               if revealViewController() != nil {
@@ -42,7 +42,7 @@ class RegionsVC: UIViewController {
                   btnMenu.action = #selector(SWRevealViewController.revealToggle(_:))
                   view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
               }
-        
+
         viewMap.camera = GMSCameraPosition(latitude: -10.190200, longitude: -75.538139, zoom: 6)
         viewMap.delegate = self
         /*
@@ -55,7 +55,7 @@ class RegionsVC: UIViewController {
         marker.map = viewMap
         marker.iconView = UIImageView(image: UIImage(named: "ic_marker_region"))
         //marker.setValue("1", forKey: "id")
-        
+
         let marker2 = GMSMarker()
         marker2.position = CLLocationCoordinate2D(latitude: -9.800696, longitude: -76.175346)
         marker2.iconView = UIImageView(image: UIImage(named: "ic_marker_region"))
@@ -63,12 +63,12 @@ class RegionsVC: UIViewController {
         marker2.snippet = "Peru"
         //marker.setValue("2", forKey: "id")
         marker2.map = viewMap
-        
-                 
-        
+
+
+
         // Do any additional setup after loading the view.
     }
-    
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         if regionCard == nil {
@@ -88,14 +88,39 @@ class RegionsVC: UIViewController {
 
 }
 
-extension RegionsVC: GMSMapViewDelegate {
-    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
-        regionCard.txtDepto.text = marker.title        
-        return false // return false to display info window
+extension RegionsVC: RegionCardVCDelegate {
+    func selectedOption(option: SelectOption) {
+        self.performSegue(withIdentifier: "segueList", sender: nil)
+    }
+
+
+}
+// Mark: - Methods Card Menu
+extension RegionsVC {
+    func setupCard() {
+        visualEffectView = UIVisualEffectView()
+        visualEffectView.frame = self.view.frame
+        //self.view.addSubview(visualEffectView)
+
+        regionCard = RegionCardVC(nibName:"RegionCardVC", bundle:nil)
+        regionCard.delegate = self
+        self.regionCard.view.layer.cornerRadius = 12
+        self.addChild(regionCard)
+        self.view.addSubview(regionCard.view)
+
+        cardHeight = 560
+        regionCard.view.frame = CGRect(x: 20, y: self.view.frame.height - cardHandleAreaHeight, width: self.view.bounds.width - 40, height: cardHeight)
+
+        regionCard.view.clipsToBounds = true
+
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.handleCardTap(recognzier:)))
+        let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(self.handleCardPan(recognizer:)))
+
+        regionCard.handleArea.addGestureRecognizer(tapGestureRecognizer)
+        regionCard.handleArea.addGestureRecognizer(panGestureRecognizer)
     }
 /*
     func mapView(_ mapView: GMSMapView, didCloseInfoWindowOf marker: GMSMarker) {
         marker.icon = UIImage(named: "map_marker_unselected")
     }*/
 }
-

@@ -1,14 +1,14 @@
 //
-//  CellGeneralSearch.swift
+//  CellOfficials.swift
 //  dirpol
 //
-//  Created by Developer iOS on 7/29/20.
+//  Created by MYB on 09/08/20.
 //  Copyright © 2020 gravittas. All rights reserved.
 //
 
 import UIKit
 
-class CellGeneralSearch: UITableViewCell {
+class CellOfficials: UITableViewCell {
 
     @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var imgIcon: UIImageView!
@@ -26,4 +26,3 @@ class CellGeneralSearch: UITableViewCell {
     }
     
 }
-
