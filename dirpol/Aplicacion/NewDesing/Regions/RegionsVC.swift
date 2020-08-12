@@ -62,6 +62,14 @@ class RegionsVC: UIViewController {
     */
 
 }
+
+extension RegionsVC: RegionCardVCDelegate {
+    func selectedOption(option: SelectOption) {
+        self.performSegue(withIdentifier: "segueList", sender: nil)
+    }
+    
+     
+}
 // Mark: - Methods Card Menu
 extension RegionsVC {
     func setupCard() {
@@ -70,6 +78,8 @@ extension RegionsVC {
         //self.view.addSubview(visualEffectView)
         
         regionCard = RegionCardVC(nibName:"RegionCardVC", bundle:nil)
+        regionCard.delegate = self
+        self.regionCard.view.layer.cornerRadius = 12
         self.addChild(regionCard)
         self.view.addSubview(regionCard.view)
         

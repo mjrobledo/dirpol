@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,7 +15,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegionCardVC" customModule="DIRPOL" customModuleProvider="target">
             <connections>
+                <outlet property="btnCity" destination="YIr-Nu-7mM" id="vuZ-Fc-JMQ"/>
+                <outlet property="btnDepto" destination="35v-tP-v0i" id="3YV-ar-Suq"/>
+                <outlet property="btnDistrict" destination="q50-em-AOI" id="dhf-Yp-LqL"/>
+                <outlet property="btnProvince" destination="LOp-FL-jhR" id="Sxp-tI-Gz4"/>
                 <outlet property="handleArea" destination="r6F-YW-eeF" id="1Y4-Bw-5yT"/>
+                <outlet property="txtCity" destination="xa3-Mj-hKd" id="A7A-Zn-Beq"/>
+                <outlet property="txtDepto" destination="7yP-Kd-h5u" id="2fp-fv-zKa"/>
+                <outlet property="txtDistrict" destination="1ho-we-DMZ" id="qE0-8D-5Bo"/>
+                <outlet property="txtProvince" destination="y4t-1X-7zD" id="Aqn-96-Uq0"/>
                 <outlet property="view" destination="iN0-l3-epB" id="DJP-sT-hnF"/>
             </connections>
         </placeholder>
@@ -47,6 +55,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="35v-tP-v0i">
                                                     <rect key="frame" x="0.0" y="-1" width="285" height="46"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <connections>
+                                                        <action selector="openSelect:" destination="-1" eventType="touchUpInside" id="wSx-TT-AoB"/>
+                                                    </connections>
                                                 </button>
                                                 <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Departamento" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7yP-Kd-h5u">
                                                     <rect key="frame" x="42" y="0.0" width="201" height="45"/>
@@ -95,6 +106,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LOp-FL-jhR">
                                                     <rect key="frame" x="0.0" y="-1" width="285" height="46"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <connections>
+                                                        <action selector="openSelect:" destination="-1" eventType="touchUpInside" id="5tf-6A-zxP"/>
+                                                    </connections>
                                                 </button>
                                                 <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Provincia" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y4t-1X-7zD">
                                                     <rect key="frame" x="42" y="0.0" width="201" height="45"/>
@@ -143,6 +157,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YIr-Nu-7mM">
                                                     <rect key="frame" x="0.0" y="-1" width="285" height="46"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <connections>
+                                                        <action selector="openSelect:" destination="-1" eventType="touchUpInside" id="NdG-an-0z3"/>
+                                                    </connections>
                                                 </button>
                                                 <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Ciudad" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xa3-Mj-hKd">
                                                     <rect key="frame" x="42" y="0.0" width="201" height="45"/>
@@ -191,6 +208,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q50-em-AOI">
                                                     <rect key="frame" x="0.0" y="-1" width="285" height="46"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <connections>
+                                                        <action selector="openSelect:" destination="-1" eventType="touchUpInside" id="kxc-vG-c7G"/>
+                                                    </connections>
                                                 </button>
                                                 <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Distrito" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1ho-we-DMZ">
                                                     <rect key="frame" x="42" y="0.0" width="201" height="45"/>

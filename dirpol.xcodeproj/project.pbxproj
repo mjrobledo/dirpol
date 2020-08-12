@@ -12,7 +12,10 @@
 		473873F024D7B1D10050693F /* CellStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473873EE24D7B1D10050693F /* CellStation.swift */; };
 		473873F124D7B1D10050693F /* CellStation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 473873EF24D7B1D10050693F /* CellStation.xib */; };
 		473881C024DA2B160077CF89 /* ImageZoomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473881BF24DA2B150077CF89 /* ImageZoomVC.swift */; };
-		477B99AE24D7BDD800BDF97F /* PoliciesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477B99AD24D7BDD800BDF97F /* PoliciesVC.swift */; };
+		4739D0EF24E07B7B0056F4DB /* OfficialsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4739D0EE24E07B7B0056F4DB /* OfficialsVC.swift */; };
+		4739D0F224E086370056F4DB /* CellOfficials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4739D0F024E086370056F4DB /* CellOfficials.swift */; };
+		4739D0F324E086370056F4DB /* CellOfficials.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4739D0F124E086370056F4DB /* CellOfficials.xib */; };
+		477B99AE24D7BDD800BDF97F /* GeolocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477B99AD24D7BDD800BDF97F /* GeolocationVC.swift */; };
 		6C3E98E5214C5746009FDF74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3E98E4214C5746009FDF74 /* AppDelegate.swift */; };
 		6C3E98E7214C5746009FDF74 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3E98E6214C5746009FDF74 /* ViewController.swift */; };
 		6C3E98EA214C5746009FDF74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C3E98E8214C5746009FDF74 /* Main.storyboard */; };
@@ -128,7 +131,10 @@
 		473873EE24D7B1D10050693F /* CellStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellStation.swift; sourceTree = "<group>"; };
 		473873EF24D7B1D10050693F /* CellStation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellStation.xib; sourceTree = "<group>"; };
 		473881BF24DA2B150077CF89 /* ImageZoomVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageZoomVC.swift; sourceTree = "<group>"; };
-		477B99AD24D7BDD800BDF97F /* PoliciesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliciesVC.swift; sourceTree = "<group>"; };
+		4739D0EE24E07B7B0056F4DB /* OfficialsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficialsVC.swift; sourceTree = "<group>"; };
+		4739D0F024E086370056F4DB /* CellOfficials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellOfficials.swift; sourceTree = "<group>"; };
+		4739D0F124E086370056F4DB /* CellOfficials.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellOfficials.xib; sourceTree = "<group>"; };
+		477B99AD24D7BDD800BDF97F /* GeolocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeolocationVC.swift; sourceTree = "<group>"; };
 		6C3E98E1214C5746009FDF74 /* DIRPOL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DIRPOL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C3E98E4214C5746009FDF74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6C3E98E6214C5746009FDF74 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -359,7 +365,8 @@
 				8B1075E924D2399300C50789 /* GeneralSearch.storyboard */,
 				8B1075F624D243CB00C50789 /* GeneralSearchVC.swift */,
 				8B1075F824D243DC00C50789 /* GeneralSearchDetailVC.swift */,
-				477B99AD24D7BDD800BDF97F /* PoliciesVC.swift */,
+				477B99AD24D7BDD800BDF97F /* GeolocationVC.swift */,
+				4739D0EE24E07B7B0056F4DB /* OfficialsVC.swift */,
 			);
 			path = GeneralSearch;
 			sourceTree = "<group>";
@@ -373,6 +380,8 @@
 				8B1075F224D23E8B00C50789 /* CellGeneralSearchDetail.xib */,
 				473873EE24D7B1D10050693F /* CellStation.swift */,
 				473873EF24D7B1D10050693F /* CellStation.xib */,
+				4739D0F024E086370056F4DB /* CellOfficials.swift */,
+				4739D0F124E086370056F4DB /* CellOfficials.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -806,6 +815,7 @@
 				473873F124D7B1D10050693F /* CellStation.xib in Resources */,
 				8BAC4FDA24BDF20C0008026F /* Menu.storyboard in Resources */,
 				FAC2C0382150C04900A74FA3 /* Buscar.storyboard in Resources */,
+				4739D0F324E086370056F4DB /* CellOfficials.xib in Resources */,
 				8B409AD224B58CED004ED46E /* Assets.xcassets in Resources */,
 				8B1992AA24C38373003D788B /* Regions.storyboard in Resources */,
 				8B19929824C36A0F003D788B /* ContactUs.storyboard in Resources */,
@@ -993,6 +1003,7 @@
 				FA43C658215CA0B400495E32 /* DetalleBAvanzadaVC.swift in Sources */,
 				8B19929A24C36E61003D788B /* ContactUsVC.swift in Sources */,
 				FA9850D4215565EC002F143D /* ModeloServicios.swift in Sources */,
+				4739D0EF24E07B7B0056F4DB /* OfficialsVC.swift in Sources */,
 				FAC2C04221517CFD00A74FA3 /* Textos.swift in Sources */,
 				8B06671224D355C000078BDB /* CellListMap.swift in Sources */,
 				8B19929524C368F1003D788B /* AdvanceSearchVC.swift in Sources */,
@@ -1006,6 +1017,7 @@
 				8B1992A724C3792E003D788B /* Singleton.swift in Sources */,
 				FAC2C02D2150573200A74FA3 /* Variables.swift in Sources */,
 				FA9850C621521EE2002F143D /* PanelUsuarioVC.swift in Sources */,
+				4739D0F224E086370056F4DB /* CellOfficials.swift in Sources */,
 				FAC2C03F21514E8500A74FA3 /* MenuVC.swift in Sources */,
 				FA9850D22153F1AE002F143D /* ViewProvInstitucion.swift in Sources */,
 				FA9850C821529F8B002F143D /* DetalleBusquedaVC.swift in Sources */,
@@ -1035,7 +1047,7 @@
 				FA43C655215C2C9700495E32 /* Servicios.swift in Sources */,
 				FAC2C0572151A6DD00A74FA3 /* CellMenu.swift in Sources */,
 				8B409ACF24B57ED5004ED46E /* Api.swift in Sources */,
-				477B99AE24D7BDD800BDF97F /* PoliciesVC.swift in Sources */,
+				477B99AE24D7BDD800BDF97F /* GeolocationVC.swift in Sources */,
 				8B9AB12624C143F0005AE821 /* CredentialVC.swift in Sources */,
 				8B1075EF24D23CF400C50789 /* CellGeneralSearch.swift in Sources */,
 				FAC2C0562151A6DD00A74FA3 /* CollMenu.swift in Sources */,

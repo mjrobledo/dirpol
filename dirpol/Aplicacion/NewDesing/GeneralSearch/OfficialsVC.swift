@@ -1,22 +1,27 @@
 //
-//  PoliciesVC.swift
+//  OfficialsVC.swift
 //  dirpol
 //
-//  Created by MYB on 02/08/20.
+//  Created by MYB on 09/08/20.
 //  Copyright © 2020 gravittas. All rights reserved.
 //
 
 import UIKit
 
-class GeolocationVC: UIViewController {
-
+class OfficialsVC: UIViewController {
     @IBOutlet weak var table: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        table.register(UINib(nibName: "CellStation", bundle: nil), forCellReuseIdentifier: "cell")
+        table.register(UINib(nibName: "CellOfficials", bundle: nil), forCellReuseIdentifier: "cell")
+        table.estimatedRowHeight = 30
         // Do any additional setup after loading the view.
+    }
+    
+    
+    @IBAction func close(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
 
@@ -32,24 +37,24 @@ class GeolocationVC: UIViewController {
 
 }
 
-extension GeolocationVC: UITableViewDataSource, UITableViewDelegate {
+extension OfficialsVC: UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
-        
-        return cell!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! CellOfficials
+        cell.cornerRadius = 8
+       cell.lblName.text = "prueba prueba prueba prueba prueba prueba prueba prueba prueba prueba prueba prueba prueba prueba prueba prueba prueba prueba prueba prueba prueba "
+        return cell
     }
-    
+     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-       return 150
+         return UITableView.automaticDimension
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "segueRepresentative", sender: nil)
-    }
+     
     
 }
+
