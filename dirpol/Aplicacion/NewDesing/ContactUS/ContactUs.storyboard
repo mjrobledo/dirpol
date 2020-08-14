@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="I37-TU-evU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="I37-TU-evU">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -39,10 +39,10 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ePe-2H-VWf">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="600"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="680"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1Nr-If-ct8">
-                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="600"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="680"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gb9-zV-j6E">
                                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="84"/>
@@ -246,8 +246,64 @@
                                                                     <constraint firstAttribute="height" constant="84" id="H0r-vv-glr"/>
                                                                 </constraints>
                                                             </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LxI-PI-ixQ">
+                                                                <rect key="frame" x="0.0" y="486" width="414" height="100"/>
+                                                                <subviews>
+                                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZE3-Y0-h0s">
+                                                                        <rect key="frame" x="45" y="22" width="325" height="70"/>
+                                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                        <subviews>
+                                                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HQE-BO-q3i">
+                                                                                <rect key="frame" x="18" y="15" width="40" height="40"/>
+                                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                                                <subviews>
+                                                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bwg-x9-EZg">
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                                        <connections>
+                                                                                            <action selector="recaptcha:" destination="2zS-LJ-EuZ" eventType="touchUpInside" id="rNW-8D-9Lu"/>
+                                                                                        </connections>
+                                                                                    </button>
+                                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_check_off" translatesAutoresizingMaskIntoConstraints="NO" id="SLo-qW-cT9">
+                                                                                        <rect key="frame" x="3" y="3" width="35" height="35"/>
+                                                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                                                    </imageView>
+                                                                                </subviews>
+                                                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                                            </view>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I´m not a robot" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jRa-LS-Ypg">
+                                                                                <rect key="frame" x="70" y="15" width="169" height="40"/>
+                                                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                <color key="textColor" red="0.30663409279999998" green="0.30663409279999998" blue="0.30663409279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_captcha" translatesAutoresizingMaskIntoConstraints="NO" id="QXF-Cv-5xQ">
+                                                                                <rect key="frame" x="260" y="10" width="50" height="50"/>
+                                                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                                            </imageView>
+                                                                        </subviews>
+                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                <real key="value" value="9"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="colorCorner">
+                                                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                                <real key="value" value="1"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </view>
+                                                                </subviews>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="100" id="zWu-a1-piS"/>
+                                                                </constraints>
+                                                            </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TtG-oQ-gKh">
-                                                                <rect key="frame" x="0.0" y="486" width="414" height="114"/>
+                                                                <rect key="frame" x="0.0" y="586" width="414" height="94"/>
                                                                 <subviews>
                                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FNQ-54-kZB">
                                                                         <rect key="frame" x="45" y="33" width="325" height="49"/>
@@ -274,7 +330,7 @@
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="600" id="EcC-el-ahQ"/>
+                                                    <constraint firstAttribute="height" constant="680" id="EcC-el-ahQ"/>
                                                     <constraint firstAttribute="trailing" secondItem="1Nr-If-ct8" secondAttribute="trailing" id="JQi-cI-eEs"/>
                                                     <constraint firstAttribute="bottom" secondItem="1Nr-If-ct8" secondAttribute="bottom" id="c2q-8l-EAZ"/>
                                                     <constraint firstItem="1Nr-If-ct8" firstAttribute="top" secondItem="ePe-2H-VWf" secondAttribute="top" id="n8t-pO-3WW"/>
@@ -318,6 +374,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="btnMenu" destination="h8g-w2-tnE" id="gnG-9z-hT9"/>
+                        <outlet property="imgCaptcha" destination="SLo-qW-cT9" id="Lzh-Rr-noh"/>
                         <outlet property="scrollView" destination="rvA-wB-H5W" id="hO3-eO-QWQ"/>
                         <outlet property="txtEmail" destination="GAa-Ye-Mnj" id="r7g-Wb-Hum"/>
                         <outlet property="txtEmpresa" destination="qiq-16-FNW" id="QDd-No-Mum"/>
@@ -397,6 +454,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ic_captcha" width="39.5" height="37.5"/>
+        <image name="ic_check_off" width="100" height="100"/>
         <image name="ic_hamburger" width="25" height="17"/>
         <image name="ic_volver" width="26" height="26"/>
         <image name="img_ok" width="567" height="496"/>

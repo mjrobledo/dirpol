@@ -22,6 +22,7 @@
 	<string>$(CONFIG_APP)</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
+		<string>comgooglemaps</string>
 		<string>tel</string>
 		<string>telprompt</string>
 		<string>whatsapp</string>
@@ -67,5 +68,7 @@
 	</array>
 	<key>URL_APP</key>
 	<string>$(URL_APP)</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>DIRPOL desea acceder a tu localización para trazar una ruta</string>
 </dict>
 </plist>

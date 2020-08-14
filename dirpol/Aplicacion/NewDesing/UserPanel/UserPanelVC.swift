@@ -12,20 +12,19 @@ import SVProgressHUD
 class UserPanelVC: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var scrollView: UIScrollView!
-       
-       @IBOutlet weak var viewFrame: UIView!
-       
-       @IBOutlet weak var txtName: UITextField!
-       
-       @IBOutlet weak var txtUser: UITextField!
-       @IBOutlet weak var txtPassword: UITextField!
-       
-       @IBOutlet weak var txtPasswordConfirm: UITextField!
-       @IBOutlet weak var txtEmailConfirm: UITextField!
-       @IBOutlet weak var txtEmail: UITextField!
+    @IBOutlet weak var viewFrame: UIView!
+    @IBOutlet weak var txtName: UITextField!
+    @IBOutlet weak var txtUser: UITextField!
+    @IBOutlet weak var txtPassword: UITextField!
+    @IBOutlet weak var txtPasswordConfirm: UITextField!
+    @IBOutlet weak var txtEmailConfirm: UITextField!
+    @IBOutlet weak var txtEmail: UITextField!
     
      @IBOutlet weak var btnMenu: UIBarButtonItem!
-          
+    
+    @IBOutlet weak var imgSelect: UIImageView!
+    
+    
        override func viewDidLoad() {
               super.viewDidLoad()
               if revealViewController() != nil {
@@ -63,6 +62,17 @@ class UserPanelVC: UIViewController, UITextFieldDelegate {
                 self.dismiss(animated: true, completion: nil)
             }
             
+    @IBAction func changedPassword(_ sender: UIButton) {
+       
+        if sender.tag == 0 {
+            imgSelect.image = #imageLiteral(resourceName: "ic_check_on-1")
+            sender.tag = 1
+        } else {
+            imgSelect.image = #imageLiteral(resourceName: "ic_round")
+            sender.tag = 0
+        }
+    }
+    
             @IBAction func guardaUsuario(_ sender: Any) {
                 if validaCampos(){
                     let us:Usuario = Usuario()

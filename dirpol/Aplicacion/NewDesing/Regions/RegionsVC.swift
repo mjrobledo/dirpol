@@ -59,7 +59,7 @@ class RegionsVC: UIViewController {
 
         let marker2 = GMSMarker()
         marker2.position = CLLocationCoordinate2D(latitude: -9.800696, longitude: -76.175346)
-        marker2.iconView = UIImageView(image: UIImage(named: "ic_marker_region"))
+        marker2.iconView = UIImageView(image: UIImage(named: "ic_marker_red"))
         marker2.title = "Huánuco"
         marker2.snippet = "Peru"
         //marker.setValue("2", forKey: "id")

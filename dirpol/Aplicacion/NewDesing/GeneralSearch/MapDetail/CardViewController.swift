@@ -10,6 +10,7 @@ import UIKit
 
 protocol CardViewControllerDelegate {
     func selectedDirectory()
+    func selectedPhotos()
 }
 
 class CardViewController: UIViewController {
@@ -142,6 +143,7 @@ extension CardViewController: DirectAccessDelegate {
     
     func photo(identifier: Int) {
         print("Foto")
+        self.delegate.selectedPhotos()
     }
     
     func socialMedia(identifier: Int) {

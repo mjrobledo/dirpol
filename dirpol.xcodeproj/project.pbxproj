@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		130E4073F78693510CFBE6A9 /* Pods_dirpolTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28E1D4D3AE7E04E1B0E24BAB /* Pods_dirpolTests.framework */; };
 		3B4DD80EF661F796EB580F16 /* Pods_dirpol.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF5EE8FABA8CCB6BFB980437 /* Pods_dirpol.framework */; };
+		473654F524E422680065DD33 /* GalleryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473654F424E422680065DD33 /* GalleryVC.swift */; };
+		473654F824E429D90065DD33 /* ViewMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473654F624E429D70065DD33 /* ViewMarker.swift */; };
+		473654F924E429D90065DD33 /* ViewMarker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 473654F724E429D80065DD33 /* ViewMarker.xib */; };
 		473873F024D7B1D10050693F /* CellStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473873EE24D7B1D10050693F /* CellStation.swift */; };
 		473873F124D7B1D10050693F /* CellStation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 473873EF24D7B1D10050693F /* CellStation.xib */; };
 		473881C024DA2B160077CF89 /* ImageZoomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473881BF24DA2B150077CF89 /* ImageZoomVC.swift */; };
@@ -130,6 +133,9 @@
 		1DBF1A2BA33935663A6946B0 /* Pods-dirpolTests.peru.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dirpolTests.peru.xcconfig"; path = "Target Support Files/Pods-dirpolTests/Pods-dirpolTests.peru.xcconfig"; sourceTree = "<group>"; };
 		1FBA1CB55586885CF192B0A3 /* Pods-dirpol-dirpolUITests.mexico.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dirpol-dirpolUITests.mexico.xcconfig"; path = "Target Support Files/Pods-dirpol-dirpolUITests/Pods-dirpol-dirpolUITests.mexico.xcconfig"; sourceTree = "<group>"; };
 		28E1D4D3AE7E04E1B0E24BAB /* Pods_dirpolTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dirpolTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		473654F424E422680065DD33 /* GalleryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryVC.swift; sourceTree = "<group>"; };
+		473654F624E429D70065DD33 /* ViewMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewMarker.swift; sourceTree = "<group>"; };
+		473654F724E429D80065DD33 /* ViewMarker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewMarker.xib; sourceTree = "<group>"; };
 		473873EE24D7B1D10050693F /* CellStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellStation.swift; sourceTree = "<group>"; };
 		473873EF24D7B1D10050693F /* CellStation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellStation.xib; sourceTree = "<group>"; };
 		473881BF24DA2B150077CF89 /* ImageZoomVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageZoomVC.swift; sourceTree = "<group>"; };
@@ -287,6 +293,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		473654F324E4223D0065DD33 /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				473654F424E422680065DD33 /* GalleryVC.swift */,
+			);
+			path = Gallery;
+			sourceTree = "<group>";
+		};
 		6C3E98D8214C5746009FDF74 = {
 			isa = PBXGroup;
 			children = (
@@ -365,6 +379,7 @@
 		8B1075E824D2397D00C50789 /* GeneralSearch */ = {
 			isa = PBXGroup;
 			children = (
+				473654F324E4223D0065DD33 /* Gallery */,
 				8B23D95124E3982C00D41BA1 /* Oficials */,
 				8B06670D24D352AB00078BDB /* MapDetail */,
 				8B1075F524D243A200C50789 /* Cell */,
@@ -508,6 +523,8 @@
 		8B929DA124D3689100E89FF5 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				473654F624E429D70065DD33 /* ViewMarker.swift */,
+				473654F724E429D80065DD33 /* ViewMarker.xib */,
 				8B06671424D356CF00078BDB /* CellDirectAccess.swift */,
 				8B06671524D356CF00078BDB /* CellDirectAccess.xib */,
 				8B06671024D355C000078BDB /* CellListMap.swift */,
@@ -848,6 +865,7 @@
 				6C3E98EF214C5748009FDF74 /* LaunchScreen.storyboard in Resources */,
 				8B115EC724BECD2000C82CFB /* Credential.storyboard in Resources */,
 				8B19929D24C3706A003D788B /* UserPanel.storyboard in Resources */,
+				473654F924E429D90065DD33 /* ViewMarker.xib in Resources */,
 				8B929DA624D368B500E89FF5 /* CellHeaderMap.xib in Resources */,
 				8B06671324D355C000078BDB /* CellListMap.xib in Resources */,
 				6C3E98EA214C5746009FDF74 /* Main.storyboard in Resources */,
@@ -1031,6 +1049,7 @@
 				8B19929524C368F1003D788B /* AdvanceSearchVC.swift in Sources */,
 				8B1075F724D243CB00C50789 /* GeneralSearchVC.swift in Sources */,
 				FA9CD355215B40420032174B /* ViewBusquedaDos.swift in Sources */,
+				473654F524E422680065DD33 /* GalleryVC.swift in Sources */,
 				8B23D95024E3903300D41BA1 /* MapExtencionVC.swift in Sources */,
 				6C3E98E7214C5746009FDF74 /* ViewController.swift in Sources */,
 				FA9850C22151D3FD002F143D /* AltoMandoPolicialVC.swift in Sources */,
@@ -1063,6 +1082,7 @@
 				8BE52BA224DE1FC300824D93 /* RegionCardVC.swift in Sources */,
 				8B1992A424C37671003D788B /* AboutUS.swift in Sources */,
 				FAC2C0342150822B00A74FA3 /* RecuperarVC.swift in Sources */,
+				473654F824E429D90065DD33 /* ViewMarker.swift in Sources */,
 				FAC2C025215032FE00A74FA3 /* Extenciones.swift in Sources */,
 				473873F024D7B1D10050693F /* CellStation.swift in Sources */,
 				8BCB2A9024E38DCC0069B5BA /* ProvincesVC.swift in Sources */,

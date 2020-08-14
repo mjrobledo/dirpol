@@ -21,6 +21,7 @@ class ContactUsVC: UIViewController , listadoDelegate, MFMailComposeViewControll
     @IBOutlet weak var txtEmpresa: UITextField!
    // @IBOutlet weak var btnTema: UIButton!
     @IBOutlet weak var txtMensaje: UITextView!
+    @IBOutlet weak var imgCaptcha: UIImageView!
     
     let req = requestContacto()
     var mail:MFMailComposeViewController! = nil
@@ -53,6 +54,15 @@ class ContactUsVC: UIViewController , listadoDelegate, MFMailComposeViewControll
     @IBAction func volver(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
         
+    }
+    
+    @IBAction func recaptcha(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+        if sender.isSelected {
+            imgCaptcha.image = #imageLiteral(resourceName: "ic_check_on-1")
+        } else {
+            imgCaptcha.image = #imageLiteral(resourceName: "ic_round")
+        }
     }
     
     
