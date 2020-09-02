@@ -17,7 +17,7 @@ class RegionsVC: UIViewController {
 
      @IBOutlet weak var viewMap: GMSMapView!
      @IBOutlet weak var btnMenu: UIBarButtonItem!
-
+    
     var regionCard: RegionCardVC!
     var visualEffectView: UIVisualEffectView!
 
@@ -36,21 +36,22 @@ class RegionsVC: UIViewController {
     var runningAnimations = [UIViewPropertyAnimator]()
     var animationProgressWhenInterrupted:CGFloat = 0
 
-       override func viewDidLoad() {
-              super.viewDidLoad()
-              if revealViewController() != nil {
-                  btnMenu.target = revealViewController()
-                  btnMenu.action = #selector(SWRevealViewController.revealToggle(_:))
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        if revealViewController() != nil {
+            btnMenu.target = revealViewController()
+            btnMenu.action = #selector(SWRevealViewController.revealToggle(_:))
                   view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-              }
+        }
+        btnMenu.colorMenu()
 
-        viewMap.camera = GMSCameraPosition(latitude: -10.190200, longitude: -75.538139, zoom: 6)
-        viewMap.delegate = self
+    viewMap.camera = GMSCameraPosition(latitude: -10.190200, longitude: -75.538139, zoom: 6)
+    viewMap.delegate = self
         /*
          -10.190200, -75.538139
          */
-        let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: -16.355114, longitude: -71.540182)
+    let marker = GMSMarker()
+    marker.position = CLLocationCoordinate2D(latitude: -16.355114, longitude: -71.540182)
         marker.title = "Arequipa"
         marker.snippet = "Peru"
         marker.map = viewMap
@@ -104,3 +105,40 @@ extension RegionsVC: GMSMapViewDelegate {
     }
 }
  
+extension UIButton {
+    func colorMenu () {
+        switch Api.config_app {
+        case .Colombia:
+            self.tintColor = UIColor.cYelowCo()
+        case .Peru:
+            self.tintColor = UIColor.white
+        case .Mexico:
+            self.tintColor = UIColor.white
+        }
+    }
+}
+
+extension UIBarButtonItem {
+    func colorMenu () {
+        switch Api.config_app {
+        case .Colombia:
+            self.tintColor = UIColor.cYelowCo()
+        case .Peru:
+            self.tintColor = UIColor.white
+        case .Mexico:
+            self.tintColor = UIColor.white
+        }
+    }
+
+    func colorBack () {
+        switch Api.config_app {
+        case .Colombia:
+            self.tintColor = UIColor.cYelowCo()
+        case .Peru:
+            self.tintColor = .cgreenMenu()
+        case .Mexico:
+            self.tintColor = UIColor.white
+        }
+    }
+
+}

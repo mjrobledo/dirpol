@@ -10,9 +10,14 @@ import UIKit
 
 class GeneralSearchDetailVC: UIViewController {
     @IBOutlet weak var table: UITableView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.navigationController?.navigationBar.colorBack()
+
+        
         table.register(UINib(nibName: "CellGeneralSearchDetail", bundle: nil), forCellReuseIdentifier: "cell")
     }
  
@@ -49,4 +54,18 @@ extension GeneralSearchDetailVC: UITableViewDelegate, UITableViewDataSource {
        return 120
     }
     
+}
+
+extension UINavigationBar {
+    func colorBack () {
+           switch Api.config_app {
+           case .Colombia:
+               self.tintColor = UIColor.cYelowCo()
+           case .Peru:
+               self.tintColor = .cgreenMenu()
+           case .Mexico:
+               self.tintColor = UIColor.white
+           }
+       }
+
 }

@@ -40,6 +40,7 @@
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
             <connections>
+                <outlet property="imgMarker" destination="Inb-aD-Dgl" id="xe2-S0-etj"/>
                 <outlet property="lblRegion" destination="Rl5-rM-wCl" id="VUA-xh-BFj"/>
             </connections>
             <point key="canvasLocation" x="-23.199999999999999" y="-217.69115442278863"/>

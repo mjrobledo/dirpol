@@ -2837,7 +2837,7 @@ sanciones penales/civiles y serán objeto de todas las acciones judiciales que c
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bloqueo de cuenta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="18i-bm-4RS">
-                                                    <rect key="frame" x="9" y="1" width="376" height="16"/>
+                                                    <rect key="frame" x="9" y="0.0" width="376" height="16"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.30663409279999998" green="0.30663409279999998" blue="0.30663409279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

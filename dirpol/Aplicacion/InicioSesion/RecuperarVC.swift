@@ -12,19 +12,27 @@ import Alamofire
 
 class RecuperarVC: UIViewController , UITextFieldDelegate{
 
+    @IBOutlet weak var lblNotRemember: UILabel!
+    
     @IBOutlet weak var lblPregunta: UILabel!
     //@IBOutlet weak var lblMensaje: UILabel!
     @IBOutlet weak var txtCorreo: UITextField!
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var viewForm: UIView!
+    @IBOutlet weak var imgBackground: UIImageView!
+    @IBOutlet weak var btnBack: UIBarButtonItem!
     
+    @IBOutlet weak var viewTel: UIView!
+    @IBOutlet weak var viewWs: UIView!
+    @IBOutlet weak var viewFb: UIView!
     
     var texto = ""
     var RecuperaPasswordUsuario = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        btnBack.colorBack()
         lblPregunta.text = texto
         // Do any additional setup after loading the view.
         if texto == .NoRecueraTuPassword {
@@ -39,6 +47,39 @@ class RecuperarVC: UIViewController , UITextFieldDelegate{
         
         let tap1 = UITapGestureRecognizer(target: self, action: #selector(hideKeyBoard))
         self.viewForm.addGestureRecognizer(tap1)
+        self.configScreen()
+    }
+    
+    private func configScreen(){
+        switch Api.config_app {
+        case .Colombia:
+            imgBackground.isHidden = true
+            viewTel.roundView(porsion: 2)
+            viewWs.roundView(porsion: 2)
+            viewFb.roundView(porsion: 2)
+            lblNotRemember.isHidden = true
+            lblPregunta.font = UIFont().MontserratRegular(size: 17)
+            if texto == .NoRecueraTuPassword {
+                let main_string = "¿No recuerdas tu contraseña?"
+                let string_to_color = "contraseña?"
+                let attributedWithTextColor: NSAttributedString = main_string.attributedStringWithColor([string_to_color], color: UIColor.cPrincipal())
+                lblPregunta.attributedText = attributedWithTextColor
+            } else {
+                
+                let attributedWithTextColor: NSAttributedString = "¿No recuerdas tu usuario?".attributedStringWithColor(["usuario?"], color: UIColor.cPrincipal())
+                
+                lblPregunta.attributedText = attributedWithTextColor
+               
+            }
+        case .Peru:
+            imgBackground.image = UIImage(named: "menu_screen-1")
+            viewTel.roundView(porsion: 3)
+            viewWs.roundView(porsion: 3)
+            viewFb.roundView(porsion: 3)
+            
+        case .Mexico:
+            imgBackground.image = UIImage(named: "menu_screen-1")
+        }
     }
     
     @objc func hideKeyBoard(){
@@ -167,4 +208,33 @@ struct structCodigo{
     
     static let Error = "500"
     
+}
+
+
+extension  UIView {
+    func roundView(porsion: Int) {
+        self.layer.cornerRadius = self.frame.width / CGFloat(porsion)
+        self.layer.masksToBounds = true
+        self.layer.borderColor = UIColor.cPrincipal().cgColor
+        
+        self.layer.borderWidth = 1
+    }
+}
+
+extension String {
+    func attributedStringWithColor(_ strings: [String], color: UIColor, characterSpacing: UInt? = nil) -> NSAttributedString {
+        let attributedString = NSMutableAttributedString(string: self)
+        for string in strings {
+            let range = (self as NSString).range(of: string)
+            attributedString.addAttribute(NSAttributedString.Key.foregroundColor, value: color, range: range)
+            attributedString.addAttribute(NSAttributedString.Key.font, value: UIFont().MontserratBold(size: 18), range: range)
+            
+        }
+
+        guard let characterSpacing = characterSpacing else {return attributedString}
+
+        attributedString.addAttribute(NSAttributedString.Key.kern, value: characterSpacing, range: NSRange(location: 0, length: attributedString.length))
+
+        return attributedString
+    }
 }

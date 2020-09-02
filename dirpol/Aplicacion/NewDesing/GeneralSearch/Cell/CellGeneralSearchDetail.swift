@@ -10,9 +10,12 @@ import UIKit
 
 class CellGeneralSearchDetail: UITableViewCell {
 
+    @IBOutlet weak var imgIcon: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        imgIcon.image = UIImage(named: "ic_call_\(Api.config_app.getShortName())")
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

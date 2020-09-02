@@ -29,8 +29,10 @@ class ContactUsVC: UIViewController , listadoDelegate, MFMailComposeViewControll
      @IBOutlet weak var btnMenu: UIBarButtonItem!
        
     override func viewDidLoad() {
-           super.viewDidLoad()
-           if revealViewController() != nil {
+        super.viewDidLoad()
+        btnMenu.colorMenu()
+        
+        if revealViewController() != nil {
                btnMenu.target = revealViewController()
                btnMenu.action = #selector(SWRevealViewController.revealToggle(_:))
                view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())

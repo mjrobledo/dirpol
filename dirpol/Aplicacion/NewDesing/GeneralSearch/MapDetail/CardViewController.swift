@@ -17,6 +17,7 @@ class CardViewController: UIViewController {
     var delegate: CardViewControllerDelegate!
     
     @IBOutlet weak var handleArea: UIView!
+    
     @IBOutlet weak var table: UITableView!
     @IBOutlet weak var imgUpDown: UIImageView!
         
@@ -27,7 +28,11 @@ class CardViewController: UIViewController {
         table.register(UINib(nibName: "CellListMap", bundle: nil), forCellReuseIdentifier: "cellList")
         table.register(UINib(nibName: "CellDirectAccess", bundle: nil), forCellReuseIdentifier: "cellActions")
         table.register(UINib(nibName: "CellHeaderMap", bundle: nil), forCellReuseIdentifier: "cellHeader")
-        table.register(UINib(nibName: "CellStation", bundle: nil), forCellReuseIdentifier: "cellDirectory")
+        if Api.config_app == .Peru {
+            table.register(UINib(nibName: "CellStation", bundle: nil), forCellReuseIdentifier: "cellDirectory")
+        } else {
+            table.register(UINib(nibName: "CellStation_co", bundle: nil), forCellReuseIdentifier: "cellDirectory")
+        }
         
         table.estimatedRowHeight = 40
         self.setData()
@@ -170,14 +175,15 @@ enum TypeCellDetail {
     
     func getIcon() -> UIImage {
         switch self {
-        case .Tel: return #imageLiteral(resourceName: "ic_tel")
-        case .Web: return #imageLiteral(resourceName: "ic_web")
-        case .Email: return #imageLiteral(resourceName: "ic_mail")
-        case .SocialMedia: return #imageLiteral(resourceName: "ic_search")
-        case .Adreess: return #imageLiteral(resourceName: "ic_web")
+        case .Tel: return UIImage(named: "ic_call_\(Api.config_app.getShortName())")!
+        case .Web: return UIImage(named: "ic_web_\(Api.config_app.getShortName())")!
+        case .Email: return UIImage(named: "ic_mail_\(Api.config_app.getShortName())")!
+        case .SocialMedia: return UIImage(named: "ic_search_\(Api.config_app.getShortName())")!
+        case .Adreess: return UIImage(named: "ic_address_\(Api.config_app.getShortName())")!
         case .Header: return #imageLiteral(resourceName: "ic_logo_3")
         case .Actions: return #imageLiteral(resourceName: "ic_logo_3")
         case .Directory: return UIImage()
         }
     }
 }
+ 

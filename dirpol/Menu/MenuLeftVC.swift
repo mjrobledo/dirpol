@@ -14,6 +14,12 @@ class MenuLeftVC: UIViewController, UITableViewDataSource, UITableViewDelegate, 
 
     
     @IBOutlet weak var imgProfile: UIImageView!
+    @IBOutlet weak var imgHeader: UIImageView!
+    @IBOutlet weak var imgLogo: UIImageView!
+    
+    @IBOutlet weak var lblUserName: UILabel!
+    @IBOutlet weak var lblSubtitle: UILabel!
+    @IBOutlet weak var lblID: UILabel!
     
     @IBOutlet weak var tblMenu: UITableView!
     @IBOutlet weak var viewTop: UIView!
@@ -28,10 +34,26 @@ class MenuLeftVC: UIViewController, UITableViewDataSource, UITableViewDelegate, 
         // Do any additional setup after loading the view.
         Singleton.instance.menuTable = self.tblMenu
         tblMenu.reloadData()
+        self.configScreen()
     }
 
     override func viewDidAppear(_ animated: Bool) {
         tblMenu.reloadData()
+    }
+    
+    private func configScreen(){
+        switch Api.config_app {
+        case .Colombia:
+            imgHeader.isHidden = false
+            imgLogo.isHidden = true
+            lblUserName.textColor = UIColor.yellow
+            lblID.textColor = UIColor.white
+            lblSubtitle.textColor = UIColor.white
+        case .Peru:
+            lblUserName.textColor = UIColor.cPrincipal()
+        case .Mexico:
+            print("Mexico Menu")
+        }
     }
     
     func revealControllerPanGestureBegan(_ revealController: SWRevealViewController!) {
@@ -105,11 +127,17 @@ class MenuLeftVC: UIViewController, UITableViewDataSource, UITableViewDelegate, 
     }
     
     @IBAction func goToRenew(_ sender: Any) {
-        let vc =  UIStoryboard(name: "Credential", bundle: nil).instantiateViewController(withIdentifier: "renewID")  as! RenewMembershipVC
-        vc.modalPresentationStyle = .fullScreen
-        vc.modalTransitionStyle = .crossDissolve
-        vc.providesPresentationContextTransitionStyle = true;
-        vc.definesPresentationContext = true;
+        var segueID = "renewIDP"
+        switch Api.config_app {
+        case .Colombia:
+            segueID = "renewIDC"
+        case .Peru:
+            segueID = "renewIDP"
+        case .Mexico:
+            segueID = "renewIDP"
+        }
+        let vc =  UIStoryboard(name: "Credential", bundle: nil).instantiateViewController(withIdentifier: segueID)  as! RenewMembershipVC
+        vc.setPopPup()
         self.present(vc, animated: true, completion: nil)
     }
     
@@ -226,15 +254,16 @@ class Menu {
     
     static func getMenu() -> [Menu] {
      
-        return [Menu(titulo: "Inicio", segue: Segue.Home, imagen: #imageLiteral(resourceName: "ic_home")),
-                Menu(titulo: "Regiones", segue: Segue.Region, imagen: #imageLiteral(resourceName: "menu_regions")),
-                Menu(titulo: "Búsqueda Avanzada", segue: Segue.Search, imagen: #imageLiteral(resourceName: "menu_search")),
-                Menu(titulo: "Directorio", segue: Segue.Directory, imagen: #imageLiteral(resourceName: "menu_directoty")),
-                Menu(titulo: "Contáctanos", segue: Segue.ContactUs, imagen: #imageLiteral(resourceName: "menu_contac_us")),
-                Menu(titulo: "Credencial Virtual", segue: Segue.Credential, imagen: #imageLiteral(resourceName: "menu_credential")),
-                Menu(titulo: "Panel de Usuario", segue: Segue.Panel, imagen: #imageLiteral(resourceName: "menu_panel")),
-                Menu(titulo: "Acerca de Dirpol", segue: Segue.About, imagen: #imageLiteral(resourceName: "menu_about")),
-                Menu(titulo: "Salir", segue: Segue.Exit, imagen: #imageLiteral(resourceName: "menu_exit"))]
+        
+        return [Menu(titulo: "Inicio", segue: Segue.Home, imagen: UIImage(named: "menu_home_\(Api.config_app.getShortName())")!),
+                Menu(titulo: "Regiones", segue: Segue.Region, imagen: UIImage(named: "menu_region_\(Api.config_app.getShortName())")!),
+                Menu(titulo: "Búsqueda Avanzada", segue: Segue.Search, imagen: UIImage(named: "menu_search_\(Api.config_app.getShortName())")!),
+                Menu(titulo: "Directorio", segue: Segue.Directory, imagen: UIImage(named: "menu_directory_\(Api.config_app.getShortName())")!),
+                Menu(titulo: "Contáctanos", segue: Segue.ContactUs, imagen: UIImage(named: "menu_contact_\(Api.config_app.getShortName())")!),
+                Menu(titulo: "Credencial Virtual", segue: Segue.Credential, imagen: UIImage(named: "menu_credential_\(Api.config_app.getShortName())")!),
+                Menu(titulo: "Panel de Usuario", segue: Segue.Panel, imagen: UIImage(named: "menu_panel_\(Api.config_app.getShortName())")!),
+                Menu(titulo: "Acerca de Dirpol", segue: Segue.About, imagen: UIImage(named: "menu_about_\(Api.config_app.getShortName())")!),
+                Menu(titulo: "Salir", segue: Segue.Exit, imagen: UIImage(named: "menu_exit_\(Api.config_app.getShortName())")!)]
     }
 }
 
@@ -248,4 +277,5 @@ enum Segue: String {
     case Panel = "seguePanel"
     case About = "segueAbout"
     case Exit = "segueExit"
+    
 }

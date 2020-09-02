@@ -21,6 +21,7 @@ class ViewRegionesMapa: UIView, GMSMapViewDelegate {
     var delegateRegiones:regionesDelegate!
     
     @IBOutlet weak var viewMapa: GMSMapView!
+    @IBOutlet weak var btnMenu: UIBarButtonItem!
     
     var markers:[GMSMarker] = []
     func iniciar(){

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -122,7 +122,7 @@
                                         <rect key="frame" x="8" y="3" width="32" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_mail" translatesAutoresizingMaskIntoConstraints="NO" id="3ZQ-tn-daZ">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_mail_pe" translatesAutoresizingMaskIntoConstraints="NO" id="3ZQ-tn-daZ">
                                                 <rect key="frame" x="5" y="5" width="22" height="22"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             </imageView>
@@ -166,7 +166,7 @@
                                         <rect key="frame" x="8" y="3" width="32" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_photo" translatesAutoresizingMaskIntoConstraints="NO" id="wRY-2Y-Dob">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_photo_pe" translatesAutoresizingMaskIntoConstraints="NO" id="wRY-2Y-Dob">
                                                 <rect key="frame" x="5" y="5" width="22" height="22"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             </imageView>
@@ -210,7 +210,7 @@
                                         <rect key="frame" x="8" y="3" width="32" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_search" translatesAutoresizingMaskIntoConstraints="NO" id="6x5-1c-dsw">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_search_pe" translatesAutoresizingMaskIntoConstraints="NO" id="6x5-1c-dsw">
                                                 <rect key="frame" x="5" y="5" width="22" height="22"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             </imageView>
@@ -254,7 +254,7 @@
                                         <rect key="frame" x="8" y="3" width="32" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_repre" translatesAutoresizingMaskIntoConstraints="NO" id="Z1g-N4-c2b">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_repre_pe" translatesAutoresizingMaskIntoConstraints="NO" id="Z1g-N4-c2b">
                                                 <rect key="frame" x="5" y="5" width="22" height="22"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             </imageView>
@@ -296,6 +296,12 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="imgEmail" destination="3ZQ-tn-daZ" id="AFI-I7-x4F"/>
+                <outlet property="imgPhoto" destination="wRY-2Y-Dob" id="yRR-jP-c68"/>
+                <outlet property="imgRepre" destination="Z1g-N4-c2b" id="m3f-Aa-fIE"/>
+                <outlet property="imgSocial" destination="6x5-1c-dsw" id="btm-bL-klf"/>
+                <outlet property="imgTel" destination="e39-LI-Ka5" id="DXg-RV-3n4"/>
+                <outlet property="imgWeb" destination="dHX-QR-WOo" id="1cq-BD-eCD"/>
                 <outlet property="viewEmail" destination="k96-Dg-v5q" id="deG-8H-0IR"/>
                 <outlet property="viewPhoto" destination="k3p-tQ-QTc" id="XUZ-hd-bHo"/>
                 <outlet property="viewSocial" destination="hO6-li-7Om" id="2Ra-Xh-vpg"/>
@@ -306,10 +312,10 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="ic_mail" width="51" height="39"/>
-        <image name="ic_photo" width="48" height="36"/>
-        <image name="ic_repre" width="50" height="65"/>
-        <image name="ic_search" width="51" height="52"/>
+        <image name="ic_mail_pe" width="51" height="39"/>
+        <image name="ic_photo_pe" width="48" height="36"/>
+        <image name="ic_repre_pe" width="50" height="65"/>
+        <image name="ic_search_pe" width="51" height="52"/>
         <image name="ic_tel" width="51" height="69"/>
         <image name="ic_web" width="47" height="47"/>
     </resources>

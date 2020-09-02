@@ -317,6 +317,7 @@
                                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                                 <real key="value" value="24"/>
                                                                             </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="primaryColor" value="YES"/>
                                                                         </userDefinedRuntimeAttributes>
                                                                         <connections>
                                                                             <action selector="enviarMensaje:" destination="2zS-LJ-EuZ" eventType="touchUpInside" id="Pwd-U7-TxQ"/>

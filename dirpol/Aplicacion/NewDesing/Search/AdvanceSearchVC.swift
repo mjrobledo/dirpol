@@ -33,18 +33,29 @@ class AdvanceSearchVC: UIViewController {
     @IBOutlet weak var btnCity: UIButton!
     @IBOutlet weak var btnPostion: UIButton!
     
-    
+    @IBOutlet weak var imgBackground: UIImageView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        btnMenu.colorMenu()
+        self.configScreen()
         if revealViewController() != nil {
             btnMenu.target = revealViewController()
             btnMenu.action = #selector(SWRevealViewController.revealToggle(_:))
             view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
-
         // Do any additional setup after loading the view.
+    }
+    private func configScreen(){
+        switch Api.config_app {
+        case .Colombia:
+            imgBackground.image = #imageLiteral(resourceName: "img_bacground_co")
+        case .Peru:
+            imgBackground.image = UIImage(named: "img_login")
+        case .Mexico:
+            imgBackground.image = UIImage(named: "img_login")
+        }
     }
     
     @IBAction func selectedList(_ sender: UIButton) {

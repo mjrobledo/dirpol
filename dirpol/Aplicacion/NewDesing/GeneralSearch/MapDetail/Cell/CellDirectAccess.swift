@@ -26,12 +26,25 @@ class CellDirectAccess: UITableViewCell {
     @IBOutlet weak var viewPhoto: UIView!
     @IBOutlet weak var viewSocial: UIView!
     
+    @IBOutlet weak var imgTel: UIImageView!
+    @IBOutlet weak var imgWeb: UIImageView!
+    @IBOutlet weak var imgEmail: UIImageView!
+    @IBOutlet weak var imgPhoto: UIImageView!
+    @IBOutlet weak var imgSocial: UIImageView!
+    @IBOutlet weak var imgRepre: UIImageView!
+    
     var identifier = 0
     
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        imgTel.image = UIImage(named: "ic_call_\(Api.config_app.getShortName())")
+        imgWeb.image = UIImage(named: "ic_web_\(Api.config_app.getShortName())")
+        imgEmail.image = UIImage(named: "ic_mail_\(Api.config_app.getShortName())")
+        imgPhoto.image = UIImage(named: "ic_photo_\(Api.config_app.getShortName())")
+        imgSocial.image = UIImage(named: "ic_search_\(Api.config_app.getShortName())")
+        imgRepre.image = UIImage(named: "ic_repre_\(Api.config_app.getShortName())")
     }
 
     @IBAction func call(_ sender: Any) {

@@ -22,6 +22,11 @@ extension RegionsVC {
         self.view.addSubview(regionCard.view)
         
         cardHeight = 560
+        if regionCard.filter.count > 4 {
+            cardHeight = cardHeight + 100
+        }
+        
+        
         regionCard.view.frame = CGRect(x: 20, y: self.view.frame.height - cardHandleAreaHeight, width: self.view.bounds.width - 40, height: cardHeight)
         
         regionCard.view.clipsToBounds = true

@@ -76,7 +76,7 @@ extension UIColor {
     class func cPrincipal() -> UIColor {
         switch Api.config_app {
         case .Colombia:
-            return UIColor(red: 49/255, green: 66/255, blue: 142/255, alpha: 1.0)
+            return UIColor(red: 21/255, green: 44/255, blue: 104/255, alpha: 1.0)
         case .Peru:
             return UIColor(red: 45/255, green: 81/255, blue: 46/255, alpha: 1.0)
         case .Mexico:
@@ -143,5 +143,17 @@ extension UIColor {
     }
     class func cSecundarioG4() -> UIColor {
         return UIColor(red: 255/255, green:255/255, blue: 255/255, alpha: 1.0)
+    }
+    
+    class func cGreenPe() -> UIColor {
+        return UIColor(red: 16/255, green: 142/255, blue: 58/255, alpha: 1.0)
+    }
+    
+    class func cYelowCo() -> UIColor {
+        return UIColor(red: 252/255, green: 210/255, blue: 15/255, alpha: 1.0)
+    }
+    
+    class func cgreenMenu() -> UIColor {
+        return UIColor(red: 106/255, green: 145/255, blue: 106/255, alpha: 1.0)
     }
 }

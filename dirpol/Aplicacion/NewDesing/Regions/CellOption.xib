@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CellOption" customModule="DIRPOL" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B6N-Vh-oxg">
+                        <rect key="frame" x="4" y="4" width="67" height="67"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_police" translatesAutoresizingMaskIntoConstraints="NO" id="w0N-s8-zIY">
+                                <rect key="frame" x="18.5" y="10" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="8xk-i9-4pH"/>
+                                    <constraint firstAttribute="height" constant="30" id="BHC-5q-WNq"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="gZt-uq-4Xk">
+                                <rect key="frame" x="6" y="44" width="54" height="15"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="gZt-uq-4Xk" firstAttribute="leading" secondItem="B6N-Vh-oxg" secondAttribute="leading" constant="6" id="FiH-WQ-igS"/>
+                            <constraint firstItem="w0N-s8-zIY" firstAttribute="centerX" secondItem="B6N-Vh-oxg" secondAttribute="centerX" id="QNC-AJ-hBg"/>
+                            <constraint firstAttribute="bottom" secondItem="gZt-uq-4Xk" secondAttribute="bottom" constant="8" id="eAx-Ws-nwO"/>
+                            <constraint firstItem="w0N-s8-zIY" firstAttribute="top" secondItem="B6N-Vh-oxg" secondAttribute="top" constant="10" id="n6U-t8-eM8"/>
+                            <constraint firstItem="gZt-uq-4Xk" firstAttribute="top" secondItem="w0N-s8-zIY" secondAttribute="bottom" constant="4" id="pZQ-IA-nhI"/>
+                            <constraint firstAttribute="trailing" secondItem="gZt-uq-4Xk" secondAttribute="trailing" constant="7" id="sDL-C4-pfu"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="25"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="colorCorner">
+                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="B6N-Vh-oxg" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="RFm-Wj-o3t"/>
+                <constraint firstItem="B6N-Vh-oxg" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="4" id="o5O-UV-jIi"/>
+                <constraint firstItem="B6N-Vh-oxg" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="udj-6V-BuD"/>
+                <constraint firstItem="B6N-Vh-oxg" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="uyc-Af-yK1"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <point key="canvasLocation" x="136.95652173913044" y="95.424107142857139"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="ic_police" width="49" height="57"/>
+    </resources>
+</document>

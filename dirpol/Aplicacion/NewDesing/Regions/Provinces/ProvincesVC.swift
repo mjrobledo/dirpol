@@ -14,14 +14,32 @@ class ProvincesVC: UIViewController {
     @IBOutlet weak var lblDepto: UILabel!
     
     @IBOutlet weak var txtSearch: UITextField!
+    @IBOutlet weak var imgBackground: UIImageView!
     
     var depto = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.colorBack()
         self.lblDepto.text = depto
         // Do any additional setup after loading the view.
-    }    
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        self.configScreen()
+    }
+    
+    private func configScreen(){
+        switch Api.config_app {
+        case .Colombia:
+            imgBackground.image = #imageLiteral(resourceName: "img_bacground_co")
+        case .Peru:
+            imgBackground.image = UIImage(named: "img_login")
+        case .Mexico:
+            imgBackground.image = UIImage(named: "img_login")
+        }
+    }
 
     
     /*

@@ -10,14 +10,13 @@ import UIKit
 
 protocol segueMenu {
     func abrirMenu(segue:String)
-    
 }
 
 class MenuVC: UIViewController , UITableViewDelegate, UITableViewDataSource {
     var idDelegate:segueMenu!
     
     var menu:[clsMenu] = []
-
+    @IBOutlet weak var tblMenu: UITableView! 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return menu.count
@@ -39,16 +38,18 @@ class MenuVC: UIViewController , UITableViewDelegate, UITableViewDataSource {
         self.dismiss(animated: true, completion: nil)
     }
     
-    
-    
 
-    @IBOutlet weak var tblMenu: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         menu = clsMenu().getMenuPrincipal()
         
+        
         // Do any additional setup after loading the view.
     }
+    
+    
+    
 
     @IBAction func volver(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)

@@ -31,4 +31,16 @@ enum VersionCountry: String {
     case Colombia = "Colombia"
     case Peru = "Peru"
     case Mexico = "Mexico"
+    
+    func getShortName() -> String {
+        switch self {
+        case .Colombia:
+            return "co"
+        case .Peru:
+            return "pe"
+        case .Mexico:
+            return "mx"
+        }
+    }
 }
+

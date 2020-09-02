@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GjZ-h2-DiF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GjZ-h2-DiF">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -80,7 +80,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgorund1-b" translatesAutoresizingMaskIntoConstraints="NO" id="HTB-0D-hvR">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HTB-0D-hvR">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
@@ -181,6 +181,7 @@
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" title="Provincias" id="byc-Eu-YFe"/>
                     <connections>
+                        <outlet property="imgBackground" destination="HTB-0D-hvR" id="tnO-nh-HmU"/>
                         <outlet property="lblDepto" destination="hdV-82-BIh" id="QJj-75-GHS"/>
                         <outlet property="table" destination="lVo-js-EpA" id="AFC-6J-krJ"/>
                         <outlet property="txtSearch" destination="O9F-yB-Iue" id="hR7-fL-mMY"/>
@@ -191,19 +192,18 @@
             </objects>
             <point key="canvasLocation" x="408.69565217391306" y="109.82142857142857"/>
         </scene>
-        <!--MapDetailID-->
+        <!--GeneralSearchDetailID-->
         <scene sceneID="FHR-hO-FBu">
             <objects>
-                <viewControllerPlaceholder storyboardName="GeneralSearch" referencedIdentifier="MapDetailID" id="YZs-xz-KjZ" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="GeneralSearch" referencedIdentifier="GeneralSearchDetailID" id="YZs-xz-KjZ" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="JZg-dk-pGx"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="95n-cw-PTt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="954" y="-86"/>
+            <point key="canvasLocation" x="999" y="-86"/>
         </scene>
     </scenes>
     <resources>
-        <image name="backgorund1-b" width="1182" height="2363"/>
         <image name="ic_hamburger" width="25" height="17"/>
     </resources>
 </document>

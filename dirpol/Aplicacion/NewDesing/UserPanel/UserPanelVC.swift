@@ -25,8 +25,9 @@ class UserPanelVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var imgSelect: UIImageView!
     
     
-       override func viewDidLoad() {
-              super.viewDidLoad()
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        btnMenu.colorMenu()
               if revealViewController() != nil {
                   btnMenu.target = revealViewController()
                   btnMenu.action = #selector(SWRevealViewController.revealToggle(_:))

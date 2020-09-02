@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jfq-hU-1s5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jfq-hU-1s5">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -37,7 +37,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgorund1-b" translatesAutoresizingMaskIntoConstraints="NO" id="2yE-cK-REK">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2yE-cK-REK">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
@@ -62,6 +62,9 @@
                                                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_logo_3" translatesAutoresizingMaskIntoConstraints="NO" id="KQJ-JV-H4f">
                                                                                 <rect key="frame" x="110" y="39" width="194" height="94"/>
                                                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="ImgPrimaryColor" value="YES"/>
+                                                                                </userDefinedRuntimeAttributes>
                                                                             </imageView>
                                                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="McZ-u8-Pcf">
                                                                                 <rect key="frame" x="45" y="174" width="324" height="50"/>
@@ -99,7 +102,7 @@
                                                                             <constraint firstAttribute="height" constant="244" id="alw-2F-mQg"/>
                                                                         </constraints>
                                                                     </view>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MX0-t0-VHu">
+                                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MX0-t0-VHu">
                                                                         <rect key="frame" x="0.0" y="252" width="414" height="45"/>
                                                                         <subviews>
                                                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2fk-A7-QhX">
@@ -150,7 +153,7 @@
                                                                             <constraint firstAttribute="height" constant="45" id="LOh-Lk-Rf7"/>
                                                                         </constraints>
                                                                     </view>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tsT-2a-qhk">
+                                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tsT-2a-qhk">
                                                                         <rect key="frame" x="0.0" y="305" width="414" height="45"/>
                                                                         <subviews>
                                                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="see-ha-CCE">
@@ -210,7 +213,7 @@
                                                                             <constraint firstAttribute="height" constant="45" id="Jcc-ad-cIS"/>
                                                                         </constraints>
                                                                     </view>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r5C-YC-IKt">
+                                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r5C-YC-IKt">
                                                                         <rect key="frame" x="0.0" y="358" width="414" height="45"/>
                                                                         <subviews>
                                                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jWC-YX-EIp">
@@ -261,7 +264,7 @@
                                                                             <constraint firstAttribute="height" constant="45" id="jz9-iE-gUD"/>
                                                                         </constraints>
                                                                     </view>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7EM-JI-Z4R">
+                                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7EM-JI-Z4R">
                                                                         <rect key="frame" x="0.0" y="411" width="414" height="45"/>
                                                                         <subviews>
                                                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ae1-X4-Dv9">
@@ -312,7 +315,7 @@
                                                                             <constraint firstAttribute="height" constant="45" id="dKy-iT-X9r"/>
                                                                         </constraints>
                                                                     </view>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dqw-0v-rjh">
+                                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dqw-0v-rjh">
                                                                         <rect key="frame" x="0.0" y="464" width="414" height="104"/>
                                                                         <subviews>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RM0-Ny-NdP">
@@ -495,7 +498,7 @@
                                                                             <constraint firstAttribute="bottom" secondItem="RM0-Ny-NdP" secondAttribute="bottom" constant="21" id="zUa-7d-xJz"/>
                                                                         </constraints>
                                                                     </view>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4F0-uG-2zr">
+                                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4F0-uG-2zr">
                                                                         <rect key="frame" x="0.0" y="576" width="414" height="45"/>
                                                                         <subviews>
                                                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nw8-8M-oN7">
@@ -543,7 +546,7 @@
                                                                             <constraint firstAttribute="height" constant="45" id="UuU-CG-8g2"/>
                                                                         </constraints>
                                                                     </view>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0K1-dd-Bjh">
+                                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0K1-dd-Bjh">
                                                                         <rect key="frame" x="0.0" y="629" width="414" height="179"/>
                                                                         <subviews>
                                                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TPu-a1-BlJ">
@@ -634,6 +637,7 @@
                         <outlet property="btnPostion" destination="gTo-6g-BCZ" id="76S-KA-V0n"/>
                         <outlet property="btnProvince" destination="H5m-Cc-W6s" id="cur-p1-ndz"/>
                         <outlet property="btnSerenazo" destination="TLE-L7-reQ" id="qXr-Tu-Frg"/>
+                        <outlet property="imgBackground" destination="2yE-cK-REK" id="K8W-PN-sLB"/>
                         <outlet property="imgFirefighter" destination="FF7-Oz-wlk" id="6Yu-Vm-Oij"/>
                         <outlet property="imgHospital" destination="Q1Y-HH-KGo" id="peV-Td-8f7"/>
                         <outlet property="imgPolice" destination="17w-ZG-xh4" id="gPM-0H-XMX"/>
@@ -721,7 +725,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="backgorund1-b" width="1182" height="2363"/>
         <image name="ic_down" width="57" height="20"/>
         <image name="ic_firefighter" width="51" height="51"/>
         <image name="ic_hamburger" width="25" height="17"/>

@@ -11,16 +11,19 @@ import SVProgressHUD
 
 class IniciarSesionVC: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var imgBackground: UIImageView!
     
     @IBOutlet weak var txtPassword: UITextField!
     @IBOutlet weak var txtNombre: UITextField!
     @IBOutlet weak var imgRemember: UIImageView!
     
     @IBOutlet weak var btnIniciaSesion: UIButton!
+    @IBOutlet weak var lblLine: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.configScreen()
         
         let tap1 = UITapGestureRecognizer(target: self, action: #selector(OcultarTeclado))
         tap1.numberOfTapsRequired = 1
@@ -29,6 +32,24 @@ class IniciarSesionVC: UIViewController, UITextFieldDelegate {
         txtNombre.text = "29478"
         txtPassword.text = "usuario2018"
         
+    }
+    
+    private func configScreen(){
+        switch Api.config_app {
+        case .Colombia:
+            imgBackground.image = #imageLiteral(resourceName: "img_bacground_co")
+            lblLine.isHidden = true
+            txtNombre.borderWidth = 0.5
+            txtNombre.colorCorner = UIColor.darkGray
+            txtNombre.cornerRadius = 24
+            txtPassword.borderWidth = 0.5
+            txtPassword.colorCorner = UIColor.darkGray
+            txtPassword.cornerRadius = 24
+        case .Peru:
+            imgBackground.image = UIImage(named: "img_login")
+        case .Mexico:
+            imgBackground.image = UIImage(named: "img_login")
+        }
     }
     
     @objc private func OcultarTeclado(){

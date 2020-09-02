@@ -15,9 +15,14 @@
 		473873F024D7B1D10050693F /* CellStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473873EE24D7B1D10050693F /* CellStation.swift */; };
 		473873F124D7B1D10050693F /* CellStation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 473873EF24D7B1D10050693F /* CellStation.xib */; };
 		473881C024DA2B160077CF89 /* ImageZoomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473881BF24DA2B150077CF89 /* ImageZoomVC.swift */; };
+		473945E324E6C7BE000338AD /* CellOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473945E124E6C7BE000338AD /* CellOption.swift */; };
+		473945E424E6C7BE000338AD /* CellOption.xib in Resources */ = {isa = PBXBuildFile; fileRef = 473945E224E6C7BE000338AD /* CellOption.xib */; };
 		4739D0EF24E07B7B0056F4DB /* OfficialsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4739D0EE24E07B7B0056F4DB /* OfficialsVC.swift */; };
 		4739D0F224E086370056F4DB /* CellOfficials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4739D0F024E086370056F4DB /* CellOfficials.swift */; };
 		4739D0F324E086370056F4DB /* CellOfficials.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4739D0F124E086370056F4DB /* CellOfficials.xib */; };
+		47422AC624F1C8FA000D9453 /* VersionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47422AC524F1C8FA000D9453 /* VersionVC.swift */; };
+		47422ACA24F1CB1C000D9453 /* CellStation_co.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47422AC824F1CB1C000D9453 /* CellStation_co.xib */; };
+		47422ACC24FA9C36000D9453 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47422ACB24FA9C36000D9453 /* ApiService.swift */; };
 		6C3E98E5214C5746009FDF74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3E98E4214C5746009FDF74 /* AppDelegate.swift */; };
 		6C3E98E7214C5746009FDF74 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3E98E6214C5746009FDF74 /* ViewController.swift */; };
 		6C3E98EA214C5746009FDF74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C3E98E8214C5746009FDF74 /* Main.storyboard */; };
@@ -139,9 +144,14 @@
 		473873EE24D7B1D10050693F /* CellStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellStation.swift; sourceTree = "<group>"; };
 		473873EF24D7B1D10050693F /* CellStation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellStation.xib; sourceTree = "<group>"; };
 		473881BF24DA2B150077CF89 /* ImageZoomVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageZoomVC.swift; sourceTree = "<group>"; };
+		473945E124E6C7BE000338AD /* CellOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellOption.swift; sourceTree = "<group>"; };
+		473945E224E6C7BE000338AD /* CellOption.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellOption.xib; sourceTree = "<group>"; };
 		4739D0EE24E07B7B0056F4DB /* OfficialsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficialsVC.swift; sourceTree = "<group>"; };
 		4739D0F024E086370056F4DB /* CellOfficials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellOfficials.swift; sourceTree = "<group>"; };
 		4739D0F124E086370056F4DB /* CellOfficials.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellOfficials.xib; sourceTree = "<group>"; };
+		47422AC524F1C8FA000D9453 /* VersionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionVC.swift; sourceTree = "<group>"; };
+		47422AC824F1CB1C000D9453 /* CellStation_co.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellStation_co.xib; sourceTree = "<group>"; };
+		47422ACB24FA9C36000D9453 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		6C3E98E1214C5746009FDF74 /* DIRPOL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DIRPOL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C3E98E4214C5746009FDF74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6C3E98E6214C5746009FDF74 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -402,6 +412,7 @@
 				473873EF24D7B1D10050693F /* CellStation.xib */,
 				4739D0F024E086370056F4DB /* CellOfficials.swift */,
 				4739D0F124E086370056F4DB /* CellOfficials.xib */,
+				47422AC824F1CB1C000D9453 /* CellStation_co.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -485,6 +496,8 @@
 				8B1992A924C38373003D788B /* Regions.storyboard */,
 				8B1992AB24C383BB003D788B /* RegionsVC.swift */,
 				8BCB2A8C24E37FA80069B5BA /* RegionExtencionCardVC.swift */,
+				473945E124E6C7BE000338AD /* CellOption.swift */,
+				473945E224E6C7BE000338AD /* CellOption.xib */,
 			);
 			path = Regions;
 			sourceTree = "<group>";
@@ -541,6 +554,7 @@
 				8BAC4FE724BE01C30008026F /* HomeVC.swift */,
 				8BAC4FE324BE01610008026F /* MenuCell.swift */,
 				8BAC4FE124BE00BA0008026F /* MenuLeftVC.swift */,
+				47422AC524F1C8FA000D9453 /* VersionVC.swift */,
 				8BAC4FD924BDF20C0008026F /* Menu.storyboard */,
 				8BAC4FDD24BDFE1B0008026F /* dirpol-Bridging-Header.h */,
 			);
@@ -654,6 +668,7 @@
 			isa = PBXGroup;
 			children = (
 				FA43C654215C2C9600495E32 /* Servicios.swift */,
+				47422ACB24FA9C36000D9453 /* ApiService.swift */,
 			);
 			path = Servicios;
 			sourceTree = "<group>";
@@ -847,6 +862,7 @@
 				FAC2C0502151810A00A74FA3 /* Localizable.strings in Resources */,
 				8BE52BA324DE1FC300824D93 /* RegionCardVC.xib in Resources */,
 				8B19929324C36591003D788B /* AdvancedSearch.storyboard in Resources */,
+				47422ACA24F1CB1C000D9453 /* CellStation_co.xib in Resources */,
 				FA9CD34D215739290032174B /* ViewMarcker.xib in Resources */,
 				8B1992B824C3A399003D788B /* Montserrat-Medium.ttf in Resources */,
 				FA9850C02151D162002F143D /* Contacto.storyboard in Resources */,
@@ -868,6 +884,7 @@
 				473654F924E429D90065DD33 /* ViewMarker.xib in Resources */,
 				8B929DA624D368B500E89FF5 /* CellHeaderMap.xib in Resources */,
 				8B06671324D355C000078BDB /* CellListMap.xib in Resources */,
+				473945E424E6C7BE000338AD /* CellOption.xib in Resources */,
 				6C3E98EA214C5746009FDF74 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1052,6 +1069,7 @@
 				473654F524E422680065DD33 /* GalleryVC.swift in Sources */,
 				8B23D95024E3903300D41BA1 /* MapExtencionVC.swift in Sources */,
 				6C3E98E7214C5746009FDF74 /* ViewController.swift in Sources */,
+				47422ACC24FA9C36000D9453 /* ApiService.swift in Sources */,
 				FA9850C22151D3FD002F143D /* AltoMandoPolicialVC.swift in Sources */,
 				8BAC4FE024BDFE1C0008026F /* SWRevealViewController.m in Sources */,
 				8B929DA524D368B500E89FF5 /* CellHeaderMap.swift in Sources */,
@@ -1080,6 +1098,7 @@
 				FA9850CE215347B9002F143D /* ViewBusquedaUno.swift in Sources */,
 				6C3E98E5214C5746009FDF74 /* AppDelegate.swift in Sources */,
 				8BE52BA224DE1FC300824D93 /* RegionCardVC.swift in Sources */,
+				473945E324E6C7BE000338AD /* CellOption.swift in Sources */,
 				8B1992A424C37671003D788B /* AboutUS.swift in Sources */,
 				FAC2C0342150822B00A74FA3 /* RecuperarVC.swift in Sources */,
 				473654F824E429D90065DD33 /* ViewMarker.swift in Sources */,
@@ -1090,6 +1109,7 @@
 				FAC2C03B2150C18700A74FA3 /* ContactoVC.swift in Sources */,
 				FA9850C421521AF7002F143D /* BusquedaAvanzadaVC.swift in Sources */,
 				FA43C655215C2C9700495E32 /* Servicios.swift in Sources */,
+				47422AC624F1C8FA000D9453 /* VersionVC.swift in Sources */,
 				FAC2C0572151A6DD00A74FA3 /* CellMenu.swift in Sources */,
 				8B409ACF24B57ED5004ED46E /* Api.swift in Sources */,
 				8B9AB12624C143F0005AE821 /* CredentialVC.swift in Sources */,

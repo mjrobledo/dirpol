@@ -12,14 +12,17 @@ class CredentialVC: UIViewController {
 
      @IBOutlet weak var btnMenu: UIBarButtonItem!
     @IBOutlet weak var viewRenew: UIView!
+    @IBOutlet weak var btnRenew: UIButton!
     
-      override func viewDidLoad() {
-          super.viewDidLoad()
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        btnMenu.colorMenu()
           if revealViewController() != nil {
               btnMenu.target = revealViewController()
               btnMenu.action = #selector(SWRevealViewController.revealToggle(_:))
               view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
           }
+        
         viewRenew.isHidden = true
         // Do any additional setup after loading the view.
     }
@@ -34,8 +37,17 @@ class CredentialVC: UIViewController {
     }
     
     @IBAction func showCredential(_ sender: Any) {
+        
         let viewController = UIViewController(nibName: "CredentialImageVC", bundle: nil)
         self.present(viewController, animated: true, completion: nil)
+    }
+    
+    @IBAction func openDetail(_ sender: Any) {
+        if  Api.config_app == .Colombia {
+            self.performSegue(withIdentifier: "segueColombia", sender: nil)
+        } else {
+            self.performSegue(withIdentifier: "seguePeru", sender: nil)
+        }
     }
     
     
@@ -44,11 +56,9 @@ class CredentialVC: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        if segue.identifier == "segueRenew" {
+        if segue.identifier == "segueColombia" ||  segue.identifier == "seguePeru"{
             let svc = segue.destination as! RenewMembershipVC
-            svc.providesPresentationContextTransitionStyle = true;
-            svc.definesPresentationContext = true;
-            svc.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+            svc.setPopPup()
         }
     }
 }

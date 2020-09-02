@@ -13,9 +13,11 @@ class GeneralSearchVC: UIViewController {
     @IBOutlet weak var table: UITableView!
     @IBOutlet weak var imgLogo: UIImageView!
     
+    @IBOutlet weak var btnBack: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        btnBack.colorBack()
         table.register(UINib(nibName: "CellGeneralSearch", bundle: nil), forCellReuseIdentifier: "cell")
 
     }

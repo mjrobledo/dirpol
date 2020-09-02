@@ -14,6 +14,7 @@ class AboutUS: UIViewController {
        
     override func viewDidLoad() {
            super.viewDidLoad()
+        btnMenu.colorMenu()
            if revealViewController() != nil {
                btnMenu.target = revealViewController()
                btnMenu.action = #selector(SWRevealViewController.revealToggle(_:))

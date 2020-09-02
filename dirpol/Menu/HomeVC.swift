@@ -10,11 +10,16 @@ import UIKit
 
 class HomeVC: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var viewMenuCo: UIView!
+    @IBOutlet weak var viewMenuPe: UIView!
+    
     @IBOutlet weak var btnRegion: UIButton!
     @IBOutlet weak var btnDirectory: UIButton!
     @IBOutlet weak var btnSearch: UIButton!
     @IBOutlet weak var btnPanel: UIButton!
     @IBOutlet weak var btnMenu: UIBarButtonItem!
+    
+    @IBOutlet weak var imgBackground: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,8 +31,23 @@ class HomeVC: UIViewController, UITextFieldDelegate {
                 
         let tap1 = UITapGestureRecognizer(target: self, action: #selector(hideKeyBoard))
         self.view.addGestureRecognizer(tap1)
-
+        self.configScreen()
         // Do any additional setup after loading the view.
+    }
+    
+    private func configScreen(){
+        switch Api.config_app {
+        case .Colombia:
+            imgBackground.image = #imageLiteral(resourceName: "img_bacground_co")
+            viewMenuCo.isHidden = false
+            viewMenuPe.isHidden = true
+            btnMenu.tintColor = .cYelowCo()
+        case .Peru:
+            imgBackground.image = UIImage(named: "img_login")
+            btnMenu.tintColor = .cGreenPe()
+        case .Mexico:
+            imgBackground.image = UIImage(named: "img_login")
+        }
     }
 
     @objc func hideKeyBoard(){
