@@ -13,3 +13,6 @@ SLASH = /
 URL_APP = http:$(SLASH)/acceso127.lorexddns.net:8084/DirPolServicio/public
 ProvideAPIKey_APP = AIzaSyAxb0nBSc39zaJl2wPa0FIVybjO95ZxQEY
 LaunchScreen = LaunchScreen_col
+BusinessCountryID = 0aaaa4cb-7927-4ddf-932f-ed573b1f25a5
+BusinessID = cacf285e-6fa9-4faa-a01c-33148db31d69
+CountryID = aa47d9ef-9181-4bf7-9707-52d46d783c9c

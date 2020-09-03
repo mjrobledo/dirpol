@@ -10,6 +10,7 @@ import UIKit
 
 enum ApiService : String {
     case login  = "/api/auth/login"
+    case account = "/api/auth/cuenta"
     case user = "/api/auth/recuperar/usuario"
     case recoveryPassword = "/api/auth/recuperar/clave"
     case logout = "/api/auth/logout"

@@ -77,6 +77,8 @@
 		8BAC4FE824BE01C30008026F /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAC4FE724BE01C30008026F /* HomeVC.swift */; };
 		8BCB2A8D24E37FA80069B5BA /* RegionExtencionCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCB2A8C24E37FA80069B5BA /* RegionExtencionCardVC.swift */; };
 		8BCB2A9024E38DCC0069B5BA /* ProvincesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCB2A8F24E38DCC0069B5BA /* ProvincesVC.swift */; };
+		8BD3B15525005F2000548EFD /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD3B15425005F2000548EFD /* UserModel.swift */; };
+		8BD3B1572500637A00548EFD /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD3B1562500637A00548EFD /* Services.swift */; };
 		8BE52BA224DE1FC300824D93 /* RegionCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE52BA024DE1FC300824D93 /* RegionCardVC.swift */; };
 		8BE52BA324DE1FC300824D93 /* RegionCardVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BE52BA124DE1FC300824D93 /* RegionCardVC.xib */; };
 		8BEDC8DF24DA58CC00E2D6F8 /* ListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEDC8DE24DA58CC00E2D6F8 /* ListVC.swift */; };
@@ -217,6 +219,8 @@
 		8BAC4FE724BE01C30008026F /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		8BCB2A8C24E37FA80069B5BA /* RegionExtencionCardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionExtencionCardVC.swift; sourceTree = "<group>"; };
 		8BCB2A8F24E38DCC0069B5BA /* ProvincesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvincesVC.swift; sourceTree = "<group>"; };
+		8BD3B15425005F2000548EFD /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		8BD3B1562500637A00548EFD /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		8BE52BA024DE1FC300824D93 /* RegionCardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegionCardVC.swift; sourceTree = "<group>"; };
 		8BE52BA124DE1FC300824D93 /* RegionCardVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegionCardVC.xib; sourceTree = "<group>"; };
 		8BEDC8DE24DA58CC00E2D6F8 /* ListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVC.swift; sourceTree = "<group>"; };
@@ -337,7 +341,6 @@
 			isa = PBXGroup;
 			children = (
 				8B1992AD24C3A385003D788B /* Font */,
-				8B1992A524C37918003D788B /* Api */,
 				8BAC4FE524BE017A0008026F /* Libraries */,
 				6C3E98F0214C5748009FDF74 /* Info.plist */,
 				8B409ACA24B57DFE004ED46E /* Config */,
@@ -479,14 +482,6 @@
 			path = AboutUS;
 			sourceTree = "<group>";
 		};
-		8B1992A524C37918003D788B /* Api */ = {
-			isa = PBXGroup;
-			children = (
-				8B1992A624C3792E003D788B /* Singleton.swift */,
-			);
-			path = Api;
-			sourceTree = "<group>";
-		};
 		8B1992A824C38368003D788B /* Regions */ = {
 			isa = PBXGroup;
 			children = (
@@ -524,6 +519,7 @@
 		8B409ACA24B57DFE004ED46E /* Config */ = {
 			isa = PBXGroup;
 			children = (
+				8B1992A624C3792E003D788B /* Singleton.swift */,
 				6C3E98E4214C5746009FDF74 /* AppDelegate.swift */,
 				8B409ACB24B57E11004ED46E /* ConfigPeru.xcconfig */,
 				8B409ACC24B57E26004ED46E /* ConfigColombia.xcconfig */,
@@ -669,6 +665,7 @@
 			children = (
 				FA43C654215C2C9600495E32 /* Servicios.swift */,
 				47422ACB24FA9C36000D9453 /* ApiService.swift */,
+				8BD3B1562500637A00548EFD /* Services.swift */,
 			);
 			path = Servicios;
 			sourceTree = "<group>";
@@ -677,6 +674,7 @@
 			isa = PBXGroup;
 			children = (
 				FA9850D3215565EC002F143D /* ModeloServicios.swift */,
+				8BD3B15425005F2000548EFD /* UserModel.swift */,
 			);
 			path = Modelos;
 			sourceTree = "<group>";
@@ -1078,6 +1076,7 @@
 				FAC2C02D2150573200A74FA3 /* Variables.swift in Sources */,
 				FA9850C621521EE2002F143D /* PanelUsuarioVC.swift in Sources */,
 				4739D0F224E086370056F4DB /* CellOfficials.swift in Sources */,
+				8BD3B15525005F2000548EFD /* UserModel.swift in Sources */,
 				FAC2C03F21514E8500A74FA3 /* MenuVC.swift in Sources */,
 				FA9850D22153F1AE002F143D /* ViewProvInstitucion.swift in Sources */,
 				FA9850C821529F8B002F143D /* DetalleBusquedaVC.swift in Sources */,
@@ -1091,6 +1090,7 @@
 				8BAC4FE824BE01C30008026F /* HomeVC.swift in Sources */,
 				8B1992AC24C383BB003D788B /* RegionsVC.swift in Sources */,
 				8B9AB12824C1441E005AE821 /* RenewMembershipVC.swift in Sources */,
+				8BD3B1572500637A00548EFD /* Services.swift in Sources */,
 				8BAC4FE424BE01610008026F /* MenuCell.swift in Sources */,
 				8BAC4FE224BE00BA0008026F /* MenuLeftVC.swift in Sources */,
 				FA9850D02153486D002F143D /* ViewDirectorio.swift in Sources */,

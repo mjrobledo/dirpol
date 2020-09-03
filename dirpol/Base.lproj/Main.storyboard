@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oCS-BW-NrT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oCS-BW-NrT">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -391,6 +391,7 @@
                     </view>
                     <connections>
                         <outlet property="btnIniciaSesion" destination="rgG-cs-DDS" id="7ZU-ZG-04C"/>
+                        <outlet property="btnRemember" destination="rJj-nb-FtH" id="iE5-nm-yn7"/>
                         <outlet property="imgBackground" destination="Fnb-SB-DRZ" id="AQm-nr-zum"/>
                         <outlet property="imgRemember" destination="MNa-lA-zsJ" id="AHN-Km-3aE"/>
                         <outlet property="lblLine" destination="NpM-ph-kuI" id="xfT-4W-tqy"/>
@@ -700,10 +701,6 @@
             <point key="canvasLocation" x="-460.86956521739131" y="824.33035714285711"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="iFX-W9-GHh"/>
-    </inferredMetricsTieBreakers>
-    <color key="tintColor" red="0.0" green="0.40784313729999999" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>
         <image name="LOGO2" width="632" height="239"/>
         <image name="ic_ambulancia" width="117" height="85"/>
@@ -723,4 +720,8 @@
         <image name="logo_v2" width="396" height="148"/>
         <image name="menu_screen-1" width="1181" height="2362"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="iFX-W9-GHh"/>
+    </inferredMetricsTieBreakers>
+    <color key="tintColor" red="0.0" green="0.40784313729999999" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

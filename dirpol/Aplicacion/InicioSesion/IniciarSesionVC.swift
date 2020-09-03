@@ -18,6 +18,7 @@ class IniciarSesionVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var imgRemember: UIImageView!
     
     @IBOutlet weak var btnIniciaSesion: UIButton!
+    @IBOutlet weak var btnRemember: UIButton!
     @IBOutlet weak var lblLine: UILabel!
     
     override func viewDidLoad() {
@@ -29,8 +30,11 @@ class IniciarSesionVC: UIViewController, UITextFieldDelegate {
         tap1.numberOfTapsRequired = 1
         self.view.addGestureRecognizer(tap1)
     
-        txtNombre.text = "29478"
-        txtPassword.text = "usuario2018"
+        //txtNombre.text = "29478"
+        //txtPassword.text = "usuario2018"
+        
+        txtNombre.text = "MROBLEDO"
+        txtPassword.text = "qwerty65"
         
     }
     
@@ -78,24 +82,32 @@ class IniciarSesionVC: UIViewController, UITextFieldDelegate {
     @IBAction func iniciarSesion(_ sender: Any) {
         let usuario = (txtNombre.text?.trim())!
         let password = (txtPassword.text?.trim())!
-        let reqLogin = RequestLogin()
+        var reqLogin : RequestLogin = RequestLogin()
         reqLogin.usuario = usuario
         reqLogin.password = password
+        reqLogin.remember_me = btnRemember.tag
         
         if validaCampos(){
             DispatchQueue.main.async {
                 //SVProgressHUD.show(withStatus: "Iniciando sesión")
                 self.btnIniciaSesion.isEnabled = false
                 self.OcultarTeclado()
-                 self.performSegue(withIdentifier: "segueInicio", sender: nil)
+                //self.performSegue(withIdentifier: "segueInicio", sender: nil)
             }
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 
                 self.btnIniciaSesion.isEnabled = true
                 
                 //Variables.Perfil = Usuario().getUsuarioPrueba()
                
+                Singleton.instance.services.login(user: reqLogin) { (response) in
+                    if response != nil && !(response?.access_token.isEmpty)! {
+                        Singleton.instance.services.getUser { (response) in
+                            print(response)
+                        }
+                    }
+                }
                 
                 /*Servicios().inicioSesion(usuario: reqLogin, completion: { respuesta  in
                     SVProgressHUD.dismiss()

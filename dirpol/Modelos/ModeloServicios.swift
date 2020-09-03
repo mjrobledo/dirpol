@@ -114,7 +114,7 @@ class Region: NSObject , Mappable{
 }
 
 // MARK: - Inicio de sesion
-class RequestLogin: NSObject , Mappable{
+/*class RequestLogin: NSObject , Mappable{
     var usuario = ""
     var password = ""
     
@@ -124,7 +124,7 @@ class RequestLogin: NSObject , Mappable{
     }
     override init() {}
     required init?(map: Map) {}
-}
+}*/
 
 class RespuestaLogin: NSObject , Mappable{
     var Mensaje = ""

@@ -68,6 +68,12 @@
 	</array>
 	<key>URL_APP</key>
 	<string>$(URL_APP)</string>
+	<key>BusinessCountryID</key>
+	<string>$(BusinessCountryID)</string>
+	<key>BusinessID</key>
+	<string>$(BusinessID)</string>
+	<key>CountryID</key>
+	<string>$(CountryID)</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>DIRPOL desea acceder a tu localización para trazar una ruta</string>
 </dict>

@@ -13,6 +13,7 @@ class Singleton {
     static let instance = Singleton()
     
     var menuTable: UITableView!
+    var services = Services()
     
     private init()
     {
