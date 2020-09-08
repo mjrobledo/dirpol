@@ -58,6 +58,14 @@ class Util: NSObject {
         )
     }
     
+    class func getDays(startDate: Date, endDate: Date) -> Int? {
+        let calendar = NSCalendar.current
+        let date1 = calendar.startOfDay(for: startDate)
+        let date2 = calendar.startOfDay(for: endDate)
+        let components = calendar.dateComponents([.day], from: date1, to: date2)
+        return components.day
+    }
+    
     static func llamar(tel:String, viewController: UIViewController){
         if let url = URL(string: "telprompt://\(tel)"), UIApplication.shared.canOpenURL(url) {
             if #available(iOS 10, *) {

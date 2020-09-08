@@ -89,13 +89,13 @@ class IniciarSesionVC: UIViewController, UITextFieldDelegate {
         
         if validaCampos(){
             DispatchQueue.main.async {
-                //SVProgressHUD.show(withStatus: "Iniciando sesión")
+                SVProgressHUD.show(withStatus: "Iniciando sesión")
                 self.btnIniciaSesion.isEnabled = false
                 self.OcultarTeclado()
                 //self.performSegue(withIdentifier: "segueInicio", sender: nil)
             }
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 
                 self.btnIniciaSesion.isEnabled = true
                 
@@ -104,7 +104,24 @@ class IniciarSesionVC: UIViewController, UITextFieldDelegate {
                 Singleton.instance.services.login(user: reqLogin) { (response) in
                     if response != nil && !(response?.access_token.isEmpty)! {
                         Singleton.instance.services.getUser { (response) in
-                            print(response)
+                            SVProgressHUD.dismiss()
+                            Singleton.instance.user = response?.usuario
+                            Singleton.instance.codeAcred = (response?.dirpol_peru_codigo_acreditado)!
+                            Singleton.instance.imgCredential = (response?.dirpol_peru)!
+                            self.performSegue(withIdentifier: "segueInicio", sender: nil)
+                        }
+                    } else {
+                        SVProgressHUD.dismiss()
+                        if response != nil {
+                            if !(response?.error?.password!.isEmpty)! {
+                                Util().enviarAlerta(mensaje: (response?.error?.password?.first)!, titulo: .Alerta, controller: self)
+                            } else if (response?.error?.usuario!.isEmpty)! {
+                                Util().enviarAlerta(mensaje: (response?.error?.usuario?.first)!, titulo: .Alerta, controller: self)
+                            } else {
+                                Util().enviarAlerta(mensaje:  "Usuario o contraseña incorrecto", titulo: .Alerta, controller: self)
+                            }
+                        } else {
+                             Util().enviarAlerta(mensaje:  .ErrorEnElServicio, titulo: .Alerta, controller: self)
                         }
                     }
                 }

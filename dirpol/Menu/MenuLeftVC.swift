@@ -23,6 +23,8 @@ class MenuLeftVC: UIViewController, UITableViewDataSource, UITableViewDelegate, 
     
     @IBOutlet weak var tblMenu: UITableView!
     @IBOutlet weak var viewTop: UIView!
+    @IBOutlet weak var lblAlertExpired: UILabel!
+    @IBOutlet weak var viewRenew: UIView!
     
     var pickerController: UIImagePickerController!
     private var croppingStyle = CropViewCroppingStyle.default
@@ -39,6 +41,21 @@ class MenuLeftVC: UIViewController, UITableViewDataSource, UITableViewDelegate, 
 
     override func viewDidAppear(_ animated: Bool) {
         tblMenu.reloadData()
+        self.lblUserName.text = Singleton.instance.user.getName()
+        lblID.text = Singleton.instance.codeAcred
+        
+        if !Singleton.instance.user.fecha_caducidad!.isEmpty {
+            let days = Util.getDays(startDate: Date(), endDate: Singleton.instance.user.fecha_caducidad!.date)
+            if days! <= 28 {
+                view.isHidden = false
+                lblAlertExpired.text = "Su plan caducará en los próximos \((days)!) días"
+            } else {
+                viewRenew.isHidden = true
+            }
+        } else {
+            lblAlertExpired.text = "-"
+        }
+         
     }
     
     private func configScreen(){

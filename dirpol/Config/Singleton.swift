@@ -14,7 +14,9 @@ class Singleton {
     
     var menuTable: UITableView!
     var services = Services()
-    
+    var user: User!
+    var imgCredential = ""
+    var codeAcred  = ""
     private init()
     {
             

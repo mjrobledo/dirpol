@@ -14,42 +14,10 @@
             filePath = "dirpol/Aplicacion/InicioSesion/IniciarSesionVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "123"
-            endingLineNumber = "123"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
             landmarkName = "iniciarSesion(_:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "8FFB56DB-C71F-43CA-896D-CB797C727610"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "dirpol/Aplicacion/InicioSesion/IniciarSesionVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
-            landmarkName = "iniciarSesion(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "1AF2A8BD-559A-48A2-BE09-45248F22D360"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "dirpol/Aplicacion/NewDesing/Credential/ImageZoomVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "supportedInterfaceOrientations"
-            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -158,8 +126,8 @@
             filePath = "dirpol/Aplicacion/InicioSesion/RecuperarVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "216"
-            endingLineNumber = "216"
+            startingLineNumber = "222"
+            endingLineNumber = "222"
             landmarkName = "roundView(porsion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -194,6 +162,502 @@
             endingLineNumber = "44"
             landmarkName = "configScreen()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9216DE0C-8011-4792-AC72-ED5A4AC439F6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dirpol/Aplicacion/InicioSesion/IniciarSesionVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "iniciarSesion(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "80A827A1-0E2C-4DCC-92F1-4AD7BAEC96F4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dirpol/Aplicacion/NewDesing/Credential/ImageZoomVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "application(_:supportedInterfaceOrientationsFor:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "18C8B280-E4B2-4851-808F-EEBD6E7974F8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dirpol/Aplicacion/NewDesing/Credential/ImageZoomVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "back(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C240F85D-AD3B-4D07-9C74-6547AFFF71D6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dirpol/Utileria/Extenciones.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "430"
+            endingLineNumber = "430"
+            landmarkName = "colorCorner"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BEC1AB64-6257-47B6-B06C-55AEEE4DC4EE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dirpol/Utileria/Extenciones.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "433"
+            endingLineNumber = "433"
+            landmarkName = "colorCorner"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EE4157CF-047E-4A7C-8E7C-AB1DD67D2244"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dirpol/Aplicacion/NewDesing/UserPanel/UserPanelVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
+            landmarkName = "guardaUsuario(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "EE4157CF-047E-4A7C-8E7C-AB1DD67D2244 - 78e8f2ec775e1f14"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DIRPOL.UserPanelVC.guardaUsuario(Any) -&gt; ()"
+                  moduleName = "DIRPOL"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hca/Documents/GitHub/dirpol/dirpol/Aplicacion/NewDesing/UserPanel/UserPanelVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "106"
+                  endingLineNumber = "106"
+                  offsetFromSymbolStart = "3489">
+               </Location>
+               <Location
+                  uuid = "EE4157CF-047E-4A7C-8E7C-AB1DD67D2244 - 11a688a76435faba"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "function signature specialization &lt;Arg[1] = Value Promoted from Box&gt; of closure #1 (Swift.Optional&lt;DIRPOL.ResponsePanel&gt;) -&gt; () in DIRPOL.UserPanelVC.guardaUsuario(Any) -&gt; ()"
+                  moduleName = "DIRPOL"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hca/Documents/GitHub/dirpol/dirpol/Aplicacion/NewDesing/UserPanel/UserPanelVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "107"
+                  endingLineNumber = "107"
+                  offsetFromSymbolStart = "111">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D30D8D9C-533E-4D31-B913-1803ADD30C43"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dirpol/Aplicacion/NewDesing/UserPanel/UserPanelVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
+            landmarkName = "guardaUsuario(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D18A5B64-0BEC-4857-84F9-15DE2E29D31B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dirpol/Servicios/Services.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "setUserPanel(request:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A1B13A8B-E14C-481A-BFC2-A76E9B9E8517"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dirpol/Servicios/Services.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "setUserPanel(request:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A1B13A8B-E14C-481A-BFC2-A76E9B9E8517 - 749f8e76bc9a57bb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DIRPOL.Services.setUserPanel(request: DIRPOL.RequestPanel, completion: (Swift.Optional&lt;DIRPOL.ResponsePanel&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "DIRPOL"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hca/Documents/GitHub/dirpol/dirpol/Servicios/Services.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "847">
+               </Location>
+               <Location
+                  uuid = "A1B13A8B-E14C-481A-BFC2-A76E9B9E8517 - 9be520f5b00ed4fd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;DIRPOL.ResponsePanel&gt;) -&gt; () in DIRPOL.Services.setUserPanel(request: DIRPOL.RequestPanel, completion: (Swift.Optional&lt;DIRPOL.ResponsePanel&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "DIRPOL"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hca/Documents/GitHub/dirpol/dirpol/Servicios/Services.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "162">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C36040A5-7EB3-42A7-A20A-4502C5A264AE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dirpol/Servicios/Services.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "setUserPanel(request:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9BB2A4A8-C62A-4AC6-BEB9-CAF891D71D3E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dirpol/Servicios/Services.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "recoveryUser(email:type:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9BB2A4A8-C62A-4AC6-BEB9-CAF891D71D3E - df34968b16c8abe0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DIRPOL.Services.recoveryUser(email: Swift.String, type: Swift.String, completion: (Swift.Optional&lt;DIRPOL.ResponsePanel&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "DIRPOL"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hca/Documents/GitHub/dirpol/dirpol/Servicios/Services.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "1802">
+               </Location>
+               <Location
+                  uuid = "9BB2A4A8-C62A-4AC6-BEB9-CAF891D71D3E - 46fde8d33e59f52"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;DIRPOL.ResponsePanel&gt;) -&gt; () in DIRPOL.Services.recoveryUser(email: Swift.String, type: Swift.String, completion: (Swift.Optional&lt;DIRPOL.ResponsePanel&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "DIRPOL"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hca/Documents/GitHub/dirpol/dirpol/Servicios/Services.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "86"
+                  endingLineNumber = "86"
+                  offsetFromSymbolStart = "162">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "86918C07-D49C-44B4-94EA-0BB839A41B96"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dirpol/Servicios/Services.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "recoveryUser(email:type:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "25AF1A96-15D2-4ED9-926F-192F22C06D1F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dirpol/Servicios/Services.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "getUser(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "25AF1A96-15D2-4ED9-926F-192F22C06D1F - b6823555ac0262e8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DIRPOL.Services.getUser(completion: (Swift.Optional&lt;DIRPOL.ResponseUser&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "DIRPOL"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hca/Documents/GitHub/dirpol/dirpol/Servicios/Services.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "849">
+               </Location>
+               <Location
+                  uuid = "25AF1A96-15D2-4ED9-926F-192F22C06D1F - 63a34eaeeccdb7ca"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;DIRPOL.ResponseUser&gt;) -&gt; () in DIRPOL.Services.getUser(completion: (Swift.Optional&lt;DIRPOL.ResponseUser&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "DIRPOL"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hca/Documents/GitHub/dirpol/dirpol/Servicios/Services.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "168">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6A7DC6B0-464C-43FE-8BD0-D2DE78730431"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dirpol/Servicios/Services.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "getUser(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B20CE8B2-8EA7-4D63-B6D0-C72C09DDDAF9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dirpol/Aplicacion/InicioSesion/IniciarSesionVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "iniciarSesion(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B20CE8B2-8EA7-4D63-B6D0-C72C09DDDAF9 - d645426b80adf349"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "function signature specialization &lt;Arg[1] = Value Promoted from Box&gt; of closure #2 () -&gt; () in DIRPOL.IniciarSesionVC.iniciarSesion(Any) -&gt; ()"
+                  moduleName = "DIRPOL"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hca/Documents/GitHub/dirpol/dirpol/Aplicacion/InicioSesion/IniciarSesionVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "104"
+                  endingLineNumber = "104"
+                  offsetFromSymbolStart = "185">
+               </Location>
+               <Location
+                  uuid = "B20CE8B2-8EA7-4D63-B6D0-C72C09DDDAF9 - 1f189627d0b874fe"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;DIRPOL.ResponseLogin&gt;) -&gt; () in closure #2 () -&gt; () in DIRPOL.IniciarSesionVC.iniciarSesion(Any) -&gt; ()"
+                  moduleName = "DIRPOL"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hca/Documents/GitHub/dirpol/dirpol/Aplicacion/InicioSesion/IniciarSesionVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "105"
+                  endingLineNumber = "105"
+                  offsetFromSymbolStart = "123">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F1DBEE3C-4CE7-477D-B57D-494719A23B0B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dirpol/Aplicacion/InicioSesion/IniciarSesionVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
+            landmarkName = "iniciarSesion(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CB02BCD5-23FF-4D66-8E36-F603D36EA20F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dirpol/Modelos/UserModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "190"
+            endingLineNumber = "190"
+            landmarkName = "mapping(map:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "72DD9372-38C8-42BD-89BD-64EC795216B0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dirpol/Aplicacion/InicioSesion/RecuperarVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
+            landmarkName = "recovery(type:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "81B2E551-25E7-46CE-B293-A736A008880A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dirpol/Aplicacion/InicioSesion/RecuperarVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
+            landmarkName = "recovery(type:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "81B2E551-25E7-46CE-B293-A736A008880A - 504cd6179a641324"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DIRPOL.RecuperarVC.(recovery in _B34DEE3FA069671065D45F641643308D)(type: Swift.String) -&gt; ()"
+                  moduleName = "DIRPOL"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hca/Documents/GitHub/dirpol/dirpol/Aplicacion/InicioSesion/RecuperarVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "135"
+                  endingLineNumber = "135"
+                  offsetFromSymbolStart = "629">
+               </Location>
+               <Location
+                  uuid = "81B2E551-25E7-46CE-B293-A736A008880A - eb493d0c9ad52fb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;DIRPOL.ResponsePanel&gt;) -&gt; () in DIRPOL.RecuperarVC.(recovery in _B34DEE3FA069671065D45F641643308D)(type: Swift.String) -&gt; ()"
+                  moduleName = "DIRPOL"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hca/Documents/GitHub/dirpol/dirpol/Aplicacion/InicioSesion/RecuperarVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "136"
+                  endingLineNumber = "136"
+                  offsetFromSymbolStart = "96">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

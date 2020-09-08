@@ -249,10 +249,12 @@ RFBQRTIQMDIwMDAwMQ
                         <outlet property="imgHeader" destination="7IN-Hx-TlH" id="xUS-ho-uzo"/>
                         <outlet property="imgLogo" destination="tzf-Ar-QRh" id="wf2-v3-HzA"/>
                         <outlet property="imgProfile" destination="nir-4O-n2v" id="Xrm-FD-MW2"/>
+                        <outlet property="lblAlertExpired" destination="pgC-bO-AFc" id="8wK-Wo-J3v"/>
                         <outlet property="lblID" destination="geA-vi-lsz" id="LbM-M3-xd9"/>
                         <outlet property="lblSubtitle" destination="5dS-Gp-dY0" id="9ss-1q-G4X"/>
                         <outlet property="lblUserName" destination="1Vb-KM-33X" id="zMD-sj-oh2"/>
                         <outlet property="tblMenu" destination="dI1-5S-CcP" id="Li5-2L-q6Y"/>
+                        <outlet property="viewRenew" destination="uRa-ei-7a2" id="Q9t-jm-Z0t"/>
                         <outlet property="viewTop" destination="YHF-Hv-qgU" id="KKa-x8-IQN"/>
                         <segue destination="Kmz-2U-eGa" kind="custom" identifier="segueInicio" customClass="SWRevealViewControllerSeguePushController" id="ZGR-A9-2Pb"/>
                         <segue destination="N6K-Z1-uW1" kind="custom" identifier="segueCredential" customClass="SWRevealViewControllerSeguePushController" id="f6J-R7-rXc"/>
@@ -871,10 +873,10 @@ RFBQRTIQMDIwMDAwMQ
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="1DT-gV-AcW"/>
-        <segue reference="2bP-0t-WVl"/>
-        <segue reference="nlg-rO-jgM"/>
-        <segue reference="HwS-3h-kQL"/>
+        <segue reference="DZ6-vK-MwE"/>
+        <segue reference="PRa-9C-yVk"/>
+        <segue reference="5VP-sP-Wms"/>
+        <segue reference="xy1-Uk-172"/>
         <segue reference="ZGR-A9-2Pb"/>
     </inferredMetricsTieBreakers>
     <resources>

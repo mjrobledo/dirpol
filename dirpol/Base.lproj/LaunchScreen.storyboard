@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="img_green" translatesAutoresizingMaskIntoConstraints="NO" id="iwo-xj-IL1">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="img_splash" translatesAutoresizingMaskIntoConstraints="NO" id="iwo-xj-IL1">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
@@ -98,7 +98,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="img_green" width="284.5" height="567.5"/>
+        <image name="img_splash" width="1184" height="2363"/>
         <image name="logo_appointment" width="266" height="190"/>
         <image name="logo_dircom" width="322" height="170"/>
         <image name="logo_v2" width="396" height="148"/>

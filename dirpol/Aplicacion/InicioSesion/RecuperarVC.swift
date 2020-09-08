@@ -111,37 +111,43 @@ class RecuperarVC: UIViewController , UITextFieldDelegate{
             Util().enviarAlerta(mensaje: .FormatoCorreoInvalido, titulo: .Alerta, controller: self)
             return
         }
-        let correo:String = (txtCorreo.text?.trim())!
+        
         self.hideKeyBoard()
         if Util.conexionInternet(){
-        DispatchQueue.global(qos: .userInitiated).async {
+            DispatchQueue.global(qos: .userInitiated).async {
             SVProgressHUD.show()
-            // Bounce back to the main thread to update the UI
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3) { 
-                Servicios().recuperaUsuarioPassword(correo: correo, tipo: self.RecuperaPasswordUsuario, completion: { respuesta in
-                    
-                    SVProgressHUD.dismiss()
-                    
-                    if respuesta != nil{
-                        if respuesta?.Codigo == structCodigo.Correcto{
-                            Util().enviarAlerta(mensaje: .CorreoEnviadoCorrectamente, titulo: .Aplicacion, controller: self)
-                            self.txtCorreo.text = ""
-                            
-                        }else{
-                            Util().enviarAlerta(mensaje: (respuesta?.Mensaje)!, titulo: .Alerta, controller: self)
-                        }
-                    }else{
-                         Util().enviarAlerta(mensaje:  .ErrorEnElServicio, titulo: .Alerta, controller: self)
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                    if self.texto == .NoRecueraTuPassword {
+                        self.recovery(type: "password")
+                    } else {
+                        self.recovery(type: "user")
                     }
-                    
-                })
-            }
+                }
             }
         }else{
            Util().enviarAlerta(mensaje:  .DebesTenerConexionInternet, titulo: .Alerta, controller: self)
         }
     }
+    
+    private func recovery(type: String) {
+        let email : String = (txtCorreo.text?.trim())!
+        Singleton.instance.services.recoveryUser(email: email, type: type) { (response) in
+            SVProgressHUD.dismiss()
+            if response != nil && !(response?.message.isEmpty)! {
+                Util().enviarAlerta(mensaje:  response!.message, titulo: .Alerta, controller: self)
+            } else {
+                if response == nil {
+                    Util().enviarAlerta(mensaje:  .ErrorEnElServicio, titulo: .Alerta, controller: self)
+                } else if response?.errors?.email != nil {
+                    Util().enviarAlerta(mensaje:  (response?.errors?.email?.first)!, titulo: .Alerta, controller: self)
+                }
+            }
+        }
+    }
+    
+    
+    
     
     
     // MARK: - Scroll

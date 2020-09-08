@@ -82,6 +82,9 @@ struct User : Mappable {
         razon_social <- map["razon_social"]
     }
 
+    func getName() -> String {
+        return "\((nombres)!) \((apellidos)!)"
+    }
 }
 
 struct RequestLogin : Mappable {
@@ -110,6 +113,7 @@ struct ResponseLogin : Mappable {
     var access_token = ""
     var token_type = ""
     var expires_at = ""
+    var error: ResponseErrorsLogin?
     
     init?(map: Map) {   }
     init() { }
@@ -118,7 +122,73 @@ struct ResponseLogin : Mappable {
         access_token <- map["access_token"]
         token_type <- map["token_type"]
         token_type <- map["token_type"]
+        error <- map["errors"]
     }
 }
 
- 
+struct RequestPanel : Mappable {
+    var password : String?
+    var password_confirmation : String?
+    var email = ""
+    var cambiar_password = 0
+    var email_confirmation = ""
+    var empresa_id = Api.BusinessID
+    
+    init?(map: Map) {   }
+    init() { }
+
+    mutating func mapping(map: Map) {
+        password <- map["password"]
+        password_confirmation <- map["password_confirmation"]
+        email <- map["email"]
+        email_confirmation <- map["email_confirmation"]
+        empresa_id <- map["empresa_id"]
+        cambiar_password <- map["cambiar_password"]
+    }
+}
+
+struct ResponsePanel : Mappable {
+    var message = ""
+    var errors : ResponseErrorsLogin?
+    
+    
+    init?(map: Map) {   }
+    
+    mutating func mapping(map: Map) {
+        message <- map["message"]
+        errors <- map["errors"]
+    }
+}
+
+
+struct ResponseErrorsLogin : Mappable {
+    var password : [String]?
+    var usuario : [String]?
+    var email : [String]?
+    init?(map: Map) {
+
+    }
+
+    mutating func mapping(map: Map) {
+        password <- map["password"]
+        usuario <- map["usuario"]
+        email <- map["email"]
+    }
+
+}
+
+
+struct ErrorsLogin : Mappable {
+    var usuario : [String]?
+    var password : [String]?
+
+    init?(map: Map) {
+
+    }
+
+    mutating func mapping(map: Map) {
+        usuario <- map["usuario"]
+        password <- map["password"]
+    }
+
+}

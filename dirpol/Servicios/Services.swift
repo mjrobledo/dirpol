@@ -15,6 +15,10 @@ class Services: NSObject {
 
     var accessToken = ""
     
+    static func getHeader() -> [String : String] {
+        return   ["Authorization": "Bearer \(Singleton.instance.services.accessToken)" ]
+    }
+    
     func login(user:RequestLogin, completion: @escaping (ResponseLogin?) -> ())
     {
         let urlAux = "\(Api.url_app)\(ApiService.login.rawValue)"
@@ -37,23 +41,50 @@ class Services: NSObject {
         let urlAux = "\(Api.url_app)\(ApiService.account.rawValue)"
          
         let manager = Alamofire.SessionManager.default
-        let header = ["Authorization": "Bearer \(Singleton.instance.services.accessToken)" ]
-        //manager.session.configuration.httpAdditionalHeaders = [
-          //  "Authorization": "Bearer \(Singleton.instance.services.accessToken)" ]
         
-      /*  manager.request(urlAux, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: header).responseString { (response) in
-            if response.result.isSuccess {
-                print(response)
-            } else {
-                print(response.error)
-            }
-            
-        }*/
         
-        manager.request(urlAux,method: .get, parameters: nil, encoding: JSONEncoding.default, headers: header ).responseObject { (response: DataResponse<ResponseUser>) in
+        manager.request(urlAux,method: .get, parameters: nil, encoding: JSONEncoding.default, headers: Services.getHeader() ).responseObject { (response: DataResponse<ResponseUser>) in
             
             if response.result.isSuccess {
                 let forecastArray: ResponseUser = response.result.value!
+                completion(forecastArray)
+            }else{
+                completion(nil)
+            }
+        }
+    }
+    
+    func setUserPanel(request: RequestPanel, completion: @escaping (ResponsePanel?) -> ())
+    {
+        let urlAux = "\(Api.url_app)\(ApiService.account.rawValue)"
+         
+        let manager = Alamofire.SessionManager.default
+        
+        manager.request(urlAux,method: .post, parameters: request.toJSON(), encoding: JSONEncoding.default, headers: Services.getHeader() ).responseObject { (response: DataResponse<ResponsePanel>) in
+            
+            if response.result.isSuccess {
+                let forecastArray: ResponsePanel = response.result.value!
+                completion(forecastArray)
+            }else{
+                completion(nil)
+            }
+        }
+    }
+    
+    func recoveryUser(email: String, type: String, completion: @escaping (ResponsePanel?) -> ())
+    {
+        var urlAux = "\(Api.url_app)\(ApiService.recoveryUser.rawValue)"
+        if type == "password" {
+             urlAux = "\(Api.url_app)\(ApiService.recoveryPassword.rawValue)"
+        }
+        
+        let manager = Alamofire.SessionManager.default
+        let userEmail = ["email" : email]
+        
+        manager.request(urlAux,method: .post, parameters: userEmail, encoding: JSONEncoding.default, headers: nil ).responseObject { (response: DataResponse<ResponsePanel>) in
+            
+            if response.result.isSuccess {
+                let forecastArray: ResponsePanel = response.result.value!
                 completion(forecastArray)
             }else{
                 completion(nil)

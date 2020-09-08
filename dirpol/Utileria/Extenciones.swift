@@ -117,7 +117,58 @@ extension Date {
     var año:  String  { return Formatter.año.string(from: self)   }
     var dia: String { return Formatter.dia.string(from: self) }
 }
+// MARK: - Dates
+extension String {
+    var date: Date {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd 00:00:00"
+        //dateFormatter.timeZone = TimeZone(abbreviation: "UTC")
+        let date = dateFormatter.date(from: self)
+        if(date != nil) {
+            return date!
+        } else {
+            return Date()
+        }
+    }
 
+    var dateFormatDDMMYYYY: Date {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-MM-yyyy 00:00:00"
+        //dateFormatter.timeZone = TimeZone(abbreviation: "UTC")
+        let date = dateFormatter.date(from: self)
+        if(date != nil) {
+            return date!
+        } else {
+            return Date()
+        }
+    }
+}
+
+
+extension Date {
+    /// Formatter yyyy-MM-dd
+    var yyyyMMdd: String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeZone = TimeZone(abbreviation: "UTC")
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        return dateFormatter.string(from: self)
+    }
+
+    /// Formatter dd/MM/yyy
+    var stringDDMMYYY: String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy"
+        return dateFormatter.string(from: self)
+    }
+
+    var stringSubtitle: String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMM d"
+        return dateFormatter.string(from: self)
+    }
+}
+
+// MARK: - Progress view
 extension UIProgressView {
     @IBInspectable var barHeight : CGFloat {
         get {
@@ -511,4 +562,25 @@ extension Date {
         }
         return data
     }
+}
+
+extension UIImage {
+
+func rotated(byDegrees degree: Double) -> UIImage {
+    let radians = CGFloat(degree * .pi) / 180.0 as CGFloat
+    let rotatedSize = self.size
+    let scale = UIScreen.main.scale
+    UIGraphicsBeginImageContextWithOptions(rotatedSize, false, scale)
+    let bitmap = UIGraphicsGetCurrentContext()
+    bitmap?.translateBy(x: rotatedSize.width / 2, y: rotatedSize.height / 2)
+    bitmap?.rotate(by: radians)
+    bitmap?.scaleBy(x: 1.0, y: -1.0)
+    bitmap?.draw(
+        self.cgImage!,
+        in: CGRect.init(x: -self.size.width / 2, y: -self.size.height / 2 , width: self.size.width, height: self.size.height))
+    let newImage = UIGraphicsGetImageFromCurrentImageContext()
+    UIGraphicsEndImageContext() // this is needed
+    return newImage!
+}
+
 }
