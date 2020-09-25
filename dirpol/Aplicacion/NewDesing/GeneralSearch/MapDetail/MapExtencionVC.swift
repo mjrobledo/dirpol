@@ -136,11 +136,14 @@ extension MapDetailVC {
 
 extension MapDetailVC: CardViewControllerDelegate {
     func selectedPhotos() {
-        self.performSegue(withIdentifier: "seguePhotos", sender: nil)
+        if let photos = cardViewController.entity.entidad_sede_foto {
+            self.performSegue(withIdentifier: "seguePhotos", sender: photos)
+        }
     }
     
-    func selectedDirectory() {
-        self.performSegue(withIdentifier: "segueRepresentative", sender: nil)
+    func selectedDirectory(people: EntidadPersonal) {
+        
+        self.performSegue(withIdentifier: "segueRepresentative", sender: people)
     }
     
     

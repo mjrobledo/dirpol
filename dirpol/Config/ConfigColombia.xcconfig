@@ -10,9 +10,9 @@
 // https://help.apple.com/xcode/#/dev745c5c974
 CONFIG_APP=Colombia
 SLASH = /
-URL_APP = http:$(SLASH)/acceso127.lorexddns.net:8084/DirPolServicio/public
+URL_APP = https:$(SLASH)/directoriopolicial.siti.tech
 ProvideAPIKey_APP = AIzaSyAxb0nBSc39zaJl2wPa0FIVybjO95ZxQEY
 LaunchScreen = LaunchScreen_col
-BusinessCountryID = 0aaaa4cb-7927-4ddf-932f-ed573b1f25a5
-BusinessID = cacf285e-6fa9-4faa-a01c-33148db31d69
-CountryID = aa47d9ef-9181-4bf7-9707-52d46d783c9c
+BusinessCountryID = c21cc919-dd88-448b-a153-289f99201d93
+BusinessID = 4a673c1f-c4f1-45ec-906b-efdecdd43c1b
+CountryID = f4766836-4e80-4e2c-aa02-a114831103ea

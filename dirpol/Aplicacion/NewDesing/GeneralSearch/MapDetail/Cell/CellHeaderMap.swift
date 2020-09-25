@@ -10,6 +10,9 @@ import UIKit
 
 class CellHeaderMap: UITableViewCell {
 
+    @IBOutlet weak var lblName: UILabel!
+    @IBOutlet weak var lblDivision: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

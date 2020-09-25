@@ -114,6 +114,12 @@
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="Rl2-h5-7dZ"/>
+            <connections>
+                <outlet property="lblAddress" destination="G3W-eV-pV6" id="luT-fW-q3b"/>
+                <outlet property="lblName" destination="L2T-oI-sK4" id="OUq-Tn-qR0"/>
+                <outlet property="lblPhones" destination="513-Qk-SkX" id="Icq-vR-8G8"/>
+                <outlet property="lblPositionCompany" destination="TIa-5d-Mow" id="BFS-s8-81L"/>
+            </connections>
             <point key="canvasLocation" x="131.8840579710145" y="127.23214285714285"/>
         </tableViewCell>
     </objects>

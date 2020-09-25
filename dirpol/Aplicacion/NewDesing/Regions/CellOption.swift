@@ -10,6 +10,9 @@ import UIKit
 
 class CellOption: UICollectionViewCell {
 
+    
+    @IBOutlet weak var viewButton: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

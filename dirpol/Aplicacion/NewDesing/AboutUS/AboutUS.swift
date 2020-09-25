@@ -11,7 +11,8 @@ import UIKit
 class AboutUS: UIViewController {
 
     @IBOutlet weak var btnMenu: UIBarButtonItem!
-       
+    @IBOutlet weak var txtAbout: UITextView!
+    
     override func viewDidLoad() {
            super.viewDidLoad()
         btnMenu.colorMenu()
@@ -21,6 +22,11 @@ class AboutUS: UIViewController {
                view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
            }
         // Do any additional setup after loading the view.
+        
+        if let text : String = Singleton.instance.business.acerca_de {
+            txtAbout.text = text.trim()
+            
+        }
     }
     
 

@@ -12,14 +12,15 @@ class ImageZoomVC: UIViewController , UICollectionViewDelegate, UICollectionView
 
     var myCollectionView: UICollectionView!
     @IBOutlet weak var btnClose: UIButton!
-    var imgArray: [UIImage] = []
+    var imgArray: [String] = []
     var passedContentOffset = IndexPath()
     
     override func viewDidLoad() {
     super.viewDidLoad()
-
         self.view.backgroundColor = UIColor.black
-
+        self.btnClose.setTitleColor(.cPrincipal(), for: .normal)
+        
+        
         let layout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         layout.minimumInteritemSpacing = 0
@@ -37,6 +38,9 @@ class ImageZoomVC: UIViewController , UICollectionViewDelegate, UICollectionView
         self.view.addSubview(myCollectionView)
         self.view.sendSubviewToBack(myCollectionView)
         myCollectionView.autoresizingMask = UIView.AutoresizingMask(rawValue: UIView.AutoresizingMask.RawValue(UInt8(UIView.AutoresizingMask.flexibleWidth.rawValue) | UInt8(UIView.AutoresizingMask.flexibleHeight.rawValue)))
+        
+        let value = UIInterfaceOrientation.landscapeLeft.rawValue
+        UIDevice.current.setValue(value, forKey: "orientation")
     }
     
     @IBAction func back(_ sender: Any) {
@@ -53,7 +57,7 @@ class ImageZoomVC: UIViewController , UICollectionViewDelegate, UICollectionView
                 }
             }
         }
-        return .portrait
+        return .landscape
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -64,7 +68,8 @@ class ImageZoomVC: UIViewController , UICollectionViewDelegate, UICollectionView
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! ImagePreviewFullViewCell
 
                 
-                cell.imgView.image = imgArray[indexPath.row]
+                //cell.imgView.image = imgArray[indexPath.row]
+        cell.imgView.imageFromServerURL(urlString: imgArray[indexPath.row], defaultImage: UIImage(named: "LOGO2"))
                 return cell
             }
 

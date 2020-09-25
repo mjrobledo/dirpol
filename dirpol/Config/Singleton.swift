@@ -14,12 +14,14 @@ class Singleton {
     
     var menuTable: UITableView!
     var services = Services()
+    var business: Business!
     var user: User!
     var imgCredential = ""
     var codeAcred  = ""
+    var avatar: String!
     private init()
     {
-            
+       
     }
     
 }

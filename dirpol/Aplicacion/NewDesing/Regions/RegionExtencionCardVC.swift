@@ -22,7 +22,7 @@ extension RegionsVC {
         self.view.addSubview(regionCard.view)
         
         cardHeight = 560
-        if regionCard.filter.count > 4 {
+        if regionCard.items.count > 4 {
             cardHeight = cardHeight + 100
         }
         
@@ -137,8 +137,25 @@ extension RegionsVC {
 }
 
 extension RegionsVC: RegionCardVCDelegate {
-    func selectedOption(option: SelectOption) {
-        self.performSegue(withIdentifier: "segueList", sender: nil)
+    func selectedOption(option: NivelOption) {
+        self.performSegue(withIdentifier: "segueList", sender: option)
+    }
+    
+    func filter(entidadID: [String]) {
+        self.sedes.removeAll()
+        entidadID.forEach { (idEntidad) in
+            Singleton.instance.services.getSedes(tipo_entidad_id: idEntidad) { (response) in
+                if response != nil {
+                    print((response?.data)!)
+                    if !(response?.data.isEmpty)! {
+                        self.setSedes(sedesM: response!.data)
+                        self.sedes.append(response!.data)
+                    }
+                } else {
+                    print("No hay datos de \(idEntidad)")
+                }
+            }
+        }
     }
 }
  

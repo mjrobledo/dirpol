@@ -8,6 +8,7 @@
 
 import UIKit
 import GoogleMaps
+import SVProgressHUD
 
 class MapDetailVC: UIViewController {
 
@@ -16,6 +17,8 @@ class MapDetailVC: UIViewController {
         case expanded
         case collapsed
     }
+    
+    var entityID: String!
     
     var cardViewController:CardViewController!
     var visualEffectView:UIVisualEffectView!
@@ -34,23 +37,60 @@ class MapDetailVC: UIViewController {
     let locationManager = CLLocationManager()
     let didFindMyLocation = false
     
+    private var latitude : Double = 0, longitude : Double = 0
+    private var entityM : EntityM!
     override func viewDidLoad() {
        super.viewDidLoad()
         
-        let camera = GMSCameraPosition.camera(withLatitude: -10.256319, longitude: -75.332631, zoom: 5.0)
+     }
+    
+    private func getEntityDetail() {
+        SVProgressHUD.show()
+        Singleton.instance.services.getEntityDetailM(entidad_id: entityID!) { (response) in
+            SVProgressHUD.dismiss()
+            if response != nil && response?.data != nil && response?.status == 200 {
+                self.entityM = response?.data
+                if let descrip = response?.data?.tipos_entidad?.descripcion {
+                    self.cardViewController.typeEntity = descrip
+                }
+                if let descrip = response?.data?.descripcion {
+                    self.cardViewController.division =  descrip
+                }
+                
+                if  let entity = response?.data?.entidad_sedes?.filter( { $0.principal == 1 }).first {
+                    self.cardViewController.entity = entity
+                    self.cardViewController.configForm()
+                    if let lat = Double((entity.latitud)!) {
+                        let lng = Double((entity.longitud)!)
+                        DispatchQueue.main.async {
+                         self.addMarker(latitude: lat , longitude: lng!)
+                        }
+                    }
+                }
+                
+                self.cardViewController.table.reloadData()
+                print(response)
+            }
+        }
+    }
+    
+    private func addMarker(latitude: Double, longitude: Double) {
+        self.latitude = latitude
+        self.longitude = longitude
+        let camera = GMSCameraPosition.camera(withLatitude: latitude, longitude: longitude, zoom: 5.0)
         viewMap.camera = camera
         viewMap.delegate = self
         viewMap.isMyLocationEnabled = true
         let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: -10.266319, longitude: -75.332631)
+        marker.position = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
         marker.map = viewMap
-        marker.icon =  #imageLiteral(resourceName: "ic_marker_region") //GMSMarker.markerImage(with: UIColor.cPrincipal())
+        marker.icon =  #imageLiteral(resourceName: "ic_marker_red") //GMSMarker.markerImage(with: UIColor.cPrincipal())
         
         locationManager.requestAlwaysAuthorization()
 
         //marker.zIndex = Int32(r.Id);
         viewMap.selectedMarker = marker
-     }
+    }
         
     @IBAction func setLocation(_ sender: Any) {
         //if locationManager != nil {
@@ -61,7 +101,7 @@ class MapDetailVC: UIViewController {
     
     @IBAction func setRute(_ sender: Any) {
         
-        let urlMaps =  URL(string: "comgooglemaps://?saddr=&daddr=\(-10.266319),\(-75.332631)&directionsmode=driving")
+        let urlMaps =  URL(string: "comgooglemaps://?saddr=&daddr=\(self.latitude),\(self.longitude)&directionsmode=driving")
         
         if UIApplication.shared.canOpenURL(urlMaps!) {
             UIApplication.shared.open(urlMaps!, completionHandler: { (success) in
@@ -77,6 +117,7 @@ class MapDetailVC: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         if cardViewController == nil {
             self.setupCard()
+            self.getEntityDetail()
         }
     }
     
@@ -86,6 +127,13 @@ class MapDetailVC: UIViewController {
         if segue.identifier == "segueRepresentative" {
         let svc = segue.destination as! OfficialsVC
             svc.setPopPup()
+            svc.people = sender as? EntidadPersonal
+        } else if segue.identifier == "seguePhotos" {
+            let ph = sender as! [EntidadSedeFoto]
+            let svc = segue.destination as! GalleryVC
+            svc.typeEntity = cardViewController.typeEntity
+            svc.division = cardViewController.division
+            svc.photos = ph
         }
     }
     
@@ -99,7 +147,7 @@ extension MapDetailVC: GMSMapViewDelegate, CLLocationManagerDelegate{
                                                                  owner: nil,
                                                                  options: nil)?.first as! ViewMarker)
           //let name = String(utf8String: (r?.Nombre.cString(using: .utf8)!)!)
-          viewFromNib?.lblRegion.text = "COMISARÍA DE MATEO PUMACAHUA"
+        viewFromNib?.lblRegion.text = self.cardViewController.typeEntity
           //Variables.region = name!
           return viewFromNib
       }

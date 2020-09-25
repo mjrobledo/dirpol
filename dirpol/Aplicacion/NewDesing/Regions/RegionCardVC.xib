@@ -18,9 +18,17 @@
                 <outlet property="btnCity" destination="YIr-Nu-7mM" id="vuZ-Fc-JMQ"/>
                 <outlet property="btnDepto" destination="35v-tP-v0i" id="3YV-ar-Suq"/>
                 <outlet property="btnDistrict" destination="q50-em-AOI" id="dhf-Yp-LqL"/>
+                <outlet property="btnNivel1" destination="35v-tP-v0i" id="mcW-Mg-9SW"/>
+                <outlet property="btnNivel2" destination="LOp-FL-jhR" id="1Qm-oR-wKQ"/>
+                <outlet property="btnNivel3" destination="YIr-Nu-7mM" id="Mbz-6g-4rQ"/>
+                <outlet property="btnNivel4" destination="q50-em-AOI" id="Dhw-wa-BYl"/>
                 <outlet property="btnProvince" destination="LOp-FL-jhR" id="Sxp-tI-Gz4"/>
                 <outlet property="collView" destination="s47-Ay-pMA" id="arr-Ez-EnY"/>
                 <outlet property="handleArea" destination="r6F-YW-eeF" id="1Y4-Bw-5yT"/>
+                <outlet property="lblNivel1" destination="7yP-Kd-h5u" id="QQP-nF-UjW"/>
+                <outlet property="lblNivel2" destination="y4t-1X-7zD" id="Gwl-AI-jqW"/>
+                <outlet property="lblNivel3" destination="xa3-Mj-hKd" id="4Vo-2R-O3x"/>
+                <outlet property="lblNivel4" destination="1ho-we-DMZ" id="YTH-BV-qyP"/>
                 <outlet property="stackF" destination="d9L-5l-BuX" id="n7K-At-A3I"/>
                 <outlet property="txtCity" destination="xa3-Mj-hKd" id="A7A-Zn-Beq"/>
                 <outlet property="txtDepto" destination="7yP-Kd-h5u" id="2fp-fv-zKa"/>
@@ -28,6 +36,10 @@
                 <outlet property="txtProvince" destination="y4t-1X-7zD" id="Aqn-96-Uq0"/>
                 <outlet property="view" destination="iN0-l3-epB" id="DJP-sT-hnF"/>
                 <outlet property="viewLine" destination="zJO-XV-NL4" id="wfm-6g-hnl"/>
+                <outlet property="viewN1" destination="kK5-qO-rRy" id="Qeb-hi-f1Z"/>
+                <outlet property="viewN2" destination="2JE-fu-Z66" id="peL-39-Ccq"/>
+                <outlet property="viewN3" destination="RWq-kJ-eG2" id="GPm-fw-KnI"/>
+                <outlet property="viewN4" destination="Dbz-EG-ONk" id="Fb2-Ft-Nhg"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -308,6 +320,9 @@
                                                 </userDefinedRuntimeAttribute>
                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="primaryColor" value="YES"/>
                                             </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="filter:" destination="-1" eventType="touchUpInside" id="g5l-XL-UAE"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

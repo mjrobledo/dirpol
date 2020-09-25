@@ -96,6 +96,7 @@ correspondan</string>
                     </navigationItem>
                     <connections>
                         <outlet property="btnMenu" destination="GfK-fP-PTN" id="Wki-co-Fy0"/>
+                        <outlet property="txtAbout" destination="Bsk-dp-NgP" id="J1X-f4-Kfv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iUQ-Tz-ak6" userLabel="First Responder" sceneMemberID="firstResponder"/>

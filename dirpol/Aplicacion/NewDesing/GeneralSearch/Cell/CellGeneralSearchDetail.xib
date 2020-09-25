@@ -85,6 +85,10 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="imgIcon" destination="dc9-QC-EoV" id="nJ9-A8-M1C"/>
+                <outlet property="imgPhoto" destination="Kdc-kl-zrg" id="h17-99-4J8"/>
+                <outlet property="lblAddress" destination="3jR-pN-ACo" id="tVo-ZN-GSu"/>
+                <outlet property="lblName" destination="RsA-vm-b7y" id="iXu-QE-0Fr"/>
+                <outlet property="lblPhone" destination="APv-nu-sMg" id="DrM-D4-GUK"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="127.23214285714285"/>
         </tableViewCell>

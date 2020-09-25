@@ -14,6 +14,7 @@ protocol DirectAccessDelegate {
     func eMail(identifier: Int)
     func photo(identifier: Int)
     func socialMedia(identifier: Int)
+    func repre(identifier: Int)
 }
 
 class CellDirectAccess: UITableViewCell {
@@ -25,6 +26,7 @@ class CellDirectAccess: UITableViewCell {
     @IBOutlet weak var viewEmail: UIView!
     @IBOutlet weak var viewPhoto: UIView!
     @IBOutlet weak var viewSocial: UIView!
+    @IBOutlet weak var viewRepre: UIView!
     
     @IBOutlet weak var imgTel: UIImageView!
     @IBOutlet weak var imgWeb: UIImageView!
@@ -35,6 +37,7 @@ class CellDirectAccess: UITableViewCell {
     
     var identifier = 0
     
+    var phone = ""
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -65,6 +68,10 @@ class CellDirectAccess: UITableViewCell {
     
     @IBAction func socialMedia(_ sender: Any) {
         self.delegate.socialMedia(identifier: self.identifier)
+    }
+    
+    @IBAction func repre(_ sender: Any) {
+        self.delegate.repre(identifier: self.identifier)
     }
     
     

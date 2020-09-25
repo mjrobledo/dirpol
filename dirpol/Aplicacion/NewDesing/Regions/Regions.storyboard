@@ -58,6 +58,7 @@
                         <outlet property="viewMap" destination="p9U-if-mQ1" id="yKl-dS-gRM"/>
                         <segue destination="g6z-UO-1HP" kind="show" identifier="segueProvince" id="Rgg-qu-csH"/>
                         <segue destination="3LU-gx-eGE" kind="presentation" identifier="segueList" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="y68-v2-Ad8"/>
+                        <segue destination="LRV-bJ-wXT" kind="show" identifier="segueMapDetail" id="RZA-Gq-tRS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Bq-tR-CRT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -201,6 +202,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="95n-cw-PTt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="999" y="-86"/>
+        </scene>
+        <!--MapDetailID-->
+        <scene sceneID="dwx-66-rFG">
+            <objects>
+                <viewControllerPlaceholder storyboardName="GeneralSearch" referencedIdentifier="MapDetailID" id="LRV-bJ-wXT" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="EE5-Iu-5IZ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vmf-wV-VI7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="184" y="-295"/>
         </scene>
     </scenes>
     <resources>

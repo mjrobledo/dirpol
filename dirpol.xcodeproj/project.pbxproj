@@ -23,6 +23,39 @@
 		47422AC624F1C8FA000D9453 /* VersionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47422AC524F1C8FA000D9453 /* VersionVC.swift */; };
 		47422ACA24F1CB1C000D9453 /* CellStation_co.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47422AC824F1CB1C000D9453 /* CellStation_co.xib */; };
 		47422ACC24FA9C36000D9453 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47422ACB24FA9C36000D9453 /* ApiService.swift */; };
+		47ACD55125071475000B526A /* GeneralModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47ACD55025071475000B526A /* GeneralModels.swift */; };
+		47ACD5662510584D000B526A /* Tipo_establecimiento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47ACD55225105841000B526A /* Tipo_establecimiento.swift */; };
+		47ACD5672510584D000B526A /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47ACD55325105842000B526A /* Data.swift */; };
+		47ACD5682510584D000B526A /* Poder_gobierno.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47ACD55425105843000B526A /* Poder_gobierno.swift */; };
+		47ACD5692510584D000B526A /* ResponseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47ACD55525105844000B526A /* ResponseEntity.swift */; };
+		47ACD56A2510584D000B526A /* Seccion_empresa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47ACD55625105844000B526A /* Seccion_empresa.swift */; };
+		47ACD56B2510584D000B526A /* Tipos_entidad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47ACD55725105845000B526A /* Tipos_entidad.swift */; };
+		47ACD56C2510584D000B526A /* Sector_entidad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47ACD55825105846000B526A /* Sector_entidad.swift */; };
+		47ACD56D2510584D000B526A /* Actividad_contribuyente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47ACD55925105846000B526A /* Actividad_contribuyente.swift */; };
+		47ACD56E2510584D000B526A /* Padron_contribuyente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47ACD55A25105847000B526A /* Padron_contribuyente.swift */; };
+		47ACD56F2510584D000B526A /* Entidad_numero_empleado.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47ACD55B25105847000B526A /* Entidad_numero_empleado.swift */; };
+		47ACD5702510584D000B526A /* Relevancia_entidad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47ACD55C25105849000B526A /* Relevancia_entidad.swift */; };
+		47ACD5712510584D000B526A /* Segmento_entidad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47ACD55D2510584A000B526A /* Segmento_entidad.swift */; };
+		47ACD5722510584D000B526A /* Condicion_contribuyente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47ACD55E2510584A000B526A /* Condicion_contribuyente.swift */; };
+		47ACD5732510584D000B526A /* Ubigeo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47ACD55F2510584A000B526A /* Ubigeo.swift */; };
+		47ACD5742510584D000B526A /* Tipo_contribuyente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47ACD5602510584B000B526A /* Tipo_contribuyente.swift */; };
+		47ACD5752510584D000B526A /* Entidad_actividad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47ACD5612510584B000B526A /* Entidad_actividad.swift */; };
+		47ACD5762510584D000B526A /* Pais.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47ACD5622510584C000B526A /* Pais.swift */; };
+		47ACD5772510584D000B526A /* Entidad_padron_contribuyente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47ACD5632510584C000B526A /* Entidad_padron_contribuyente.swift */; };
+		47ACD5782510584D000B526A /* Entidad_sedes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47ACD5642510584D000B526A /* Entidad_sedes.swift */; };
+		47ACD5792510584D000B526A /* Estado_contribuyente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47ACD5652510584D000B526A /* Estado_contribuyente.swift */; };
+		47E9379125106B3C002A60B0 /* Cargo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E9378E25106B39002A60B0 /* Cargo.swift */; };
+		47E9379225106B3C002A60B0 /* Area_administrativa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E9378F25106B3A002A60B0 /* Area_administrativa.swift */; };
+		47E9379325106B3C002A60B0 /* Entidad_personal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E9379025106B3B002A60B0 /* Entidad_personal.swift */; };
+		47E9379625106D05002A60B0 /* Red_social.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E9379425106D04002A60B0 /* Red_social.swift */; };
+		47E9379725106D05002A60B0 /* EntidadRedSocialId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E9379525106D05002A60B0 /* EntidadRedSocialId.swift */; };
+		47E9379A25106FA1002A60B0 /* EntidadTelefono.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E9379825106FA0002A60B0 /* EntidadTelefono.swift */; };
+		47E9379E25157E01002A60B0 /* CellHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E9379C25157E01002A60B0 /* CellHeader.swift */; };
+		47E9379F25157E01002A60B0 /* CellHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47E9379D25157E01002A60B0 /* CellHeader.xib */; };
+		47E937A225165869002A60B0 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E937A025165869002A60B0 /* PhotoCell.swift */; };
+		47E937A325165869002A60B0 /* PhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47E937A125165869002A60B0 /* PhotoCell.xib */; };
+		47E937A725183DB9002A60B0 /* EntitySearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E937A525183DB9002A60B0 /* EntitySearchResponse.swift */; };
+		47E937A925198457002A60B0 /* RegionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E937A825198457002A60B0 /* RegionModel.swift */; };
 		6C3E98E5214C5746009FDF74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3E98E4214C5746009FDF74 /* AppDelegate.swift */; };
 		6C3E98E7214C5746009FDF74 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3E98E6214C5746009FDF74 /* ViewController.swift */; };
 		6C3E98EA214C5746009FDF74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C3E98E8214C5746009FDF74 /* Main.storyboard */; };
@@ -154,6 +187,39 @@
 		47422AC524F1C8FA000D9453 /* VersionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionVC.swift; sourceTree = "<group>"; };
 		47422AC824F1CB1C000D9453 /* CellStation_co.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellStation_co.xib; sourceTree = "<group>"; };
 		47422ACB24FA9C36000D9453 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		47ACD55025071475000B526A /* GeneralModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralModels.swift; sourceTree = "<group>"; };
+		47ACD55225105841000B526A /* Tipo_establecimiento.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tipo_establecimiento.swift; sourceTree = "<group>"; };
+		47ACD55325105842000B526A /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		47ACD55425105843000B526A /* Poder_gobierno.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Poder_gobierno.swift; sourceTree = "<group>"; };
+		47ACD55525105844000B526A /* ResponseEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseEntity.swift; sourceTree = "<group>"; };
+		47ACD55625105844000B526A /* Seccion_empresa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Seccion_empresa.swift; sourceTree = "<group>"; };
+		47ACD55725105845000B526A /* Tipos_entidad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tipos_entidad.swift; sourceTree = "<group>"; };
+		47ACD55825105846000B526A /* Sector_entidad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sector_entidad.swift; sourceTree = "<group>"; };
+		47ACD55925105846000B526A /* Actividad_contribuyente.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Actividad_contribuyente.swift; sourceTree = "<group>"; };
+		47ACD55A25105847000B526A /* Padron_contribuyente.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Padron_contribuyente.swift; sourceTree = "<group>"; };
+		47ACD55B25105847000B526A /* Entidad_numero_empleado.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entidad_numero_empleado.swift; sourceTree = "<group>"; };
+		47ACD55C25105849000B526A /* Relevancia_entidad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Relevancia_entidad.swift; sourceTree = "<group>"; };
+		47ACD55D2510584A000B526A /* Segmento_entidad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Segmento_entidad.swift; sourceTree = "<group>"; };
+		47ACD55E2510584A000B526A /* Condicion_contribuyente.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Condicion_contribuyente.swift; sourceTree = "<group>"; };
+		47ACD55F2510584A000B526A /* Ubigeo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ubigeo.swift; sourceTree = "<group>"; };
+		47ACD5602510584B000B526A /* Tipo_contribuyente.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tipo_contribuyente.swift; sourceTree = "<group>"; };
+		47ACD5612510584B000B526A /* Entidad_actividad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entidad_actividad.swift; sourceTree = "<group>"; };
+		47ACD5622510584C000B526A /* Pais.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pais.swift; sourceTree = "<group>"; };
+		47ACD5632510584C000B526A /* Entidad_padron_contribuyente.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entidad_padron_contribuyente.swift; sourceTree = "<group>"; };
+		47ACD5642510584D000B526A /* Entidad_sedes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entidad_sedes.swift; sourceTree = "<group>"; };
+		47ACD5652510584D000B526A /* Estado_contribuyente.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Estado_contribuyente.swift; sourceTree = "<group>"; };
+		47E9378E25106B39002A60B0 /* Cargo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cargo.swift; sourceTree = "<group>"; };
+		47E9378F25106B3A002A60B0 /* Area_administrativa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Area_administrativa.swift; sourceTree = "<group>"; };
+		47E9379025106B3B002A60B0 /* Entidad_personal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entidad_personal.swift; sourceTree = "<group>"; };
+		47E9379425106D04002A60B0 /* Red_social.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Red_social.swift; sourceTree = "<group>"; };
+		47E9379525106D05002A60B0 /* EntidadRedSocialId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntidadRedSocialId.swift; sourceTree = "<group>"; };
+		47E9379825106FA0002A60B0 /* EntidadTelefono.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntidadTelefono.swift; sourceTree = "<group>"; };
+		47E9379C25157E01002A60B0 /* CellHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellHeader.swift; sourceTree = "<group>"; };
+		47E9379D25157E01002A60B0 /* CellHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellHeader.xib; sourceTree = "<group>"; };
+		47E937A025165869002A60B0 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		47E937A125165869002A60B0 /* PhotoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCell.xib; sourceTree = "<group>"; };
+		47E937A525183DB9002A60B0 /* EntitySearchResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntitySearchResponse.swift; sourceTree = "<group>"; };
+		47E937A825198457002A60B0 /* RegionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegionModel.swift; sourceTree = "<group>"; };
 		6C3E98E1214C5746009FDF74 /* DIRPOL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DIRPOL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C3E98E4214C5746009FDF74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6C3E98E6214C5746009FDF74 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -311,8 +377,45 @@
 			isa = PBXGroup;
 			children = (
 				473654F424E422680065DD33 /* GalleryVC.swift */,
+				47E9379C25157E01002A60B0 /* CellHeader.swift */,
+				47E9379D25157E01002A60B0 /* CellHeader.xib */,
+				47E937A025165869002A60B0 /* PhotoCell.swift */,
+				47E937A125165869002A60B0 /* PhotoCell.xib */,
 			);
 			path = Gallery;
+			sourceTree = "<group>";
+		};
+		47ACD57A25105874000B526A /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				47E9379825106FA0002A60B0 /* EntidadTelefono.swift */,
+				47E9379525106D05002A60B0 /* EntidadRedSocialId.swift */,
+				47E9379425106D04002A60B0 /* Red_social.swift */,
+				47E9378F25106B3A002A60B0 /* Area_administrativa.swift */,
+				47E9378E25106B39002A60B0 /* Cargo.swift */,
+				47E9379025106B3B002A60B0 /* Entidad_personal.swift */,
+				47ACD55925105846000B526A /* Actividad_contribuyente.swift */,
+				47ACD55E2510584A000B526A /* Condicion_contribuyente.swift */,
+				47ACD55325105842000B526A /* Data.swift */,
+				47ACD5612510584B000B526A /* Entidad_actividad.swift */,
+				47ACD55B25105847000B526A /* Entidad_numero_empleado.swift */,
+				47ACD5632510584C000B526A /* Entidad_padron_contribuyente.swift */,
+				47ACD5642510584D000B526A /* Entidad_sedes.swift */,
+				47ACD5652510584D000B526A /* Estado_contribuyente.swift */,
+				47ACD55525105844000B526A /* ResponseEntity.swift */,
+				47ACD55A25105847000B526A /* Padron_contribuyente.swift */,
+				47ACD5622510584C000B526A /* Pais.swift */,
+				47ACD55425105843000B526A /* Poder_gobierno.swift */,
+				47ACD55C25105849000B526A /* Relevancia_entidad.swift */,
+				47ACD55625105844000B526A /* Seccion_empresa.swift */,
+				47ACD55825105846000B526A /* Sector_entidad.swift */,
+				47ACD55D2510584A000B526A /* Segmento_entidad.swift */,
+				47ACD5602510584B000B526A /* Tipo_contribuyente.swift */,
+				47ACD55225105841000B526A /* Tipo_establecimiento.swift */,
+				47ACD55725105845000B526A /* Tipos_entidad.swift */,
+				47ACD55F2510584A000B526A /* Ubigeo.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		6C3E98D8214C5746009FDF74 = {
@@ -673,8 +776,12 @@
 		FAC2C0292150570E00A74FA3 /* Modelos */ = {
 			isa = PBXGroup;
 			children = (
+				47ACD57A25105874000B526A /* Entity */,
 				FA9850D3215565EC002F143D /* ModeloServicios.swift */,
 				8BD3B15425005F2000548EFD /* UserModel.swift */,
+				47ACD55025071475000B526A /* GeneralModels.swift */,
+				47E937A825198457002A60B0 /* RegionModel.swift */,
+				47E937A525183DB9002A60B0 /* EntitySearchResponse.swift */,
 			);
 			path = Modelos;
 			sourceTree = "<group>";
@@ -874,7 +981,9 @@
 				8B19929824C36A0F003D788B /* ContactUs.storyboard in Resources */,
 				8B1992A224C3759F003D788B /* About.storyboard in Resources */,
 				8B088B8924C26B50005C723C /* Directory.storyboard in Resources */,
+				47E937A325165869002A60B0 /* PhotoCell.xib in Resources */,
 				8B1075EA24D2399300C50789 /* GeneralSearch.storyboard in Resources */,
+				47E9379F25157E01002A60B0 /* CellHeader.xib in Resources */,
 				8B1075F424D23E8B00C50789 /* CellGeneralSearchDetail.xib in Resources */,
 				6C3E98EF214C5748009FDF74 /* LaunchScreen.storyboard in Resources */,
 				8B115EC724BECD2000C82CFB /* Credential.storyboard in Resources */,
@@ -1046,27 +1155,45 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAC2C03D2150C4E400A74FA3 /* ListadoTemaVC.swift in Sources */,
+				47E9379225106B3C002A60B0 /* Area_administrativa.swift in Sources */,
 				8B1075F924D243DC00C50789 /* GeneralSearchDetailVC.swift in Sources */,
 				FAC2C02B2150572800A74FA3 /* Constantes.swift in Sources */,
 				8B088B8B24C26BDC005C723C /* DirectoryVC.swift in Sources */,
+				47ACD56A2510584D000B526A /* Seccion_empresa.swift in Sources */,
+				47ACD5742510584D000B526A /* Tipo_contribuyente.swift in Sources */,
+				47ACD56F2510584D000B526A /* Entidad_numero_empleado.swift in Sources */,
+				47ACD5712510584D000B526A /* Segmento_entidad.swift in Sources */,
 				FA9CD34F21573B340032174B /* ViewMarcker.swift in Sources */,
 				8B19929F24C370E2003D788B /* UserPanelVC.swift in Sources */,
 				FAC2C0272150333100A74FA3 /* Tema.swift in Sources */,
 				FA9CD3532159EBB60032174B /* Util.swift in Sources */,
+				47ACD5692510584D000B526A /* ResponseEntity.swift in Sources */,
+				47ACD5662510584D000B526A /* Tipo_establecimiento.swift in Sources */,
+				47E9379725106D05002A60B0 /* EntidadRedSocialId.swift in Sources */,
 				8B1075F324D23E8B00C50789 /* CellGeneralSearchDetail.swift in Sources */,
 				8B6780E224D31A2200B76B2D /* MapDetailVC.swift in Sources */,
+				47E937A925198457002A60B0 /* RegionModel.swift in Sources */,
+				47E937A725183DB9002A60B0 /* EntitySearchResponse.swift in Sources */,
+				47E9379E25157E01002A60B0 /* CellHeader.swift in Sources */,
 				FA43C658215CA0B400495E32 /* DetalleBAvanzadaVC.swift in Sources */,
 				8B19929A24C36E61003D788B /* ContactUsVC.swift in Sources */,
+				47ACD5782510584D000B526A /* Entidad_sedes.swift in Sources */,
+				47E9379A25106FA1002A60B0 /* EntidadTelefono.swift in Sources */,
 				FA9850D4215565EC002F143D /* ModeloServicios.swift in Sources */,
+				47ACD5672510584D000B526A /* Data.swift in Sources */,
 				4739D0EF24E07B7B0056F4DB /* OfficialsVC.swift in Sources */,
 				FAC2C04221517CFD00A74FA3 /* Textos.swift in Sources */,
 				8B06671224D355C000078BDB /* CellListMap.swift in Sources */,
+				47ACD5752510584D000B526A /* Entidad_actividad.swift in Sources */,
+				47ACD56B2510584D000B526A /* Tipos_entidad.swift in Sources */,
 				8B19929524C368F1003D788B /* AdvanceSearchVC.swift in Sources */,
 				8B1075F724D243CB00C50789 /* GeneralSearchVC.swift in Sources */,
+				47ACD56C2510584D000B526A /* Sector_entidad.swift in Sources */,
 				FA9CD355215B40420032174B /* ViewBusquedaDos.swift in Sources */,
 				473654F524E422680065DD33 /* GalleryVC.swift in Sources */,
 				8B23D95024E3903300D41BA1 /* MapExtencionVC.swift in Sources */,
 				6C3E98E7214C5746009FDF74 /* ViewController.swift in Sources */,
+				47ACD5732510584D000B526A /* Ubigeo.swift in Sources */,
 				47422ACC24FA9C36000D9453 /* ApiService.swift in Sources */,
 				FA9850C22151D3FD002F143D /* AltoMandoPolicialVC.swift in Sources */,
 				8BAC4FE024BDFE1C0008026F /* SWRevealViewController.m in Sources */,
@@ -1075,6 +1202,7 @@
 				8B1992A724C3792E003D788B /* Singleton.swift in Sources */,
 				FAC2C02D2150573200A74FA3 /* Variables.swift in Sources */,
 				FA9850C621521EE2002F143D /* PanelUsuarioVC.swift in Sources */,
+				47ACD5702510584D000B526A /* Relevancia_entidad.swift in Sources */,
 				4739D0F224E086370056F4DB /* CellOfficials.swift in Sources */,
 				8BD3B15525005F2000548EFD /* UserModel.swift in Sources */,
 				FAC2C03F21514E8500A74FA3 /* MenuVC.swift in Sources */,
@@ -1083,11 +1211,18 @@
 				FA9850CB2152D50C002F143D /* ViewRegionesMapa.swift in Sources */,
 				FAC2C02F2150574400A74FA3 /* Metodos.swift in Sources */,
 				8BEDC8DF24DA58CC00E2D6F8 /* ListVC.swift in Sources */,
+				47ACD5762510584D000B526A /* Pais.swift in Sources */,
 				8B6780DF24D31A0A00B76B2D /* CardViewController.swift in Sources */,
 				FAC2C0362150828300A74FA3 /* IniciarSesionVC.swift in Sources */,
 				8B06671624D356CF00078BDB /* CellDirectAccess.swift in Sources */,
 				473881C024DA2B160077CF89 /* ImageZoomVC.swift in Sources */,
+				47E9379625106D05002A60B0 /* Red_social.swift in Sources */,
+				47ACD55125071475000B526A /* GeneralModels.swift in Sources */,
+				47ACD5682510584D000B526A /* Poder_gobierno.swift in Sources */,
+				47E9379125106B3C002A60B0 /* Cargo.swift in Sources */,
+				47E937A225165869002A60B0 /* PhotoCell.swift in Sources */,
 				8BAC4FE824BE01C30008026F /* HomeVC.swift in Sources */,
+				47ACD5772510584D000B526A /* Entidad_padron_contribuyente.swift in Sources */,
 				8B1992AC24C383BB003D788B /* RegionsVC.swift in Sources */,
 				8B9AB12824C1441E005AE821 /* RenewMembershipVC.swift in Sources */,
 				8BD3B1572500637A00548EFD /* Services.swift in Sources */,
@@ -1104,14 +1239,19 @@
 				473654F824E429D90065DD33 /* ViewMarker.swift in Sources */,
 				FAC2C025215032FE00A74FA3 /* Extenciones.swift in Sources */,
 				473873F024D7B1D10050693F /* CellStation.swift in Sources */,
+				47ACD56E2510584D000B526A /* Padron_contribuyente.swift in Sources */,
 				8BCB2A9024E38DCC0069B5BA /* ProvincesVC.swift in Sources */,
+				47ACD5722510584D000B526A /* Condicion_contribuyente.swift in Sources */,
+				47E9379325106B3C002A60B0 /* Entidad_personal.swift in Sources */,
 				8BCB2A8D24E37FA80069B5BA /* RegionExtencionCardVC.swift in Sources */,
 				FAC2C03B2150C18700A74FA3 /* ContactoVC.swift in Sources */,
 				FA9850C421521AF7002F143D /* BusquedaAvanzadaVC.swift in Sources */,
 				FA43C655215C2C9700495E32 /* Servicios.swift in Sources */,
 				47422AC624F1C8FA000D9453 /* VersionVC.swift in Sources */,
+				47ACD5792510584D000B526A /* Estado_contribuyente.swift in Sources */,
 				FAC2C0572151A6DD00A74FA3 /* CellMenu.swift in Sources */,
 				8B409ACF24B57ED5004ED46E /* Api.swift in Sources */,
+				47ACD56D2510584D000B526A /* Actividad_contribuyente.swift in Sources */,
 				8B9AB12624C143F0005AE821 /* CredentialVC.swift in Sources */,
 				8B1075EF24D23CF400C50789 /* CellGeneralSearch.swift in Sources */,
 				FAC2C0562151A6DD00A74FA3 /* CollMenu.swift in Sources */,
@@ -1303,7 +1443,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.7;
+				CURRENT_PROJECT_VERSION = 1.8;
 				DEVELOPMENT_TEAM = XYEE79Z2JZ;
 				INFOPLIST_FILE = dirpol/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -1328,7 +1468,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon_CO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.7;
+				CURRENT_PROJECT_VERSION = 1.8;
 				DEVELOPMENT_TEAM = XYEE79Z2JZ;
 				INFOPLIST_FILE = dirpol/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -1494,7 +1634,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.7;
+				CURRENT_PROJECT_VERSION = 1.8;
 				DEVELOPMENT_TEAM = XYEE79Z2JZ;
 				INFOPLIST_FILE = dirpol/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;

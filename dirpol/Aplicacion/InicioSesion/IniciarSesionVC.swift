@@ -33,8 +33,9 @@ class IniciarSesionVC: UIViewController, UITextFieldDelegate {
         //txtNombre.text = "29478"
         //txtPassword.text = "usuario2018"
         
-        txtNombre.text = "MROBLEDO"
-        txtPassword.text = "qwerty65"
+        txtNombre.text = "earlene83"
+        txtPassword.text = "password"
+        
         
     }
     
@@ -86,6 +87,9 @@ class IniciarSesionVC: UIViewController, UITextFieldDelegate {
         reqLogin.usuario = usuario
         reqLogin.password = password
         reqLogin.remember_me = btnRemember.tag
+        if let uuid = UIDevice.current.identifierForVendor?.uuidString {
+            reqLogin.imei = uuid
+        }
         
         if validaCampos(){
             DispatchQueue.main.async {
@@ -104,22 +108,22 @@ class IniciarSesionVC: UIViewController, UITextFieldDelegate {
                 Singleton.instance.services.login(user: reqLogin) { (response) in
                     if response != nil && !(response?.access_token.isEmpty)! {
                         Singleton.instance.services.getUser { (response) in
-                            SVProgressHUD.dismiss()
-                            Singleton.instance.user = response?.usuario
-                            Singleton.instance.codeAcred = (response?.dirpol_peru_codigo_acreditado)!
-                            Singleton.instance.imgCredential = (response?.dirpol_peru)!
-                            self.performSegue(withIdentifier: "segueInicio", sender: nil)
+                            if response != nil {
+                                SVProgressHUD.dismiss()
+                                Singleton.instance.user = response?.usuario
+                                Singleton.instance.codeAcred = (response?.codigoAcreditado)!
+                                Singleton.instance.imgCredential = (response?.dirpolUrlCredential)!
+                                Singleton.instance.avatar = (response?.avatar)!
+                                self.getBusiness()
+                            } else {
+                                Util().enviarAlerta(mensaje:  .ErrorEnElServicio, titulo: .Alerta, controller: self)
+                            }
                         }
                     } else {
                         SVProgressHUD.dismiss()
                         if response != nil {
-                            if !(response?.error?.password!.isEmpty)! {
-                                Util().enviarAlerta(mensaje: (response?.error?.password?.first)!, titulo: .Alerta, controller: self)
-                            } else if (response?.error?.usuario!.isEmpty)! {
-                                Util().enviarAlerta(mensaje: (response?.error?.usuario?.first)!, titulo: .Alerta, controller: self)
-                            } else {
-                                Util().enviarAlerta(mensaje:  "Usuario o contraseña incorrecto", titulo: .Alerta, controller: self)
-                            }
+                            Util().enviarAlerta(mensaje: (response?.message)!, titulo: .Alerta, controller: self)
+                            
                         } else {
                              Util().enviarAlerta(mensaje:  .ErrorEnElServicio, titulo: .Alerta, controller: self)
                         }
@@ -163,6 +167,21 @@ class IniciarSesionVC: UIViewController, UITextFieldDelegate {
         }else{
             Util().enviarAlerta(mensaje: .TodosLosCamposSonObligatorios, titulo: .Alerta, controller: self)
         }
+    }
+    
+    private func getBusiness() {
+        SVProgressHUD.show()
+        Singleton.instance.services.getBussiness(method: .post, header: Services.getHeader(), completion: { (response) in
+            SVProgressHUD.dismiss()
+            if response != nil {
+                if let b = response?.data?.first {
+                    Singleton.instance.business = b
+                        self.performSegue(withIdentifier: "segueInicio", sender: nil)
+                    }
+            } else {
+                Util().enviarAlerta(mensaje: "Error al descargar configuración de la empresa", titulo: "Intenta más tarde", controller: self)
+                }
+        })
     }
     
     private func controlIntentos(){

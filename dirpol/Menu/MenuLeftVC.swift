@@ -8,7 +8,7 @@
 
 import UIKit
 import CropViewController
-
+import Alamofire
  
 class MenuLeftVC: UIViewController, UITableViewDataSource, UITableViewDelegate, SWRevealViewControllerDelegate {
 
@@ -43,6 +43,12 @@ class MenuLeftVC: UIViewController, UITableViewDataSource, UITableViewDelegate, 
         tblMenu.reloadData()
         self.lblUserName.text = Singleton.instance.user.getName()
         lblID.text = Singleton.instance.codeAcred
+        
+        if let avatar = Singleton.instance.avatar {
+            DispatchQueue.main.async {
+                self.imgProfile.imageFromServerURL(urlString: avatar, defaultImage: #imageLiteral(resourceName: "img_man"))
+            }
+        }
         
         if !Singleton.instance.user.fecha_caducidad!.isEmpty {
             let days = Util.getDays(startDate: Date(), endDate: Singleton.instance.user.fecha_caducidad!.date)
@@ -244,7 +250,8 @@ extension MenuLeftVC: CropViewControllerDelegate {
     func cropViewController(_ cropViewController: CropViewController, didCropToCircularImage image: UIImage, withRect cropRect: CGRect, angle: Int) {
         print("didCropToCircularImage")
         cropViewController.dismiss(animated: true) {
-            self.imgProfile.image = image
+         //   self.imgProfile.image = image
+            self.uploadPhoto(image: image)
         }
     }
     func cropViewController(_ cropViewController: CropViewController, didCropImageToRect rect: CGRect, angle: Int) {
@@ -256,6 +263,48 @@ extension MenuLeftVC: CropViewControllerDelegate {
     }
     func cropViewController(_ cropViewController: CropViewController, didCropToImage image: UIImage, withRect cropRect: CGRect, angle: Int) {
         print("didCropToImage")
+    }
+    
+    func uploadPhoto(image : UIImage) {
+        // let image = UIImage.init(named: "myImage")
+        let imgData = image.jpegData(compressionQuality: 0.8)!
+
+         //let parameters = ["name": rname] //Optional for extra parameter
+        let urlStr = "\(Api.url_app)\(ApiService.photo.rawValue)"
+
+/*        Alamofire.upload(imgData, to: urlStr, method: .post, headers: Services.getHeader()).responseString { (response) in
+            print(response)
+        }*/
+        
+        Alamofire.upload(multipartFormData: { multipartFormData in
+                multipartFormData.append(imgData, withName: "avatar",fileName: "avatar.jpg", mimeType: "image/jpg")
+               /* for (key, value) in parameters {
+                        multipartFormData.append(value.data(using: String.Encoding.utf8)!, withName: key)
+                    } *///Optional for extra parameters
+            }, to: urlStr, headers: Services.getHeader())
+        { (result) in
+            switch result {
+            case .success(let upload, _, _):
+
+                upload.uploadProgress(closure: { (progress) in
+                    print("Upload Progress: \(progress.fractionCompleted)")
+                })
+
+                upload.responseObject { (resp: DataResponse<ResponsePhoto>) in
+                     print((resp.result.value)!)
+                    if resp.value != nil && (resp.value?.status)! == 201 {
+                        self.imgProfile.image = image
+                        Singleton.instance.avatar = (resp.value?.photoUrl)!
+                        Util().enviarAlerta(mensaje:"Foto de perfil modificada correctamente", titulo:  "Exito", controller: self)
+                    } else {
+                        Util().enviarAlerta(mensaje: "", titulo: "No fue posible subir la foto de perfil, Intenta más tarde", controller: self)
+                    }
+                }
+
+            case .failure(let encodingError):
+                print(encodingError)
+            }
+        }
     }
 }
 

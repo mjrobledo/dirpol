@@ -84,7 +84,7 @@ class CredentialVC: UIViewController {
         }
         if segue.identifier == "segueCredential" {
             let svc = segue.destination as! ImageZoomVC
-            svc.imgArray.append(self.imgCredential.image!)
+            svc.imgArray.append(Singleton.instance.imgCredential)
         }
     }
 }

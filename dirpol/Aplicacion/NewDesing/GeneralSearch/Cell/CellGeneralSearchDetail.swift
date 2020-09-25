@@ -12,6 +12,12 @@ class CellGeneralSearchDetail: UITableViewCell {
 
     @IBOutlet weak var imgIcon: UIImageView!
     
+    @IBOutlet weak var lblName: UILabel!
+    @IBOutlet weak var lblAddress: UILabel!
+    @IBOutlet weak var lblPhone: UILabel!
+    @IBOutlet weak var imgPhoto: UIImageView!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

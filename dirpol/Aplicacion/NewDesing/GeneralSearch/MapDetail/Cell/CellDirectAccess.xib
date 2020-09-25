@@ -78,7 +78,7 @@
                                         <rect key="frame" x="8" y="3" width="32" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_web" translatesAutoresizingMaskIntoConstraints="NO" id="dHX-QR-WOo">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_web_pe" translatesAutoresizingMaskIntoConstraints="NO" id="dHX-QR-WOo">
                                                 <rect key="frame" x="5" y="5" width="22" height="22"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             </imageView>
@@ -247,7 +247,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="51"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <connections>
-                                            <action selector="socialMedia:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="mGa-kJ-z2d"/>
+                                            <action selector="repre:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="9IB-Gn-QqG"/>
                                         </connections>
                                     </button>
                                     <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7nZ-Kj-MfJ">
@@ -304,6 +304,7 @@
                 <outlet property="imgWeb" destination="dHX-QR-WOo" id="1cq-BD-eCD"/>
                 <outlet property="viewEmail" destination="k96-Dg-v5q" id="deG-8H-0IR"/>
                 <outlet property="viewPhoto" destination="k3p-tQ-QTc" id="XUZ-hd-bHo"/>
+                <outlet property="viewRepre" destination="iI7-0s-88C" id="fcX-hY-j8X"/>
                 <outlet property="viewSocial" destination="hO6-li-7Om" id="2Ra-Xh-vpg"/>
                 <outlet property="viewTel" destination="YiQ-Uq-5CX" id="GOU-0d-wlI"/>
                 <outlet property="viewWeb" destination="ZRo-9F-U89" id="pOl-z4-uaI"/>
@@ -317,6 +318,6 @@
         <image name="ic_repre_pe" width="50" height="65"/>
         <image name="ic_search_pe" width="51" height="52"/>
         <image name="ic_tel" width="51" height="69"/>
-        <image name="ic_web" width="47" height="47"/>
+        <image name="ic_web_pe" width="47" height="47"/>
     </resources>
 </document>

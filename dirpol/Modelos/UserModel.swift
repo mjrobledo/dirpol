@@ -15,6 +15,28 @@ struct ResponseUser : Mappable {
     var dirpol_peru : String?
     var dirpol_peru_codigo_acreditado : String?
 
+    var dirpol_colombia : String?
+    var dirpol_colombia_codigo_acreditado : String?
+    var avatar : String?
+    
+    var dirpolUrlCredential : String {
+        if dirpol_peru != nil {
+            return dirpol_peru!
+        } else if dirpol_colombia != nil {
+            return dirpol_colombia!
+        }
+        return ""
+    }
+    
+    var codigoAcreditado : String {
+        if dirpol_peru_codigo_acreditado != nil {
+            return dirpol_peru_codigo_acreditado!
+        } else if dirpol_colombia_codigo_acreditado != nil {
+            return dirpol_colombia_codigo_acreditado!
+        }
+        return ""
+    }
+    
     init?(map: Map) {
 
     }
@@ -24,6 +46,10 @@ struct ResponseUser : Mappable {
         usuario <- map["usuario"]
         dirpol_peru <- map["dirpol_peru"]
         dirpol_peru_codigo_acreditado <- map["dirpol_peru_codigo_acreditado"]
+        
+        dirpol_colombia <- map["dirpol_colombia"]
+        dirpol_colombia_codigo_acreditado <- map["dirpol_colombia_codigo_acreditado"]
+        avatar <- map["avatar"]
     }
 
 }
@@ -51,13 +77,13 @@ struct User : Mappable {
     var fecha_alta : String?
     var fecha_caducidad : String?
     var razon_social : String?
-
+    
+    
     init?(map: Map) {
 
     }
 
     mutating func mapping(map: Map) {
-
         usuario_id <- map["usuario_id"]
         tipo_documento_identidad_id <- map["tipo_documento_identidad_id"]
         entidad_id <- map["entidad_id"]
@@ -80,6 +106,7 @@ struct User : Mappable {
         fecha_alta <- map["fecha_alta"]
         fecha_caducidad <- map["fecha_caducidad"]
         razon_social <- map["razon_social"]
+        
     }
 
     func getName() -> String {
@@ -94,6 +121,7 @@ struct RequestLogin : Mappable {
     var empresa_pais_id = Api.BusinessCountryID
     var empresa_id = Api.BusinessID
     var pais_id = Api.CountryID
+    var imei = ""
     
     init?(map: Map) {   }
     init() { }
@@ -105,7 +133,7 @@ struct RequestLogin : Mappable {
         empresa_pais_id <- map["empresa_pais_id"]
         empresa_id <- map["empresa_id"]
         pais_id <- map["pais_id"]
-    
+        imei <- map["imei"]
     }
 }
 
@@ -113,7 +141,9 @@ struct ResponseLogin : Mappable {
     var access_token = ""
     var token_type = ""
     var expires_at = ""
-    var error: ResponseErrorsLogin?
+    
+    var status = 500
+    var message = ""
     
     init?(map: Map) {   }
     init() { }
@@ -122,7 +152,9 @@ struct ResponseLogin : Mappable {
         access_token <- map["access_token"]
         token_type <- map["token_type"]
         token_type <- map["token_type"]
-        error <- map["errors"]
+       
+        status <- map["status"]
+        message <- map["message"]
     }
 }
 
@@ -162,9 +194,9 @@ struct ResponsePanel : Mappable {
 
 
 struct ResponseErrorsLogin : Mappable {
-    var password : [String]?
-    var usuario : [String]?
-    var email : [String]?
+    var password : [String] = []
+    var usuario : [String] = []
+    var email : [String] = []
     init?(map: Map) {
 
     }
@@ -189,6 +221,23 @@ struct ErrorsLogin : Mappable {
     mutating func mapping(map: Map) {
         usuario <- map["usuario"]
         password <- map["password"]
+    }
+
+}
+
+
+struct ResponsePhoto : Mappable {
+    var status : Int?
+    var message : String?
+    var photoUrl : String?
+
+    init?(map: Map) {
+
+    }
+    mutating func mapping(map: Map) {
+        status <- map["status"]
+        message <- map["message"]
+        photoUrl <- map["data"]
     }
 
 }

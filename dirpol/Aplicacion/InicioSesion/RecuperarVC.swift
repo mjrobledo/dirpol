@@ -48,6 +48,7 @@ class RecuperarVC: UIViewController , UITextFieldDelegate{
         let tap1 = UITapGestureRecognizer(target: self, action: #selector(hideKeyBoard))
         self.viewForm.addGestureRecognizer(tap1)
         self.configScreen()
+        self.getBusiness()
     }
     
     private func configScreen(){
@@ -82,20 +83,40 @@ class RecuperarVC: UIViewController , UITextFieldDelegate{
         }
     }
     
+    private func getBusiness() {
+        SVProgressHUD.show()
+        Singleton.instance.services.getBussiness(method: .get, header: nil, completion: { (response) in
+            SVProgressHUD.dismiss()
+            if response != nil {
+                if let b = response?.data?.first {
+                    Singleton.instance.business = b
+                }
+            } else {
+                Util().enviarAlerta(mensaje: "Error al descargar configuración de la empresa", titulo: "Intenta más tarde", controller: self)
+            }
+        })
+    }
+    
     @objc func hideKeyBoard(){
         self.view.endEditing(true)
     }
     
      @IBAction func call(_ sender: Any) {
-         Util.llamar(tel: "+5115006000", viewController: self)
+        if let tel = Singleton.instance.business.telefono {
+            Util.llamar(tel: tel, viewController: self)
+        }
      }
          
      @IBAction func whatsapp(_ sender: Any) {
-         Util.openWhatsapp()
+        if let wsp = Singleton.instance.business.whatsapp {
+            Util.openWhatsapp(number: wsp)
+        }
      }
      
      @IBAction func facebook(_ sender: Any) {
-         Util.openFB()
+        if let facebook = Singleton.instance.business.whatsapp {
+            Util.openFB(idFacebook: facebook)
+        }
      }
 
     @IBAction func volver(_ sender: Any) {
@@ -140,7 +161,7 @@ class RecuperarVC: UIViewController , UITextFieldDelegate{
                 if response == nil {
                     Util().enviarAlerta(mensaje:  .ErrorEnElServicio, titulo: .Alerta, controller: self)
                 } else if response?.errors?.email != nil {
-                    Util().enviarAlerta(mensaje:  (response?.errors?.email?.first)!, titulo: .Alerta, controller: self)
+                    Util().enviarAlerta(mensaje:  (response?.errors?.email.first)!, titulo: .Alerta, controller: self)
                 }
             }
         }

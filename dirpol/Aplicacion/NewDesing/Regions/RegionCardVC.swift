@@ -9,7 +9,8 @@
 import UIKit
 
 protocol RegionCardVCDelegate {
-    func selectedOption(option: SelectOption)
+    func selectedOption(option: NivelOption)
+    func filter(entidadID : [String])
 }
 
 class RegionCardVC: UIViewController {
@@ -30,24 +31,43 @@ class RegionCardVC: UIViewController {
     
     @IBOutlet weak var collView: UICollectionView!
     
-    var filter: [Dependencies] = []
+    @IBOutlet weak var viewN1: UIView!
+    @IBOutlet weak var viewN2: UIView!
+    @IBOutlet weak var viewN3: UIView!
+    @IBOutlet weak var viewN4: UIView!
+    
+    @IBOutlet weak var lblNivel1: UITextField!
+    @IBOutlet weak var lblNivel2: UITextField!
+    @IBOutlet weak var lblNivel3: UITextField!
+    @IBOutlet weak var lblNivel4: UITextField!
+    
+    @IBOutlet weak var btnNivel1: UIButton!
+    @IBOutlet weak var btnNivel2: UIButton!
+    @IBOutlet weak var btnNivel3: UIButton!
+    @IBOutlet weak var btnNivel4: UIButton!
+    
+    //var filter: [Dependencies] = []
+    var items: [TypeEntity] = []
+    private var entidades : [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configScreen()
+        viewN1.isHidden = true
+        viewN2.isHidden = true
+        viewN3.isHidden = true
+        viewN4.isHidden = true
         
         collView.register(UINib(nibName: "CellOption", bundle: nil), forCellWithReuseIdentifier: "cellOption")
-        filter.append(Dependencies(title: "Bomberos", icon: #imageLiteral(resourceName: "ic_firefighter")))
-        filter.append(Dependencies(title: "Comisaria", icon: #imageLiteral(resourceName: "ic_police")))
-        filter.append(Dependencies(title: "Hospitales", icon: #imageLiteral(resourceName: "ic_hospital")))
-        filter.append(Dependencies(title: "Serenazgos", icon: #imageLiteral(resourceName: "escudo_cara_principal")))
-        filter.append(Dependencies(title: "Comisaria", icon: #imageLiteral(resourceName: "ic_police")))
-        filter.append(Dependencies(title: "Hospitales", icon: #imageLiteral(resourceName: "ic_hospital")))
-        filter.append(Dependencies(title: "Serenazgos", icon: #imageLiteral(resourceName: "escudo_cara_principal")))
+       
         
-        if filter.count > 4 {
+    }
+    
+    func loadTypes() {
+        if items.count > 4 {
             stackF.constant = 200
         }
+        self.collView.reloadData()
     }
     
     func configScreen() {
@@ -62,41 +82,47 @@ class RegionCardVC: UIViewController {
     }
 
     @IBAction func openSelect(_ sender: UIButton) {
-        switch sender {
-        case btnProvince:
-            self.delegate.selectedOption(option: .depto)
-        case btnProvince:
-            self.delegate.selectedOption(option: .province)
-        case btnCity:
-            self.delegate.selectedOption(option: .city)
-        case btnDistrict:
-            self.delegate.selectedOption(option: .districto)
-        default:
-            self.delegate.selectedOption(option: .depto)
+        let n = NivelOption(rawValue: sender.tag)
+        self.delegate.selectedOption(option: n!)
+    }
+    
+    @IBAction func filter(_ sender: UIButton) {
+        if lblNivel3.text!.isEmpty || entidades.isEmpty {
+            Util().enviarAlerta(mensaje: "Todos los campos son obligatorios", titulo: .Alerta, controller: self)
+        } else {
+            self.delegate.filter(entidadID: self.entidades)
         }
     }
 }
 
-enum SelectOption {
-    case depto
-    case province
-    case city
-    case districto
+enum NivelOption : Int {
+    case Nivel1 = 1
+    case Nivel2 = 2
+    case Nivel3 = 3
+    case Nivel4 = 4
 }
 
 extension RegionCardVC : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return filter.count
+        return items.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellOption", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellOption", for: indexPath) as! CellOption
         let title: UILabel = cell.viewWithTag(2) as! UILabel
         let img: UIImageView = cell.viewWithTag(1) as! UIImageView
         
-        let item = filter[indexPath.row]
-        title.text = item.title
-        img.image = item.icon
+        let item = items[indexPath.row]
+        title.text = item.descripcion
+        img.imageFromServerURL(urlString: item.ruta_icono_seleccionado!, defaultImage: UIImage(named: "LOGO2"))
+        
+        if item.selected {
+            cell.viewButton.backgroundColor = UIColor.cPrincipal()
+            title.textColor = .white
+        } else {
+            cell.viewButton.backgroundColor = UIColor.white
+            title.textColor = .cPrincipal()
+        }
         
         return cell
     }
@@ -105,6 +131,19 @@ extension RegionCardVC : UICollectionViewDelegate, UICollectionViewDataSource, U
         
         let width = collectionView.frame.width / 4
         return CGSize(width: width, height: width)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let item = items[indexPath.row]
+        item.selected = !item.selected
+        
+        if item.selected {
+            entidades.append(item.tipo_entidad_id!)
+        } else {
+            entidades.removeAll(where: { $0 == item.tipo_entidad_id! })
+        }
+        
+        self.collView.reloadData()
     }
     
 }

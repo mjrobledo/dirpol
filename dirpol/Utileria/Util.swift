@@ -78,30 +78,37 @@ class Util: NSObject {
         }
     }
     
-   static func openWhatsapp() {
-        let phoneNumber =  "+5115006000" // you need to change this number
-        let appURL = URL(string: "https://api.whatsapp.com/send?phone=\(phoneNumber)")!
-        if UIApplication.shared.canOpenURL(appURL) {
-            if #available(iOS 10.0, *) {
-                UIApplication.shared.open(appURL, options: [:], completionHandler: nil)
-            }
-            else {
-                UIApplication.shared.openURL(appURL)
+    static func openWhatsapp(number : String) {
+    
+        let phoneNumber =  number // you need to change this number
+        if let appURL = URL(string: "https://api.whatsapp.com/send?phone=\(phoneNumber)") {
+            if UIApplication.shared.canOpenURL(appURL) {
+                if #available(iOS 10.0, *) {
+                    UIApplication.shared.open(appURL, options: [:], completionHandler: nil)
+                } else {
+                    UIApplication.shared.openURL(appURL)
+                }
+            } else {
+                // WhatsApp is not installed
             }
         } else {
-            // WhatsApp is not installed
+            print("URL not valid")
         }
+    
     }
     
-   static func openFB() {
-        let url = URL(string: "fb://profile/254320987943693")!
-        let application = UIApplication.shared
-        // Check if the facebook App is installed
-        if application.canOpenURL(url) {
-            application.open(url)
+    static func openFB(idFacebook: String) {
+        if let url = URL(string: "fb://profile/\(idFacebook)") {
+            let application = UIApplication.shared
+            // Check if the facebook App is installed
+            if application.canOpenURL(url) {
+                application.open(url)
+            } else {
+                // If Facebook App is not installed, open Safari with Facebook Link
+                application.open(URL(string: "https://de-de.facebook.com/apple")!)
+            }
         } else {
-            // If Facebook App is not installed, open Safari with Facebook Link
-            application.open(URL(string: "https://de-de.facebook.com/apple")!)
+            print("URL not valid")
         }
     }
     

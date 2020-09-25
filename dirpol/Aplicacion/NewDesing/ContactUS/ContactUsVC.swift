@@ -7,9 +7,9 @@
 //
 
 import UIKit
-import MessageUI
+import SVProgressHUD
 
-class ContactUsVC: UIViewController , listadoDelegate, MFMailComposeViewControllerDelegate, UITextFieldDelegate{
+class ContactUsVC: UIViewController , listadoDelegate, UITextFieldDelegate{
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var viewForm: UIView!
@@ -21,10 +21,9 @@ class ContactUsVC: UIViewController , listadoDelegate, MFMailComposeViewControll
     @IBOutlet weak var txtEmpresa: UITextField!
    // @IBOutlet weak var btnTema: UIButton!
     @IBOutlet weak var txtMensaje: UITextView!
+    @IBOutlet weak var txtAsunto: UITextField!
     @IBOutlet weak var imgCaptcha: UIImageView!
     
-    let req = requestContacto()
-    var mail:MFMailComposeViewController! = nil
     
      @IBOutlet weak var btnMenu: UIBarButtonItem!
        
@@ -42,9 +41,9 @@ class ContactUsVC: UIViewController , listadoDelegate, MFMailComposeViewControll
         self.viewForm.addGestureRecognizer(tap1)
         
         // Do any additional setup after loading the view.
-        txtNombre.text = ""
-        txtEmpresa.text = Variables.Perfil.Nombre
-        txtEmail.text = Variables.Perfil.Email
+        txtNombre.text = Singleton.instance.user.getName()
+        txtEmpresa.text = Singleton.instance.user.razon_social //Variables.Perfil.Nombre
+        txtEmail.text = Singleton.instance.user.email // Variables.Perfil.Email
         
         
     }
@@ -74,45 +73,38 @@ class ContactUsVC: UIViewController , listadoDelegate, MFMailComposeViewControll
                 Util().enviarAlerta(mensaje: .LaCuentaDeCorreoNoEsValida, titulo: .Alerta, controller: self)
                 return
             }
-            
-            req.Nombre = (txtNombre.text?.trim())!
-            req.Email = (txtEmail.text?.trim())!
-            req.Mensaje = txtMensaje.text.trim()
-            req.Contacto = (txtEmpresa.text?.trim())!
-           // req.Tema = (lblTema.text?.trim())!
-            
-            mail = MFMailComposeViewController()
-            if mail != nil{
-                mail.mailComposeDelegate = self
-                mail.setSubject("\(req.Tema) - \(req.Contacto)")
-                mail.setMessageBody(req.Mensaje, isHTML: false)
-                mail.setToRecipients(["mjrobledo@live.com.mx"])
-            
-                self.present(mail, animated: true, completion: nil)
-            }else{
-                Util().enviarAlerta(mensaje: .ParaContactarnosEsNecesario, titulo: .Alerta, controller: self)
+            var reqC = RequestContact()
+            reqC.nombres_apellidos = (txtNombre.text?.trim())!
+            reqC.email = (txtEmail.text?.trim())!
+            reqC.asunto = txtAsunto.text!.trim()
+            reqC.mesaje = txtMensaje.text.trim()
+            SVProgressHUD.show()
+            Singleton.instance.services.setContact(request: reqC) { (response) in
+                SVProgressHUD.dismiss()
+                if response != nil && response?.status == 200 {
+                    Util().enviarAlerta(mensaje: "Mensaje enviado", titulo: "Exito", controller: self)
+                    self.clearData()
+                } else {
+                    if response == nil {
+                        Util().enviarAlerta(mensaje: .ErrorEnElServicio, titulo: .Alerta, controller: self)
+                    } else if response != nil {
+                        Util().enviarAlerta(mensaje: response!.message, titulo: .Alerta, controller: self)
+                    }
+                }
             }
+            
         }else{
             Util().enviarAlerta(mensaje: .TodosLosCamposSonObligatorios, titulo: .Alerta, controller: self)
         }
         
     }
     
-    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
-        switch result {
-        case MFMailComposeResult.sent :
-            self.viewCorrecto.frame = self.view.frame
-            self.view.addSubview(self.viewCorrecto)
-            mail.dismiss(animated: true, completion: nil)
-            
-        case MFMailComposeResult.failed:
-            Util().enviarAlerta(mensaje: error.debugDescription, titulo: .Alerta, controller: self)
-        case MFMailComposeResult.cancelled:
-            mail.dismiss(animated: true, completion: nil)
-            
-        default:
-            mail.dismiss(animated: true, completion: nil)
-        }
+    private func clearData() {
+        txtMensaje.text = ""
+        txtAsunto.text = ""
+        txtEmail.text = ""
+        txtNombre.text = ""
+        txtEmpresa.text = ""
     }
     
     private func validaCampos() -> Bool{
