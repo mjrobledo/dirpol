@@ -33,7 +33,9 @@ class IniciarSesionVC: UIViewController, UITextFieldDelegate {
         //txtNombre.text = "29478"
         //txtPassword.text = "usuario2018"
         
-        txtNombre.text = "earlene83"
+        //txtNombre.text = "ernesto10"
+        txtNombre.text = "ckozey"
+        
         txtPassword.text = "password"
         
         
@@ -113,7 +115,9 @@ class IniciarSesionVC: UIViewController, UITextFieldDelegate {
                                 Singleton.instance.user = response?.usuario
                                 Singleton.instance.codeAcred = (response?.codigoAcreditado)!
                                 Singleton.instance.imgCredential = (response?.dirpolUrlCredential)!
-                                Singleton.instance.avatar = (response?.avatar)!
+                                if let avatar = response?.avatar {
+                                    Singleton.instance.avatar = avatar
+                                }
                                 self.getBusiness()
                             } else {
                                 Util().enviarAlerta(mensaje:  .ErrorEnElServicio, titulo: .Alerta, controller: self)
@@ -176,8 +180,17 @@ class IniciarSesionVC: UIViewController, UITextFieldDelegate {
             if response != nil {
                 if let b = response?.data?.first {
                     Singleton.instance.business = b
+                    if Singleton.instance.user.days <= 0 {
+                        let alert = UIAlertController(title: "Suscripción Expirada", message: "Para seguir usando DIRPOL Perú sin interrupción, reactívelo ahora.", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "Reactivar", style: .default, handler: { (action) in
+                            self.openRenew()
+                        }))
+                        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+                        self.present(alert, animated: true, completion: nil)
+                    } else {
                         self.performSegue(withIdentifier: "segueInicio", sender: nil)
                     }
+                }
             } else {
                 Util().enviarAlerta(mensaje: "Error al descargar configuración de la empresa", titulo: "Intenta más tarde", controller: self)
                 }
@@ -195,7 +208,6 @@ class IniciarSesionVC: UIViewController, UITextFieldDelegate {
             Servicios().bloquearCuenta(usuario: usuario) { repuesta  in
                 if repuesta?.Codigo == structCodigo.Correcto{
                     Util().enviarAlerta(mensaje: " Bloqueo se completó con éxito. Por favor contacte con el administrador del sistema.", titulo: "Mensaje", controller: self)
-                    
                 }
             }
             
@@ -237,6 +249,14 @@ class IniciarSesionVC: UIViewController, UITextFieldDelegate {
         return true
     }
     
+    private func openRenew() {
+        if Api.config_app == .Colombia {
+            self.performSegue(withIdentifier: "segueColombia", sender: nil)
+        } else {
+            self.performSegue(withIdentifier: "seguePeru", sender: nil)
+        }
+    }
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -250,6 +270,9 @@ class IniciarSesionVC: UIViewController, UITextFieldDelegate {
         } else if segue.identifier == strSegue.RecuperaUsuario {
             let vc = navVC?.viewControllers.first as! RecuperarVC
             vc.texto = .NoRecueraTuUsuario
+        } else if segue.identifier == "segueColombia" ||  segue.identifier == "seguePeru"{
+            let svc = segue.destination as! RenewMembershipVC
+            svc.setPopPup()
         }
     }
     

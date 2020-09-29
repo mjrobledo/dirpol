@@ -22,6 +22,7 @@ class CredentialVC: UIViewController {
     @IBOutlet weak var lblAlertExpired: UILabel!
     
     @IBOutlet weak var imgCredential: UIImageView!
+    @IBOutlet weak var imgProfile: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +35,19 @@ class CredentialVC: UIViewController {
         self.loadForm()
         //viewRenew.isHidden = true
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        if Singleton.instance.user.image == nil {
+            if let avatar = Singleton.instance.avatar {
+                DispatchQueue.main.async {
+                    self.imgProfile.imageFromServerURL(urlString: avatar, defaultImage: #imageLiteral(resourceName: "img_man"))
+                }
+            }
+        } else {
+            imgProfile.image = Singleton.instance.user.image
+        }
     }
     
     private func loadForm() {

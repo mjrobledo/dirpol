@@ -249,6 +249,7 @@ extension RegionsVC : ListDelegate {
         }
     }
 }
+
 extension RegionsVC: GMSMapViewDelegate {
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
         self.labelDepto = marker.title!

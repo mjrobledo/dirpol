@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MessageUI
 
 protocol CardViewControllerDelegate {
     func selectedDirectory(people : EntidadPersonal)
@@ -176,7 +177,11 @@ extension CardViewController: UITableViewDataSource, UITableViewDelegate {
                 cell.viewWeb.isHidden = principalWeb.isEmpty
                 cell.viewEmail.isHidden = principalEmail.isEmpty
                 cell.viewSocial.isHidden = principalSocial.isEmpty
-                cell.viewRepre.isHidden = (principalRepre != nil)
+                if principalRepre == nil {
+                    cell.viewRepre.isHidden = true
+                } else {
+                    cell.viewRepre.isHidden = false
+                }
                 cell.viewPhoto.isHidden = entity.entidad_sede_foto?.count == 0
                 cell.delegate = self
                 // cell.viewWeb.isHidden = true
@@ -232,7 +237,9 @@ extension CardViewController: UITableViewDataSource, UITableViewDelegate {
 
 extension CardViewController: DirectAccessDelegate {
     func repre(identifier: Int) {
-        print("Repre")
+        DispatchQueue.main.async {
+            self.delegate.selectedDirectory(people: self.principalRepre)
+        }
     }
     
     func call(identifier: Int) {
@@ -242,10 +249,27 @@ extension CardViewController: DirectAccessDelegate {
     
     func web(identifier: Int) {
         print("WEB")
+        
+        if let url = URL(string: principalWeb.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!) {
+            if UIApplication.shared.canOpenURL(url) {
+                UIApplication.shared.open(url, options: [:])
+            }
+        } else {
+            Util().enviarAlerta(mensaje: "URL (\(principalWeb)) no disponible", titulo: .Alerta, controller: self)
+        }
     }
     
     func eMail(identifier: Int) {
         print("EMAIL")
+        if MFMailComposeViewController.canSendMail() {
+            let mail = MFMailComposeViewController()
+            mail.mailComposeDelegate = self
+            mail.setToRecipients([principalEmail])
+            mail.setMessageBody("<p>DIRPOL \(Api.config_app)</p>", isHTML: true)
+            present(mail, animated: true)
+        } else {
+            Util().enviarAlerta(mensaje: "Email (\(principalEmail)) no disponible", titulo: .Alerta, controller: self)
+        }
     }
     
     func photo(identifier: Int) {
@@ -255,6 +279,15 @@ extension CardViewController: DirectAccessDelegate {
     
     func socialMedia(identifier: Int) {
         print("Social Media")
+        if let url = URL(string: principalSocial.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!) {
+            if UIApplication.shared.canOpenURL(url) {
+                UIApplication.shared.open(url, options: [:])
+            } else {
+                Util().enviarAlerta(mensaje: "URL (\(principalSocial) no disponible", titulo: .Alerta, controller: self)
+            }
+        } else {
+            Util().enviarAlerta(mensaje: "URL (\(principalSocial) no disponible", titulo: .Alerta, controller: self)
+        }
     }
     
     
@@ -296,3 +329,6 @@ enum TypeCellDetail {
     }
 }
  
+extension CardViewController: MFMailComposeViewControllerDelegate {
+    
+}

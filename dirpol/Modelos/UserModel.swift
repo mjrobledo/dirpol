@@ -77,7 +77,7 @@ struct User : Mappable {
     var fecha_alta : String?
     var fecha_caducidad : String?
     var razon_social : String?
-    
+    var image: UIImage?
     
     init?(map: Map) {
 
@@ -112,6 +112,14 @@ struct User : Mappable {
     func getName() -> String {
         return "\((nombres)!) \((apellidos)!)"
     }
+    
+    var days: Int {
+           let calendar = NSCalendar.current
+        let date1 = calendar.startOfDay(for: Date())
+        let date2 = calendar.startOfDay(for: self.fecha_caducidad!.date)
+           let components = calendar.dateComponents([.day], from: date1, to: date2)
+        return components.day!
+       }
 }
 
 struct RequestLogin : Mappable {

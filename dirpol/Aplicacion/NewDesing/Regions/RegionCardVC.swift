@@ -59,8 +59,6 @@ class RegionCardVC: UIViewController {
         viewN4.isHidden = true
         
         collView.register(UINib(nibName: "CellOption", bundle: nil), forCellWithReuseIdentifier: "cellOption")
-       
-        
     }
     
     func loadTypes() {

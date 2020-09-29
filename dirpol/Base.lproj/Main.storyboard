@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oCS-BW-NrT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oCS-BW-NrT">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -399,11 +399,29 @@
                         <outlet property="txtPassword" destination="6qh-O5-TdE" id="Cni-ae-XsA"/>
                         <segue destination="OMp-v7-3ka" kind="presentation" identifier="segueInicio2" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="AWL-qE-Ito"/>
                         <segue destination="WXq-fq-m4Q" kind="presentation" identifier="segueInicio" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="uzX-Ux-Am5"/>
+                        <segue destination="A8j-J7-NHS" kind="presentation" identifier="segueColombia" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="hXZ-ft-PZh"/>
+                        <segue destination="xEy-YZ-Qqz" kind="presentation" identifier="seguePeru" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="UAN-lc-FZs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wWV-UP-aPd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1071.0144927536232" y="832.36607142857144"/>
+        </scene>
+        <!--renewIDP-->
+        <scene sceneID="zHK-yZ-AjS">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Credential" referencedIdentifier="renewIDP" id="xEy-YZ-Qqz" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A2X-ZU-8o4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1624" y="533"/>
+        </scene>
+        <!--renewIDC-->
+        <scene sceneID="2cO-zZ-znn">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Credential" referencedIdentifier="renewIDC" id="A8j-J7-NHS" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cf2-d9-nUz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1624" y="579"/>
         </scene>
         <!--Buscar-->
         <scene sceneID="gEY-jQ-za6">
@@ -701,6 +719,10 @@
             <point key="canvasLocation" x="-460.86956521739131" y="824.33035714285711"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="iFX-W9-GHh"/>
+    </inferredMetricsTieBreakers>
+    <color key="tintColor" red="0.0" green="0.40784313729999999" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>
         <image name="LOGO2" width="632" height="239"/>
         <image name="ic_ambulancia" width="117" height="85"/>
@@ -720,8 +742,4 @@
         <image name="logo_v2" width="396" height="148"/>
         <image name="menu_screen-1" width="1181" height="2362"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="iFX-W9-GHh"/>
-    </inferredMetricsTieBreakers>
-    <color key="tintColor" red="0.0" green="0.40784313729999999" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

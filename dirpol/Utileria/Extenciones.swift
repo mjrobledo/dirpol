@@ -308,6 +308,26 @@ extension UIImageView {
             
         }).resume()
     }
+    
+    public func imageProfileFromServerURL(urlString: String, defaultImage : UIImage?) {
+        if let di = defaultImage {
+            self.image = di
+        }
+        
+        URLSession.shared.dataTask(with: NSURL(string: urlString)! as URL, completionHandler: { (data, response, error) -> Void in
+            
+            if error != nil {
+                print(error ?? "error")
+                return
+            }
+            DispatchQueue.main.async(execute: { () -> Void in
+                let image = UIImage(data: data!)
+                self.image = image
+                Singleton.instance.user.image = image
+            })
+            
+        }).resume()
+    }
 }
  
 /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::

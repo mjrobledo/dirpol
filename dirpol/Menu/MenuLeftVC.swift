@@ -43,11 +43,14 @@ class MenuLeftVC: UIViewController, UITableViewDataSource, UITableViewDelegate, 
         tblMenu.reloadData()
         self.lblUserName.text = Singleton.instance.user.getName()
         lblID.text = Singleton.instance.codeAcred
-        
-        if let avatar = Singleton.instance.avatar {
-            DispatchQueue.main.async {
-                self.imgProfile.imageFromServerURL(urlString: avatar, defaultImage: #imageLiteral(resourceName: "img_man"))
+        if Singleton.instance.user.image == nil {
+            if let avatar = Singleton.instance.avatar {
+                DispatchQueue.main.async {
+                    self.imgProfile.imageProfileFromServerURL(urlString: avatar, defaultImage: #imageLiteral(resourceName: "img_man"))
+                }
             }
+        } else {
+            self.imgProfile.image = Singleton.instance.user.image
         }
         
         if !Singleton.instance.user.fecha_caducidad!.isEmpty {
@@ -285,7 +288,6 @@ extension MenuLeftVC: CropViewControllerDelegate {
         { (result) in
             switch result {
             case .success(let upload, _, _):
-
                 upload.uploadProgress(closure: { (progress) in
                     print("Upload Progress: \(progress.fractionCompleted)")
                 })
@@ -294,13 +296,13 @@ extension MenuLeftVC: CropViewControllerDelegate {
                      print((resp.result.value)!)
                     if resp.value != nil && (resp.value?.status)! == 201 {
                         self.imgProfile.image = image
+                        Singleton.instance.user.image = image
                         Singleton.instance.avatar = (resp.value?.photoUrl)!
                         Util().enviarAlerta(mensaje:"Foto de perfil modificada correctamente", titulo:  "Exito", controller: self)
                     } else {
                         Util().enviarAlerta(mensaje: "", titulo: "No fue posible subir la foto de perfil, Intenta más tarde", controller: self)
                     }
                 }
-
             case .failure(let encodingError):
                 print(encodingError)
             }
