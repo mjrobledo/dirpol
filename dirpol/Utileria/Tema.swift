@@ -78,7 +78,7 @@ extension UIColor {
         case .Colombia:
             return UIColor(red: 21/255, green: 44/255, blue: 104/255, alpha: 1.0)
         case .Peru:
-            return UIColor(red: 45/255, green: 81/255, blue: 46/255, alpha: 1.0)
+            return UIColor(red: 0/255, green: 90/255, blue: 32/255, alpha: 1.0)
         case .Mexico:
             return UIColor(red: 45/255, green: 81/255, blue: 46/255, alpha: 1.0)
         }
