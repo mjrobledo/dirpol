@@ -128,6 +128,7 @@ class MenuLeftVC: UIViewController, UITableViewDataSource, UITableViewDelegate, 
         
         let alertController = UIAlertController(title: .CerrarSesion , message: .AlertaSesion, preferredStyle: UIAlertController.Style.alert)
         let siAction = UIAlertAction(title: .Si, style: UIAlertAction.Style.default) { (result : UIAlertAction) -> Void in
+            Services.deleteSesion()
             self.dismiss(animated: true, completion: nil)
         }
         

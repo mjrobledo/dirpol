@@ -23,6 +23,21 @@ class Services: NSObject {
     static func getHeader() -> [String : String] {
         return   ["Authorization": "Bearer \(Singleton.instance.services.accessToken)" ]
     }
+    // MARK: - Login
+   func refreshToken( completion: @escaping (ResponseLogin?) -> ())
+    {
+        let urlAux = "\(Api.url_app)\(ApiService.refresh.rawValue)"
+        
+        Services.manager.request(urlAux,method: .post, parameters: nil, encoding: JSONEncoding.default, headers: Services.getHeader() ).responseObject { (response: DataResponse<ResponseLogin>) in
+            if response.response != nil && response.result.isSuccess {
+                let forecastArray: ResponseLogin = response.result.value!
+                //Singleton.instance.services.accessToken = forecastArray.access_token
+                completion(forecastArray)
+            }else{
+                completion(nil)
+            }
+        }
+    }
     
     func login(user:RequestLogin, completion: @escaping (ResponseLogin?) -> ())
     {
@@ -32,7 +47,9 @@ class Services: NSObject {
         Services.manager.request(urlAux,method: .post, parameters:parametros, encoding: JSONEncoding.default, headers:[:] ).responseObject { (response: DataResponse<ResponseLogin>) in
             if response.response != nil && response.result.isSuccess {
                 let forecastArray: ResponseLogin = response.result.value!
-                Singleton.instance.services.accessToken = forecastArray.access_token
+                if !forecastArray.access_token.isEmpty {
+                    Singleton.instance.services.accessToken = forecastArray.access_token                    
+                }
                 completion(forecastArray)
             }else{
                 completion(nil)
@@ -165,6 +182,8 @@ class Services: NSObject {
         }
     }
     
+   
+    
     func getBussiness(method : HTTPMethod, header: [String : String]?, completion: @escaping (ResponseBusiness?) -> ())
     {
        // let p = BusinessR().toJSONString(prettyPrint: false)
@@ -266,3 +285,23 @@ class Services: NSObject {
 }
 
 
+extension Services {
+    static  func saveSesion() {
+        UserDefaults.standard.set(Singleton.instance.services.accessToken, forKey: "tokenRefresh")
+    }
+    
+    static func getSesionToken() -> String {
+        guard let tokenRefresh = UserDefaults.standard.object(forKey: "tokenRefresh") as? String else{
+            return ""
+        }
+        
+        if tokenRefresh.isEmpty {
+            return ""
+        }
+        return tokenRefresh
+    }
+    
+    static func deleteSesion() {
+        UserDefaults.standard.set("", forKey: "tokenRefresh")
+    }
+}

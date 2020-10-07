@@ -25,4 +25,5 @@ enum ApiService : String {
     case niveles = "/api/ubicacion-geografica/niveles?query={}&limit=10&ascending=1&page=1&byColumn=1"
     case sedes = "/api/entidades/sedes?query={}&limit=100&ascending=1&page=1&byColumn=1"
     case photo = "/api/cuenta/foto"
+    case refresh = "/api/refresh"
 }

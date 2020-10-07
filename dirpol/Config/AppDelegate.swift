@@ -29,7 +29,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.tintColor = UIColor.cPrincipal()        
         GMSServices.provideAPIKey(Api.ProvideAPIKey)
  
-        
+
+        let token = Services.getSesionToken().trim()
+        if !token.isEmpty {
+            Singleton.instance.services.accessToken = token
+        }                
         return true
     }
 

@@ -34,11 +34,31 @@ class IniciarSesionVC: UIViewController, UITextFieldDelegate {
         //txtPassword.text = "usuario2018"
         
         //txtNombre.text = "ernesto10"
-        txtNombre.text = "ckozey"
-        
+        txtNombre.text = "rrveitia"
         txtPassword.text = "password"
         
+        self.validateSesion()
+    }
+    
+    private func validateSesion() {
         
+        if !Singleton.instance.services.accessToken.isEmpty {
+            SVProgressHUD.setStatus("Iniciando sesión")
+            Singleton.instance.services.refreshToken { (response) in
+                SVProgressHUD.dismiss()
+                if response != nil && response?.status == 200 {
+                    Singleton.instance.services.accessToken = response!.access_token
+                    self.btnRemember.tag = 1
+                    self.userLogin()
+                } else {
+                    if response != nil {
+                        Util().enviarAlerta(mensaje: (response?.message)!, titulo: .Alerta, controller: self)
+                    } else {
+                         Util().enviarAlerta(mensaje:  .ErrorEnElServicio, titulo: .Alerta, controller: self)
+                    }
+                }
+            }
+        }
     }
     
     private func configScreen(){
@@ -83,94 +103,101 @@ class IniciarSesionVC: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func iniciarSesion(_ sender: Any) {
+        self.userLogin()
+    }
+    
+    private func userLogin() {
         let usuario = (txtNombre.text?.trim())!
-        let password = (txtPassword.text?.trim())!
-        var reqLogin : RequestLogin = RequestLogin()
-        reqLogin.usuario = usuario
-        reqLogin.password = password
-        reqLogin.remember_me = btnRemember.tag
-        if let uuid = UIDevice.current.identifierForVendor?.uuidString {
-            reqLogin.imei = uuid
-        }
-        
-        if validaCampos(){
-            DispatchQueue.main.async {
-                SVProgressHUD.show(withStatus: "Iniciando sesión")
-                self.btnIniciaSesion.isEnabled = false
-                self.OcultarTeclado()
-                //self.performSegue(withIdentifier: "segueInicio", sender: nil)
-            }
-            
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                
-                self.btnIniciaSesion.isEnabled = true
-                
-                //Variables.Perfil = Usuario().getUsuarioPrueba()
+               let password = (txtPassword.text?.trim())!
+               var reqLogin : RequestLogin = RequestLogin()
+               reqLogin.usuario = usuario
+               reqLogin.password = password
+               reqLogin.remember_me = btnRemember.tag
+               if let uuid = UIDevice.current.identifierForVendor?.uuidString {
+                   reqLogin.imei = uuid
+               }
                
-                Singleton.instance.services.login(user: reqLogin) { (response) in
-                    if response != nil && !(response?.access_token.isEmpty)! {
-                        Singleton.instance.services.getUser { (response) in
-                            if response != nil {
-                                SVProgressHUD.dismiss()
-                                Singleton.instance.user = response?.usuario
-                                Singleton.instance.codeAcred = (response?.codigoAcreditado)!
-                                Singleton.instance.imgCredential = (response?.dirpolUrlCredential)!
-                                if let avatar = response?.avatar {
-                                    Singleton.instance.avatar = avatar
-                                }
-                                self.getBusiness()
-                            } else {
-                                Util().enviarAlerta(mensaje:  .ErrorEnElServicio, titulo: .Alerta, controller: self)
-                            }
-                        }
-                    } else {
-                        SVProgressHUD.dismiss()
-                        if response != nil {
-                            Util().enviarAlerta(mensaje: (response?.message)!, titulo: .Alerta, controller: self)
-                            
-                        } else {
-                             Util().enviarAlerta(mensaje:  .ErrorEnElServicio, titulo: .Alerta, controller: self)
-                        }
-                    }
-                }
-                
-                /*Servicios().inicioSesion(usuario: reqLogin, completion: { respuesta  in
-                    SVProgressHUD.dismiss()
-                    if respuesta != nil {
-                        switch respuesta?.Codigo {
-                        case structCodigo.Correcto :
-                            Variables.Perfil = (respuesta?.Usuario)!
-                            Variables.Perfil.Password = (self.txtPassword.text?.trim())!
+               if validaCampos(){
+                   DispatchQueue.main.async {
+                       SVProgressHUD.show(withStatus: "Iniciando sesión")
+                       self.btnIniciaSesion.isEnabled = false
+                       self.OcultarTeclado()
+                       //self.performSegue(withIdentifier: "segueInicio", sender: nil)
+                   }
+                   
+                   DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                       
+                       self.btnIniciaSesion.isEnabled = true
+                       
+                       //Variables.Perfil = Usuario().getUsuarioPrueba()
+                      
+                       Singleton.instance.services.login(user: reqLogin) { (response) in
+                           if response != nil && !(response?.access_token.isEmpty)! {
+                               Singleton.instance.services.getUser { (response) in
+                                   if response != nil {
+                                       SVProgressHUD.dismiss()
+                                       Singleton.instance.user = response?.usuario
+                                       Singleton.instance.codeAcred = (response?.codigoAcreditado)!
+                                       Singleton.instance.imgCredential = (response?.dirpolUrlCredential)!
+                                       if let avatar = response?.avatar {
+                                           Singleton.instance.avatar = avatar
+                                       }
+                                       self.getBusiness()
+                                       if reqLogin.remember_me == 1 {
+                                           Services.saveSesion()
+                                       }
+                                   } else {
+                                       Util().enviarAlerta(mensaje:  .ErrorEnElServicio, titulo: .Alerta, controller: self)
+                                   }
+                               }
+                           } else {
+                               SVProgressHUD.dismiss()
+                               if response != nil {
+                                   Util().enviarAlerta(mensaje: (response?.message)!, titulo: .Alerta, controller: self)
+                                   
+                               } else {
+                                    Util().enviarAlerta(mensaje:  .ErrorEnElServicio, titulo: .Alerta, controller: self)
+                               }
+                           }
+                       }
+                       
+                       /*Servicios().inicioSesion(usuario: reqLogin, completion: { respuesta  in
+                           SVProgressHUD.dismiss()
+                           if respuesta != nil {
+                               switch respuesta?.Codigo {
+                               case structCodigo.Correcto :
+                                   Variables.Perfil = (respuesta?.Usuario)!
+                                   Variables.Perfil.Password = (self.txtPassword.text?.trim())!
+                                       self.performSegue(withIdentifier: "segueInicio", sender: nil)
+                               
+                               case structCodigo.UsuarioNoExiste :
+                                       Util().enviarAlerta(mensaje: "Error de autenticación", titulo: .Alerta, controller: self)
+                               
+                               case structCodigo.PasswordErronea :
+                                   self.controlIntentos()
+                                   Variables.IntentosDeLogin = Variables.IntentosDeLogin + 1
+                               
+                               case structCodigo.CuentaBloqueada :
+                                   Util().enviarAlerta(mensaje: "Por seguridad su cuenta a sido bloqueada", titulo: .Alerta, controller: self)
+                                   
+                               default:
+                                   print("No hay opciones login")
+                               }
+                           }else{
+                               DispatchQueue.main.async {
+                               SVProgressHUD.dismiss()
+                               // Util().enviarAlerta(mensaje:  .ErrorEnElServicio, titulo: .Alerta, controller: self)
                                 self.performSegue(withIdentifier: "segueInicio", sender: nil)
-                        
-                        case structCodigo.UsuarioNoExiste :
-                                Util().enviarAlerta(mensaje: "Error de autenticación", titulo: .Alerta, controller: self)
-                        
-                        case structCodigo.PasswordErronea :
-                            self.controlIntentos()
-                            Variables.IntentosDeLogin = Variables.IntentosDeLogin + 1
-                        
-                        case structCodigo.CuentaBloqueada :
-                            Util().enviarAlerta(mensaje: "Por seguridad su cuenta a sido bloqueada", titulo: .Alerta, controller: self)
-                            
-                        default:
-                            print("No hay opciones login")
-                        }
-                    }else{
-                        DispatchQueue.main.async {
-                        SVProgressHUD.dismiss()
-                        // Util().enviarAlerta(mensaje:  .ErrorEnElServicio, titulo: .Alerta, controller: self)
-                         self.performSegue(withIdentifier: "segueInicio", sender: nil)
-                        }
-                    }
-                    
-                })*/
-               
-            }
-            
-        }else{
-            Util().enviarAlerta(mensaje: .TodosLosCamposSonObligatorios, titulo: .Alerta, controller: self)
-        }
+                               }
+                           }
+                           
+                       })*/
+                      
+                   }
+                   
+               }else{
+                   Util().enviarAlerta(mensaje: .TodosLosCamposSonObligatorios, titulo: .Alerta, controller: self)
+               }
     }
     
     private func getBusiness() {
