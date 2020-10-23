@@ -1,8 +1,8 @@
 //
-//  ConfigPeru.xcconfig
+//  ConfigPeruDebug.xcconfig
 //  dirpol
 //
-//  Created by Developer iOS on 7/7/20.
+//  Created by Developer iOS on 10/22/20.
 //  Copyright © 2020 gravittas. All rights reserved.
 //
 
@@ -11,9 +11,9 @@
 CONFIG_APP=Peru
 SLASH = /
 DASH = -
-URL_APP = https:$(SLASH)/sigip.portafolio.pe
+URL_APP = https:$(SLASH)/directoriopolicial.siti.tech
 ProvideAPIKey_APP = AIzaSyAxb0nBSc39zaJl2wPa0FIVybjO95ZxQEY
 LaunchScreen = LaunchScreen
-BusinessCountryID = 7b019c1f-1db8-4a80-8658-6213c1d87517
-BusinessID = 9030398b-c9f5-4fa9-ad2e-128b87ab8146
-CountryID = 577ac688-75d3-4e50-8425-6208d35c66df
+BusinessCountryID = 09c09d4b-42f9-4663-8da9-aece93c83a8d
+BusinessID = cb037f9d-9f09-4896-b2e9-edcf4ab5fc00
+CountryID = 3e0b531a-10d0-40da-84bb-575c39d4cc73

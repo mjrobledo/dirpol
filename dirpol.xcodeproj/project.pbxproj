@@ -220,6 +220,7 @@
 		47E937A125165869002A60B0 /* PhotoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCell.xib; sourceTree = "<group>"; };
 		47E937A525183DB9002A60B0 /* EntitySearchResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntitySearchResponse.swift; sourceTree = "<group>"; };
 		47E937A825198457002A60B0 /* RegionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegionModel.swift; sourceTree = "<group>"; };
+		67EA04C86A308ED75BCDA9C5 /* Pods-dirpol.peru_debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dirpol.peru_debug.xcconfig"; path = "Target Support Files/Pods-dirpol/Pods-dirpol.peru_debug.xcconfig"; sourceTree = "<group>"; };
 		6C3E98E1214C5746009FDF74 /* DIRPOL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DIRPOL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C3E98E4214C5746009FDF74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6C3E98E6214C5746009FDF74 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -247,6 +248,7 @@
 		8B1075F624D243CB00C50789 /* GeneralSearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSearchVC.swift; sourceTree = "<group>"; };
 		8B1075F824D243DC00C50789 /* GeneralSearchDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSearchDetailVC.swift; sourceTree = "<group>"; };
 		8B115EC624BECD2000C82CFB /* Credential.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Credential.storyboard; sourceTree = "<group>"; };
+		8B11D13C25420BB800F9AD2E /* ConfigPeruDebug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ConfigPeruDebug.xcconfig; sourceTree = "<group>"; };
 		8B19929224C36591003D788B /* AdvancedSearch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AdvancedSearch.storyboard; sourceTree = "<group>"; };
 		8B19929424C368F1003D788B /* AdvanceSearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvanceSearchVC.swift; sourceTree = "<group>"; };
 		8B19929724C36A0F003D788B /* ContactUs.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ContactUs.storyboard; sourceTree = "<group>"; };
@@ -293,6 +295,8 @@
 		90B03790D0990D7E4219AB21 /* Pods-dirpol.mexico.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dirpol.mexico.xcconfig"; path = "Target Support Files/Pods-dirpol/Pods-dirpol.mexico.xcconfig"; sourceTree = "<group>"; };
 		9BDB73251C6243509590301A /* Pods-dirpol-dirpolUITests.peru.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dirpol-dirpolUITests.peru.xcconfig"; path = "Target Support Files/Pods-dirpol-dirpolUITests/Pods-dirpol-dirpolUITests.peru.xcconfig"; sourceTree = "<group>"; };
 		B07D7F5F9B59EC8EE5077742 /* Pods-dirpolTests.mexico.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dirpolTests.mexico.xcconfig"; path = "Target Support Files/Pods-dirpolTests/Pods-dirpolTests.mexico.xcconfig"; sourceTree = "<group>"; };
+		BFF1FA5329CBE4AD9AE53496 /* Pods-dirpol-dirpolUITests.peru_debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dirpol-dirpolUITests.peru_debug.xcconfig"; path = "Target Support Files/Pods-dirpol-dirpolUITests/Pods-dirpol-dirpolUITests.peru_debug.xcconfig"; sourceTree = "<group>"; };
+		C0494798691E05D7BF0AD5BB /* Pods-dirpolTests.peru_debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dirpolTests.peru_debug.xcconfig"; path = "Target Support Files/Pods-dirpolTests/Pods-dirpolTests.peru_debug.xcconfig"; sourceTree = "<group>"; };
 		CB731EA2087CD5BCCD6C80F2 /* Pods-dirpol.peru.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dirpol.peru.xcconfig"; path = "Target Support Files/Pods-dirpol/Pods-dirpol.peru.xcconfig"; sourceTree = "<group>"; };
 		CF5A5138F4AA5FEE0024E96A /* Pods-dirpol-dirpolUITests.colombia.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dirpol-dirpolUITests.colombia.xcconfig"; path = "Target Support Files/Pods-dirpol-dirpolUITests/Pods-dirpol-dirpolUITests.colombia.xcconfig"; sourceTree = "<group>"; };
 		CF5EE8FABA8CCB6BFB980437 /* Pods_dirpol.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dirpol.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -625,6 +629,7 @@
 				8B1992A624C3792E003D788B /* Singleton.swift */,
 				6C3E98E4214C5746009FDF74 /* AppDelegate.swift */,
 				8B409ACB24B57E11004ED46E /* ConfigPeru.xcconfig */,
+				8B11D13C25420BB800F9AD2E /* ConfigPeruDebug.xcconfig */,
 				8B409ACC24B57E26004ED46E /* ConfigColombia.xcconfig */,
 				8B409ACD24B57E33004ED46E /* ConfigMexico.xcconfig */,
 				8B409ACE24B57ED5004ED46E /* Api.swift */,
@@ -689,6 +694,9 @@
 				1DBF1A2BA33935663A6946B0 /* Pods-dirpolTests.peru.xcconfig */,
 				FA65284E9D4A4E7DADA8CE51 /* Pods-dirpolTests.colombia.xcconfig */,
 				B07D7F5F9B59EC8EE5077742 /* Pods-dirpolTests.mexico.xcconfig */,
+				67EA04C86A308ED75BCDA9C5 /* Pods-dirpol.peru_debug.xcconfig */,
+				BFF1FA5329CBE4AD9AE53496 /* Pods-dirpol-dirpolUITests.peru_debug.xcconfig */,
+				C0494798691E05D7BF0AD5BB /* Pods-dirpolTests.peru_debug.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -1571,6 +1579,135 @@
 			};
 			name = Colombia;
 		};
+		8B11D13825420A7400F9AD2E /* Peru_Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B11D13C25420BB800F9AD2E /* ConfigPeruDebug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Peru_Debug;
+		};
+		8B11D13925420A7400F9AD2E /* Peru_Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67EA04C86A308ED75BCDA9C5 /* Pods-dirpol.peru_debug.xcconfig */;
+			buildSettings = {
+				APP_NAME_DISPLAY = DIRPOLP;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.9;
+				DEVELOPMENT_TEAM = XYEE79Z2JZ;
+				INFOPLIST_FILE = dirpol/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gravittas.dirpol;
+				PRODUCT_NAME = DIRPOL;
+				SWIFT_OBJC_BRIDGING_HEADER = "dirpol/Menu/dirpol-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Peru_Debug;
+		};
+		8B11D13A25420A7400F9AD2E /* Peru_Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0494798691E05D7BF0AD5BB /* Pods-dirpolTests.peru_debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XYEE79Z2JZ;
+				INFOPLIST_FILE = dirpolTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gravittas.dirpolTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/dirpol.app/dirpol";
+			};
+			name = Peru_Debug;
+		};
+		8B11D13B25420A7400F9AD2E /* Peru_Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFF1FA5329CBE4AD9AE53496 /* Pods-dirpol-dirpolUITests.peru_debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XYEE79Z2JZ;
+				INFOPLIST_FILE = dirpolUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gravittas.dirpolUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = dirpol;
+			};
+			name = Peru_Debug;
+		};
 		8B409AC624B57AFC004ED46E /* Mexico */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8B409ACD24B57E33004ED46E /* ConfigMexico.xcconfig */;
@@ -1701,6 +1838,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6C3E9907214C5748009FDF74 /* Peru */,
+				8B11D13825420A7400F9AD2E /* Peru_Debug */,
 				6C3E9908214C5748009FDF74 /* Colombia */,
 				8B409AC624B57AFC004ED46E /* Mexico */,
 			);
@@ -1711,6 +1849,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6C3E990A214C5748009FDF74 /* Peru */,
+				8B11D13925420A7400F9AD2E /* Peru_Debug */,
 				6C3E990B214C5748009FDF74 /* Colombia */,
 				8B409AC724B57AFC004ED46E /* Mexico */,
 			);
@@ -1721,6 +1860,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6C3E990D214C5748009FDF74 /* Peru */,
+				8B11D13A25420A7400F9AD2E /* Peru_Debug */,
 				6C3E990E214C5748009FDF74 /* Colombia */,
 				8B409AC824B57AFC004ED46E /* Mexico */,
 			);
@@ -1731,6 +1871,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6C3E9910214C5748009FDF74 /* Peru */,
+				8B11D13B25420A7400F9AD2E /* Peru_Debug */,
 				6C3E9911214C5748009FDF74 /* Colombia */,
 				8B409AC924B57AFC004ED46E /* Mexico */,
 			);

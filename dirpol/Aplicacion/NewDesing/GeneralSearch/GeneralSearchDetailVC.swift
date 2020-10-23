@@ -43,8 +43,10 @@ class GeneralSearchDetailVC: UIViewController {
                 self.items = (response?.entitySearch)!
                 self.table.reloadData()
                 
-                self.viewCount.isHidden = self.items.isEmpty
+               // self.viewCount.isHidden = self.items.isEmpty
                 self.lblCount.text = "\(self.items.count) Resultados"
+            } else {
+                Util().enviarAlerta(mensaje: .ErrorEnElServicio, titulo: .Alerta, controller: self)
             }
         }
     }
@@ -74,8 +76,11 @@ extension GeneralSearchDetailVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! CellGeneralSearchDetail
         let item = items[indexPath.row]
-        
-        cell.imgPhoto.imageFromServerURL(urlString: item.foto!, defaultImage: UIImage(named: "LOGO2"))
+        if let photoURL = item.foto {
+            cell.imgPhoto.imageFromServerURL(urlString: photoURL, defaultImage: UIImage(named: "LOGO2"))
+        } else {
+            cell.imgPhoto.image = UIImage(named: "LOGO2")
+        }
         cell.lblName.text = item.nombre
         cell.lblAddress.text = item.direccion
         cell.lblPhone.text = item.telefonos?.joined(separator: ",")
